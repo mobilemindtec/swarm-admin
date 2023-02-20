@@ -1,0 +1,485 @@
+2023.01.20 11:05:37 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json[0m
+2023.01.20 11:05:38 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log[0m
+2023.01.20 11:05:38 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Sublime Text LSP 1.21.0.[0m
+2023.01.20 11:05:40 INFO  time: initialize in 2.02s[0m
+2023.01.20 11:05:40 WARN  Build server is not auto-connectable.[0m
+2023.01.20 11:05:40 WARN  no build target for: /mnt/data/sources/repositories/mobloja/reactive-web/build.sbt[0m
+2023.01.20 11:05:47 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/build.sbt. Using presentation compiler with project's scala-library version: 3.2.0[0m
+2023.01.20 11:05:49 INFO  time: code lens generation in 9.45s[0m
+2023.01.20 11:05:49 INFO  running '/opt/jdk/jdk-17.0.2/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals769418419190553637/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.01.20 11:05:49 ERROR Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true[0m
+2023.01.20 11:05:52 INFO  [info] welcome to sbt 1.8.0 (Oracle Corporation Java 17.0.2)[0m
+2023.01.20 11:05:55 INFO  [info] loading global plugins from /home/ricardo/.sbt/1.0/plugins[0m
+2023.01.20 11:06:00 INFO  [info] loading settings for project reactive-web-build-build-build from metals.sbt ...[0m
+2023.01.20 11:06:00 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project/project/project[0m
+2023.01.20 11:06:06 INFO  [info] loading settings for project reactive-web-build-build from metals.sbt ...[0m
+2023.01.20 11:06:06 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project/project[0m
+2023.01.20 11:06:09 INFO  [success] Generated .bloop/reactive-web-build-build.json[0m
+2023.01.20 11:06:09 INFO  [success] Total time: 3 s, completed Jan 20, 2023, 11:06:09 AM[0m
+2023.01.20 11:06:11 INFO  [info] loading settings for project reactive-web-build from metals.sbt,plugins.sbt ...[0m
+2023.01.20 11:06:11 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project[0m
+2023.01.20 11:06:15 INFO  [success] Generated .bloop/reactive-web-build.json[0m
+2023.01.20 11:06:15 INFO  [success] Total time: 4 s, completed Jan 20, 2023, 11:06:15 AM[0m
+2023.01.20 11:06:17 WARN  no build target for: /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/Main.scala[0m
+2023.01.20 11:06:19 INFO  [info] loading settings for project app from build.sbt ...[0m
+2023.01.20 11:06:19 INFO  [info] set current project to mobloja-reactive (in build file:/mnt/data/sources/repositories/mobloja/reactive-web/)[0m
+2023.01.20 11:06:19 INFO  [warn] there's a key that's not used by any other settings/tasks:[0m
+2023.01.20 11:06:19 INFO  [warn]  [0m
+2023.01.20 11:06:19 INFO  [warn] * ThisBuild / name[0m
+2023.01.20 11:06:19 INFO  [warn]   +- /mnt/data/sources/repositories/mobloja/reactive-web/build.sbt:1[0m
+2023.01.20 11:06:19 INFO  [warn]  [0m
+2023.01.20 11:06:19 INFO  [warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check[0m
+2023.01.20 11:06:19 INFO  [warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key[0m
+2023.01.20 11:06:19 INFO  [success] Generated .bloop/app-test.json[0m
+2023.01.20 11:06:19 INFO  [success] Generated .bloop/app.json[0m
+2023.01.20 11:06:19 INFO  [success] Total time: 0 s, completed Jan 20, 2023, 11:06:20 AM[0m
+2023.01.20 11:06:20 INFO  time: ran 'sbt bloopInstall' in 30s[0m
+2023.01.20 11:06:20 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:06:20 INFO  Setting up current java home /opt/jdk/jdk-17.0.2 in /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:06:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:06:44 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:06:44 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:06:44 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:06:44 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:06:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:06:44 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:06:54 INFO  time: Connected to build server in 33s[0m
+2023.01.20 11:06:54 INFO  Connected to Build server: Bloop v1.5.4[0m
+2023.01.20 11:06:54 INFO  time: Imported build in 0.36s[0m
+2023.01.20 11:07:08 INFO  time: indexed workspace in 13s[0m
+2023.01.20 11:07:09 INFO  compiling app (12 scala sources)[0m
+2023.01.20 11:07:22 INFO  running '/opt/jdk/jdk-17.0.2/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals13818657558338890676/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.01.20 11:07:22 ERROR Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true[0m
+2023.01.20 11:07:23 INFO  time: compiled app in 14s[0m
+2023.01.20 11:07:23 INFO  compiling app (12 scala sources)[0m
+2023.01.20 11:07:25 INFO  [info] welcome to sbt 1.8.0 (Oracle Corporation Java 17.0.2)[0m
+2023.01.20 11:07:28 INFO  [info] loading global plugins from /home/ricardo/.sbt/1.0/plugins[0m
+2023.01.20 11:07:31 INFO  time: compiled app in 7.62s[0m
+2023.01.20 11:07:32 INFO  [info] loading settings for project reactive-web-build-build-build from metals.sbt ...[0m
+2023.01.20 11:07:32 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project/project/project[0m
+2023.01.20 11:07:32 INFO  [info] loading settings for project reactive-web-build-build from metals.sbt ...[0m
+2023.01.20 11:07:33 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project/project[0m
+2023.01.20 11:07:36 INFO  [success] Generated .bloop/reactive-web-build-build.json[0m
+2023.01.20 11:07:36 INFO  [success] Total time: 3 s, completed Jan 20, 2023, 11:07:36 AM[0m
+2023.01.20 11:07:36 INFO  [info] loading settings for project reactive-web-build from metals.sbt,plugins.sbt ...[0m
+2023.01.20 11:07:36 INFO  [info] loading project definition from /mnt/data/sources/repositories/mobloja/reactive-web/project[0m
+2023.01.20 11:07:38 INFO  [success] Generated .bloop/reactive-web-build.json[0m
+2023.01.20 11:07:38 INFO  [success] Total time: 1 s, completed Jan 20, 2023, 11:07:38 AM[0m
+2023.01.20 11:07:38 INFO  [info] loading settings for project app from build.sbt ...[0m
+2023.01.20 11:07:39 INFO  [info] set current project to mobloja-reactive (in build file:/mnt/data/sources/repositories/mobloja/reactive-web/)[0m
+2023.01.20 11:07:39 INFO  [warn] there's a key that's not used by any other settings/tasks:[0m
+2023.01.20 11:07:39 INFO  [warn]  [0m
+2023.01.20 11:07:39 INFO  [warn] * ThisBuild / name[0m
+2023.01.20 11:07:39 INFO  [warn]   +- /mnt/data/sources/repositories/mobloja/reactive-web/build.sbt:1[0m
+2023.01.20 11:07:39 INFO  [warn]  [0m
+2023.01.20 11:07:39 INFO  [warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check[0m
+2023.01.20 11:07:39 INFO  [warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key[0m
+2023.01.20 11:07:40 INFO  [success] Generated .bloop/app.json[0m
+2023.01.20 11:07:40 INFO  [success] Generated .bloop/app-test.json[0m
+2023.01.20 11:07:40 INFO  [success] Total time: 1 s, completed Jan 20, 2023, 11:07:40 AM[0m
+2023.01.20 11:07:41 INFO  time: ran 'sbt bloopInstall' in 18s[0m
+2023.01.20 11:07:41 INFO  Disconnecting from Bloop session...[0m
+2023.01.20 11:07:41 INFO  Shut down connection with build server.[0m
+2023.01.20 11:07:41 INFO  Shut down connection with build server.[0m
+2023.01.20 11:07:41 INFO  Shut down connection with build server.[0m
+2023.01.20 11:07:41 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:07:41 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:07:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:07:41 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:07:41 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:07:41 INFO  Attempting to connect to the build server...[0m
+2023.01.20 11:07:41 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.20 11:07:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:07:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.20 11:07:41 INFO  time: Connected to build server in 0.23s[0m
+2023.01.20 11:07:41 INFO  Connected to Build server: Bloop v1.5.4[0m
+2023.01.20 11:07:41 INFO  time: Imported build in 0.2s[0m
+2023.01.20 11:07:43 ERROR --sourceroot /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp is not a directoryscala.meta.internal.metals.ScalafixProvider$ScalafixRunException: --sourceroot /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp is not a directory
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+[0m
+Jan 20, 2023 11:07:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: --sourceroot /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp is not a directory
+java.util.concurrent.CompletionException: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: --sourceroot /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp is not a directory
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: --sourceroot /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp is not a directory
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2023.01.20 11:07:45 INFO  time: indexed workspace in 3.88s[0m
+2023.01.20 11:07:45 INFO  compiling app (12 scala sources)[0m
+2023.01.20 11:07:51 INFO  time: compiled app in 5.86s[0m
+error: /mnt/data/sources/repositories/mobloja/reactive-web/.metals/.tmp/.metals/.tmp/Main-6181367279691131690.scala is not a file
+2023.01.20 11:08:04 INFO  time: code lens generation in 6.45s[0m
+2023.01.20 11:08:04 INFO  time: code lens generation in 5.96s[0m
+2023.01.20 11:09:01 INFO  compiling app (12 scala sources)[0m
+2023.01.20 11:09:06 INFO  time: compiled app in 4.51s[0m
+2023.01.20 11:09:06 INFO  compiling app (12 scala sources)[0m
+2023.01.20 11:09:08 INFO  time: compiled app in 2.51s[0m
+2023.01.20 11:09:28 ERROR SemanticDB not found: src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scalascala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+[0m
+Jan 20, 2023 11:09:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2023.01.20 11:09:38 INFO  shutting down Metals[0m
+2023.01.20 11:09:38 INFO  Shut down connection with build server.[0m
+2023.01.20 11:09:38 INFO  Shut down connection with build server.[0m
+2023.01.20 11:09:38 INFO  Shut down connection with build server.[0m
+2023.01.21 17:41:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json[0m
+2023.01.21 17:41:34 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log[0m
+2023.01.21 17:41:34 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Neovim 0.9.0.[0m
+2023.01.21 17:41:36 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json[0m
+2023.01.21 17:41:37 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log[0m
+2023.01.21 17:41:37 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Neovim 0.9.0.[0m
+2023.01.21 17:41:39 INFO  time: initialize in 2.58s[0m
+2023.01.21 17:41:42 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:41:42 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:41:42 INFO  skipping build import with status 'Installed'[0m
+2023.01.21 17:41:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:41:48 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:41:48 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:41:48 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:41:48 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:41:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:41:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:41:48 INFO  time: Connected to build server in 6.51s[0m
+2023.01.21 17:41:48 INFO  Connected to Build server: Bloop v1.5.4[0m
+2023.01.21 17:41:55 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala. Using presentation compiler with project's scala-library version: 3.2.0[0m
+Jan 21, 2023 5:41:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2023.01.21 17:41:56 INFO  time: Imported build in 0.45s[0m
+2023.01.21 17:41:59 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/pages/DiscountCouponPage.scala. Using presentation compiler with project's scala-library version: 3.2.0[0m
+2023.01.21 17:42:03 INFO  time: indexed workspace in 6.44s[0m
+2023.01.21 17:42:04 INFO  compiling app (12 scala sources)[0m
+2023.01.21 17:42:17 INFO  shutting down Metals[0m
+2023.01.21 17:42:17 INFO  compiling app (12 scala sources)[0m
+2023.01.21 17:42:17 INFO  Shut down connection with build server.[0m
+2023.01.21 17:42:17 INFO  Shut down connection with build server.[0m
+2023.01.21 17:42:17 INFO  Shut down connection with build server.[0m
+Jan 21, 2023 5:42:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$2(BuildServerConnection.scala:321)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$1(BuildServerConnection.scala:321)
+	at scala.meta.internal.metals.Cancelable$$anon$1.cancel(Cancelable.scala:18)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:258)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:122)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:115)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SinkChannelImpl.endWrite(SinkChannelImpl.java:263)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:285)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:93)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:171)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:151)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2023.01.21 17:42:17 INFO  Cancelling compilation on Bloop server[0m
+2023.01.21 17:42:17 INFO  Cancelling compilation on Bloop server[0m
+2023.01.21 17:42:45 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json[0m
+2023.01.21 17:42:45 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log[0m
+2023.01.21 17:42:45 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Neovim 0.9.0.[0m
+2023.01.21 17:42:48 INFO  time: initialize in 2.38s[0m
+2023.01.21 17:42:51 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:42:51 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:42:51 INFO  skipping build import with status 'Installed'[0m
+2023.01.21 17:42:51 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:42:51 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:42:51 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:42:51 INFO  Attempting to connect to the build server...[0m
+2023.01.21 17:42:51 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.01.21 17:42:51 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:42:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.01.21 17:42:52 INFO  time: Connected to build server in 0.83s[0m
+2023.01.21 17:42:52 INFO  Connected to Build server: Bloop v1.5.4[0m
+2023.01.21 17:42:52 INFO  time: Imported build in 0.22s[0m
+2023.01.21 17:42:59 INFO  time: indexed workspace in 7.56s[0m
+2023.01.21 17:43:00 INFO  compiling app (12 scala sources)[0m
+2023.01.21 17:43:08 INFO  time: compiled app in 8.27s[0m
+2023.01.21 17:43:08 INFO  compiling app (12 scala sources)[0m
+2023.01.21 17:43:15 INFO  time: compiled app in 6.9s[0m
+2023.01.21 17:44:12 INFO  shutting down Metals[0m
+2023.01.21 17:44:12 INFO  compiling app (12 scala sources)[0m
+2023.01.21 17:44:12 INFO  Shut down connection with build server.[0m
+2023.01.21 17:44:12 INFO  Shut down connection with build server.[0m
+2023.01.21 17:44:12 INFO  Shut down connection with build server.[0m
+Jan 21, 2023 5:44:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$2(BuildServerConnection.scala:321)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$1(BuildServerConnection.scala:321)
+	at scala.meta.internal.metals.Cancelable$$anon$1.cancel(Cancelable.scala:18)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:258)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:122)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:115)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SinkChannelImpl.endWrite(SinkChannelImpl.java:263)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:285)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:93)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:171)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:151)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2023.01.21 17:44:12 INFO  Cancelling compilation on Bloop server[0m
+2023.02.03 15:05:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json[0m
+2023.02.03 15:05:52 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log[0m
+2023.02.03 15:05:52 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Sublime Text LSP 1.21.0.[0m
+2023.02.03 15:05:54 INFO  time: initialize in 2.34s[0m
+2023.02.03 15:05:54 INFO  Attempting to connect to the build server...[0m
+2023.02.03 15:05:54 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.02.03 15:06:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.02.03 15:06:01 INFO  Attempting to connect to the build server...[0m
+2023.02.03 15:06:01 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.02.03 15:06:01 INFO  Attempting to connect to the build server...[0m
+2023.02.03 15:06:01 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json[0m
+2023.02.03 15:06:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.02.03 15:06:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json[0m
+2023.02.03 15:06:01 INFO  time: Connected to build server in 6.83s[0m
+2023.02.03 15:06:01 INFO  Connected to Build server: Bloop v1.5.4[0m
+2023.02.03 15:06:03 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/api/ApiServer.scala. Using presentation compiler with project's scala-library version: 3.2.0[0m
+2023.02.03 15:06:03 INFO  time: code lens generation in 9.3s[0m
+2023.02.03 15:06:04 INFO  time: Imported build in 0.32s[0m
+2023.02.03 15:06:06 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/api/ApiServer.scala. Using presentation compiler with project's scala-library version: 3.2.0[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 4.31s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 2.61s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 12s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 2.65s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 2.69s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 2.63s[0m
+2023.02.03 15:06:09 INFO  time: code lens generation in 2.65s[0m
+2023.02.03 15:06:14 INFO  time: indexed workspace in 9.73s[0m
+2023.02.03 15:06:15 INFO  compiling app (16 scala sources)[0m
+2023.02.03 15:06:25 INFO  Deduplicating compilation of app from bsp client 'Metals 0.11.9' (since 24.424s)[0m
+2023.02.03 15:06:25 INFO  compiling app (16 scala sources)[0m
+2023.02.03 15:06:26 INFO  time: compiled app in 1.16s[0m
+2023.02.03 15:06:26 INFO  compiling app (16 scala sources)[0m
+2023.02.03 15:06:28 INFO  shutting down Metals[0m
+2023.02.03 15:06:28 INFO  Shut down connection with build server.[0m
+2023.02.03 15:06:28 INFO  Shut down connection with build server.[0m
+2023.02.03 15:06:28 INFO  Shut down connection with build server.[0m
+Feb 03, 2023 3:06:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$2(BuildServerConnection.scala:321)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$1(BuildServerConnection.scala:321)
+	at scala.meta.internal.metals.Cancelable$$anon$1.cancel(Cancelable.scala:18)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:258)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:122)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:115)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SinkChannelImpl.endWrite(SinkChannelImpl.java:263)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:285)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:93)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:171)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:151)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2023.02.03 15:06:28 INFO  Cancelling compilation on Bloop server[0m
+2023.02.03 15:20:24 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/lsp.trace.json or /home/ricardo/.cache/metals/lsp.trace.json
+2023.02.03 15:20:25 INFO  logging to file /mnt/data/sources/repositories/mobloja/reactive-web/.metals/metals.log
+2023.02.03 15:20:25 INFO  Started: Metals version 0.11.9 in workspace '/mnt/data/sources/repositories/mobloja/reactive-web' for client Sublime Text LSP 1.21.0.
+2023.02.03 15:20:25 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(17), jdkHome: /usr/lib/jvm/java-17-openjdk-amd64, javac exists: false)
+2023.02.03 15:20:29 INFO  time: initialize in 4.12s
+2023.02.03 15:20:29 INFO  Attempting to connect to the build server...
+2023.02.03 15:20:29 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json
+2023.02.03 15:20:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json
+2023.02.03 15:20:30 INFO  Attempting to connect to the build server...
+2023.02.03 15:20:30 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json
+2023.02.03 15:20:30 INFO  Attempting to connect to the build server...
+2023.02.03 15:20:30 INFO  Bloop uses /opt/jdk/jdk-17.0.2 defined at /home/ricardo/.bloop/bloop.json
+2023.02.03 15:20:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json
+2023.02.03 15:20:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /mnt/data/sources/repositories/mobloja/reactive-web/project/project/.metals/bsp.trace.json or /home/ricardo/.cache/metals/bsp.trace.json
+2023.02.03 15:20:30 INFO  time: Connected to build server in 1.26s
+2023.02.03 15:20:30 INFO  Connected to Build server: Bloop v1.5.4
+2023.02.03 15:20:34 INFO  no build target found for /mnt/data/sources/repositories/mobloja/reactive-web/src/main/scala/br/com/mobloja/api/ApiServer.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2023.02.03 15:20:34 INFO  time: code lens generation in 5.44s
+2023.02.03 15:20:35 INFO  time: Imported build in 0.17s
+2023.02.03 15:20:37 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.02.03 15:20:37 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.02.03 15:20:37 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.02.03 15:20:37 INFO  time: indexed workspace in 3.23s
+2023.02.03 15:20:38 INFO  compiling app (16 scala sources)
+2023.02.03 15:20:47 INFO  time: compiled app in 8.46s
+2023.02.03 15:20:47 INFO  compiling app (16 scala sources)
+2023.02.03 15:20:47 INFO  Deduplicating compilation of app from bsp client 'Metals 0.11.9' (since 16.791s)
+2023.02.03 15:20:47 INFO  compiling app (16 scala sources)
+2023.02.03 15:20:50 INFO  time: compiled app in 3.12s
+2023.02.03 15:20:50 ERROR SemanticDB not found: src/main/scala/br/com/mobloja/api/ApiServer.scalascala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/api/ApiServer.scala
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+Feb 03, 2023 3:20:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/api/ApiServer.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/api/ApiServer.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: scala.meta.internal.metals.ScalafixProvider$ScalafixRunException: SemanticDB not found: src/main/scala/br/com/mobloja/api/ApiServer.scala
+	at scala.meta.internal.metals.ScalafixProvider.$anonfun$runScalafixRules$1(ScalafixProvider.scala:156)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2023.02.03 15:25:21 INFO  compiling app (16 scala sources)
+2023.02.03 15:25:26 INFO  time: compiled app in 5s
+2023.02.03 15:25:26 INFO  compiling app (16 scala sources)
+2023.02.03 15:25:30 INFO  time: compiled app in 3.68s
+2023.02.03 15:32:34 INFO  compiling app (16 scala sources)
+2023.02.03 15:32:40 INFO  time: compiled app in 5.2s
+2023.02.03 15:32:40 INFO  compiling app (16 scala sources)
+2023.02.03 15:32:42 INFO  time: compiled app in 2s
+2023.02.03 15:46:04 INFO  compiling app (16 scala sources)
+2023.02.03 15:46:09 INFO  time: compiled app in 4.39s
+2023.02.03 15:46:09 INFO  compiling app (16 scala sources)
+2023.02.03 15:46:10 INFO  time: compiled app in 1.55s
+2023.02.03 15:46:44 INFO  compiling app (16 scala sources)
+2023.02.03 15:46:45 INFO  shutting down Metals
+2023.02.03 15:46:46 INFO  Shut down connection with build server.
+2023.02.03 15:46:46 INFO  Shut down connection with build server.
+2023.02.03 15:46:46 INFO  Shut down connection with build server.
+Feb 03, 2023 3:46:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.AsynchronousCloseException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$2(BuildServerConnection.scala:321)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$1(BuildServerConnection.scala:321)
+	at scala.meta.internal.metals.Cancelable$$anon$1.cancel(Cancelable.scala:18)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:258)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:122)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:115)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.SinkChannelImpl.endWrite(SinkChannelImpl.java:263)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:285)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:93)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:171)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:151)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 19 more
+
+2023.02.03 15:46:46 INFO  Cancelling compilation on Bloop server
