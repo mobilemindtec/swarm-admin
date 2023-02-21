@@ -1,19 +1,35 @@
 #!/bin/tclsh
 
+package require logger 0.3
+
+set log [logger::init main]
+
 
 source "./core/httpserver.tcl"
 source "./core/socketserver.tcl"
+source "./configs/configs.tcl"
+
 source "./handlers/index_handler.tcl"
+source "./handlers/login_handler.tcl"
+source "./handlers/api_handler.tcl"
 
-set configs [dict create]
-set routes [dict create] 
 
-dict set routes "/" IndexGet
-dict set routes "/docker/service/ls" DockerServiceList
-dict set routes "/docker/service/ps/:id" DockerServicePs
-dict set routes "/docker/node/ls" DockerNodeLs
-dict set routes "/docker/node/ps/:id" DockerNodePs
-dict set routes "/docker/ps" DockerPs
+set configs [load_configs]
+set routes [dict get $configs routes] 
+
+#dict set routes "/" index
+#dict set routes "/docker/*" index
+#dict set routes "/api/docker/service/ls" docker_service_ls
+#dict set routes "/api/docker/service/ps/:id" docker_service_ps
+#dict set routes "/api/docker/node/ls" docker_node_ls
+#dict set routes "/api/docker/node/ps/:id" docker_node_ps
+#dict set routes "/api/docker/ps" docker_ps
+
+
+puts ":: app routes"
+dict for {k v} $routes {
+	puts ":: $k"
+}
 
 
 # cmd dockker stats
@@ -62,6 +78,6 @@ proc handler {chan} {
 set socketConfigs {}
 lappend socketConfigs handler handler 
 
-runSocketApp $socketConfigs
+#runSocketApp $socketConfigs
 
-runApp $configs $routes
+run_app $configs $routes

@@ -53,6 +53,6 @@ proc tcl2json value {
   }
 }
 
-proc to_json {text}  {
+proc json2dict {text}  {
   return [json::json2dict $text]
 }

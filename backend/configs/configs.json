@@ -1,0 +1,62 @@
+{
+	"templates": "./public/templates",
+	"assets": "./public/assets",
+	"server": {
+		"port": 5151
+	},
+	"jwt" : {
+		"secret": "12345678910"
+	},
+	"credentials": {
+		"username": "test",
+		"password": "test"
+	},
+	"routes": {
+
+		"/": {
+			"handler": "index",
+			"auth": false,
+			"methods": ["get"]
+		},		
+		"/docker/*": {
+			"handler": "index",
+			"auth": false,
+			"methods": ["get"]
+		},		
+		"/login": {
+			"handler": "login",
+			"auth": false,
+			"methods": ["post"]
+		},		
+		"/api/docker/service/ls": {
+				"handler": "docker_service_ls",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
+		"/api/docker/service/ps/:id": {
+				"handler": "docker_service_ps",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
+		"/api/docker/node/ls": {
+				"handler": "docker_node_ls",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
+		"/api/docker/node/ps/:id": {
+				"handler": "docker_node_ps",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
+		"/api/docker/ps": {
+				"handler": "docker_ps",		
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		}
+	}
+}

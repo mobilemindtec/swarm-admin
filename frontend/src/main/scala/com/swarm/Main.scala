@@ -9,17 +9,7 @@ import com.raquo.laminar.api.L.*
 
 object App:
 
-  lazy val node: HtmlElement =
-    div(
-      pathEnd {
-        Index.page()
-      },
-      noneMatched {
-        div(
-          h2("not found")
-        )
-      }
-    )
+  lazy val node: HtmlElement = Index.page()
 
 @main def main(args: String*) =
   lazy val container = dom.document.getElementById("app")

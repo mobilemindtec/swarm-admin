@@ -4,7 +4,7 @@ package require logger 0.3
 
 set log [logger::init main]
 
-proc findRoute {routes path} {
+proc find_route {routes path} {
 
 	variable log
 
@@ -29,9 +29,9 @@ proc findRoute {routes path} {
 		#${log}::notice "route parts $routeParts, $rParts"
 		#${log}::notice "path parts $pathParts, $pParts"
 
-		if { $rParts != $pParts } {
-			continue
-		}
+		#if { $rParts != $pParts } {
+		#	continue
+		#}
 
 		for {set j 0} {$j < $rParts} {incr j} {
 			
@@ -45,8 +45,13 @@ proc findRoute {routes path} {
 
 			#${log}::notice "j = $j, routePart = $routePart, pathPart = $pathPart"
 
+			set any false
 
-			if { $routePart != $pathPart } {
+			if { $routePart == "*" } {
+				set any true
+			} 
+
+			if { $routePart != $pathPart && ! $any } {
 
 				if { [string match {:*} $routePart] } {
 					set varName [string map { : "" } $routePart ]
@@ -57,12 +62,29 @@ proc findRoute {routes path} {
 				} else {
 					break
 				}
-			}
+			}			
 
-			if { [expr $j + 1] == $rParts } {
+			if { [expr $j + 1] == $rParts || $any } {
 				set ret  [dict create]
+				set dRoute [dict get $routes $route]
 				dict set ret route $route
-				dict set ret handler [dict get $routes $route]
+				
+				dict set ret handler [dict get $dRoute handler]
+
+				if {[dict exists $dRoute "after"]} {
+					dict set ret "after" [dict get $dRoute "after"]				
+				} else {
+					dict set ret "after" []
+				}
+
+				if {[dict exists $dRoute "before"]} {
+					dict set ret "before" [dict get $dRoute "before"]
+				} else {
+					dict set ret "before" []
+				}
+
+				dict set ret auth [dict get $dRoute auth]
+				dict set ret methods [dict get $dRoute methods]
 				dict set ret vars $variables
 
 				${log}::info "found route $path"

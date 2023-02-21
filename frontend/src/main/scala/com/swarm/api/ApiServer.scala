@@ -1,17 +1,37 @@
 package com.swarm.api
 
+import com.swarm.configs.AppConfigs
+import com.swarm.models.Models.Service
 import org.scalajs.dom
+import scalajs.js
+import scalajs.js.JSON
 
 import scala.concurrent.Future
 import scala.scalajs.js.undefined
 import scala.concurrent.ExecutionContext.Implicits.global
-import scalajs.js
 import js.Thenable.Implicits.*
-import scalajs.js.{JSON}
+import org.getshaka.nativeconverter.{NativeConverter, fromJson, fromNative}
 
 object ApiServer:
 
-  private def fetch[T](
+  case class ApiResult[T](data: T) derives NativeConverter
+
+  private def defaultHeaders = Map(
+    "Content-Type" -> "application/json",
+    "Accept" -> "application/json"
+  )
+
+  def servicesLs(): Future[ApiResult[List[Service]]] =
+    val url = s"${AppConfigs.serverUrl}/docker/service/ls"
+    fetch(url, "GET", None, defaultHeaders)
+      .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
+
+  def servicesPs(id: String): Future[ApiResult[List[Service]]] =
+    val url = s"${AppConfigs.serverUrl}/docker/service/ps/${id}"
+    fetch(url, "GET", None, defaultHeaders)
+      .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
+
+  private def fetch(
     url: String,
     method: String,
     body: Option[js.Any],

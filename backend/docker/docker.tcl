@@ -4,7 +4,7 @@ package require json 1.3.3
 
 set log [logger::init main]
 
-proc normalizeLine {line} {
+proc normalize_line {line} {
 	set map [dict create "  " "-"]
   set newline [string map $map $line]
   set map [dict create " " "+"]
@@ -14,7 +14,7 @@ proc normalizeLine {line} {
   return $newline
 }
 
-proc removePlus {newline} {
+proc remove_plus {newline} {
   set map [dict create "+" " "]
   set newline [string map $map $newline]  	
   set newline [string trim $newline]
@@ -22,7 +22,7 @@ proc removePlus {newline} {
   return $newline
 }
 
-proc execDockerCmd {cmd args} {
+proc exec_docker_cmd {cmd args} {
 
 	variable log
 
@@ -30,10 +30,10 @@ proc execDockerCmd {cmd args} {
 
 	switch $cmd {
 	 	"service ls" {
-			dockerCmd_ls
+			exec_docker_service_ls
 		}
 		"service ps" {
-			dockerServiceCmd_ps $args
+			exec_docker_service_ps $args
 		}
 		default {
 			${log}::debug "CMD $cmd not found"
@@ -41,12 +41,12 @@ proc execDockerCmd {cmd args} {
 	}
 }
 
-proc dockerCmdList {cmd cb} {
+proc exec_docker_cmd_fmt {cmd cb} {
 	variable log
-	${log}::debug "dockerCmdList"
+	${log}::debug "exec_docker_cmd_fmt"
 	set lines [split [exec {*}$cmd] "\n"] 
 	set results []
-	${log}::debug "lines = $lines"
+	#${log}::debug "lines = $lines"
 	set lines [lrange $lines 1 [llength $lines]]
 
 	foreach line $lines {
@@ -58,48 +58,49 @@ proc dockerCmdList {cmd cb} {
 	return $results		
 }
 
-proc dockerCmd_ls {} {
+proc exec_docker_service_ls {} {
 
 	variable log
 	set cmd [list docker service ls]
 
 	proc pformat {line} {
-		set newline [normalizeLine $line]
+		set newline [normalize_line $line]
 		lassign $newline id name replicated replicatedCount 	
 		set data {}
-		dict set data id [removePlus $id]
-		dict set data name [removePlus $name]
-		dict set data replicas [removePlus $replicatedCount]	
+		dict set data id [remove_plus $id]
+		dict set data name [remove_plus $name]
+		dict set data replicas [remove_plus $replicatedCount]	
 		return $data	
 	}
 
-	set results [dockerCmdList $cmd pformat]
+	set results [exec_docker_cmd_fmt $cmd pformat]
 
 	#${log}::debug " results = $results"
 	return [dict create columns [list id name replicas] rows $results]		
 }
 
-proc dockerServiceCmd_ps {srvName} {
+proc exec_docker_service_ps {id} {
 
 	variable log
-	set cmd [list docker service ps $srvName]
+	set cmd [list docker service ps $id]
 
 	proc pformat {line} {
-
-		set newline [normalizeLine $line]		
+		set newline [normalize_line $line]		
 		lassign $newline id name image node desiredState   currentState err ports 	
-		lappend data id [removePlus $id]
-		lappend data name [removePlus $name]
-		lappend data node [removePlus $node]	
-		lappend data desired_state [removePlus $desiredState]
-		lappend data current_state [removePlus $currentState]
-		lappend data err [removePlus $err]
+		set data {}
+		dict set data id [remove_plus $id]
+		dict set data name [remove_plus $name]
+		dict set data image [remove_plus $image]	
+		dict set data node [remove_plus $node]	
+		dict set data desiredState [remove_plus $desiredState]
+		dict set data currentState [remove_plus $currentState]
+		dict set data err [remove_plus $err]
 		return $data	
 	}
 
-	set results [dockerCmdList $cmd pformat]
+	set results [exec_docker_cmd_fmt $cmd pformat]
 
-	${log}::debug " results = $results"
+	#${log}::debug " results = $results"
 	return [dict create columns [list id name node desired_state current_state err] rows $results]		
 }
 
