@@ -2,10 +2,11 @@ package com.swarm.api
 
 import com.swarm.configs.AppConfigs
 import com.swarm.models.Models.Service
+import com.swarm.util.Cookie
 import org.scalajs.dom
+
 import scalajs.js
 import scalajs.js.JSON
-
 import scala.concurrent.Future
 import scala.scalajs.js.undefined
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -15,19 +16,37 @@ import org.getshaka.nativeconverter.{NativeConverter, fromJson, fromNative}
 object ApiServer:
 
   case class ApiResult[T](data: T) derives NativeConverter
+  case class ApiAuthResult(
+    token: Option[String] = None,
+    expires_at: Option[Long] = None,
+    error: Option[String] = None
+  ) derives NativeConverter:
+    def hasError = this.error.nonEmpty
 
-  private def defaultHeaders = Map(
-    "Content-Type" -> "application/json",
-    "Accept" -> "application/json"
-  )
+  private def defaultHeaders =
+    val token = getToken()
+    val headers = Map(
+      "Content-Type" -> "application/json",
+      "Accept" -> "application/json"
+    )
+    token.map(s => headers + ("Authorization" -> s"Bearer $s")).getOrElse(headers)
+
+  private def getToken(): Option[String] =
+    Cookie.getCookie("SwarmAdminToken")
+
+  def login(username: String, password: String): Future[ApiAuthResult] =
+    val url = s"${AppConfigs.serverUrl}/login"
+    val payload = js.Dynamic.literal(username = username, password = password)
+    fetch(url, "POST", Some(payload), defaultHeaders)
+      .map(r => NativeConverter[ApiAuthResult].fromNative(r))
 
   def servicesLs(): Future[ApiResult[List[Service]]] =
-    val url = s"${AppConfigs.serverUrl}/docker/service/ls"
+    val url = s"${AppConfigs.serverUrl}/api/docker/service/ls"
     fetch(url, "GET", None, defaultHeaders)
       .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
 
   def servicesPs(id: String): Future[ApiResult[List[Service]]] =
-    val url = s"${AppConfigs.serverUrl}/docker/service/ps/${id}"
+    val url = s"${AppConfigs.serverUrl}/api/docker/service/ps/${id}"
     fetch(url, "GET", None, defaultHeaders)
       .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
 

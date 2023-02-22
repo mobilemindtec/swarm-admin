@@ -13,23 +13,48 @@ source "./json/json.tcl"
 global _routes
 global _configs
 
+proc get_uri_query {uri} {
+  set parts [split $uri ?]
+  set queries [lindex $parts 1]
+  set requestQuery [dict create]
 
-
-proc http_serve {socket addr port} {
-  #fconfigure $chan -translation crlf -buffering line
-  #chan configure $chan -translation {crlf crlf} -blocking 0 -buffering full -buffersize 4096
-  #chan event $chan readable [list get_reply $chan]
-
-  fconfigure $socket -blocking 0
-  fileevent $socket readable [list server_receive $socket]
-
-  #set uuid [new_uuid]
-  #set coro [coroutine $uuid {*}[list get_reply $uuid $chan]]
-  #chan event $chan readable $coro
+  foreach var [split $queries "&"] {
+    if { [string trim $var] == "" } {
+      continue
+    }
+    set param [split $var "="]
+    set k [lindex $param 0] 
+    set v [lindex $param 1]
+    dict set requestQuery $k $v 
+  }  
+  return $requestQuery
 }
 
-proc server_receive {socket} {
+proc http_serve {socket addr port} {
+
+  # case 1
+  #fconfigure $socket -translation crlf -buffering line
+  #socket configure $socket -translation {crlf crlf} -blocking 0 -buffering full -buffersize 4096
+  #socket event $socket readable [list get_reply $socket]
+
+  # case 2
+  #fconfigure $socket -blocking 0
+  #fileevent $socket readable [list server_receive $socket]
+
+  # case 3
+  
+  set uuid [new_uuid]
+  set coro [coroutine ::$uuid {*}[list server_receive $socket $uuid]]
+  
+  #fconfigure $socket -blocking 0
+  #socket event $socket readable $coro  
+}
+
+proc server_receive {socket uuid} {
   variable log
+
+  fileevent $socket readable {}
+  fconfigure $socket -blocking 0
 
   if { [eof $socket]} {
     ${log}::debug "channel closed"
@@ -39,38 +64,37 @@ proc server_receive {socket} {
 
   # Default request data, they are overwritten if explicitly specified in 
   # the HTTP request
-  set RequestMethod ""
-  set RequestURI ""
-  set RequestProtocol ""
-  set RequestHeader [dict create connection "close" accept "text/plain" accept-encoding "" content-type "text/plain"]
-  set RequestBody ""
-  set RequestQuery {}
-  set RequestAcceptGZip 0; # Indicates that the request accepts a gzipped response
-
+  set requestMethod ""
+  set requestURI ""
+  set requestProtocol ""
+  set requestHeader [dict create connection "close" accept "text/plain" accept-encoding "" content-type "text/plain"]
+  set requestBody {}
+  set requestQuery {}
+  #set RequestAcceptGZip 0; # Indicates that the request accepts a gzipped response
   set state connecting
 
-  while {[gets $socket line]>=0} {
+  # while {[gets $socket line]>=0}
+
+  while {1} {
+
+    set readCount [::coroutine::util::gets_safety $socket 4096 line]
+
+    #if { $readCount <= 0} {
+    #  break
+    #}
+
     #${log}::debug $line
     # Decode the HTTP request line
     if {$state=="connecting"} {
-      if {![regexp {^(\w+)\s+(/.*)\s+(HTTP/[\d\.]+)} $line {} RequestMethod RequestURI RequestProtocol]} {
+      if {![regexp {^(\w+)\s+(/.*)\s+(HTTP/[\d\.]+)} $line {} requestMethod requestURI requestProtocol]} {
         break }
 
       #set path "/[string trim [lindex $line 1] /]"
-      set parts [split $RequestURI ?]
-      set RequestURI [lindex $parts 0]
-
-      set queries [lindex $parts 1]
-
-      foreach var [split $queries "&"] {
-        if { [string trim $var] == "" } {
-          continue
-        }
-        set param [split $var "="]
-        set k [lindex $param 0] 
-        set v [lindex $param 1]
-        dict set RequestQuery $k $v 
-      }
+      set requestQuery [get_uri_query $requestURI]
+      
+      # remove query from URI
+      set parts [split $requestURI ?]
+      set requestURI [lindex $parts 0]
 
       set state header
 
@@ -78,14 +102,15 @@ proc server_receive {socket} {
     } elseif {$state=="header"} {
       if {$line!=""} {
         if {[regexp {^\s*([^: ]+)\s*:\s*(.*)\s*$} $line {} AttrName AttrValue]} {
-          dict set RequestHeader [string tolower $AttrName] $AttrValue
+          dict set requestHeader [string tolower $AttrName] $AttrValue
         } else {
           # RequestData not recognized, ignore it
-          ${log}::debug {Unable to interpret RequestData: $line}
+          ${log}::error {Unable to interpret RequestData: $line}
         }
       } else {
         set state body
-        break; # Header is completed, read now the body
+        # Header is completed, read now the body
+        break
       }
     }
   }
@@ -97,18 +122,17 @@ proc server_receive {socket} {
   }  
 
   if {$state=="body"} {
-    fconfigure $socket -translation {binary crlf}
 
+    #fconfigure $socket -translation {binary crlf}
 
-    set RequestBody {}
     
     # Read the body in binary mode to match the content length and avoid
     # any unwanted translation of binary data
     fconfigure $socket -translation {binary crlf}
 
-    set TransferEncoding ""
-    if {[dict exists $RequestHeader transfer-encoding]} {
-      set TransferEncoding [dict get $RequestHeader transfer-encoding]
+    set transferEncoding ""
+    if {[dict exists $requestHeader transfer-encoding]} {
+      set transferEncoding [dict get $requestHeader transfer-encoding]
     }
 
     # RFC7230 - 3.3.3. Message Body Length
@@ -116,39 +140,39 @@ proc server_receive {socket} {
     # transfer coding (Section 4.1) is the final encoding, the message
     # body length is determined by reading and decoding the chunked
     # data until the transfer coding indicates the data is complete.
-    if {[string match {*chunked} $TransferEncoding]} {
+    if {[string match {*chunked} $transferEncoding]} {
       while {![eof $socket]} {
-        set ChunkHeader ""
-        while {$ChunkHeader==""} {
-          gets $socket ChunkHeader
+        set chunkHeader ""
+        while {$chunkHeader==""} {
+          gets $socket chunkHeader
         }
 
         # The chunk header can include "chunk extensions" after a semicolon
-        set ChunkSizeHex [lindex [split $ChunkHeader {;}] 0]
-        set ChunkSize [expr 0x$ChunkSizeHex]
-        if {$ChunkSize==0} {
+        set chunkSizeHex [lindex [split $chunkHeader {;}] 0]
+        set chunkSize [expr 0x$chunkSizeHex]
+        if {$chunkSize==0} {
           break}
 
-        set CurrentChunk {}
+        set currentChunk {}
         while {![eof $socket]} {
-          if {[string bytelength $CurrentChunk]>=$ChunkSize} {
+          if {[string bytelength $currentChunk]>=$chunkSize} {
             break}
-          append CurrentChunk [read $socket $ChunkSize]
+          append currentChunk [read $socket $chunkSize]
         }
 
-        append RequestBody $CurrentChunk
+        append requestBody $currentChunk
       }
 
       #dict set Response ErrorStatus 501
       #dict set Response ErrorBody {Chunked transfer encoding not supported}
       #Log {Chunked transfer encoding not supported} info 2
-    } elseif {[dict exists $RequestHeader content-length]} {
+    } elseif {[dict exists $requestHeader content-length]} {
       # Read the number of bytes defined by the content-length header
-      set ContentLength [dict get $RequestHeader content-length]
+      set contentLength [dict get $requestHeader content-length]
       while {![eof $socket]} {
-        if {[string bytelength $RequestBody]>=$ContentLength} {
+        if {[string bytelength $requestBody]>=$contentLength} {
           break}
-        append RequestBody [read $socket $ContentLength]
+        append requestBody [read $socket $contentLength]
       }
     
     } else {
@@ -159,46 +183,46 @@ proc server_receive {socket} {
     # Switch back to the standard translation mode
     fconfigure $socket -translation {auto crlf}
 
-    #if {$RequestBody!=""} {
-    #  ${log}::debug {Received body length: [string bytelength $RequestBody]}
-    #  ${log}::debug "RequestBody = $RequestBody"
+    #if {$requestBody!=""} {
+    #  ${log}::debug {Received body length: [string bytelength $requestBody]}
+    #  ${log}::debug "requestBody = $requestBody"
     #}
      
   }
 
+  set contentType [dict get $requestHeader "content-type"]
 
+  #puts "requestBody = $requestBody"
 
-  set contentType [dict get $RequestHeader "content-type"]
-
-  if {[lsearch [list "GET" "OPTIONS"] $RequestMethod] == -1} {
-    set body [body_parse $RequestBody $contentType]
+  if {[lsearch [list "GET" "OPTIONS"] $requestMethod] == -1} {
+    set body [body_parse $requestBody $contentType]
   } else {
     set body [dict create]
   }
 
-  if { $body == "not_supported" } {
+  if {$body == "not_supported"} {
     http_server_error $socket "content-type not supported" $contentType
     close $socket
     return
   }
 
-  #set RequestURITail [string range $RequestURI [lindex $ResponderDef 2] end]
+  #set requestURITail [string range $requestURI [lindex $ResponderDef 2] end]
   set request [dict create]  
-  dict set request method $RequestMethod 
-  dict set request uri $RequestURI 
-  dict set request headers $RequestHeader 
+  dict set request method $requestMethod 
+  dict set request uri $requestURI 
+  dict set request headers $requestHeader 
   dict set request body $body 
-  dict set request rowBody $RequestBody
-  dict set request query $RequestQuery
+  dict set request rowBody $requestBody
+  dict set request query $requestQuery
   dict set request contentType $contentType
 
   #${log}::debug "request = $request"
 
-  dispatch $socket $request
+  dispatch_handler $socket $request
 
 }
 
-proc dispatch {socket request} {
+proc dispatch_handler {socket request} {
 
   global _routes
   global _configs
@@ -215,10 +239,9 @@ proc dispatch {socket request} {
   set body ""
   set handler ""
 
-  set assetsPath [dict get $_configs "assets"]
-
   if {[string match "/public/assets/*" $path]}  {
     
+    set assetsPath [dict get $_configs "assets"]
     set map {} 
     lappend map "/public/assets" $assetsPath
 
@@ -243,15 +266,15 @@ proc dispatch {socket request} {
     set beforeHandlers [dict get $foudedRoute "before"]
     set afterHandlers [dict get $foudedRoute "after"]
 
-    if {[lsearch $methods [string tolower $method]] == -1} {      
+    if {[lsearch $methods [string tolower $method]] == -1} {
       http_server_not_found $socket "Not Found" $contentType 
       close $socket   
       return      
     }
 
     if { $handler == "" } {
-      ${log}::error "HTTP HANDLER not found to route $routeName, $handler"    
-      http_server_error $socket "Server Error" $contentType
+      ${log}::error "HTTP HANDLER not found to route $routeName"    
+      http_server_error $socket "Internal Server Error" $contentType
       close $socket 
       return
     }
@@ -269,6 +292,7 @@ proc dispatch {socket request} {
           set request [dict get $ret next]
         } else {
           render_response $socket $ret $contentType
+          close $socket
           return
         }
       }
@@ -282,126 +306,99 @@ proc dispatch {socket request} {
           set response [dict get $ret next]
         } else {
           render_response $socket $ret $contentType
+          close $socket
           return
         }
       }
 
       render_response $socket $response $contentType
-      
+      close $socket
+
     } err]} {
 
       if {$err != ""} {
         ${log}::error "Error to process handler to route $routeName: $err"
 
-        http_server_error $socket "Server Error" $contentType 
+        http_server_error $socket "Internal Server Error" $contentType 
         close $socket
       }
 
-      #wr_http_header $socket "500 Internal Server Error"
-      #puts $socket [bad_request "error.html" $err]
     }        
   }
 }
 
 
-proc render_response {socket body contentType} {
+proc render_response {socket response contentType} {
 
   variable log
 
-  ${log}::debug "render_response $body"
+  #${log}::debug "render_response $response"
 
-  set bodyType "json"
-  set statusCode 200
-
-  if { $body == "" } {
-    http_server_ok $socket $body $contentType 
-    close $socket
+  if {$response == ""} {
+    http_server_ok $socket $response $contentType 
     return
   } 
 
-  if { [dict exists $body tpl] } {
+  set bodyType "json"
+  set statusCode 200
+  set headers [dict create]
+
+  if { [dict exists $response tpl] } {
     set bodyType tpl
   }
 
-  if { [dict exists $body json] } {
+  if { [dict exists $response json] } {
     set bodyType json
   }
 
-  if { [dict exists $body text] } {
+  if { [dict exists $response text] } {
     set bodyType text
   }
 
-  if { [dict exists $body statusCode] } {
-    set statusCode [dict get $body statusCode]
+  if { [dict exists $response statusCode] } {
+    set statusCode [dict get $response statusCode]
+  }
+
+  if { [dict exists $response headers] } {
+    set headers [dict get $response headers]
   }
 
   set bodyValue ""
 
   switch $bodyType {
     tpl {
-      render_template $socket $body
+      render_template $socket $response
     }
     json {                
-      set bodyValue [dict get $body json]
-      render_as_json $socket $bodyValue $statusCode
+      set bodyValue [dict get $response json]
+      render_as_json $socket $bodyValue $statusCode $headers
     }
     text {
-      set bodyValue [dict get $body json]
-      render_as_text $socket $bodyValue $statusCode
+      set bodyValue [dict get $response json]
+      render_as_text $socket $bodyValue $statusCode $headers
     }
     html {
-      set bodyValue [dict get $body json]
-      render_as_html $socket $bodyValue $statusCode
+      set bodyValue [dict get $response json]
+      render_as_html $socket $bodyValue $statusCode $headers
     }
     default {
-      ${log}::error "unknow body type: $bodyType "
-      #wr_http_header $socket "500 Internal Server Error"
-      #puts $socket [bad_request "error.html" "unknow body type: $bodyType "]                            
-      http_server_ok $socket $body $contentType 
+      ${log}::error "unknow response type: $bodyType "
+      write_response $socket $response 200 $contentType $headers
     }
-  }    
-
-  close $socket    
-}
-
-  #if { [catch {
-  #  set fl [open $path]
-  #} err] } {
-  #  puts $chan "HTTP/1.0 404 Not Found"
-  #} else {
-  #  puts $chan "HTTP/1.0 200 OK"
-  #  puts $chan "Content-Type: text/html"
-  #  puts $chan ""
-  #  puts $chan [GetIndex]; # [read $fl]
-  #  close $fl
-  #}
-  #close $chan
-
-
-proc isDict {d} {
-  expr {[string is list $d]
-      && !([llength $d] % 2)
-      && ((2 * [llength [dict keys $d]]) == [llength $d])
-  }
+  }        
 }
 
 proc run_app {configs routes} {
   global _routes
   global _configs
 
-  if { [isDict $routes] && [dict size $routes] > 0 } {
-    set _routes $routes
-  } 
-
-  if { [isDict $configs] && [dict size $configs] > 0 } {
-    set _configs $configs
-  } 
+  set _routes $routes
+  set _configs $configs
 
   set port [get_config $_configs 5151 server port]
 
   puts "http server init on port $port..."
   set sk [socket -server http_serve [expr $port * 1]]  
-
   vwait forever
 }
 

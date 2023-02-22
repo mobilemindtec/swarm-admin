@@ -18,6 +18,11 @@
 			"auth": false,
 			"methods": ["get"]
 		},		
+		"/app/login": {
+			"handler": "index",
+			"auth": false,
+			"methods": ["get"]
+		},			
 		"/docker/*": {
 			"handler": "index",
 			"auth": false,

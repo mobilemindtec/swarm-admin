@@ -1,5 +1,42 @@
 
 
-h1{
-	color:  red;
+
+form label {
+  color: rgba(68, 189, 50,1);
+  font-weight: normal;  
+  margin-top: 15px;
+}
+
+input.form-control, textarea.form-control {
+  background-color: rgba(64, 115, 158,1.0);
+  border: 1px solid rgba(47, 54, 64,1.0);
+  border-radius: 3px;
+  color: #fff;
+}
+
+input.form-control:hover, input.form-control:active, input.form-control:focus, textarea.form-control:hover, textarea.form-control:active, textarea.form-control:focus {
+  background-color: rgba(72, 126, 176,1.0);
+  color: #fff;
+}
+
+form button {
+  color: #4cd137;
+  background-color: transparent;
+  border: 0px;
+  margin-top: 20px;
+  float: right;
+}
+
+form.login input {
+	text-align: center;
+}
+
+form button:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+form .title {
+  color: #40739e;
+  padding: 30px 0;
 }

@@ -4,8 +4,9 @@ import io.frontroute.*
 import org.scalajs.dom
 
 import scalajs.js
-import com.swarm.pages.{Index}
+import com.swarm.pages.Index
 import com.raquo.laminar.api.L.*
+import com.swarm.util.Cookie
 
 object App:
 

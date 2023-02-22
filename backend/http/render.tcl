@@ -71,7 +71,7 @@ proc http_server_bad_request { socket body contentType } {
   puts $socket [body_format $body $contentType true]
 }
 
-proc wr_http_status {chan {statusCode "200 OK"} } {
+proc write_response {chan body {statusCode 200} {contentType "text/plain"} {headers {}} } {
   
   switch $statusCode {
     200 {
@@ -94,24 +94,19 @@ proc wr_http_status {chan {statusCode "200 OK"} } {
     }
   }  
 
+  if {![dict exists $headers "content-type"] && ![dict exists $headers "Content-Type"]} {
+    dict set headers "Content-Type" $contentType
+  }
+
   puts $chan "HTTP/1.0 $status"
-}
 
-proc wr_http_ctype {chan {contentType "text/html"}} {
-  puts $chan "Content-Type: $contentType"  
-}
+  foreach {k v} $headers {
+    puts $chan "$k: $v"    
+  }
 
-proc wr_http_ok {chan body {contentType "text/html"}} {
-  wr_http_status $chan
-  wr_http_ctype $chan $contentType
   puts $chan ""
   puts $chan $body
-}
 
-proc wr_http_header {chan {statusCode "200 OK"} {contentType "text/html"}} {
-  wr_http_status $chan $statusCode
-  wr_http_ctype $chan $contentType
-  puts $chan ""
 }
 
 proc render {template {vars ""} {cmds ""} } {
@@ -119,13 +114,13 @@ proc render {template {vars ""} {cmds ""} } {
   return [run $script $cmds $vars]  
 }
 
-proc not_found {{errorTpl "error.html"}} {
+proc not_found_tpl {{errorTpl "error.html"}} {
   set vars [dict create statusCode "404" description "Not found" content ""]
   set cmds [dict create]
   return [render [render_template_content $errorTpl] $vars $cmds]
 }
 
-proc bad_request {{errorTpl "error.html"} {error ""}} {
+proc bad_request_tpl {{errorTpl "error.html"} {error ""}} {
   set vars [dict create statusCode "500" description "Internal Server Error" content $error]
   set cmds [dict create]
   return [render [render_template_content $errorTpl] $vars $cmds]
@@ -147,7 +142,7 @@ proc render_asset {chan path} {
   #puts "assetFile = $assetFile, exists = [file exists $assetFile]"
 
   if {[file exists $assetFile] == 0 } {
-    wr_http_header $chan "404 Not found"
+    write_response $chan 404    
   } else {
     if {[catch {
       
@@ -174,40 +169,27 @@ proc render_asset {chan path} {
       }
 
       set assetFile [open $assetFile r]
-      set assetContent [read $assetFile]
-      wr_http_ok $chan $assetContent $contentType
+      set assetContent [read $assetFile]      
       close $assetFile      
+      write_response $chan $assetContent 200 $contentType
 
     } err]} {
-      wr_http_header $chan "500 Internal Server Error"
-      puts $chan [bad_request "error.html" $err]
+      write_response $chan "Internal Server Error" 500
     }
   }  
 }
 
-proc render_as_json { chan data {statusCode 200}} {
-  set contentType "application/json" 
-
-  wr_http_status $chan $statusCode
-  wr_http_ctype $chan $contentType
-
-  puts $chan ""
-
+proc render_as_json { chan data {statusCode 200} {headers {}}} {
   set payload [tcl2json $data]
-
-  puts $chan $payload
+  write_response $chan $payload $statusCode "application/json" $headers
 }
 
-proc render_as_text { chan data {statusCode 200}} {
-  set contentType "plain/text" 
-  wr_http_header $chan $statusCode
-  puts $chan [to_json $data]
+proc render_as_text { chan data {statusCode 200} {headers {}}} {
+  write_response $chan $data $statusCode "plain/text" $headers
 }
 
-proc render_as_html { chan data {statusCode 200}} {
-  set contentType "text/html" 
-  wr_http_header $chan $statusCode
-  puts $chan [to_json $data]
+proc render_as_html { chan data {statusCode 200} {headers {}}} {
+  write_response $chan $data $statusCode "text/html" $headers
 }
 
 proc render_template {chan content} {
@@ -218,42 +200,46 @@ proc render_template {chan content} {
   set cmds [dict create]
   set text ""
   set html ""
+  set headers [dict create]
 
-  set templatesPath [dict get $_configs "templates"]
+  set templatesPath [dict get $_configs templates]
 
-  if { [dict exists $content "tpl"] } {
-    set tplFileName [dict get $content "tpl"]
+  if { [dict exists $content tpl] } {
+    set tplFileName [dict get $content tpl]
     set tplFile [open "$templatesPath/$tplFileName"]
     set tpl [read $tplFile]
     close $tplFile
   }
 
-  if { [dict exists $content "vars"] } {
-    set vars [dict get $content "vars"]
+  if { [dict exists $content vars] } {
+    set vars [dict get $content vars]
   }
 
-  if { [dict exists $content "cmds"] } {
-    set cmds [dict get $content "cmds"]
+  if { [dict exists $content cmds] } {
+    set cmds [dict get $content cmds]
   }
 
-  if { [dict exists $content "text"] } {
-    set text [dict get $content "text"]
+  if { [dict exists $content text] } {
+    set text [dict get $content text]
   }
 
-  if { [dict exists $content "html"] } {
-    set html [dict get $content "html"]
+  if { [dict exists $content html] } {
+    set html [dict get $content html]
+  }
+
+  if { [dict exists $content headers] } {
+    set headers [dict get $content headers]
   }
 
   #puts $chan "HTTP/1.0 200 OK"
   if { $text != "" } {
-    wr_http_ok $chan $text "text/plain" 
+    write_response $chan $text 200 "text/plain" 
   } elseif { $html != "" } {
-    wr_http_ok $chan $html
-    #puts $chan $html
+    write_response $chan $html 200 "text/html" 
   } elseif { $tpl != "" } {
-    wr_http_ok $chan [render $tpl $vars $cmds]
+    set html [render $tpl $vars $cmds]
+    write_response $chan $html 200 "text/html" 
   } else {
-    wr_http_header $chan "500 Internal Server Error"
-    puts $chan [bad_request "error.html" "no render options found, use \[tpl | text | html | json]"]
+    write_response $chan "500 Internal Server Error" 500
   }
 }
