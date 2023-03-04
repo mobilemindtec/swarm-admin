@@ -27,15 +27,32 @@ object ServiceLS:
       styleAttr("width: 100%; min-width: 100%"),
       thead(
         tr(
-          List("ID", "NAME", "REPLICAS").map(c => th(c))
+          List("ID", "NAME", "IMAGE", "REPLICAS", "PORTS").map(c => th(c))
         )
       ),
       tbody(
         children <-- servicesVar.signal.map(_.map(v => {
           tr(
-            td(a(href(s"/docker/service/ps/${v.id}"), v.id)),
-            td(v.name),
-            td(v.replicas.getOrElse("-"))
+            td(
+              dataAttr("title")("ID"),
+              a(href(s"/docker/service/ps/${v.id}"), v.id)
+            ),
+            td(
+              dataAttr("title")("NAME"),
+              v.name
+            ),
+            td(
+              dataAttr("title")("IMAGE"),
+              v.image
+            ),
+            td(
+              dataAttr("title")("REPLICAS"),
+              v.replicas.getOrElse("-")
+            ),
+            td(
+              dataAttr("title")("PORTS"),
+              v.ports.getOrElse("-")
+            )
           )
         }))
       )

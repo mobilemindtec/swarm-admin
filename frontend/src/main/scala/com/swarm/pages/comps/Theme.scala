@@ -5,4 +5,4 @@ import com.raquo.laminar.api.L.*
 object Theme:
 
   def terminal(children: Mod[HtmlElement]*) =
-    div(cls("terminal"), children)
+    div(cls("terminal table-responsive"), children)

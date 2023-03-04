@@ -16,7 +16,8 @@ object Login:
 
   case class User(username: String = "", password: String = ""):
     def validate = this.username.nonEmpty && this.password.nonEmpty
-
+  
+  
   val CookieAuthName = "SwarmAdminToken"
   val CookieExpirationName = "SwarmAdminTokenExpiration"
 

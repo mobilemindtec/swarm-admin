@@ -20,7 +20,7 @@ input.form-control:hover, input.form-control:active, input.form-control:focus, t
 }
 
 form button {
-  color: #4cd137;
+  color: rgba(76, 209, 55, 1);
   background-color: transparent;
   border: 0px;
   margin-top: 20px;
@@ -40,3 +40,113 @@ form .title {
   color: #40739e;
   padding: 30px 0;
 }
+
+.terminal{
+  height:500px;
+  overflow: auto;
+  background: #000;
+  width: 100%; 
+  text-align: left;
+  padding: 10px;
+  margin-top: 30px;
+}
+.terminal table{
+  color: rgba(76, 209, 55, 1);
+  font-size: 13px;            
+}
+
+.terminal table thead tr th {
+  border: 1px rgba(76, 209, 55, 1) solid;
+} 
+
+.terminal table tbody tr td {
+  border: 1px rgba(76, 209, 55, .3) solid;
+}
+
+.terminal a {
+  font-weight: bold;
+  color: rgba(76, 209, 55, 1); 
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 800px) {
+  
+  .terminal2 .cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+  .terminal2 * html .cf { zoom: 1; }
+  .terminal2 *:first-child+html .cf { zoom: 1; }
+  
+  .terminal2 table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+ 
+  .terminal2 th,
+  .terminal2 td { margin: 0; vertical-align: top; }
+  .terminal2 th { text-align: left; }
+  
+  .terminal2 table { display: block; position: relative; width: 100%; }
+  .terminal2 thead { display: block; float: left; }
+  .terminal2 tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+  .terminal2 thead tr { display: block; }
+  .terminal2 th { display: block; text-align: right; }
+  .terminal2 tbody tr { display: inline-block; vertical-align: top; }
+  .terminal2 td { display: block; min-height: 1.25em; text-align: left; }
+ 
+
+}
+            
+@media only screen and (min-width: 800px) {
+  .terminal table thead tr th {
+    padding: 0 5px;
+  } 
+
+  .terminal table tbody tr td {
+    padding: 5px;
+  }  
+}
+
+@media only screen and (max-width: 800px) {
+  
+  /* Force table to not be like tables anymore */
+  .terminal table, 
+  .terminal thead, 
+  .terminal tbody, 
+  .terminal th, 
+  .terminal td, 
+  .terminal tr { 
+    display: block; 
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .terminal thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .terminal td { 
+    /* Behave  like a "row" */
+    position: relative;
+    padding: 3px 0 5px 50%; 
+    white-space: normal;
+    text-align:left;
+  }
+ 
+  .terminal td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+ 
+  /*
+  Label the data
+  */
+  .terminal td:before { content: attr(data-title); }
+
+  .terminal tr { border: 1px solid rgba(76, 209, 55, 1); }
+}            

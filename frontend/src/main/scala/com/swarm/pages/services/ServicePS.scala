@@ -19,9 +19,9 @@ object ServicePS:
       case Failure(err)  => println(s"ERROR: ${err}")
     }
 
-  def page(id: String) = 
+  def page(id: String) =
     terminal(tb(id))
-  
+
   def tb(id: String) =
     table(
       onMountCallback(_ => mount(id)),
@@ -34,12 +34,30 @@ object ServicePS:
       tbody(
         children <-- servicesVar.signal.map(_.map(v => {
           tr(
-            td(v.id),
-            td(v.name),
-            td(v.image.getOrElse("-")),
-            td(v.node.getOrElse("-")),
-            td(v.currentState.getOrElse("-")),
-            td(v.err.getOrElse("-"))
+            td(
+              dataAttr("title")("ID"),
+              v.id
+            ),
+            td(
+              dataAttr("title")("NAME"),
+              v.name
+            ),
+            td(
+              dataAttr("title")("IMAGE"),
+              v.image.getOrElse("-")
+            ),
+            td(
+              dataAttr("title")("NODE"),
+              v.node.getOrElse("-")
+            ),
+            td(
+              dataAttr("title")("STATE"),
+              v.currentState.getOrElse("-")
+            ),
+            td(
+              dataAttr("title")("ERROR"),
+              v.err.filter(_.nonEmpty).getOrElse("-")
+            )
           )
         }))
       )

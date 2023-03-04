@@ -15,7 +15,6 @@ import scala.util.{Failure, Success}
 
 case class User(token: String)
 
-//val authenticationEvents = new EventBus[AuthenticationEvent]
 val authenticatedUser = Var[Option[User]](None)
 
 val requireAuthentication: Directive[User] =

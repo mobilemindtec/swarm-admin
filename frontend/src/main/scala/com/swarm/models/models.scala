@@ -8,6 +8,7 @@ object Models:
     id: String,
     name: String,
     replicas: Option[String] = None,
+    ports: Option[String] = None,
     image: Option[String] = None,
     node: Option[String] = None,
     err: Option[String] = None,
