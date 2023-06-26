@@ -3,7 +3,7 @@ package com.swarm.pages.services
 import com.raquo.laminar.api.L.*
 import com.swarm.api.ApiServer
 import com.swarm.models.Models.Service
-import com.swarm.pages.comps.Theme.terminal
+import com.swarm.pages.comps.Theme.{breadcrumb, terminal}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.scalajs.js
@@ -19,7 +19,11 @@ object ServiceLS:
       case Failure(err)  => println(s"ERROR: ${err}")
     }
 
-  def page() = terminal(tb())
+  def page() =
+    div(
+      breadcrumb(),
+      terminal(tb())
+    )
 
   def tb() =
     table(

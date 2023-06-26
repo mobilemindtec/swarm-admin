@@ -1,16 +1,17 @@
 package com.swarm
 
-import io.frontroute.*
+import frontroute._
 import org.scalajs.dom
 
 import scalajs.js
 import com.swarm.pages.Index
-import com.raquo.laminar.api.L.*
+import com.raquo.laminar.api.L._
 import com.swarm.util.Cookie
 
 object App:
 
-  lazy val node: HtmlElement = Index.page()
+  lazy val node: HtmlElement =
+    div(initRouting, Index.page())
 
 @main def main(args: String*) =
   lazy val container = dom.document.getElementById("app")

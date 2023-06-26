@@ -9,34 +9,35 @@ TODO
 ----
 
 #### docker
-- docker rm ${image-id}
-- docker ls
+- docker stop ${image-id} - 50/100
+- docker ps - 50/100
 - docker stats
 
+50/100
 - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 125408739825.dkr.ecr.us-east-1.amazonaws.com
 - eval "$(aws ecr get-login-password  --region us-east-1)"
 
 
 ### docker service
-- docker service rm ${service-name}
+- docker service rm ${service-name} - 50/100
 - docker service logs --timestamps --follow --tail 100 ${container-name}
-- docker service update --force ${service-name}
+- docker service update --force ${service-name} - 50/100
 
 - docker service logs $service-id
 	* (for all services ids to get all logs) 
 
 ### docker stack
-- docker stack rm ${stack-name}
-- docker stack deploy --with-registry-auth -c ${stack-name}.yaml $2
+- docker stack rm ${stack-name} - 50/100
+- docker stack deploy --with-registry-auth -c ${stack-name}.yaml $2 - 50/100
 
 ### clean docker disk space
-- docker system df
-- docker system prune -a
+- docker system df - 50/100
+- docker system prune -a - 50/100
 
 ### restart docker service
-- sudo service docker restart
-- sudo service docker stop
-- sudo service docker start
+- sudo service docker restart - 50/100
+- sudo service docker stop - 50/100
+- sudo service docker start - 50/100
 
 -- auth login
 -- responsive, mobile

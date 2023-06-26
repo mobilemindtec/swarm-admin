@@ -11,6 +11,24 @@
 		"username": "test",
 		"password": "test"
 	},
+	"docker": {
+		"stack": {
+			"path": "../swarm-stack-demo",
+			"ext": "yml"
+		},
+		"logs": {
+			"path": "/tmp"
+		},	
+		"aws": {
+			"region": "us-east-1",
+			"ecr_id": "125408739825"
+		}
+	},
+	"logger": {
+		"docker": {
+			"execute": "debug"
+		}
+	},
 	"routes": {
 
 		"/": {

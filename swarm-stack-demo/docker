@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case "$1" in
+
+    "build")
+        docker compose build
+        ;;
+    "up")
+        docker compose up
+        ;;
+    "deploy")
+        docker stack deploy --with-registry-auth -c stackdemo.yml stackdemo
+        ;;
+    "rm")
+        docker stack rm stackdemo
+        ;;
+    *)
+        echo "use build | up | deploy | rm"
+
+esac

@@ -3,7 +3,7 @@ package com.swarm.pages.services
 import com.raquo.laminar.api.L.*
 import com.swarm.api.ApiServer
 import com.swarm.models.Models.Service
-import com.swarm.pages.comps.Theme.terminal
+import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, terminal}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.scalajs.js
@@ -20,7 +20,12 @@ object ServicePS:
     }
 
   def page(id: String) =
-    terminal(tb(id))
+    div(
+      breadcrumb(
+        breadcrumbItem("docker ps", true)
+      ),
+      terminal(tb(id))
+    )
 
   def tb(id: String) =
     table(

@@ -1,7 +1,7 @@
 
 package require logger 0.3
 
-set log [logger::init main]
+set log [logger::init login_handler]
 
 
 source "./security/jwt.tcl"

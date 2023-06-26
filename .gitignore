@@ -21,8 +21,11 @@ apk
 platforms-tmp
 ipa
 */**/.idea
+.bloop
 screens/**/*
 screens
 node_modules
 *-lock*
 .bsp
+.idea
+.metals

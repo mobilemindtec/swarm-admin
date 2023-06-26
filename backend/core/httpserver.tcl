@@ -2,7 +2,7 @@
 package require logger 0.3
 package require coroutine
 
-set log [logger::init main]
+set log [logger::init httpserver]
 
 source "./http/render.tcl"
 source "./core/router.tcl"
@@ -397,7 +397,7 @@ proc run_app {configs routes} {
 
   set port [get_config $_configs 5151 server port]
 
-  puts "http server init on port $port..."
+  puts "http server started on http://localhost:$port"
   set sk [socket -server http_serve [expr $port * 1]]  
   vwait forever
 }

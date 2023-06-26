@@ -1,26 +1,17 @@
+#!/bin/tclsh
 
 package require logger 0.3
 package require json 1.3.3
 
-set log [logger::init main]
+source "./configs/configs.tcl"
+source "./docker/util.tcl"
+source "./docker/docker-service-cmd.tcl"
+source "./docker/docker-cmd.tcl"
+source "./docker/docker-stack-cmd.tcl"
+source "./docker/docker-system-cmd.tcl"
 
-proc normalize_line {line} {
-	set map [dict create "  " "-"]
-  set newline [string map $map $line]
-  set map [dict create " " "+"]
-  set newline [string map $map $newline]
-  set map [dict create "-" " "]
-  set newline [string map $map $newline]  	
-  return $newline
-}
+set log [logger::init docker]
 
-proc remove_plus {newline} {
-  set map [dict create "+" " "]
-  set newline [string map $map $newline]  	
-  set newline [string trim $newline]
-  set newline [regsub -all {[\r\n]+$} $newline ""]
-  return $newline
-}
 
 proc exec_docker_cmd {cmd args} {
 
@@ -30,114 +21,50 @@ proc exec_docker_cmd {cmd args} {
 
 	switch $cmd {
 	 	"service ls" {
-			exec_docker_service_ls
+			return [exec_docker_service_ls]
 		}
 		"service ps" {
-			exec_docker_service_ps $args
+			return [exec_docker_service_ps {*}$args]
+		}
+		"service rm" {
+			return [exec_docker_service_rm {*}$args]
+		}
+		"service update" {
+			return [exec_docker_service_update {*}$args]
+		}
+		"service get logs" {
+			return [exec_docker_service_get_logs {*}$args]
+		}
+		"ps" {
+			return [exec_docker_ps]
+		}		
+		"stop" {
+			return [exec_docker_stop {*}$args]
+		}		
+		"aws login" {
+			return [exec_docker_aws_login]
+		}
+		"system df" {
+			return [exec_docker_system_df]
+		}
+		"system prune" {
+			return [exec_docker_system_prune]
+		}
+		"system stats" {
+			return [exec_docker_system_stats]
+		}
+		"stack deploy" {
+			return [exec_docker_stack_deploy {*}$args]
+		}
+		"stack rm" {
+			return [exec_docker_stack_rm {*}$args]
 		}
 		default {
 			${log}::debug "CMD $cmd not found"
+			return [dict create error true message "command $cmd not found"]
 		}
 	}
 }
-
-proc exec_docker_cmd_fmt {cmd cb} {
-	variable log
-	${log}::debug "exec_docker_cmd_fmt"
-	set lines [split [exec {*}$cmd] "\n"] 
-	set results []
-	#${log}::debug "lines = $lines"
-	set lines [lrange $lines 1 [llength $lines]]
-
-	foreach line $lines {
-		set data [$cb $line]
-		lappend results $data
-		#puts "$id $name $replicated $replicatedCount "		
-	}
-
-	return $results		
-}
-
-proc exec_docker_service_ls {} {
-
-	variable log
-	set cmd [list \
-						docker \
-						service ls \
-						--format \
-						"{{.ID}},{{.Name}},{{.Image}},{{.Replicas}},{{.Ports}}"]
-
-	proc pformat {line} {
-		puts "line = $line"
-		#set newline [normalize_line $line]
-		#lassign $newline id name replicated replicatedCount
-		set rows [split $line ,] 	
-		set data {}
-		dict set data id [string trim [lindex $rows 0]]
-		dict set data name [string trim [lindex $rows 1]]
-		dict set data image [format_image [string trim [lindex $rows 2]]]
-		dict set data replicas [string trim [lindex $rows 3]]
-		dict set data ports [string trim [lindex $rows 4]]	
-
-		#dict set data id [remove_plus $id]
-		#dict set data name [remove_plus $name]
-		#dict set data replicas [remove_plus $replicatedCount]	
-		return $data	
-	}
-
-	set results [exec_docker_cmd_fmt $cmd pformat]
-
-	#${log}::debug " results = $results"
-	return [dict create columns [list id name image replicas ports] rows $results]		
-}
-
-proc format_image {image} {
-	set imageParts [split $image :]
-	set ilen [llength $imageParts]	
-	return [lindex $imageParts [expr $ilen - 2]]:[lindex $imageParts [expr $ilen - 1]]	
-}
-
-proc exec_docker_service_ps {id} {
-
-	variable log
-	set cmd [list \
-						docker \
-						service \
-						ps $id \
-						--no-trunc \
-						--format \
-						"{{.ID}},{{.Name}},{{.Image}},{{.Node}},{{.DesiredState}},{{.CurrentState}},{{.Error}},{{.Ports}}"]
-
-	proc pformat {line} {
-		#set newline [normalize_line $line]
-		set rows [split $line ,]		
-		#lassign $newline id name image node desiredState   currentState err ports 	
-		set data {}	
-		dict set data id [string trim [lindex $rows 0]]
-		dict set data name [string trim [lindex $rows 1]]
-		dict set data image [format_image [string trim [lindex $rows 2]]]	
-		dict set data node [string trim [lindex $rows 3]]	
-		dict set data desiredState [string trim [lindex $rows 4]]
-		dict set data currentState [string trim [lindex $rows 5]]
-		dict set data err [string trim [lindex $rows 6]]
-		dict set data ports [string trim [lindex $rows 7]]
-
-		#dict set data id [remove_plus $id]
-		#dict set data name [remove_plus $name]
-		#dict set data image [remove_plus $image]	
-		#dict set data node [remove_plus $node]	
-		#dict set data desiredState [remove_plus $desiredState]
-		#dict set data currentState [remove_plus $currentState]
-		#dict set data err [remove_plus $err]
-		return $data	
-	}
-
-	set results [exec_docker_cmd_fmt $cmd pformat]
-
-	#${log}::debug " results = $results"
-	return [dict create columns [list id name image node desired_state current_state err ports] rows $results]		
-}
-
 
 proc writeLogs {chan} {
 	# sudo apt install tcllib

@@ -2,7 +2,7 @@
 
 package require logger 0.3
 
-set log [logger::init main]
+set log [logger::init router]
 
 proc find_route {routes path} {
 

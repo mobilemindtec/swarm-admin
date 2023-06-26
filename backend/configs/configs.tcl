@@ -23,3 +23,8 @@ proc get_config {configs def args} {
 
 	return $curr
 }
+
+proc get_cnf {args} {
+	global _configs
+	get_config $_configs "" {*}$args
+}

@@ -26,10 +26,11 @@ set routes [dict get $configs routes]
 #dict set routes "/api/docker/ps" docker_ps
 
 
-puts ":: app routes"
+puts ":::: app routes ::::"
 dict for {k v} $routes {
-	puts ":: $k"
+	puts ":: route $k"
 }
+puts "::::::::::::::::::::"
 
 
 # cmd dockker stats

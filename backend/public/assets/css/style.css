@@ -48,7 +48,7 @@ form .title {
   width: 100%; 
   text-align: left;
   padding: 10px;
-  margin-top: 30px;
+  
 }
 .terminal table{
   color: rgba(76, 209, 55, 1);
@@ -150,3 +150,14 @@ form .title {
 
   .terminal tr { border: 1px solid rgba(76, 209, 55, 1); }
 }            
+
+
+.breadcrumb {
+  background-color: #353b48;
+  border-radius: 0;
+  margin: 20px 0 20px;
+}
+
+.breadcrumb .breadcrumb-item.active span{
+  color: rgba(76, 209, 55, 1);
+}
