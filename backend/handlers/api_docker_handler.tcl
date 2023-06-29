@@ -35,15 +35,13 @@ proc docker_service_ps {request} {
 	return [dict create json $data]
 }
 
-proc docker_node_ls {request} {
-	return [DockerServiceList $request]
+proc docker_service_rm {request} {
+	set cmd "service rm"
+	set pathVars [dict get $request vars]
+	set serviceName [dict get $pathVars service_name]
+	set result [exec_docker_cmd  "service rm" $serviceName]	
+	set data [dict create data $result]
+	return [dict create json $data]
 }
 
-proc docker_node_ps {request} {
-	return [DockerServicePs $request]
-}
-
-proc docker_ps {request} {
-	
-}
 

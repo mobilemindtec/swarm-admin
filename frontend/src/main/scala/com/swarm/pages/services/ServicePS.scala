@@ -24,6 +24,13 @@ object ServicePS:
       breadcrumb(
         breadcrumbItem("docker ps", true)
       ),
+      div(
+        cls("actions"),
+        a(
+          cls("action pull-left"),
+          "docker service rm"
+        )
+      ),
       terminal(tb(id))
     )
 
@@ -49,7 +56,7 @@ object ServicePS:
             ),
             td(
               dataAttr("title")("IMAGE"),
-              v.image.getOrElse("-")
+              v.image.map(x => if x.length > 30 then x.substring(0, 30) else x).getOrElse("-")
             ),
             td(
               dataAttr("title")("NODE"),

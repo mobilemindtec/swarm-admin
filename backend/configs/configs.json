@@ -63,6 +63,12 @@
 				"auth": true,
 				"methods": ["get"]
 		},
+		"/api/docker/service/rm/:service_name": {
+				"handler": "docker_service_rm",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
 		"/api/docker/node/ls": {
 				"handler": "docker_node_ls",
 				"before": ["auth_token"],

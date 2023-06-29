@@ -16,39 +16,39 @@ proc tcl2json value {
 
   #puts " -> $value ==> [::tcl::unsupported::representation $value], type = $type"
  
-    switch $type {
+  switch $type {
     string {
       #puts "write string $$value"
-        return [json::write string $value]
+      return [json::write string $value]
     }
     dict {
-        return [json::write object {*}[
+      return [json::write object {*}[
       dict map {k v} $value {tcl2json $v}]]
     }
     list {
-        return [json::write array {*}[lmap v $value {tcl2json $v}]]
+      return [json::write array {*}[lmap v $value {tcl2json $v}]]
     }
     int - double {
-        return [expr {$value}]
+      return [expr {$value}]
     }
     booleanString {
-        return [expr {$value ? "true" : "false"}]
+      return [expr {$value ? "true" : "false"}]
     }
     default {
       #puts "write string other $value"
         # Some other type; do some guessing...
-        if {$value eq "null"} {
+      if {$value eq "null"} {
       # Tcl has *no* null value at all; empty strings are semantically
       # different and absent variables aren't values. So cheat!
-      return $value
-        } elseif {[string is integer -strict $value]} {
-      return [expr {$value}]
-        } elseif {[string is double -strict $value]} {
-      return [expr {$value}]
-        } elseif {[string is boolean -strict $value]} {
-      return [expr {$value ? "true" : "false"}]
-        }
-        return [json::write string $value]
+        return $value
+      } elseif {[string is integer -strict $value]} {
+        return [expr {$value}]
+      } elseif {[string is double -strict $value]} {
+        return [expr {$value}]
+      } elseif {[string is boolean -strict $value]} {
+        return [expr {$value ? "true" : "false"}]
+      }
+      return [json::write string $value]
     }
   }
 }
