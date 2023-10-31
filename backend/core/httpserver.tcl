@@ -1,66 +1,42 @@
 
 package require logger 0.3
 package require coroutine
+package require uuid
 
-set log [logger::init httpserver]
-
-source "./http/render.tcl"
+source "./http/http.tcl"
 source "./core/router.tcl"
+source "./core/websocket.tcl"
 source "./configs/configs.tcl"
-source "./support/uuid.tcl"
+#source "./support/uuid.tcl"
 source "./json/json.tcl"
 
-global _routes
-global _configs
 
-proc get_uri_query {uri} {
-  set parts [split $uri ?]
-  set queries [lindex $parts 1]
-  set requestQuery [dict create]
-
-  foreach var [split $queries "&"] {
-    if { [string trim $var] == "" } {
-      continue
-    }
-    set param [split $var "="]
-    set k [lindex $param 0] 
-    set v [lindex $param 1]
-    dict set requestQuery $k $v 
-  }  
-  return $requestQuery
+namespace eval http_server {
+  variable log
+  set log [logger::init httpserver]
 }
 
-proc http_serve {socket addr port} {
+proc http_server::accept {socket addr port} {
+  #set uuid [uuid::uuid generate]
+  #chan configure $socket -blocking 0 -buffering line
+  #set coro [coroutine ::$uuid {*}[list handle $socket $addr $port]]  
 
-  # case 1
-  #fconfigure $socket -translation crlf -buffering line
-  #socket configure $socket -translation {crlf crlf} -blocking 0 -buffering full -buffersize 4096
-  #socket event $socket readable [list get_reply $socket]
-
-  # case 2
-  #fconfigure $socket -blocking 0
-  #fileevent $socket readable [list server_receive $socket]
-
-  # case 3
-  
-  set uuid [new_uuid]
-  set coro [coroutine ::$uuid {*}[list server_receive $socket $uuid]]
-  
-  #fconfigure $socket -blocking 0
-  #socket event $socket readable $coro  
+  chan configure $socket -blocking 0 -buffering line
+  chan event $socket readable [list http_server::handle $socket $addr $port]  
 }
 
-proc server_receive {socket uuid} {
+proc http_server::handle {socket addr port} {
   variable log
 
-  fileevent $socket readable {}
-  fconfigure $socket -blocking 0
+  #fileevent $socket readable {}
+  #fconfigure $socket -blocking 0
 
   if { [eof $socket]} {
     ${log}::debug "channel closed"
-    close $socket
+    try_close $socket
     return
   }
+
 
   # Default request data, they are overwritten if explicitly specified in 
   # the HTTP request
@@ -90,7 +66,7 @@ proc server_receive {socket uuid} {
         break }
 
       #set path "/[string trim [lindex $line 1] /]"
-      set requestQuery [get_uri_query $requestURI]
+      set requestQuery [router::get_uri_query $requestURI]
       
       # remove query from URI
       set parts [split $requestURI ?]
@@ -117,7 +93,7 @@ proc server_receive {socket uuid} {
 
   if {$state=="connecting"} {
     ${log}::debug {  No data received -> close socket}
-    catch {close $socket}
+    try_close $socket
     return
   }  
 
@@ -193,16 +169,16 @@ proc server_receive {socket uuid} {
   set contentType [dict get $requestHeader "content-type"]
 
   #puts "requestBody = $requestBody"
-
+  #puts "method=$requestMethod"
   if {[lsearch [list "GET" "OPTIONS"] $requestMethod] == -1} {
-    set body [body_parse $requestBody $contentType]
+    set body [request::body_parse $requestBody $contentType]
   } else {
     set body [dict create]
   }
 
   if {$body == "not_supported"} {
-    http_server_error $socket "content-type not supported" $contentType
-    close $socket
+    response::server_error $socket "content-type not supported" $contentType
+    try_close $socket
     return
   }
 
@@ -218,14 +194,15 @@ proc server_receive {socket uuid} {
 
   #${log}::debug "request = $request"
 
-  dispatch_handler $socket $request
+  dispatch $socket $request
 
 }
 
-proc dispatch_handler {socket request} {
+proc http_server::try_close {socket} {
+  catch {close $socket}
+}
 
-  global _routes
-  global _configs
+proc http_server::dispatch {socket request} {
 
   variable log
 
@@ -233,28 +210,48 @@ proc dispatch_handler {socket request} {
   set query [dict get $request query]
   set method [dict get $request method]
   set contentType [dict get $request contentType]
+  set headers [dict get $request headers]
 
-  ${log}::debug "HTTP REQUEST: $path"
+  ${log}::debug "HTTP REQUEST: $method $path"
 
   set body ""
   set handler ""
 
-  if {[string match "/public/assets/*" $path]}  {
+  if {[string match "/public/assets/*" $path]} {
     
-    set assetsPath [dict get $_configs "assets"]
+    set assetsPath [dict get $app::configs "assets"]
     set map {} 
     lappend map "/public/assets" $assetsPath
 
-    render_asset $socket [string map $map $path]    
-    close $socket
+    response::asset $socket [string map $map $path]    
+    try_close $socket
+
+  } elseif {[string match "/raw/logs/*" $path]} {
+    
+    set logsPath [dict get $app::configs docker logs path]
+    set map {} 
+    lappend map "/raw/logs" $logsPath
+
+    response::raw $socket [string map $map $path]    
+    try_close $socket
+
+  } elseif {[string match "/download/logs/*" $path]} {
+    
+    set logsPath [dict get $app::configs docker logs path]
+    set map {} 
+    lappend map "/download/logs" $logsPath
+
+    response::download $socket [string map $map $path]    
+    try_close $socket
 
   } else {
 
-    set foudedRoute [find_route $_routes $path]
+    set foudedRoute [router::match $path $method]
 
-    if { $foudedRoute == "not_found" } {      
-      http_server_not_found $socket "Not Found" $contentType 
-      close $socket   
+    if { $foudedRoute == "not_found" } {
+      ${log}::debug "route not found for $method $path"
+      response::not_found $socket "Not Found" $contentType 
+      try_close $socket   
       return
     }
 
@@ -263,25 +260,17 @@ proc dispatch_handler {socket request} {
     set pathVars [dict get $foudedRoute vars]
     set methods [dict get $foudedRoute methods]
     set auth [dict get $foudedRoute auth]
+    set isWs [dict get $foudedRoute ws]
     set beforeHandlers [dict get $foudedRoute "before"]
     set afterHandlers [dict get $foudedRoute "after"]
 
-    if {[lsearch $methods [string tolower $method]] == -1} {
-      http_server_not_found $socket "Not Found" $contentType 
-      close $socket   
-      return      
-    }
-
-    if { $handler == "" } {
-      ${log}::error "HTTP HANDLER not found to route $routeName"    
-      http_server_error $socket "Internal Server Error" $contentType
-      close $socket 
+    if { $handler == "" && !$isWs } {
+      response::server_error $socket "handler not found" $contentType
+      try_close $socket 
       return
     }
 
     if {[catch {
-
-      ${log}::debug "execute handler $handler"
 
       dict set request route $routeName
       dict set request vars $pathVars
@@ -291,13 +280,21 @@ proc dispatch_handler {socket request} {
         if {[dict exists $ret next]} {
           set request [dict get $ret next]
         } else {
-          render_response $socket $ret $contentType
-          close $socket
+          response::slect_render $socket $ret $contentType
+          try_close $socket        
           return
         }
       }
 
-      #puts "execute handler"
+      if {$isWs} {
+        puts "do websocket upgrade"
+        set headers [websocket_app::check_headers $headers]        
+        websocket_app::upgrade $app::ServerSocket $socket $headers      
+        return
+      }
+      
+      ${log}::debug "handler = $handler"
+
       set response [$handler $request]
 
       foreach action $afterHandlers {
@@ -305,22 +302,21 @@ proc dispatch_handler {socket request} {
         if {[dict exists $ret next]} {
           set response [dict get $ret next]
         } else {
-          render_response $socket $ret $contentType
-          close $socket
+          response::slect_render $socket $ret $contentType
+          try_close $socket
           return
         }
       }
 
-      render_response $socket $response $contentType
-      close $socket
+      response::slect_render $socket $response $contentType
+      try_close $socket
 
     } err]} {
 
       if {$err != ""} {
-        ${log}::error "Error to process handler to route $routeName: $err"
-
-        http_server_error $socket "Internal Server Error" $contentType 
-        close $socket
+        ${log}::error "$::errorInfo"
+        response::server_error $socket "error to process handler: $err" $contentType 
+        try_close $socket
       }
 
     }        
@@ -328,77 +324,7 @@ proc dispatch_handler {socket request} {
 }
 
 
-proc render_response {socket response contentType} {
 
-  variable log
 
-  #${log}::debug "render_response $response"
 
-  if {$response == ""} {
-    http_server_ok $socket $response $contentType 
-    return
-  } 
-
-  set bodyType "json"
-  set statusCode 200
-  set headers [dict create]
-
-  if { [dict exists $response tpl] } {
-    set bodyType tpl
-  }
-
-  if { [dict exists $response json] } {
-    set bodyType json
-  }
-
-  if { [dict exists $response text] } {
-    set bodyType text
-  }
-
-  if { [dict exists $response statusCode] } {
-    set statusCode [dict get $response statusCode]
-  }
-
-  if { [dict exists $response headers] } {
-    set headers [dict get $response headers]
-  }
-
-  set bodyValue ""
-
-  switch $bodyType {
-    tpl {
-      render_template $socket $response
-    }
-    json {                
-      set bodyValue [dict get $response json]
-      render_as_json $socket $bodyValue $statusCode $headers
-    }
-    text {
-      set bodyValue [dict get $response json]
-      render_as_text $socket $bodyValue $statusCode $headers
-    }
-    html {
-      set bodyValue [dict get $response json]
-      render_as_html $socket $bodyValue $statusCode $headers
-    }
-    default {
-      ${log}::error "unknow response type: $bodyType "
-      write_response $socket $response 200 $contentType $headers
-    }
-  }        
-}
-
-proc run_app {configs routes} {
-  global _routes
-  global _configs
-
-  set _routes $routes
-  set _configs $configs
-
-  set port [get_config $_configs 5151 server port]
-
-  puts "http server started on http://localhost:$port"
-  set sk [socket -server http_serve [expr $port * 1]]  
-  vwait forever
-}
 

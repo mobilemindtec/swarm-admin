@@ -5,9 +5,13 @@ package require logger 0.3
 source "./docker/docker-execute.tcl"
 source "./docker/util.tcl"
 
-set log [logger::init docker-cmd]
+namespace eval docker {
+	variable log
+	set log [logger::init docker-cmd]
+}
 
-proc exec_docker_ps {} {
+
+proc docker::ps {} {
 	variable log
 	set cmd [list \
 				docker \
@@ -26,15 +30,15 @@ proc exec_docker_ps {} {
 		return $data	
 	}
 
-	set results [docker_execute_with_fmt $cmd pformat]
+	set results [execute_with_fmt $cmd pformat]
 
 	return [dict create columns [list id name image createdAt state status] rows $results]
 }
 
-proc exec_docker_stop {containerId} {
+proc docker::stop {containerId} {
 	variable log
 	set cmd [list docker stop $containerId]
-	docker_execute $cmd
+	execute $cmd
 } 
 
 # use credential helper
@@ -47,7 +51,7 @@ proc exec_docker_stop {containerId} {
 #	    "<ecr id>.dkr.ecr.<region>.amazonaws.com": "ecr-login"
 #	  }                                                                                                          
 #	} 
-proc exec_docker_aws_login {} {	
+proc docker::aws_login {} {
 	variable log
 
 	set region [get_cnf docker aws region]
@@ -60,13 +64,13 @@ proc exec_docker_aws_login {} {
 									--password-stdin $ecrId.dkr.ecr.$region.amazonaws.com]
 	set cmdEval [list "eval \$(aws ecr get-login-password --region $region)"]
 	
-	set result [docker_execute $cmdLogin]
+	set result [execute $cmdLogin]
 
 	if {[dict get $result error]} {
 		return $result
 	}
 
-	docker_execute $cmdEval
+	execute $cmdEval
 } 
 
 

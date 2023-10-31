@@ -3,22 +3,28 @@
 package require logger 0.3
 
 source "./configs/configs.tcl"
+source "./docker/util.tcl"
+
+namespace eval docker {
+	variable log
+	set log [logger::init docker-execute]
+}
 
 
-proc docker_execute_with_fmt {cmd cb args} {
+proc docker::execute_with_fmt {cmd cb args} {
 	variable log
 
-	${log}::debug "docker_execute $cmd"
+	${log}::debug $cmd
 	set lines ""
 
 	if {[catch {
 		set lines [split [exec {*}$cmd] "\n"] 
 	} err]} {
-		${log}::error "docker_execute: $err"
-		return [dict create error true message $err]
+		${log}::error $err
+		return [json_error $err]
 	}
 	
-	set results []
+	set results [list]
 	#${log}::debug "lines = $lines"
 	#set lines [lrange $lines 1 [llength $lines]]
 
@@ -28,22 +34,22 @@ proc docker_execute_with_fmt {cmd cb args} {
 		lappend results $data
 	}
 
-	return $results		
+	return [dict create error false data $results]		
 }
 
-proc docker_execute {cmd} {
+proc docker::execute {cmd} {
 	variable log
 
-	${log}::debug "docker_execute $cmd"
+	${log}::debug $cmd
 	set result ""
 
 	if {[catch {
 		set result [split [exec {*}$cmd] "\n"] 
 	} err]} {
-		${log}::error "docker_execute: $err"
-		return [dict create error true message $err]
+		${log}::error $err
+		return [json_error $err]
 	}
 
 	set lines [lsearch -all -inline -not -exact [split $result \n] {}]
-	return [dict create error false message $lines]
+	return [dict create error false messages $lines]
 }

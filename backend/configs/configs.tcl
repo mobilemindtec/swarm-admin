@@ -25,6 +25,9 @@ proc get_config {configs def args} {
 }
 
 proc get_cnf {args} {
-	global _configs
-	get_config $_configs "" {*}$args
+		get_config $app::configs "" {*}$args
+}
+
+proc get_cnf_or_def {def args} {
+		get_config $app::configs $def {*}$args
 }

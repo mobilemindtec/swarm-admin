@@ -1,42 +1,66 @@
 package com.swarm.pages
-import com.swarm.pages.comps.Theme.*
-import com.swarm.pages.services.{ServiceLS, ServicePS}
-import frontroute.*
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
-import com.raquo.laminar.tags.HtmlTag
-import com.swarm.api.ApiServer
-import com.swarm.util.{Cookie, HtmlUtil}
-import org.scalajs.dom
-import org.scalajs.dom.{MouseEvent, window}
-import org.scalajs.dom.window.document
-
-import scala.util.{Failure, Success}
+import com.swarm.laminar.Drawer
+import com.swarm.pages.Index.DrawerMenuItem.{AwsCodeBuildApp, Home, Stack}
+import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppPage
+import com.swarm.pages.adm.stack.StackPage
+import com.swarm.pages.services.{ServiceLS, ServiceLogStream, ServicePS}
 import com.swarm.services.AuthService
-import com.swarm.services.AuthService.{AuthenticationEvent, UserAuth, authenticatedUser, authenticationEvents}
+import com.swarm.services.AuthService.{UserAuth, authenticatedUser}
+import frontroute.*
+import org.scalajs.dom
+import org.scalajs.dom.{Event, document, html, window}
 
 object Index:
+
+  enum DrawerMenuItem:
+    case Home, Stack, AwsCodeBuildApp
+
+  val drawerMenuItemVar = Var[DrawerMenuItem](DrawerMenuItem.Home)
+  val menuItemCls = "list-group-item" :: "list-group-item-action" :: "rounded-0" :: Nil
+
+  def getDrawerMenuItemCls(item: DrawerMenuItem) =
+    drawerMenuItemVar.signal.map { curr =>
+      if curr == item then menuItemCls :+ "active" else menuItemCls
+    }
 
   def route =
     div(
       child <-- authenticatedUser.map(render)
     )
   def render(maybeUser: Option[UserAuth]) =
-    println(s"maybeUser = ${maybeUser.isEmpty}")
     div(
       firstMatch(
         pathEnd {
           provideOption(maybeUser) { us_er =>
-            ServiceLS.page()
+            ServiceLS()
           }
         },
         path("docker" / "service" / "ps" / segment) { id =>
           provideOption(maybeUser) { _ =>
-            ServicePS.page(id)
+            ServicePS(id)
+          }
+        },
+        path("docker" / "service" / "log" / "stream" / segment) { id =>
+          provideOption(maybeUser) { _ =>
+            ServiceLogStream(id)
+          }
+        },
+        pathPrefix("adm" / "stack") {
+          provideOption(maybeUser) { _ =>
+            drawerMenuItemVar.update(_ => DrawerMenuItem.Stack)
+            StackPage()
+          }
+        },
+        pathPrefix("adm" / "aws" / "codebuild" / "app") {
+          provideOption(maybeUser) { _ =>
+            drawerMenuItemVar.update(_ => DrawerMenuItem.AwsCodeBuildApp)
+            AwsCodeBuildAppPage()
           }
         },
         path("app" / "login") {
-          Login.page()
+          Login()
         },
         extractUnmatchedPath { unmatched =>
           div(
@@ -48,6 +72,57 @@ object Index:
     )
 
   def skeleton[Ref <: dom.html.Element](children: ReactiveHtmlElement[Ref]*): HtmlElement =
+    Drawer(
+      drawerMenu,
+      drawerContent(children*),
+      Drawer.mockBottom,
+      authenticatedUser.map(p => p.nonEmpty)
+    )
+
+  def drawerMenu =
+    div(
+      cls := "h-100 bg-dark",
+      div(cls := "p-4 bg-dark", a(href := "#", h1(cls := "text-white", "Swarm Admin"))),
+      ul(
+        cls := "list-group",
+        onClick --> Drawer.toogle,
+        a(
+          cls <-- getDrawerMenuItemCls(Home),
+          href("/"),
+          "Home"
+        ),
+        a(
+          cls <-- getDrawerMenuItemCls(Stack),
+          href("/adm/stack"),
+          "Stacks"
+        ),
+        a(
+          cls <-- getDrawerMenuItemCls(AwsCodeBuildApp),
+          href("/adm/aws/codebuild/app"),
+          "Aws CodeBuild Apps"
+        ),
+        a(
+          cls("list-group-item list-group-item-action rounded-0"),
+          href("#"),
+          "Logout",
+          onClick --> (_ => AuthService.logout())
+        )
+      )
+    )
+
+  def drawerContent[Ref <: dom.html.Element](children: ReactiveHtmlElement[Ref]*): HtmlElement =
+    mainTag(
+      cls("inner cover"),
+      div(
+        cls("row-fluid"),
+        div(
+          cls("col-12"),
+          children
+        )
+      )
+    )
+
+  def skeleton1[Ref <: dom.html.Element](children: ReactiveHtmlElement[Ref]*): HtmlElement =
     div(
       cls("container-fluid"),
       headerTag(
@@ -56,7 +131,7 @@ object Index:
           cls("inner"),
           h3(
             cls("masthead-brand"),
-            "Swarm Admin"
+            a(href("/"), "Swarm Admin")
           ),
           child.maybe <-- authenticatedUser.signal.map(
             _.map(_ =>
@@ -66,6 +141,16 @@ object Index:
                   cls("nav-link"),
                   href("/"),
                   "Home"
+                ),
+                a(
+                  cls("nav-link"),
+                  href("/adm/stack"),
+                  "Stacks"
+                ),
+                a(
+                  cls("nav-link"),
+                  href("/adm/aws/codebuild/app"),
+                  "Aws CodeBuild Apps"
                 ),
                 a(
                   cls("nav-link"),
@@ -93,7 +178,7 @@ object Index:
   def page() =
     skeleton(
       div(
-        onMountCallback((_) => AuthService.enterApp()),
+        onMountCallback(_ => AuthService.enterApp()),
         route
       )
     )

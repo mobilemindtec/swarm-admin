@@ -26,6 +26,7 @@ TODO
 - docker service logs $service-id
 	* (for all services ids to get all logs) 
 
+
 ### docker stack
 - docker stack rm ${stack-name} - 50/100
 - docker stack deploy --with-registry-auth -c ${stack-name}.yaml $2 - 50/100
@@ -33,6 +34,7 @@ TODO
 ### clean docker disk space
 - docker system df - 50/100
 - docker system prune -a - 50/100
+- docker system stats
 
 ### restart docker service
 - sudo service docker restart - 50/100
@@ -65,4 +67,9 @@ $ sudo apt install tcllib
 Install ornament
 
 $sudo ./installmodule.tcl ornament_tcl/ornament-0.1.tm
+
+
+
+
+auth
 

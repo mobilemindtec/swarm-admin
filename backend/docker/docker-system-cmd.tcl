@@ -5,22 +5,25 @@ package require logger 0.3
 source "./docker/docker-execute.tcl"
 source "./docker/util.tcl"
 
-set log [logger::init docker-system-cmd]
+namespace eval docker {
+	variable log
+	set log [logger::init docker-system-cmd]
+}
 
-proc exec_docker_system_df {} {
+proc docker::system_df {} {
 	variable log
 	set cmd [list docker system df]
-	docker_execute $cmd
+	execute $cmd
 } 
 
-proc exec_docker_system_prune {} {
+proc docker::system_prune {} {
 	variable log
 	set cmd [list docker system prune -a]
-	docker_execute $cmd
+	execute $cmd
 } 
 
-proc exec_docker_stats {} {
+proc docker::stats {} {
 	variable log
 	set cmd [list docker stats]
-	docker_execute $cmd
+	execute $cmd
 } 

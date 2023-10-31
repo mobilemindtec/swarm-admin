@@ -1,8 +1,8 @@
 package com.swarm.services
 
 import com.raquo.laminar.api.L.*
-import com.swarm.api.ApiServer
-import com.swarm.api.ApiServer.ApiAuthResult
+import com.swarm.api.ApiAuth
+import com.swarm.api.ApiAuth.ApiAuthResult
 import com.swarm.util.Cookie
 import org.scalajs.dom.window
 import org.scalajs.dom.window.document
@@ -47,7 +47,7 @@ object AuthService:
 
   def login(u: UserLogin): Future[Unit] =
     val p = Promise[Unit]()
-    ApiServer
+    ApiAuth
       .login(u.username, u.password)
       .onComplete {
         case Success(r) =>

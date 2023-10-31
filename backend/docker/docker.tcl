@@ -10,10 +10,12 @@ source "./docker/docker-cmd.tcl"
 source "./docker/docker-stack-cmd.tcl"
 source "./docker/docker-system-cmd.tcl"
 
-set log [logger::init docker]
+namespace eval docker {
+	variable log
+	set log [logger::init docker]
+}
 
-
-proc exec_docker_cmd {cmd args} {
+proc docker::cmd {cmd args} {
 
 	variable log
 
@@ -21,43 +23,43 @@ proc exec_docker_cmd {cmd args} {
 
 	switch $cmd {
 	 	"service ls" {
-			return [exec_docker_service_ls]
+			return [service_ls]
 		}
 		"service ps" {
-			return [exec_docker_service_ps {*}$args]
+			return [service_ps {*}$args]
 		}
 		"service rm" {
-			return [exec_docker_service_rm {*}$args]
+			return [service_rm {*}$args]
 		}
 		"service update" {
-			return [exec_docker_service_update {*}$args]
+			return [service_update {*}$args]
 		}
-		"service get logs" {
-			return [exec_docker_service_get_logs {*}$args]
+		"service logs get" {
+			return [service_logs_get {*}$args]
 		}
 		"ps" {
-			return [exec_docker_ps]
+			return [ps]
 		}		
 		"stop" {
-			return [exec_docker_stop {*}$args]
+			return [stop {*}$args]
 		}		
 		"aws login" {
-			return [exec_docker_aws_login]
+			return [aws_login]
 		}
 		"system df" {
-			return [exec_docker_system_df]
+			return [system_df]
 		}
 		"system prune" {
-			return [exec_docker_system_prune]
+			return [system_prune]
 		}
 		"system stats" {
-			return [exec_docker_system_stats]
+			return [system_stats]
 		}
 		"stack deploy" {
-			return [exec_docker_stack_deploy {*}$args]
+			return [stack_deploy {*}$args]
 		}
 		"stack rm" {
-			return [exec_docker_stack_rm {*}$args]
+			return [stack_rm {*}$args]
 		}
 		default {
 			${log}::debug "CMD $cmd not found"

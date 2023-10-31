@@ -1,7 +1,8 @@
 package com.swarm.api
 
+import br.com.mobilemind.nconv.custom.JsonMapper.Mappeable
 import com.swarm.configs.AppConfigs
-import com.swarm.models.Models.Service
+import com.swarm.models.Models.{CmdResult, Service}
 import com.swarm.util.Cookie
 import org.scalajs.dom
 
@@ -13,17 +14,13 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import js.Thenable.Implicits.*
 import org.getshaka.nativeconverter.{NativeConverter, fromJson, fromNative}
 
+import scala.annotation.internal.MappedAlternative
+
 object ApiServer:
 
   case class ApiResult[T](data: T) derives NativeConverter
-  case class ApiAuthResult(
-    token: Option[String] = None,
-    expires_at: Option[Long] = None,
-    error: Option[String] = None
-  ) derives NativeConverter:
-    def hasError = this.error.nonEmpty
 
-  private def defaultHeaders =
+  def defaultHeaders =
     val token = getToken()
     val headers = Map(
       "Content-Type" -> "application/json",
@@ -31,26 +28,10 @@ object ApiServer:
     )
     token.map(s => headers + ("Authorization" -> s"Bearer $s")).getOrElse(headers)
 
-  private def getToken(): Option[String] =
+  def getToken(): Option[String] =
     Cookie.getCookie("SwarmAdminToken")
 
-  def login(username: String, password: String): Future[ApiAuthResult] =
-    val url = s"${AppConfigs.serverUrl}/login"
-    val payload = js.Dynamic.literal(username = username, password = password)
-    fetch(url, "POST", Some(payload), defaultHeaders)
-      .map(r => NativeConverter[ApiAuthResult].fromNative(r))
-
-  def servicesLs(): Future[ApiResult[List[Service]]] =
-    val url = s"${AppConfigs.serverUrl}/api/docker/service/ls"
-    fetch(url, "GET", None, defaultHeaders)
-      .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
-
-  def servicesPs(id: String): Future[ApiResult[List[Service]]] =
-    val url = s"${AppConfigs.serverUrl}/api/docker/service/ps/${id}"
-    fetch(url, "GET", None, defaultHeaders)
-      .map(r => NativeConverter[ApiResult[List[Service]]].fromNative(r))
-
-  private def fetch(
+  def fetch(
     url: String,
     method: String,
     body: Option[js.Any],

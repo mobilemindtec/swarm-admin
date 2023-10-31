@@ -2,8 +2,7 @@ version: '3.7'
 
 services:
   web:
-    image: 127.0.0.1:5000/stackdemo
-    build: .
+    image: stackdemo
     ports:
       - "8000:8000"
   redis:

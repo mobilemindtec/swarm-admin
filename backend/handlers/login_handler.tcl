@@ -7,8 +7,6 @@ set log [logger::init login_handler]
 source "./security/jwt.tcl"
 source "./configs/configs.tcl"
 
-global _configs
-
 proc auth_token {request} {
 
 	variable log
@@ -30,7 +28,7 @@ proc auth_token {request} {
 
 	set token [string trim [lindex [split $token " "] 1]]
 
-	set valid [token_validate $token]
+	set valid [jwt::validate $token]
 
 	if {!$valid} {
 		return [dict create json [dict create error "invalid token"] statusCode 401]	
@@ -40,7 +38,6 @@ proc auth_token {request} {
 }
 
 proc login {request} {
-	global _configs
 	variable log
 
 	${log}::debug "execute login"
@@ -55,8 +52,8 @@ proc login {request} {
 		return [dict create json [dict create error "password is required"] statusCode 401]
 	}
 
-	set username [get_config $_configs "" credentials username]
-	set password [get_config $_configs "" credentials password]
+	set username [get_cnf_or_def "" credentials username]
+	set password [get_cnf_or_def "" credentials password]
 
 	if { $username != [dict get $body username]} {
 		return [dict create json [dict create error "invalid username or password"] statusCode 401]
@@ -66,5 +63,5 @@ proc login {request} {
 		return [dict create json [dict create error "invalid username or password"] statusCode 401]
 	}
 
-	return [dict create json [new_token]]
+	return [dict create json [jwt::token]]
 }

@@ -1,9 +1,9 @@
 package com.swarm.pages.services
 
 import com.raquo.laminar.api.L.*
-import com.swarm.api.ApiServer
+import com.swarm.api.ApiDockerService
 import com.swarm.models.Models.Service
-import com.swarm.pages.comps.Theme.{breadcrumb, terminal}
+import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, terminal}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.scalajs.js
@@ -11,21 +11,33 @@ import scala.util.{Failure, Success}
 
 object ServiceLS:
 
-  val servicesVar = Var(List[Service]())
+  private val servicesVar = Var(List[Service]())
 
-  private def mount() =
-    ApiServer.servicesLs().onComplete {
+  def apply() = node()
+
+  private def apiSync() =
+    ApiDockerService.ls().onComplete {
       case Success(data) => servicesVar.update(_ => data.data)
-      case Failure(err)  => println(s"ERROR: ${err}")
+      case Failure(err)  => println(s"ERROR: $err")
     }
+  private def mount() = apiSync()
 
-  def page() =
+  private def node() =
     div(
-      breadcrumb(),
+      breadcrumb(
+        breadcrumbItem(
+          a(
+            href("#"),
+            span(s"docker service ls"),
+            onClick --> (_ => apiSync())
+          ),
+          true
+        )
+      ),
       terminal(tb())
     )
 
-  def tb() =
+  private def tb() =
     table(
       onMountCallback(_ => mount()),
       styleAttr("width: 100%; min-width: 100%"),

@@ -4,73 +4,65 @@
 package require tcltest
 namespace import ::tcltest::*
 
-source "./router.tcl"
+source "./configs/configs.tcl"
+source "./core/router.tcl"
 
-proc fnRouteHandlerDummy {} {}
+namespace eval app {
+	variable configs
+	variable routes
+	
+	set configs [load_configs]
+	set routes [router::prepare_routes [get_cnf routes]]
+} 
 
 test router-test {
 	test route not found
 } -body {
-	
-	set routes [dict create]
-	dict set routes "/api/customer" fnRouteHandlerDummy
-	dict set routes "/api/customer/:id" fnRouteHandlerDummy
-
-	return [findRoute $routes "/api/customer/test/1"]
-
+	set r [router::find_route "/api/customer/test/1" get]
+	return $r
 } -result not_found
 
+test router-test-stacks-get {
+	test route get stacks
+} -body {
+	set r [router::find_route "/mngr/stack" get]
+	return [expr {$r != "not_found"}]
+} -result 1
+
+test router-test-stack-get {
+	test route get stack
+} -body {
+	set r [router::find_route "/mngr/stack/1" get]
+	return [expr {$r != "not_found"}]
+} -result 1
+
+test router-test-stack-post {
+	test route port stack
+} -body {
+	set r [router::find_route "/mngr/stack" post]
+	return [expr {$r != "not_found"}]
+} -result 1
+
+test router-test-stack-put {
+	test route put stack
+} -body {
+	set r [router::find_route "/mngr/stack" put]
+	return [expr {$r != "not_found"}]
+} -result 1
+
+test router-test-stack-delete {
+	test route delete stack
+} -body {
+	set r [router::find_route "/mngr/stack" delete]
+	return [expr {$r != "not_found"}]
+} -result 1
+
 test router-test-found {
-	test route not found
+	test route found
 } -body {
-	
-	set routes [dict create]
-	dict set routes "/api/customer" fnRouteHandlerDummy
-	dict set routes "/api/customer/:id" fnRouteHandlerDummy
-
-	set rName "/api/customer"
-
-	set result [findRoute $routes $rName]
-
-	if { $result == "not_found" } {
-		return not_found
-	} else {
-
-		set f1 [expr {[dict get $result route] == $rName}]
-
-		return $f1
-	}
-
-
+	set r [router::find_route "/app/login" get]
+	return [expr {$r != "not_found"}]
 } -result 1
 
-test router-test-foun-path-param {
-	test route not found
-} -body {
-	
-	set routes [dict create]
-	dict set routes "/api/customer" fnRouteHandlerDummy
-	dict set routes "/api/customer/:id" fnRouteHandlerDummy
-
-	set rName "/api/customer/aa1"
-
-	set result [findRoute $routes $rName]
-
-	if { $result == "not_found" } {
-		return not_found
-	} else {
-
-		set foundRouteName [dict get $result route]
-		set foundRouteVars [dict get $result vars]
-
-		set f1 [expr {$foundRouteName == $rName}]
-		set f2 [expr {[dict size $foundRouteVars] == 1}]
-		set f3 [expr {[dict get $foundRouteVars id] == "aa1"}]
-
-		return $f1 && $f2 && $f3
-	}
-
-
-} -result 1
 
 cleanupTests

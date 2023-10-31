@@ -2,10 +2,15 @@
 	"templates": "./public/templates",
 	"assets": "./public/assets",
 	"server": {
-		"port": 5151
+		"port": 5151,
+		"workers": 1
+	},
+	"authenticator": {
+		"secret": "",
+		"url": "https://authenticatorapi.com/"
 	},
 	"jwt" : {
-		"secret": "12345678910"
+		"secret": ""
 	},
 	"credentials": {
 		"username": "test",
@@ -20,8 +25,8 @@
 			"path": "/tmp"
 		},	
 		"aws": {
-			"region": "us-east-1",
-			"ecr_id": "125408739825"
+			"region": "",
+			"ecr_id": ""
 		}
 	},
 	"logger": {
@@ -30,9 +35,13 @@
 		}
 	},
 	"routes": {
-
 		"/": {
 			"handler": "index",
+			"auth": false,
+			"methods": ["get"]
+		},		
+		"/websocket": {
+			"handler": "websocket",
 			"auth": false,
 			"methods": ["get"]
 		},		
@@ -42,6 +51,11 @@
 			"methods": ["get"]
 		},			
 		"/docker/*": {
+			"handler": "index",
+			"auth": false,
+			"methods": ["get"]
+		},		
+		"/adm/*": {
 			"handler": "index",
 			"auth": false,
 			"methods": ["get"]
@@ -69,6 +83,18 @@
 				"auth": true,
 				"methods": ["get"]
 		},
+		"/api/docker/service/update/:service_name": {
+				"handler": "docker_service_update",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
+		"/api/docker/service/logs/get/:service_name": {
+				"handler": "docker_service_logs_get",
+				"before": ["auth_token"],
+				"auth": true,
+				"methods": ["get"]
+		},
 		"/api/docker/node/ls": {
 				"handler": "docker_node_ls",
 				"before": ["auth_token"],
@@ -86,6 +112,17 @@
 				"before": ["auth_token"],
 				"auth": true,
 				"methods": ["get"]
+		},
+		"/ws": {
+			"handler": "",
+			"before": [],
+			"auth": true,
+			"methods": ["get"],
+			"ws": true						
 		}
+	},
+	"websocket":{
+		"handler": "websocket_handler",
+		"handler_msg": ""
 	}
 }

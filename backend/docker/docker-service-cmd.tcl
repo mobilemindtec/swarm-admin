@@ -7,9 +7,13 @@ source "./configs/configs.tcl"
 source "./docker/docker-execute.tcl"
 source "./docker/util.tcl"
 
-set log [logger::init docker-service-cmd]
+namespace eval docker {
+	variable log
+	set log [logger::init docker-service-cmd]
+}
 
-proc exec_docker_service_ls {} {
+
+proc docker::service_ls {} {
 
 	variable log
 	set cmd [list \
@@ -29,16 +33,18 @@ proc exec_docker_service_ls {} {
 		return $data	
 	}
 
-	set results [docker_execute_with_fmt $cmd pformat]
+	set results [execute_with_fmt $cmd pformat]
 
-	if {[dict exists $results error]} {
+	if {[has_error $results]} {
 		return $results
 	}
 
-	return [dict create columns [list id name image replicas ports] rows $results]		
+	set data [dict get $results data]
+	set columns [list id name image replicas ports]
+	return [dict create columns $columns rows $data]		
 }
 
-proc exec_docker_service_ps {id} {
+proc docker::service_ps {id} {
 
 	variable log
 	set cmd [list \
@@ -63,35 +69,37 @@ proc exec_docker_service_ps {id} {
 		return $data	
 	}
 
-	set results [docker_execute_with_fmt $cmd pformat]
+	set results [execute_with_fmt $cmd pformat]
 
-	if {[dict exists $results error]} {
+	if {[has_error $results]} {
 		return $results
 	}
-
-	return [dict create columns [list id name image node desired_state current_state err ports] rows $results]		
+	set data [dict get $results data]
+	set columns [list id name image node desired_state current_state err ports]
+	return [dict create columns $columns rows $data]		
 }
 
-proc exec_docker_service_rm {serviceName} {
+proc docker::service_rm {serviceName} {
 	variable log
 	set cmd [list docker service rm $serviceName]
-	docker_execute $cmd
+	execute $cmd
 } 
 
-proc exec_docker_service_update {serviceName} {
+proc docker::service_update {serviceName} {
 	variable log
 	set cmd [list docker service update --force $serviceName]
-	docker_execute $cmd
+	execute $cmd
 }
 
-proc exec_docker_service_get_logs {serviceName} {
+proc docker::service_logs_get {serviceName} {
 	variable log
 
 	set systemTime [clock seconds]
 	set datetime [clock format $systemTime -format %Y%m%d%H%M%S]
 	set logsPath [get_cnf docker logs path]
 
-	set logFile "${logsPath}/docker_service_${serviceName}_${datetime}.log"
+	set fileName docker_service_${serviceName}_${datetime}.log
+	set logFile "$logsPath/$fileName"
 
 	set cmdGetIds [list \
 									docker service ps \
@@ -110,14 +118,41 @@ proc exec_docker_service_get_logs {serviceName} {
 			if { [ catch {
 				exec {*}$cmdGetLogs
 			} err ] } {
-				return [dict create error true message "get logs: $err"]		
+				return [json_error $err]		
 			}
 		}
 
 	} err] } {
-		return [dict create error true message "get container ids: $err"]
+		return [json_error $err]
 	}
 
-	return [dict create error false path $logFile]
+	return [dict create error false messages [list "link:local:/download/logs/$fileName"] fileName $fileName]
 
 } 
+
+proc docker::service_logs_stream {serviceName follow_stream {tail 100}} {
+	set fd [open [list | docker service logs \
+									--follow \
+									--timestamps \
+									--raw \
+									--tail $tail \
+									$serviceName \
+									2>@1]]
+	
+	set follow $follow_stream
+	lappend follow $fd
+	
+	fconfigure $fd -blocking false -buffering none
+	chan event $fd readable $follow
+	return $fd
+	# [list {*}$follow_stream $fd]
+
+	#proc follow {fd} {
+	#	if {[gets $fd line] < 0} {
+	#		puts "not to read"
+	#	} else {
+	#		puts "read $line"
+	#	}
+	#}
+
+}

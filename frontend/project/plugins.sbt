@@ -1,2 +1,2 @@
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.13.2")
-addSbtPlugin("br.com.mobilemind" % "livereload" % "0.2.3")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.14.0")
+addSbtPlugin("br.com.mobilemind" % "livereload" % "0.2.4")

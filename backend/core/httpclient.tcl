@@ -6,21 +6,24 @@
 #  sudo apt install libcurl4-openssl-dev
 # sudo apt-get install tcl8.6-dev    
 
+namespace eval http_client {
 
-proc http_get {url {params ""} {query ""}} {
-	http_call GET $url $query "" $params
 }
 
-proc http_post_json {url body {params ""} {query ""}} {
+proc http_client::get {url {params ""} {query ""}} {
+	call GET $url $query "" $params
+}
+
+proc http_client::post_json {url body {params ""} {query ""}} {
 	lappend params json true
-	http_post $url $body $params $query
+	post $url $body $params $query
 } 
 
-proc http_post {url body {params ""} {query ""}} {
-	http_call POST $url $query $body $params
+proc http_client::post {url body {params ""} {query ""}} {
+	call POST $url $query $body $params
 }
 
-proc http_call {method url query body params} {
+proc http_client::call {method url query body params} {
 
 
 	set headers ""

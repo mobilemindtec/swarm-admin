@@ -1,23 +1,18 @@
 package com.swarm.pages
 
-import com.swarm.util.{Cookie, HtmlUtil}
-import org.scalajs.dom.{MouseEvent, window}
 import com.raquo.laminar.api.L.*
-import com.swarm.api.ApiServer
-import com.swarm.api.ApiServer.ApiAuthResult
-import org.scalajs.dom.window.document
+import com.swarm.services.AuthService.UserLogin
+import com.swarm.services.{AuthService, Router}
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.scalajs.js
-import scala.scalajs.js.Date
 import scala.util.{Failure, Success}
-import com.swarm.services.{AuthService, Router}
-import com.swarm.services.AuthService.UserLogin
 
 object Login:
 
   private val message = Var[Option[String]](None)
   private val stateVar = Var(UserLogin())
+
+  def apply() = node()
 
   private def loginSubmitter = Observer[UserLogin] { state =>
     if !state.validate then message.update(_ => Some("Enter with username and password"))
@@ -30,7 +25,7 @@ object Login:
       case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
     }
 
-  def page() =
+  def node() =
     div(
       cls("row"),
       div(
