@@ -71,6 +71,25 @@ proc aws_codebuild_app_service::save {data} {
 	return [$rs get_data]
 }
 
+proc aws_codebuild_app_service::clone {id} {
+	set data [find $id false]
+
+	if {$data == ""} {
+		return ""
+	} 
+
+
+	set data [dict remove $data id createdAt updatedAt]
+
+	puts "data = $data"
+		
+	set repo [dict get $data awsEcrRepositoryName]
+	puts "!!!! a"
+	dict set data awsEcrRepositoryName "$repo (cloned)"  
+	puts "!!!! b"
+	return [save $data]
+}
+
 proc aws_codebuild_app_service::update {data} {
 
 	set aws_codebuild_app [prepare $data]
@@ -103,10 +122,10 @@ proc aws_codebuild_app_service::all {} {
 	return $results 
 }
 
-proc aws_codebuild_app_service::find {id} {
+proc aws_codebuild_app_service::find {id {tpl true} {raw false}} {
 	variable fields
 
-	set rs [db::one aws_codebuild_apps [dict keys $fields] $id]
+	set rs [db::first aws_codebuild_apps [dict keys $fields] $id]
 
 	if {[$rs has_error]} {
 		error [$rs get_error_info]
@@ -118,13 +137,21 @@ proc aws_codebuild_app_service::find {id} {
 		return ""
 	}	
 
-	return [rs_to_entity $data]
+	if {$raw} {
+		return $data
+	}
+
+	if {$tpl} {
+		return [rs_to_entity $data]		
+	}
+
+	return [rs_to_entity $data false]
 }
 
-proc aws_codebuild_app_service::find_all_by_stack {id} {
+proc aws_codebuild_app_service::find_all_by_stack_id {id {tpl true} {raw false}} {
 	variable fields
 
-	set rs [db::where aws_codebuild_apps [dict keys $fields] "stack_id = $id"]
+	set rs [db::where aws_codebuild_apps [dict keys $fields] "stack_id = ?" $id]
 
 	if {[$rs has_error]} {
 		error [$rs get_error_info]
@@ -134,7 +161,14 @@ proc aws_codebuild_app_service::find_all_by_stack {id} {
 	set results [list]
 
 	foreach it $data {
-		set aws_codebuild_app [rs_to_entity $it]
+		set aws_codebuild_app ""
+
+		if {$raw} {
+			set aws_codebuild_app $it
+		} else {
+			set aws_codebuild_app [rs_to_entity $it $tpl]
+		}
+
 		lappend results $aws_codebuild_app
 	}
 
@@ -164,12 +198,12 @@ proc aws_codebuild_app_service::exists {id} {
 	return [expr {$count > 0}]
 }
 
-proc aws_codebuild_app_service::rs_to_entity {rs} {
+proc aws_codebuild_app_service::rs_to_entity {rs {tpl true}} {
 	variable fields
 
 	set index 0
 	set aws_codebuild_app [dict create]
-	set tpl [dict create]
+	set template [dict create]
 
 	dict for {k v} $fields {
 		set fieldName [lindex $v 0]
@@ -177,10 +211,14 @@ proc aws_codebuild_app_service::rs_to_entity {rs} {
 		set value [lindex $rs $index]
 
 		dict set aws_codebuild_app $fieldName $value
-		dict set tpl $fieldName $fieldType
+		dict set template $fieldName $fieldType
 
 		incr index
 	}
 
-	return [dict create data $aws_codebuild_app tpl $tpl]
+	if {$tpl} {
+		return [dict create data $aws_codebuild_app tpl $template]
+	}
+
+	return $aws_codebuild_app
 }

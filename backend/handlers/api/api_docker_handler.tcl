@@ -63,22 +63,24 @@ proc docker_service_logs_get {request} {
 proc docker_stack_deploy {request} {
 
 	set pathVars [dict get $request vars]
-	set stackId [dict get $pathVars stack]
-
-	set stack [stack_service::find $stackId]
+	set stackName [dict get $pathVars stack_name]
+	set stack [stack_service::find_by_name $stackName]
 
 	if {$stack eq ""} {
-		return [dict create json [dict create error true message "stack $stackId not found"]]		
+		return [dict create json [dict create error true message "stack $stackName not found"]]		
 	}
 
 	set stackContent [dict get $stack content]
 	set stackName [dict get $stack name]
-	set apps [aws_codebuild_app_service::find_all_by_stack $stackId]
+	set stackId [dict get $stack id]
+	set apps [aws_codebuild_app_service::find_all_by_stack_id $stackId false]
+
+	puts "apps for stake [llength $apps]"
 	
 	foreach it $apps {
 		set varName [dict get $it stackVarName]
 		set version [dict get $it versionTag]
-		set stackContent [string map $stackContent [list $varName $version]]				
+		set stackContent [string map [list $varName $version] $stackContent]				
 	}
 
 	set result [docker::cmd  "stack deploy" $stackName $stackContent]
@@ -89,13 +91,14 @@ proc docker_stack_deploy {request} {
 
 proc docker_stack_rm {request} {
 
-	set pathVars [dict get $request vars]
-	set stackId [dict get $pathVars stack]
 
-	set stack [stack_service::find $stackId]
+	set pathVars [dict get $request vars]
+	set stackName [dict get $pathVars stack_name]
+
+	set stack [stack_service::find_by_name $stackName]
 
 	if {$stack eq ""} {
-		return [dict create json [dict create error true message "stack $stackId not found"]]		
+		return [dict create json [dict create error true message "stack $stackName not found"]]		
 	}
 
 	set stackName [dict get $stack name]

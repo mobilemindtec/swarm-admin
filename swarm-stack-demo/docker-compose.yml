@@ -2,9 +2,10 @@ version: '3.7'
 
 services:
   web:
-    image: stackdemo
-    build: ./
+    image: app:1.0
+    build: ./app
     ports:
       - "8000:8000"
   redis:
-    image: redis:alpine
+    image: redis:1.0
+    build: ./redis

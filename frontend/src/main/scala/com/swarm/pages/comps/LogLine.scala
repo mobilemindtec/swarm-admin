@@ -15,16 +15,19 @@ final case class LogLineView(
   datetime: Option[Date] = None
 ):
   def node: CollectionCommand.Prepend[ReactiveHtmlElement[HTMLSpanElement]] =
-    CollectionCommand.Prepend(
+    CollectionCommand.Prepend(elem)
+  def elem: ReactiveHtmlElement[HTMLSpanElement] =
+    span(
       span(
-        span(
-          s"[${typ}] ",
-          styleAttr(s"color: $color")
-        ) :: nodes
-      )
+        s"[$typ] ",
+        styleAttr(s"color: $color")
+      ) :: nodes
     )
 
 object LogLineView:
+  def apply(msg: String): LogLineView =
+    println(s"msg = ${msg}")
+    new LogLineView(span(s"$msg") :: br() :: Nil, "info", colorize(WsMsgType.info))
   def apply(wsMsg: WsMsg): LogLineView = fromWsMsg(wsMsg)
   private def fromWsMsg(msg: WsMsg): LogLineView =
     val nodes = messageParts(msg) match

@@ -34,3 +34,7 @@ object ApiAwsCodeBuildApp:
     val url = s"${AppConfigs.serverUrl}/api/aws/codebuild/app/$id"
     fetch(url, "GET", None, defaultHeaders)
       .map(r => NativeConverter[ApiResult[AwsCodeBuildApp]].fromNative(r))
+  def clone(id: Int): Future[ApiResult[AwsCodeBuildApp]] =
+    val url = s"${AppConfigs.serverUrl}/api/aws/codebuild/app/clone/$id"
+    fetch(url, "GET", None, defaultHeaders)
+      .map(r => NativeConverter[ApiResult[AwsCodeBuildApp]].fromNative(r))

@@ -122,13 +122,15 @@ proc pool::transaction_done {rconn} {
 
 
 proc db::sanitaze {value} {
-  puts "db sanitaze"
   #set regex1 {\D}
   #set regex2 {[^[:alpha:]]}
-  set regex {[^[:alnum:][:space:]]}
-  regsub -all $regex $value ""
+  #set regex {[^[:alnum:][:space:]]}
+  #regsub -all $regex $value ""
   
-  set value [regsub -all \' $value \\\']
+  set value [regsub -all {'} $value {\'}]
+  set value [regsub -all {"} $value {\"}]
+  set value [regsub -all {;} $value {\;}]
+  set value [regsub -all {\-} $value {\-}]
 
   return $value
 }
@@ -699,20 +701,26 @@ proc db::delete {table id {trans {}}} {
   return [execute $sql $id $trans]
 }
 
-proc db::one {table cols id {trans {}}} {
+proc db::first {table cols id {trans {}}} {
   set fields [join $cols ", "]
-  set sql "select $fields from $table where id = ?"
-  return [select_one $sql $id]
+  set sql "select $fields from $table where id = ? limit 1"
+  return [select_one $sql $id $trans]
 }
 
 proc db::all {table cols {trans {}}} {
   set fields [join $cols ", "]
   set sql "select $fields from $table"
-  return [select $sql]
+  return [select $sql "" $trans]
 }
 
-proc db::where {table cols cond {trans {}}} {
+proc db::where {table cols cond params {trans {}}} {
   set fields [join $cols ", "]
   set sql "select $fields from $table where $cond"
-  return [select $sql]
+  return [select $sql $params $trans]
+}
+
+proc db::where_first {table cols cond params {trans {}}} {
+  set fields [join $cols ", "]
+  set sql "select $fields from $table where $cond limit 1"
+  return [select_one $sql $params $trans]
 }

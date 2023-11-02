@@ -69,20 +69,23 @@ object Theme:
       )
     )
 
-  def pageAction(label: HtmlElement, navigateTo: String) =
+  def pageAction(label: Mod[HtmlElement], navigateTo: String) =
     a(
       cls("action pull-left"),
       href(navigateTo),
       label
     )
 
-  def pageAction(label: HtmlElement, navigateTo: Signal[String]) =
+  def pageAction(label: Mod[HtmlElement], navigateTo: Signal[String]) =
     a(
       cls("action pull-left"),
       href <-- navigateTo,
       label
     )
-  def pageAction(click: Any => Unit, label: HtmlElement): ReactiveHtmlElement[HTMLAnchorElement] =
+  def pageAction(
+    click: Any => Unit,
+    label: Mod[HtmlElement]
+  ): ReactiveHtmlElement[HTMLAnchorElement] =
     a(
       cls("action pull-left"),
       onClick --> click,

@@ -39,6 +39,9 @@ proc tcl2json {value {tplType ""}} {
           return false
         }        
       }
+      list {
+        return [json::write array $value]       
+      }
     }
   }
  

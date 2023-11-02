@@ -6,6 +6,7 @@ import com.swarm.pages.Index.DrawerMenuItem.{AwsCodeBuildApp, Home, Stack}
 import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppPage
 import com.swarm.pages.adm.stack.StackPage
 import com.swarm.pages.services.{ServiceLS, ServiceLogStream, ServicePS}
+import com.swarm.pages.stacks.StackManager
 import com.swarm.services.AuthService
 import com.swarm.services.AuthService.{UserAuth, authenticatedUser}
 import frontroute.*
@@ -45,6 +46,11 @@ object Index:
         path("docker" / "service" / "log" / "stream" / segment) { id =>
           provideOption(maybeUser) { _ =>
             ServiceLogStream(id)
+          }
+        },
+        path("docker" / "stack" / "mgr" / segment) { id =>
+          provideOption(maybeUser) { _ =>
+            StackManager(id)
           }
         },
         pathPrefix("adm" / "stack") {

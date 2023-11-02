@@ -6,7 +6,7 @@ import com.swarm.models.Models.AwsCodeBuildApp
 import frontroute.BrowserNavigation
 import io.scalaland.chimney.dsl.*
 import org.scalajs.dom
-import org.scalajs.dom.HTMLLabelElement
+import org.scalajs.dom.{HTMLLabelElement, window}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
@@ -48,6 +48,7 @@ object AwsCodeBuildAppForm:
     load(id)
     node()
   def apply() =
+    clear()
     loadStaks()
     node()
 
@@ -61,6 +62,25 @@ object AwsCodeBuildAppForm:
     if !state.validate then message.update(_ => Some("Enter with all required fields"))
     else submit(state)
   }
+
+  private def clear() =
+    stateVar.set(AwsCodeBuildAppForm())
+  private def goback(): Unit =
+    clear()
+    BrowserNavigation.replaceState(
+      url = "/adm/aws/codebuild/app"
+    )
+
+  private def onClone(): Unit =
+    if window.confirm("Are you sure?") then
+      ApiAwsCodeBuildApp.clone(stateVar.now().id).onComplete {
+        case Success(r) =>
+          BrowserNavigation.replaceState(
+            url = s"/adm/aws/codebuild/app/form/${r.data.id}"
+          )
+        case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      }
+
   private def submit(form: AwsCodeBuildAppForm) =
     val stack = form
       .into[AwsCodeBuildApp]
@@ -69,10 +89,7 @@ object AwsCodeBuildAppForm:
     (if form.id == 0
      then ApiAwsCodeBuildApp.save(stack)
      else ApiAwsCodeBuildApp.update(stack)).onComplete {
-      case Success(_) =>
-        BrowserNavigation.replaceState(
-          url = "/adm/aws/codebuild/app"
-        ) // Router.navigate("/adm/aws/codebuild/app")
+      case Success(_)   => goback()
       case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
     }
 
@@ -118,7 +135,7 @@ object AwsCodeBuildAppForm:
     div(
       onMountCallback(_ => mount()),
       onUnmountCallback(_ => unmount()),
-      cls("col-md-8 offset-2 col-12 mt-5"),
+      cls("col-md-8 offset-2 col-12 mt-5 form"),
       h2(
         cls("text-center"),
         "AWS CodeBuild App"
@@ -214,6 +231,15 @@ object AwsCodeBuildAppForm:
           button(
             "SAVE",
             typ("submit")
+          ),
+          button(
+            "CANCEL",
+            onClick --> (_ => goback())
+          ),
+          button(
+            "CLONE",
+            cls("pull-left"),
+            onClick --> (_ => onClone())
           )
         ),
         onSubmit.preventDefault.mapTo(stateVar.now()) --> formSubmitter

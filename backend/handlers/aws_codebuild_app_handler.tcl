@@ -130,6 +130,32 @@ proc aws_codebuild_app_delete {request} {
 }
 
 
+proc aws_codebuild_app_clone {request} {
+	variable log
+	
 
+	set id [dict get $request vars id]
+	set response [dict create error false messages ""]
+	set statusCode 200
 
+	${log}::debug "aws_codebuild_app_clone $id"
 
+	try {
+
+		set data [aws_codebuild_app_service::clone $id]
+
+		if {$data == ""} {	
+			set statusCode 404
+		} else {
+			dict set response data $data
+		}
+				
+	} on error err {		
+		${log}::error $err
+		dict set $response message $err
+		dict set $response error true 		
+		set statusCode 500
+	}
+	
+	return [dict create json $response statusCode $statusCode]
+}

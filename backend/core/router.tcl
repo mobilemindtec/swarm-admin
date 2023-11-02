@@ -66,7 +66,7 @@ proc router::extract_route_and_variables {route} {
 			set re ""
 
 			# find path var and regex
-			regexp -nocase {:([[:alpha:]]*\(?/?)(\(.+\))?} $part -> param re
+			regexp -nocase {:([a-zA-Z_]*\(?/?)(\(.+\))?} $part -> param re
 
 			# empty regex
 			if {$re == ""} {

@@ -37,6 +37,9 @@ object StackList:
   private def edit(stack: Stack) =
     Router.navigate(s"/adm/stack/form/${stack.id}")
 
+  private def mgr(stack: Stack) =
+    Router.navigate(s"/docker/stack/mgr/${stack.id}")
+
   private def header =
     breadcrumb(
       breadcrumbItem(
@@ -56,8 +59,18 @@ object StackList:
       td(
         cls("text-center"),
         a(
+          href("#"),
+          i(cls("fa fa-cubes")),
+          title("stack manager"),
+          onClick --> (_ => mgr(stack))
+        )
+      ),
+      td(
+        cls("text-center"),
+        a(
           href(s"/adm/stack/form/${stack.id}"),
           i(cls("fa fa-edit")),
+          title("edit"),
           onClick --> (_ => edit(stack))
         )
       ),
@@ -66,6 +79,7 @@ object StackList:
         a(
           href("#"),
           i(cls("fa fa-trash")),
+          title("remove"),
           onClick --> (_ => remove(stack))
         )
       )
@@ -76,7 +90,7 @@ object StackList:
       cls("table table-striped table-dark table-bordered table-hover table-sm table-adm"),
       thead(
         tr(
-          List("#", "name", "last update", "", "").map { s =>
+          List("#", "name", "last update", "", "", "").map { s =>
             th(s)
           }
         )

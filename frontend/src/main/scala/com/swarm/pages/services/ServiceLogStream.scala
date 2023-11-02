@@ -17,15 +17,17 @@ object ServiceLogStream:
 
   final case class ServiceName(serviceName: String, tail: Int = 100) derives NativeConverter
 
+  private val message = Var[Option[String]](None)
+  private val wsClient = WsClient()
+
   def apply(serviceName: String): ReactiveHtmlElement[HTMLDivElement] = node(serviceName)
 
-  private val wsClient = WsClient()
   private def mount(serviceName: String): Unit =
     wsClient.open().onComplete {
       case Success(_) =>
         val msg = WsMsg(WsMsgType.logStart.toString, ServiceName(serviceName).toNative)
         wsClient.send(msg)
-      case Failure(exception) => println(s"error: ${exception.getMessage}")
+      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
     }
   private def unmount(): Unit =
     wsClient.close()
@@ -42,10 +44,16 @@ object ServiceLogStream:
           true
         )
       ),
+      child.maybe <-- message.signal.map(_.map(s => {
+        div(
+          cls("alert alert-danger"),
+          span(s)
+        )
+      })),
+      hr(),
       terminal(
         onMountCallback(_ => mount(serviceName)),
         children.command <-- wsClient.buss.events.map(msg => LogLineView(msg)).map(_.node)
       )
       // actions(),
-
     )

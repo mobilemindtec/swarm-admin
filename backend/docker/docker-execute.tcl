@@ -17,9 +17,9 @@ proc docker::execute_with_fmt {cmd cb args} {
 	${log}::debug $cmd
 	set lines ""
 
-	if {[catch {
+	try {
 		set lines [split [exec {*}$cmd] "\n"] 
-	} err]} {
+	} on error err {
 		${log}::error $err
 		return [json_error $err]
 	}
@@ -43,13 +43,14 @@ proc docker::execute {cmd} {
 	${log}::debug $cmd
 	set result ""
 
-	if {[catch {
+	try {
 		set result [split [exec {*}$cmd] "\n"] 
-	} err]} {
+	} on error err {
 		${log}::error $err
 		return [json_error $err]
 	}
+	puts "$result"
 
-	set lines [lsearch -all -inline -not -exact [split $result \n] {}]
+	set lines [lsearch -all -inline -not -exact $result {}]
 	return [dict create error false messages $lines]
 }

@@ -5,6 +5,7 @@ import com.raquo.laminar.receivers.ChildReceiver.text
 import com.swarm.api.ApiStack
 import com.swarm.facade.{Editor, EditorOpts}
 import com.swarm.models.Models.Stack
+import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem}
 import com.swarm.services.Router
 import org.scalajs.dom
 import org.scalajs.dom.{document, window}
@@ -26,6 +27,24 @@ object StackForm:
   private val stateVar = Var(StackForm())
 
   private val editor = Editor()
+
+  private def header =
+    breadcrumb(
+      breadcrumbItem(
+        a(
+          href("/adm/stack"),
+          span(s"stacks")
+        ),
+        false
+      ),
+      breadcrumbItem(
+        a(
+          href("#"),
+          span(s"stack")
+        ),
+        true
+      )
+    )
 
   def apply(id: Int) =
     load(id)
@@ -67,7 +86,7 @@ object StackForm:
     div(
       onMountCallback(_ => mount()),
       onUnmountCallback(_ => unmount()),
-      cls("col-md-8 offset-2 col-12"),
+      header,
       cls("col-md-8 offset-2 col-12 mt-5"),
       h2(
         cls("text-center"),

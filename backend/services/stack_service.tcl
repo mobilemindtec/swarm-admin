@@ -80,7 +80,27 @@ proc stack_service::all {} {
 
 proc stack_service::find {id} {
 
-	set rs [db::one stacks [list id name content enabled created_at updated_at] $id]
+	set rs [db::first stacks [list id name content enabled created_at updated_at] $id]
+
+	if {[$rs has_error]} {
+		error [$rs get_error_info]
+	}	
+
+	set data [$rs get_data]
+
+	if {$data == ""} {
+		return ""
+	}	
+
+	return [rs_to_entity $data]
+}
+
+proc stack_service::find_by_name {name} {
+
+	set rs [db::where_first stacks \
+						[list id name content enabled created_at updated_at] \
+						{name = ?} \
+						$name]
 
 	if {[$rs has_error]} {
 		error [$rs get_error_info]

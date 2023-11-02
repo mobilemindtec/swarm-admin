@@ -61,5 +61,7 @@ proc app::run {} {
 }
 
 proc test_route {} {
-	puts "result = [string match {*/\*} /app/te/*/*]"
+	set re ^/api/aws/codebuild/app/(\[0-9]+)(/?)$
+	set rs [regexp -nocase -all -inline $re /api/aws/codebuild/app/111]
+	puts "result = $rs"
 }
