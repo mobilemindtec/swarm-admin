@@ -165,7 +165,7 @@ proc websocket_app::session_remove {clientSocket k} {
 
 proc websocket_app::session_init {clientSocket} {
   variable Sessions
-  dict set $Sessions "$clientSocket" [dict create] 
+  dict set Sessions "$clientSocket" [dict create] 
 }
 
 proc websocket_app::session_destroy {clientSocket} {

@@ -2,8 +2,12 @@ package com.swarm.pages.services
 
 import com.raquo.laminar.api.L.*
 import com.swarm.api.ApiDockerService
-import com.swarm.models.Models.Service
+import com.swarm.api.ApiServer.ApiResult
+import com.swarm.models.Service
+import com.swarm.pages.adm.stack.StackForm.message
 import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, terminal}
+import com.swarm.pages.stacks.StackManager.message
+import com.swarm.util.ApiErrorHandle
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.scalajs.js
@@ -12,13 +16,15 @@ import scala.util.{Failure, Success}
 object ServiceLS:
 
   private val servicesVar = Var(List[Service]())
+  private val message = Var[Option[String]](None)
 
   def apply() = node()
 
   private def apiSync() =
     ApiDockerService.ls().onComplete {
-      case Success(data) => servicesVar.update(_ => data.data)
-      case Failure(err)  => println(s"ERROR: $err")
+      ApiErrorHandle.handle(message) { case Success(ApiResult(Some(service), _, _, _)) =>
+        servicesVar.update(_ => service)
+      }
     }
   private def mount() = apiSync()
 
@@ -34,6 +40,12 @@ object ServiceLS:
           true
         )
       ),
+      child.maybe <-- message.signal.map(_.map(s => {
+        div(
+          cls("alert alert-danger"),
+          span(s)
+        )
+      })),
       terminal(tb())
     )
 

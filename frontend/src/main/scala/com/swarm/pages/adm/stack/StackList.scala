@@ -2,10 +2,13 @@ package com.swarm.pages.adm.stack
 
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import com.swarm.api.ApiServer.ApiResult
 import com.swarm.api.ApiStack
-import com.swarm.models.Models.Stack
+import com.swarm.models.Stack
+import com.swarm.pages.adm.stack.StackForm.message
 import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, pageAction, pageActions}
 import com.swarm.services.Router
+import com.swarm.util.ApiErrorHandle
 import org.scalajs.dom.{HTMLDivElement, window}
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -22,16 +25,16 @@ object StackList:
     load()
   private def load() =
     ApiStack.list().onComplete {
-      case Success(result) =>
-        stacks.update(_ => result.data)
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      ApiErrorHandle.handle(message) { case Success(ApiResult(Some(lst), _, _, _)) =>
+        stacks.update(_ => lst)
+      }
     }
   private def remove(stack: Stack) =
     if window.confirm("Are you sure?") then
       ApiStack.delete(stack).onComplete {
-        case Success(_) =>
+        ApiErrorHandle.handleUnit(message) { case Success(_) =>
           stacks.update(lst => lst.filterNot(_.id == stack.id))
-        case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+        }
       }
 
   private def edit(stack: Stack) =
@@ -43,10 +46,7 @@ object StackList:
   private def header =
     breadcrumb(
       breadcrumbItem(
-        a(
-          href("#"),
-          span(s"stacks")
-        ),
+        "stacks",
         true
       )
     )

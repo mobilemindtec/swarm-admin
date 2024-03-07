@@ -81,6 +81,7 @@ proc httpworker::new_thread_ctx {tid} {
 		source "./core/router.tcl"
 		source "./workers/person_worker.tcl"
 		source "./database/db.tcl"
+		source "./core/app.tcl"
 		
 		proc init {configs routes} {
 

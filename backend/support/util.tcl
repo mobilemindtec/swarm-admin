@@ -17,3 +17,18 @@ proc util::try_get {d args} {
 
 	return $curr
 }
+
+proc util::get_def_or_keys {d defVal args} {
+
+	set next $d
+
+	foreach k $args {
+		if {[dict exists $next $k]} {
+			set next [dict get $next $k]
+		} else {
+			return $defVal
+		}
+	}
+
+	return $next
+}

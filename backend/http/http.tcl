@@ -52,6 +52,55 @@ proc response::body_format { body contentType {err false} } {
   }
 }
 
+proc response::json_not_found {{body ""}} {
+  return [dict create json $body statusCode 404]
+}
+
+proc response::json_unauthorized {{body ""}} {
+  return [dict create json $body statusCode 401]
+}
+
+proc response::json_forbiden {{body ""}} {
+  return [dict create json $body statusCode 403]
+}
+
+proc response::json_bad_request {{body ""}} {
+  return [dict create json $body statusCode 400]
+}
+
+proc response::json_server_error {{body ""}} {
+  return [dict create json $body statusCode 500]
+}
+
+proc response::json_error {msg} {
+  return [dict create json [dict create error true message $msg] statusCode 500]
+}
+
+proc response::json_ok {{body ""}} {
+  return [dict create json $body statusCode 200]
+}
+
+proc response::json_data_ok {{data ""} {lst false}} {
+  if {$lst} {
+    if {[llength $data] == 0} {
+      set data {[]}
+    }
+  }
+  set body [dict create messages {[]} error false data $data]
+  return [dict create json $body statusCode 200]
+}
+
+proc response::json_created {{body ""} {location ""}} {
+
+  set headers [dict create]
+
+  if {$location ne ""} {
+    set headers [dict create Location $location]
+  }
+
+  return [dict create json $body statusCode 201 headers $headers]
+}
+
 proc response::ok {socket body contentType } {
   puts $socket "HTTP/1.0 200"
   puts $socket "Content-Type: $contentType"  
@@ -234,8 +283,47 @@ proc response::slect_render {socket response contentType} {
     tpl {
       template $socket $response
     }
-    json {                
+    json {
       set bodyValue [dict get $response json]
+
+      
+      if {$bodyValue eq ""} {
+
+        switch $statusCode {
+          200 {
+            set bodyValue [dict create message "success"]
+          }
+          201 {
+            set bodyValue [dict create message "Created"]
+          }
+          202 {
+            set bodyValue [dict create message "Accepted"]
+          }
+          204 {
+            set bodyValue [dict create message "No Content"]
+          }
+          400 {
+            set bodyValue [dict create message "Bad Request"]
+          }
+          401 {
+            set bodyValue [dict create message "Unauthorized"]
+          }
+          401 {
+            set bodyValue [dict create message "Forbiden"]
+          }
+          404 {
+            set bodyValue [dict create message "Not Found"]
+          }
+          500 {
+            set bodyValue [dict create message "Server Error"]
+          }
+          default {
+            set bodyValue [dict create message "Unknown error: $statusCode"] 
+          }
+        }
+
+      }
+
       as_json $socket $bodyValue $statusCode $headers $isList
     }
     text {

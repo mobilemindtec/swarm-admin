@@ -12,6 +12,7 @@ source "./support/async.tcl"
 namespace eval app {
 	variable log
 	variable configs
+	variable ServerSocket
 
 	set log [logger::init app]
 }
@@ -20,10 +21,9 @@ namespace eval app {
 proc app::init_routes {} {
 
 	variable configs
-	variable ServerSocket
 
 	set configs [load_configs]
-	router::init [dict get $configs routes]	
+	router::init [dict get $configs routes]		
 }
 
 proc app::init {} {
@@ -58,6 +58,11 @@ proc app::run {} {
   websocket_app::init $socket
   
   vwait forever
+}
+
+proc app::get_ws_socket {} {
+	variable ServerSocket
+	return $ServerSocket
 }
 
 proc test_route {} {

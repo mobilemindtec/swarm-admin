@@ -5,14 +5,12 @@ import com.swarm.api.ApiAuth
 import com.swarm.api.ApiAuth.ApiAuthResult
 import com.swarm.util.Cookie
 import org.scalajs.dom.window
-import org.scalajs.dom.window.document
 
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.{Future, Promise}
 import scala.scalajs.js
 import scala.scalajs.js.Date
-import scala.concurrent.{Future, Promise}
-import scala.util.{Failure, Success, Try}
-import scala.concurrent.duration.*
+import scala.util.{Failure, Success}
 
 object AuthService:
 

@@ -1,8 +1,7 @@
 package com.swarm.api
 
-import br.com.mobilemind.nconv.custom.JsonMapper.Mappeable
 import com.swarm.configs.AppConfigs
-import com.swarm.models.Models.{CmdResult, Service}
+import com.swarm.models.{CmdResult, Service}
 import com.swarm.util.Cookie
 import org.scalajs.dom
 
@@ -18,7 +17,12 @@ import scala.annotation.internal.MappedAlternative
 
 object ApiServer:
 
-  case class ApiResult[T](data: T) derives NativeConverter
+  case class ApiResult[T](
+    data: Option[T] = None,
+    error: Option[Boolean] = None,
+    message: Option[String] = None,
+    messages: Option[List[String]] = None
+  ) derives NativeConverter
 
   def defaultHeaders =
     val token = getToken()

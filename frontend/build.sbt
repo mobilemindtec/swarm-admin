@@ -1,5 +1,5 @@
 ThisBuild / name := "Swarm Admin"
-ThisBuild / scalaVersion := "3.3.1"
+ThisBuild / scalaVersion := "3.4.0"
 
 lazy val app = (project in file("."))
   .enablePlugins(ScalaJSPlugin, LiveReloadJSPlugin)
@@ -12,11 +12,9 @@ lazy val app = (project in file("."))
       ("org.querki" %%% "jquery-facade" % "2.1") cross CrossVersion.for3Use2_13 excludeAll (
         ExclusionRule(organization = "org.scala-js")
       ),
-      "org.getshaka" %%% "native-converter" % "0.9.0",
-      "br.com.mobilemind.nconv.custom" %%% "native-converter-custom" % "0.0.2-SNAPSHOT",
-      "io.frontroute" %%% "frontroute" % "0.18.1",
-      "com.lihaoyi" %%% "upickle" % "3.1.2",
-      "io.scalaland" %%% "chimney" % "0.8.0-RC1",
+      "org.getshaka" %%% "native-converter" % "0.10.0-SNAPSHOT",
+      "io.frontroute" %%% "frontroute" % "0.18.2",
+      "io.scalaland" %%% "chimney" % "0.8.5",
       ("org.scala-js" %%% "scalajs-java-securerandom" % "1.0.0") cross CrossVersion.for3Use2_13
     ),
     scalaJSUseMainModuleInitializer := true,

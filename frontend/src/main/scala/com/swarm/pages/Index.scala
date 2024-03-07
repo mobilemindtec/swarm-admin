@@ -4,6 +4,7 @@ import com.raquo.laminar.nodes.ReactiveHtmlElement
 import com.swarm.laminar.Drawer
 import com.swarm.pages.Index.DrawerMenuItem.{AwsCodeBuildApp, Home, Stack}
 import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppPage
+import com.swarm.pages.adm.aws.codebuild.build.{AwsBuildLogStream, AwsBuildPage}
 import com.swarm.pages.adm.stack.StackPage
 import com.swarm.pages.services.{ServiceLS, ServiceLogStream, ServicePS}
 import com.swarm.pages.stacks.StackManager
@@ -11,7 +12,7 @@ import com.swarm.services.AuthService
 import com.swarm.services.AuthService.{UserAuth, authenticatedUser}
 import frontroute.*
 import org.scalajs.dom
-import org.scalajs.dom.{Event, document, html, window}
+import org.scalajs.dom.{Event, html}
 
 object Index:
 
@@ -43,14 +44,20 @@ object Index:
             ServicePS(id)
           }
         },
-        path("docker" / "service" / "log" / "stream" / segment) { id =>
+        path("docker" / "service" / "log" / "stream" / segment / segment) { (name, id) =>
           provideOption(maybeUser) { _ =>
-            ServiceLogStream(id)
+            ServiceLogStream(name, id)
           }
         },
         path("docker" / "stack" / "mgr" / segment) { id =>
           provideOption(maybeUser) { _ =>
             StackManager(id)
+          }
+        },
+        path("adm" / "aws" / "build" / "logs" / segment) { id =>
+          provideOption(maybeUser) { _ =>
+            drawerMenuItemVar.update(_ => DrawerMenuItem.AwsCodeBuildApp)
+            AwsBuildLogStream(id)
           }
         },
         pathPrefix("adm" / "stack") {
@@ -63,6 +70,12 @@ object Index:
           provideOption(maybeUser) { _ =>
             drawerMenuItemVar.update(_ => DrawerMenuItem.AwsCodeBuildApp)
             AwsCodeBuildAppPage()
+          }
+        },
+        pathPrefix("adm" / "aws" / "build") {
+          provideOption(maybeUser) { _ =>
+            drawerMenuItemVar.update(_ => DrawerMenuItem.AwsCodeBuildApp)
+            AwsBuildPage()
           }
         },
         path("app" / "login") {

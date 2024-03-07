@@ -274,6 +274,7 @@ proc http_server::dispatch {socket request} {
 
       dict set request route $routeName
       dict set request vars $pathVars
+      dict set request auth $auth
 
       foreach action $beforeHandlers {
         set ret [$action $request]  
@@ -287,9 +288,10 @@ proc http_server::dispatch {socket request} {
       }
 
       if {$isWs} {
-        puts "do websocket upgrade"
+        set wsServer [app::get_ws_socket]
+        puts "do websocket upgrade ${wsServer}"
         set headers [websocket_app::check_headers $headers]        
-        websocket_app::upgrade $app::ServerSocket $socket $headers      
+        websocket_app::upgrade $wsServer $socket $headers      
         return
       }
       

@@ -8,12 +8,15 @@ set log [logger::init main]
 source "./core/app.tcl"
 source "./core/router.tcl"
 source "./handlers/index.tcl"
+source "./jobs/jobs.tcl"
 
 
 app::init
 router::print
 
 #person_worker::init
+
+jobs::schedule
 
 app::run
 

@@ -3,6 +3,8 @@
 package require logger 0.3
 
 
+source "./support/util.tcl"
+
 namespace eval router {
 
 	variable log
@@ -28,20 +30,6 @@ proc router::get_uri_query {uri} {
   return $requestQuery
 }
 
-proc router::get_by_Key_or_default {d defVal args} {
-
-	set next $d
-
-	foreach k $args {
-		if {[dict exists $next $k]} {
-			set next [dict get $next $k]
-		} else {
-			return $defVal
-		}
-	}
-
-	return $next
-}
 
 proc router::extract_route_and_variables {route} {
 
@@ -102,13 +90,13 @@ proc router::prepare_route {route routeKey {main false}} {
 
 	set routesResuls [list]
 
-	set subRoutes [get_by_Key_or_default $route [] routes]
-	set auth [get_by_Key_or_default $route false auth]
-	set methods [get_by_Key_or_default $route [] methods]
-	set handler [get_by_Key_or_default $route "" handler]
-	set after_ [get_by_Key_or_default $route "" "after"]
-	set before_ [get_by_Key_or_default $route "" "before"]
-	set ws [get_by_Key_or_default $route false ws]
+	set subRoutes [util::get_def_or_keys $route [] routes]
+	set auth [util::get_def_or_keys $route false auth]
+	set methods [util::get_def_or_keys $route [] methods]
+	set handler [util::get_def_or_keys $route "" handler]
+	set after_ [util::get_def_or_keys $route "" "after"]
+	set before_ [util::get_def_or_keys $route "" "before"]
+	set ws [util::get_def_or_keys $route false ws]
 	set path [dict get $route path]
 
 	dict set route auth $auth
@@ -135,12 +123,12 @@ proc router::prepare_route {route routeKey {main false}} {
 			set rKey [dict get $sRoute path]
 
 
-			set auth0 [get_by_Key_or_default $sRoute $auth auth]
-			set methods0 [get_by_Key_or_default $sRoute $methods methods]
-			set handler0 [get_by_Key_or_default $sRoute $handler handler]
-			set after0 [get_by_Key_or_default $sRoute $after_ "after"]
-			set before0 [get_by_Key_or_default $sRoute $before_ "before"]
-			set ws0 [get_by_Key_or_default $sRoute $ws ws]
+			set auth0 [util::get_def_or_keys $sRoute $auth auth]
+			set methods0 [util::get_def_or_keys $sRoute $methods methods]
+			set handler0 [util::get_def_or_keys $sRoute $handler handler]
+			set after0 [util::get_def_or_keys $sRoute $after_ "after"]
+			set before0 [util::get_def_or_keys $sRoute $before_ "before"]
+			set ws0 [util::get_def_or_keys $sRoute $ws ws]
 
 			#puts "==> $methods0, $routePath$rKey"
 

@@ -285,12 +285,19 @@ proc db::replace_any_query_params {query params} {
       set param [lindex $params $pindex]
       set param [sanitaze $param]
 
+      #if {$param eq "null"} {
+      #  continue
+      #}
+
       switch "$param" {
         "true" {
           set sql $sql'1'
         }
         "false" {
           set sql $sql'0'
+        }
+        "null" {
+          set sql "${sql}null"
         }
         default {
           set sql $sql'$param'
@@ -313,6 +320,10 @@ proc db::replace_any_query_params {query params} {
       set param [dict get $params $argKey]
       set param [sanitaze $param]
 
+      #if {$param eq "null"} {
+      #  continue
+      #}
+
       switch "$param" {
         "true" {
           set sql $sql'1'
@@ -320,6 +331,9 @@ proc db::replace_any_query_params {query params} {
         "false" {
           set sql $sql'0'
         }
+        "null" {
+          set sql "${sql}null"
+        }        
         default {
           set sql $sql'$param'
         }
@@ -329,61 +343,6 @@ proc db::replace_any_query_params {query params} {
       set sql $sql$char
     }
   }
-
-  return $sql
-}
-
-proc db::replace_query_params_by_wildcard {query params} {
-  set parts [split $query ?]
-  set pn [expr {[llength $parts] - 1}]
-  set an [llength $params]
-  set sql {}
-
-  if {$pn != $an} {
-    $result set_error "args count not match? $pn != $an"
-    return $result
-  }
-    
-  for {set i 0} {$i < $pn} {incr i} {
-    set part [lindex $parts $i]
-    set arg [lindex $params $i]
-    set arg [sanitaze $arg]
-    set sql "$sql $part '$arg'" 
-  }  
-
-  return $sql
-}
-
-proc db::replace_query_params_by_colon {query params} {
-  set parts [split $query :]
-  set n [llength $parts]
-  set pn [expr {$n - 1}]
-  set plist {}
-  set sql {}
-
-  # [select .. where x =, :x]
-  # first :x on index 1
-  for {set i 1} {$i < $n} {incr i} {
-    set p [lindex $parts $i]  
-    set idx [string first " " $p]
-    if {$idx > -1} {
-      set param [string range $p 0 $idx]
-      set rest [string range $p $idx end-1]
-      lset parts $i $rest  
-    } else {
-      # last :? on last position
-      set param $p
-    }
-    lappend plist [string trim $param]
-  }
-
-  for {set i 0} {$i < $pn} {incr i} {
-    set part [lindex $parts $i]
-    set argkey [lindex $plist $i]
-    set arg [dict get $params $argkey] 
-    set arg [sanitaze $arg]
-    set sql "$sql $part '$arg'" 
-  }   
 
   return $sql
 }
@@ -619,6 +578,8 @@ proc db::tx {lambda args} {
 
 proc db::insert {table entity {trans {}}} {
 
+  variable log
+
   set fields ""
   set stmts ""
   set values {}
@@ -636,6 +597,8 @@ proc db::insert {table entity {trans {}}} {
   set sqlLastId "SELECT LAST_INSERT_ID();"
 
   set err ""
+
+  ${log}::debug "SQL = $sqlInsert"
 
   if {$trans == ""} {
     set rs [tx { {t values sqlInsert sqlLastId} {
@@ -713,9 +676,29 @@ proc db::all {table cols {trans {}}} {
   return [select $sql "" $trans]
 }
 
-proc db::where {table cols cond params {trans {}}} {
+proc db::where {table cols cond params {more {}} {trans {}}} {
   set fields [join $cols ", "]
-  set sql "select $fields from $table where $cond"
+  set orderBy [util::get_def_or_keys $more "" orderBy]
+  set limit [util::get_def_or_keys $more 0 limit]
+  set offset [util::get_def_or_keys $more 0 offset]
+
+  if {[expr {$limit > 0}]} {
+    set limit "limit $limit"
+  } else {
+    set limit ""
+  }
+
+  if {[expr {$offset > 0}]} {
+    set offset "offset $offset"
+  } else {
+    set offset ""
+  }
+
+  if {$orderBy ne ""} {
+    set orderBy "order by $orderBy"
+  }
+
+  set sql "select $fields from $table where $cond $orderBy $limit $offset"
   return [select $sql $params $trans]
 }
 
@@ -724,3 +707,4 @@ proc db::where_first {table cols cond params {trans {}}} {
   set sql "select $fields from $table where $cond limit 1"
   return [select_one $sql $params $trans]
 }
+

@@ -49,8 +49,6 @@ proc docker::execute {cmd} {
 		${log}::error $err
 		return [json_error $err]
 	}
-	puts "$result"
-
 	set lines [lsearch -all -inline -not -exact $result {}]
 	return [dict create error false messages $lines]
 }

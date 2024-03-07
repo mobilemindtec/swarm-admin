@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.JSON
 object WebSocketClient:
   enum WsMsgType derives NativeConverter:
-    case logStart, logStop, error, info, log, stopped
+    case logStart, logStop, error, info, log, stopped, awsLogsStreamStart
 
   case class WsMsg(msgType: String, msg: js.Any) derives NativeConverter:
     def typ = WsMsgType.valueOf(msgType)
@@ -22,7 +22,7 @@ object WebSocketClient:
     private var _ws: Option[WebSocket] = None
     private def ws = _ws.get
 
-    def open(): Future[_] =
+    def open(): Future[?] =
       val p = Promise[Any]()
       _ws = Some(new WebSocket(AppConfigs.wsUrl))
 

@@ -1086,6 +1086,124 @@ function $h_Lapp_tulz_tuplez_Composition() {
 }
 $h_Lapp_tulz_tuplez_Composition.prototype = $c_Lapp_tulz_tuplez_Composition.prototype;
 /** @constructor */
+function $c_Lcom_raquo_airstream_combine_CombineObservable$() {
+  /*<skip>*/
+}
+$c_Lcom_raquo_airstream_combine_CombineObservable$.prototype = new $h_O();
+$c_Lcom_raquo_airstream_combine_CombineObservable$.prototype.constructor = $c_Lcom_raquo_airstream_combine_CombineObservable$;
+/** @constructor */
+function $h_Lcom_raquo_airstream_combine_CombineObservable$() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_airstream_combine_CombineObservable$.prototype = $c_Lcom_raquo_airstream_combine_CombineObservable$.prototype;
+$c_Lcom_raquo_airstream_combine_CombineObservable$.prototype.jsArrayCombinator__Lcom_raquo_ew_JsArray__F1__s_util_Try = (function(trys, combinator) {
+  var elem = false;
+  elem = true;
+  var i = 0;
+  var len = $uI(trys.length);
+  while ((i < len)) {
+    var t = trys[i];
+    var t$1 = $as_s_util_Try(t);
+    if ($n(t$1).isFailure__Z()) {
+      var ev$6 = false;
+      elem = ev$6
+    };
+    i = ((1 + i) | 0)
+  };
+  if (elem) {
+    var values = trys.map(((_$3) => {
+      var _$3$1 = $as_s_util_Try(_$3);
+      return $n(_$3$1).get__O()
+    }));
+    var value = $n(combinator).apply__O__O(values);
+    return new $c_s_util_Success(value)
+  } else {
+    var arr = trys.map(((x$1) => {
+      var x$1$1 = $as_s_util_Try(x$1);
+      if ((x$1$1 instanceof $c_s_util_Failure)) {
+        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
+        return new $c_s_Some(err)
+      } else {
+        return $m_s_None$()
+      }
+    }));
+    var errors = $m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), arr));
+    var exception = new $c_Lcom_raquo_airstream_core_AirstreamError$CombinedError(errors);
+    return new $c_s_util_Failure(exception)
+  }
+});
+var $d_Lcom_raquo_airstream_combine_CombineObservable$ = new $TypeData().initClass({
+  Lcom_raquo_airstream_combine_CombineObservable$: 0
+}, false, "com.raquo.airstream.combine.CombineObservable$", {
+  Lcom_raquo_airstream_combine_CombineObservable$: 1,
+  O: 1
+});
+$c_Lcom_raquo_airstream_combine_CombineObservable$.prototype.$classData = $d_Lcom_raquo_airstream_combine_CombineObservable$;
+var $n_Lcom_raquo_airstream_combine_CombineObservable$;
+function $m_Lcom_raquo_airstream_combine_CombineObservable$() {
+  if ((!$n_Lcom_raquo_airstream_combine_CombineObservable$)) {
+    $n_Lcom_raquo_airstream_combine_CombineObservable$ = new $c_Lcom_raquo_airstream_combine_CombineObservable$()
+  };
+  return $n_Lcom_raquo_airstream_combine_CombineObservable$
+}
+/** @constructor */
+function $c_Lcom_raquo_airstream_combine_generated_CombinableSignal$() {
+  /*<skip>*/
+}
+$c_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype = new $h_O();
+$c_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype.constructor = $c_Lcom_raquo_airstream_combine_generated_CombinableSignal$;
+/** @constructor */
+function $h_Lcom_raquo_airstream_combine_generated_CombinableSignal$() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype = $c_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype;
+$c_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype.combineWith$extension__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Source$SignalSource__Lapp_tulz_tuplez_Composition__Lcom_raquo_airstream_core_Signal = (function(this$, s1, c) {
+  var combinator = new $c_sjsr_AnonFunction2(((a, v1) => $n(c).compose__O__O__O(a, v1)));
+  return $m_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$().combineWithFn__Lcom_raquo_airstream_core_Source$SignalSource__Lcom_raquo_airstream_core_Source$SignalSource__F2__Lcom_raquo_airstream_core_Signal(this$, s1, combinator)
+});
+var $d_Lcom_raquo_airstream_combine_generated_CombinableSignal$ = new $TypeData().initClass({
+  Lcom_raquo_airstream_combine_generated_CombinableSignal$: 0
+}, false, "com.raquo.airstream.combine.generated.CombinableSignal$", {
+  Lcom_raquo_airstream_combine_generated_CombinableSignal$: 1,
+  O: 1
+});
+$c_Lcom_raquo_airstream_combine_generated_CombinableSignal$.prototype.$classData = $d_Lcom_raquo_airstream_combine_generated_CombinableSignal$;
+var $n_Lcom_raquo_airstream_combine_generated_CombinableSignal$;
+function $m_Lcom_raquo_airstream_combine_generated_CombinableSignal$() {
+  if ((!$n_Lcom_raquo_airstream_combine_generated_CombinableSignal$)) {
+    $n_Lcom_raquo_airstream_combine_generated_CombinableSignal$ = new $c_Lcom_raquo_airstream_combine_generated_CombinableSignal$()
+  };
+  return $n_Lcom_raquo_airstream_combine_generated_CombinableSignal$
+}
+/** @constructor */
+function $c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$() {
+  /*<skip>*/
+}
+$c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype = new $h_O();
+$c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype.constructor = $c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$;
+/** @constructor */
+function $h_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype = $c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype;
+$c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype.combineWithFn__Lcom_raquo_airstream_core_Source$SignalSource__Lcom_raquo_airstream_core_Source$SignalSource__F2__Lcom_raquo_airstream_core_Signal = (function(s1, s2, combinator) {
+  return new $c_Lcom_raquo_airstream_combine_CombineSignalN($m_Lcom_raquo_ew_JsArray$().apply__sci_Seq__Lcom_raquo_ew_JsArray($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_airstream_core_Signal.getArrayOf().constr)([$n(s1).toObservable__Lcom_raquo_airstream_core_Signal(), $n(s2).toObservable__Lcom_raquo_airstream_core_Signal()]))), new $c_sjsr_AnonFunction1(((arr) => $n(combinator).apply__O__O__O(arr[0], arr[1]))))
+});
+var $d_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$ = new $TypeData().initClass({
+  Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$: 0
+}, false, "com.raquo.airstream.combine.generated.StaticSignalCombineOps$", {
+  Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$: 1,
+  O: 1
+});
+$c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$.prototype.$classData = $d_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$;
+var $n_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$;
+function $m_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$() {
+  if ((!$n_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$)) {
+    $n_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$ = new $c_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$()
+  };
+  return $n_Lcom_raquo_airstream_combine_generated_StaticSignalCombineOps$
+}
+/** @constructor */
 function $c_Lcom_raquo_airstream_common_InternalParentObserver$() {
   /*<skip>*/
 }
@@ -1427,7 +1545,7 @@ $c_Lcom_raquo_airstream_core_Transaction.prototype.enqueuePendingObservable__Lco
     var newQueue = new $c_Lcom_raquo_airstream_util_JsPriorityQueue(new $c_sjsr_AnonFunction1(((observable$1) => {
       var observable$2 = $as_Lcom_raquo_airstream_core_SyncObservable(observable$1);
       $m_Lcom_raquo_airstream_core_Protected$();
-      return $n(observable$2).Lcom_raquo_airstream_combine_MergeStream__f_topoRank
+      return $n(observable$2).topoRank__I()
     })));
     this.Lcom_raquo_airstream_core_Transaction__f_maybePendingObservables = newQueue;
     var $$x1 = newQueue
@@ -4281,6 +4399,85 @@ function $m_Lcom_swarm_api_ApiAuth$() {
   return $n_Lcom_swarm_api_ApiAuth$
 }
 /** @constructor */
+function $c_Lcom_swarm_api_ApiAwsBuild$() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype = new $h_O();
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.constructor = $c_Lcom_swarm_api_ApiAwsBuild$;
+/** @constructor */
+function $h_Lcom_swarm_api_ApiAwsBuild$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_api_ApiAwsBuild$.prototype = $c_Lcom_swarm_api_ApiAwsBuild$.prototype;
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.list__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future = (function(app) {
+  var url = (($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build/list/") + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "GET", $m_s_None$(), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var $$x1 = $m_Lcom_swarm_api_ApiServer$ApiResult$();
+    var evidence$12 = $m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter();
+    var nc$proxy1 = $n($$x1).derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter(new $c_Lorg_getshaka_nativeconverter_NativeConverter$ListConv(evidence$12));
+    var this$3 = $n(nc$proxy1);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$3, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.update__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future = (function(awsBuild) {
+  var url = ($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build");
+  var $$x1 = $m_sr_ScalaRunTime$();
+  var value = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id;
+  var fields = $n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("id", value)]));
+  var body = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "PUT", new $c_s_Some(body), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var nc$proxy2 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$7 = $n(nc$proxy2);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$7, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.delete__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future = (function(awsBuild) {
+  var url = ($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build");
+  var $$x1 = $m_sr_ScalaRunTime$();
+  var value = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id;
+  var fields = $n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("id", value)]));
+  var body = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "DELETE", new $c_s_Some(body), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((_$1) => (void 0))), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.get__I__s_concurrent_Future = (function(id) {
+  var url = (($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build/") + id);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "GET", $m_s_None$(), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var nc$proxy3 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$2 = $n(nc$proxy3);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$2, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.start__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future = (function(app) {
+  var url = (($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build/start/") + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "GET", $m_s_None$(), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var nc$proxy4 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$2 = $n(nc$proxy4);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$2, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.stop__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future = (function(awsBuild) {
+  var url = (($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/aws/build/stop/") + $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id);
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "GET", $m_s_None$(), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var nc$proxy5 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$2 = $n(nc$proxy5);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$2, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+});
+var $d_Lcom_swarm_api_ApiAwsBuild$ = new $TypeData().initClass({
+  Lcom_swarm_api_ApiAwsBuild$: 0
+}, false, "com.swarm.api.ApiAwsBuild$", {
+  Lcom_swarm_api_ApiAwsBuild$: 1,
+  O: 1
+});
+$c_Lcom_swarm_api_ApiAwsBuild$.prototype.$classData = $d_Lcom_swarm_api_ApiAwsBuild$;
+var $n_Lcom_swarm_api_ApiAwsBuild$;
+function $m_Lcom_swarm_api_ApiAwsBuild$() {
+  if ((!$n_Lcom_swarm_api_ApiAwsBuild$)) {
+    $n_Lcom_swarm_api_ApiAwsBuild$ = new $c_Lcom_swarm_api_ApiAwsBuild$()
+  };
+  return $n_Lcom_swarm_api_ApiAwsBuild$
+}
+/** @constructor */
 function $c_Lcom_swarm_api_ApiAwsCodeBuildApp$() {
   /*<skip>*/
 }
@@ -4613,7 +4810,11 @@ $c_Lcom_swarm_api_ApiStack$.prototype.update__Lcom_swarm_models_Models$Stack__s_
   var url = ($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/stack");
   var $$x1 = $m_Lcom_swarm_api_ApiServer$();
   var value = $n($m_Lcom_swarm_models_Models$Stack$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter()).toNative__O__sjs_js_Any(stack);
-  return $n($n($$x1).fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "PUT", new $c_s_Some(value), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((_$1) => (void 0))), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  return $n($n($$x1).fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "PUT", new $c_s_Some(value), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
+    var nc$proxy3 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$Stack$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$3 = $n(nc$proxy3);
+    return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$3, r))
+  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 });
 $c_Lcom_swarm_api_ApiStack$.prototype.delete__Lcom_swarm_models_Models$Stack__s_concurrent_Future = (function(stack) {
   var url = ($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/stack");
@@ -4621,13 +4822,13 @@ $c_Lcom_swarm_api_ApiStack$.prototype.delete__Lcom_swarm_models_Models$Stack__s_
   var value = $n(stack).Lcom_swarm_models_Models$Stack__f_id;
   var fields = $n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("id", value)]));
   var body = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
-  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "DELETE", new $c_s_Some(body), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((_$2) => (void 0))), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "DELETE", new $c_s_Some(body), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((_$1) => (void 0))), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 });
 $c_Lcom_swarm_api_ApiStack$.prototype.get__I__s_concurrent_Future = (function(id) {
   var url = (($m_Lcom_swarm_configs_AppConfigs$().serverUrl__T() + "/api/stack/") + id);
   return $n($m_Lcom_swarm_api_ApiServer$().fetch__T__T__s_Option__sci_Map__s_concurrent_Future(url, "GET", $m_s_None$(), $m_Lcom_swarm_api_ApiServer$().defaultHeaders__sci_Map())).map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction1(((r) => {
-    var nc$proxy3 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$Stack$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
-    var this$2 = $n(nc$proxy3);
+    var nc$proxy4 = $m_Lcom_swarm_api_ApiServer$ApiResult$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter($m_Lcom_swarm_models_Models$Stack$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var this$2 = $n(nc$proxy4);
     return $as_Lcom_swarm_api_ApiServer$ApiResult($f_Lorg_getshaka_nativeconverter_NativeConverter__fromNative__sjs_js_Any__O(this$2, r))
   })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 });
@@ -4908,14 +5109,14 @@ $c_Lcom_swarm_pages_Index$.prototype.route__Lcom_raquo_laminar_nodes_ReactiveHtm
   return $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_raquo_laminar_modifiers_ChildInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childSource, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])))
 });
 $c_Lcom_swarm_pages_Index$.prototype.render__s_Option__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(maybeUser) {
-  var $$x47 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x46 = $m_sr_ScalaRunTime$();
+  var $$x61 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x60 = $m_sr_ScalaRunTime$();
   $m_Lfrontroute_package$();
-  var $$x38 = $m_sr_ScalaRunTime$();
-  var $$x37 = $m_Lfrontroute_package$().addNullaryDirectiveApply__Lfrontroute_Directive__F1($m_Lfrontroute_package$().Lfrontroute_package$__f_pathEnd);
-  var $$x36 = $m_Lfrontroute_package$();
+  var $$x52 = $m_sr_ScalaRunTime$();
+  var $$x51 = $m_Lfrontroute_package$().addNullaryDirectiveApply__Lfrontroute_Directive__F1($m_Lfrontroute_package$().Lfrontroute_package$__f_pathEnd);
+  var $$x50 = $m_Lfrontroute_package$();
   var this$1 = $m_Lfrontroute_package$();
-  var $$x35 = $as_Lfrontroute_Route($n($$x37).apply__O__O($n($n($$x36).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$1, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((us_er) => {
+  var $$x49 = $as_Lfrontroute_Route($n($$x51).apply__O__O($n($n($$x50).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$1, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((us_er) => {
     $as_Lcom_swarm_services_AuthService$UserAuth(us_er);
     $m_Lfrontroute_package$();
     var e = new $c_sjsr_AnonFunction0((() => {
@@ -4925,73 +5126,73 @@ $c_Lcom_swarm_pages_Index$.prototype.render__s_Option__Lcom_raquo_laminar_nodes_
     $m_Lfrontroute_package$();
     return new $c_Lfrontroute_package$$anon$8(e)
   })))));
-  var $$x33 = $m_Lfrontroute_package$();
+  var $$x47 = $m_Lfrontroute_package$();
   var this$14 = $m_Lfrontroute_package$();
   var this$7 = $m_Lfrontroute_package$();
-  var $$x32 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$7);
+  var $$x46 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$7);
   var this$8 = $m_Lfrontroute_package$();
-  var $$x31 = $$x32.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("service", this$8), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var $$x45 = $$x46.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("service", this$8), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
   var this$10 = $m_Lfrontroute_package$();
-  var $$x30 = $n($n($$x31).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("ps", this$10), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var $$x44 = $n($n($$x45).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("ps", this$10), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
   var this$12 = $m_Lfrontroute_package$();
-  var m = $n($$x30).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$12), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
-  var $$x29 = $as_Lfrontroute_Route($n($n($$x33).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$14, m), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id) => {
+  var m = $n($$x44).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$12), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
+  var $$x43 = $as_Lfrontroute_Route($n($n($$x47).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$14, m), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id) => {
     var id$1 = $as_T(id);
-    var $$x34 = $m_Lfrontroute_package$();
+    var $$x48 = $m_Lfrontroute_package$();
     var this$16 = $m_Lfrontroute_package$();
-    return $as_Lfrontroute_Route($n($n($$x34).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$16, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$1) => {
+    return $as_Lfrontroute_Route($n($n($$x48).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$16, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$1) => {
       $as_Lcom_swarm_services_AuthService$UserAuth(_$1);
       $m_Lfrontroute_package$();
-      var e$1 = new $c_sjsr_AnonFunction0((() => {
-        var this$18 = $m_Lcom_swarm_pages_services_ServicePS$();
-        return $p_Lcom_swarm_pages_services_ServicePS$__node__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$18, id$1)
-      }));
+      var e$1 = new $c_sjsr_AnonFunction0((() => $m_Lcom_swarm_pages_services_ServicePS$().apply__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(id$1)));
       $m_Lfrontroute_package$();
       return new $c_Lfrontroute_package$$anon$8(e$1)
     }))))
   }))));
-  var $$x27 = $m_Lfrontroute_package$();
-  var this$30 = $m_Lfrontroute_package$();
+  var $$x41 = $m_Lfrontroute_package$();
+  var this$31 = $m_Lfrontroute_package$();
+  var this$20 = $m_Lfrontroute_package$();
+  var $$x40 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$20);
   var this$21 = $m_Lfrontroute_package$();
-  var $$x26 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$21);
-  var this$22 = $m_Lfrontroute_package$();
-  var $$x25 = $n($$x26.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("service", this$22), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
-  var this$24 = $m_Lfrontroute_package$();
-  var $$x24 = $n($$x25).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("log", this$24), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var this$26 = $m_Lfrontroute_package$();
-  var $$x23 = $n($n($$x24).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stream", this$26), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
-  var this$28 = $m_Lfrontroute_package$();
-  var m$1 = $n($$x23).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$28), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
-  var $$x22 = $as_Lfrontroute_Route($n($n($$x27).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$30, m$1), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id$2) => {
+  var $$x39 = $$x40.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("service", this$21), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var this$23 = $m_Lfrontroute_package$();
+  var $$x38 = $n($n($$x39).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("log", this$23), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$25 = $m_Lfrontroute_package$();
+  var $$x37 = $n($$x38).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stream", this$25), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var this$27 = $m_Lfrontroute_package$();
+  var $$x36 = $n($n($$x37).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$27), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65()));
+  var this$29 = $m_Lfrontroute_package$();
+  var m$1 = $n($$x36).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$29), new $c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1());
+  var $$x35 = $as_Lfrontroute_Route($n($n($$x41).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$31, m$1), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3()))).apply__O__O(new $c_sjsr_AnonFunction2(((name, id$2) => {
+    var name$1 = $as_T(name);
     var id$3 = $as_T(id$2);
-    var $$x28 = $m_Lfrontroute_package$();
-    var this$32 = $m_Lfrontroute_package$();
-    return $as_Lfrontroute_Route($n($n($$x28).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$32, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$2) => {
+    var $$x42 = $m_Lfrontroute_package$();
+    var this$33 = $m_Lfrontroute_package$();
+    return $as_Lfrontroute_Route($n($n($$x42).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$33, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$2) => {
       $as_Lcom_swarm_services_AuthService$UserAuth(_$2);
       $m_Lfrontroute_package$();
       var e$2 = new $c_sjsr_AnonFunction0((() => {
-        var this$34 = $m_Lcom_swarm_pages_services_ServiceLogStream$();
-        return $p_Lcom_swarm_pages_services_ServiceLogStream$__node__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$34, id$3)
+        var this$35 = $m_Lcom_swarm_pages_services_ServiceLogStream$();
+        return $p_Lcom_swarm_pages_services_ServiceLogStream$__node__T__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$35, name$1, id$3)
       }));
       $m_Lfrontroute_package$();
       return new $c_Lfrontroute_package$$anon$8(e$2)
     }))))
   }))));
-  var $$x20 = $m_Lfrontroute_package$();
-  var this$44 = $m_Lfrontroute_package$();
-  var this$37 = $m_Lfrontroute_package$();
-  var $$x19 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$37);
+  var $$x33 = $m_Lfrontroute_package$();
+  var this$45 = $m_Lfrontroute_package$();
   var this$38 = $m_Lfrontroute_package$();
-  var $$x18 = $$x19.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stack", this$38), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var this$40 = $m_Lfrontroute_package$();
-  var $$x17 = $n($n($$x18).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("mgr", this$40), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
-  var this$42 = $m_Lfrontroute_package$();
-  var m$2 = $n($$x17).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$42), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
-  var $$x16 = $as_Lfrontroute_Route($n($n($$x20).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$44, m$2), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id$3$1) => {
+  var $$x32 = new $c_Lfrontroute_PathMatchers$$anon$14("docker", this$38);
+  var this$39 = $m_Lfrontroute_package$();
+  var $$x31 = $$x32.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stack", this$39), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var this$41 = $m_Lfrontroute_package$();
+  var $$x30 = $n($n($$x31).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("mgr", this$41), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$43 = $m_Lfrontroute_package$();
+  var m$2 = $n($$x30).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$43), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
+  var $$x29 = $as_Lfrontroute_Route($n($n($$x33).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$45, m$2), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id$3$1) => {
     var id$4 = $as_T(id$3$1);
-    var $$x21 = $m_Lfrontroute_package$();
-    var this$46 = $m_Lfrontroute_package$();
-    return $as_Lfrontroute_Route($n($n($$x21).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$46, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$3) => {
+    var $$x34 = $m_Lfrontroute_package$();
+    var this$47 = $m_Lfrontroute_package$();
+    return $as_Lfrontroute_Route($n($n($$x34).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$47, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$3) => {
       $as_Lcom_swarm_services_AuthService$UserAuth(_$3);
       $m_Lfrontroute_package$();
       var e$3 = new $c_sjsr_AnonFunction0((() => $m_Lcom_swarm_pages_stacks_StackManager$().apply__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(id$4)));
@@ -4999,96 +5200,153 @@ $c_Lcom_swarm_pages_Index$.prototype.render__s_Option__Lcom_raquo_laminar_nodes_
       return new $c_Lfrontroute_package$$anon$8(e$3)
     }))))
   }))));
-  var $$x15 = $m_Lfrontroute_package$();
-  var this$53 = $m_Lfrontroute_package$();
-  var this$50 = $m_Lfrontroute_package$();
-  var $$x14 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$50);
-  var this$51 = $m_Lfrontroute_package$();
-  var m$3 = $$x14.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stack", this$51), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var $$x13 = $n($$x15).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__pathPrefix__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$53, m$3));
-  var $$x12 = $m_Lfrontroute_package$();
-  var this$54 = $m_Lfrontroute_package$();
-  var $$x11 = $as_Lfrontroute_Route($n($$x13).apply__O__O($n($n($$x12).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$54, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$4) => {
-    $as_Lcom_swarm_services_AuthService$UserAuth(_$4);
-    var this$56 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
-    var mod = new $c_sjsr_AnonFunction1(((_$5) => {
-      $as_Lcom_swarm_pages_Index$DrawerMenuItem(_$5);
-      return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__Stack__Lcom_swarm_pages_Index$DrawerMenuItem()
-    }));
-    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$56, mod);
-    $m_Lfrontroute_package$();
-    var e$4 = new $c_sjsr_AnonFunction0((() => {
-      var this$57 = $m_Lcom_swarm_pages_adm_stack_StackPage$();
-      return $p_Lcom_swarm_pages_adm_stack_StackPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$57)
-    }));
-    $m_Lfrontroute_package$();
-    return new $c_Lfrontroute_package$$anon$8(e$4)
-  })))));
-  var $$x10 = $m_Lfrontroute_package$();
-  var this$67 = $m_Lfrontroute_package$();
+  var $$x27 = $m_Lfrontroute_package$();
   var this$60 = $m_Lfrontroute_package$();
-  var $$x9 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$60);
-  var this$61 = $m_Lfrontroute_package$();
-  var $$x8 = $$x9.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("aws", this$61), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var this$63 = $m_Lfrontroute_package$();
-  var $$x7 = $n($n($$x8).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("codebuild", this$63), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
-  var this$65 = $m_Lfrontroute_package$();
-  var m$4 = $n($$x7).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("app", this$65), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var $$x6 = $n($$x10).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__pathPrefix__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$67, m$4));
-  var $$x5 = $m_Lfrontroute_package$();
+  var this$51 = $m_Lfrontroute_package$();
+  var $$x26 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$51);
+  var this$52 = $m_Lfrontroute_package$();
+  var $$x25 = $n($$x26.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("aws", this$52), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$54 = $m_Lfrontroute_package$();
+  var $$x24 = $n($$x25).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("build", this$54), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var this$56 = $m_Lfrontroute_package$();
+  var $$x23 = $n($n($$x24).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("logs", this$56), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$58 = $m_Lfrontroute_package$();
+  var m$3 = $n($$x23).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$11(this$58), new $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65());
+  var $$x22 = $as_Lfrontroute_Route($n($n($$x27).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$60, m$3), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id$4$1) => {
+    var id$5 = $as_T(id$4$1);
+    var $$x28 = $m_Lfrontroute_package$();
+    var this$62 = $m_Lfrontroute_package$();
+    return $as_Lfrontroute_Route($n($n($$x28).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$62, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$4) => {
+      $as_Lcom_swarm_services_AuthService$UserAuth(_$4);
+      var this$64 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
+      var mod = new $c_sjsr_AnonFunction1(((_$5) => {
+        $as_Lcom_swarm_pages_Index$DrawerMenuItem(_$5);
+        return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__AwsCodeBuildApp__Lcom_swarm_pages_Index$DrawerMenuItem()
+      }));
+      $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$64, mod);
+      $m_Lfrontroute_package$();
+      var e$4 = new $c_sjsr_AnonFunction0((() => $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$().apply__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(id$5)));
+      $m_Lfrontroute_package$();
+      return new $c_Lfrontroute_package$$anon$8(e$4)
+    }))))
+  }))));
+  var $$x21 = $m_Lfrontroute_package$();
+  var this$70 = $m_Lfrontroute_package$();
+  var this$67 = $m_Lfrontroute_package$();
+  var $$x20 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$67);
   var this$68 = $m_Lfrontroute_package$();
-  var $$x4 = $as_Lfrontroute_Route($n($$x6).apply__O__O($n($n($$x5).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$68, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$6) => {
+  var m$4 = $$x20.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("stack", this$68), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var $$x19 = $n($$x21).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__pathPrefix__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$70, m$4));
+  var $$x18 = $m_Lfrontroute_package$();
+  var this$71 = $m_Lfrontroute_package$();
+  var $$x17 = $as_Lfrontroute_Route($n($$x19).apply__O__O($n($n($$x18).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$71, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$6) => {
     $as_Lcom_swarm_services_AuthService$UserAuth(_$6);
-    var this$70 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
+    var this$73 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
     var mod$1 = new $c_sjsr_AnonFunction1(((_$7) => {
       $as_Lcom_swarm_pages_Index$DrawerMenuItem(_$7);
-      return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__AwsCodeBuildApp__Lcom_swarm_pages_Index$DrawerMenuItem()
+      return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__Stack__Lcom_swarm_pages_Index$DrawerMenuItem()
     }));
-    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$70, mod$1);
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$73, mod$1);
     $m_Lfrontroute_package$();
     var e$5 = new $c_sjsr_AnonFunction0((() => {
-      var this$71 = $m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$();
-      return $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$71)
+      var this$74 = $m_Lcom_swarm_pages_adm_stack_StackPage$();
+      return $p_Lcom_swarm_pages_adm_stack_StackPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$74)
     }));
     $m_Lfrontroute_package$();
     return new $c_Lfrontroute_package$$anon$8(e$5)
   })))));
-  var $$x3 = $m_Lfrontroute_package$();
+  var $$x16 = $m_Lfrontroute_package$();
+  var this$84 = $m_Lfrontroute_package$();
   var this$77 = $m_Lfrontroute_package$();
-  var this$74 = $m_Lfrontroute_package$();
-  var $$x2 = new $c_Lfrontroute_PathMatchers$$anon$14("app", this$74);
-  var this$75 = $m_Lfrontroute_package$();
-  var m$5 = $$x2.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("login", this$75), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
-  var $$x1 = $n($$x3).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$77, m$5));
-  $m_Lfrontroute_package$();
-  var e$6 = new $c_sjsr_AnonFunction0((() => {
-    var this$78 = $m_Lcom_swarm_pages_Login$();
-    return this$78.node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()
-  }));
-  $m_Lfrontroute_package$();
-  var routes = $n($$x38).wrapRefArray__AO__sci_ArraySeq(new ($d_Lfrontroute_Route.getArrayOf().constr)([$$x35, $$x29, $$x22, $$x16, $$x11, $$x4, $as_Lfrontroute_Route($n($$x1).apply__O__O(new $c_Lfrontroute_package$$anon$8(e$6))), $as_Lfrontroute_Route($n($m_Lfrontroute_package$().addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($m_Lfrontroute_package$().Lfrontroute_package$__f_extractUnmatchedPath, ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((unmatched) => {
-    var unmatched$1 = $as_sci_List(unmatched);
+  var $$x15 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$77);
+  var this$78 = $m_Lfrontroute_package$();
+  var $$x14 = $$x15.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("aws", this$78), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var this$80 = $m_Lfrontroute_package$();
+  var $$x13 = $n($n($$x14).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("codebuild", this$80), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$82 = $m_Lfrontroute_package$();
+  var m$5 = $n($$x13).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("app", this$82), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var $$x12 = $n($$x16).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__pathPrefix__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$84, m$5));
+  var $$x11 = $m_Lfrontroute_package$();
+  var this$85 = $m_Lfrontroute_package$();
+  var $$x10 = $as_Lfrontroute_Route($n($$x12).apply__O__O($n($n($$x11).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$85, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$8) => {
+    $as_Lcom_swarm_services_AuthService$UserAuth(_$8);
+    var this$87 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
+    var mod$2 = new $c_sjsr_AnonFunction1(((_$9) => {
+      $as_Lcom_swarm_pages_Index$DrawerMenuItem(_$9);
+      return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__AwsCodeBuildApp__Lcom_swarm_pages_Index$DrawerMenuItem()
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$87, mod$2);
+    $m_Lfrontroute_package$();
+    var e$6 = new $c_sjsr_AnonFunction0((() => {
+      var this$88 = $m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$();
+      return $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$88)
+    }));
+    $m_Lfrontroute_package$();
+    return new $c_Lfrontroute_package$$anon$8(e$6)
+  })))));
+  var $$x9 = $m_Lfrontroute_package$();
+  var this$96 = $m_Lfrontroute_package$();
+  var this$91 = $m_Lfrontroute_package$();
+  var $$x8 = new $c_Lfrontroute_PathMatchers$$anon$14("adm", this$91);
+  var this$92 = $m_Lfrontroute_package$();
+  var $$x7 = $n($$x8.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("aws", this$92), new $c_Lapp_tulz_tuplez_Composition$$anon$67()));
+  var this$94 = $m_Lfrontroute_package$();
+  var m$6 = $n($$x7).$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("build", this$94), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var $$x6 = $n($$x9).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__pathPrefix__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$96, m$6));
+  var $$x5 = $m_Lfrontroute_package$();
+  var this$97 = $m_Lfrontroute_package$();
+  var $$x4 = $as_Lfrontroute_Route($n($$x6).apply__O__O($n($n($$x5).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__provideOption__s_Option__Lfrontroute_Directive(this$97, maybeUser), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((_$10) => {
+    $as_Lcom_swarm_services_AuthService$UserAuth(_$10);
+    var this$99 = $n(this.Lcom_swarm_pages_Index$__f_drawerMenuItemVar);
+    var mod$3 = new $c_sjsr_AnonFunction1(((_$11) => {
+      $as_Lcom_swarm_pages_Index$DrawerMenuItem(_$11);
+      return $s_Lcom_swarm_pages_Index$DrawerMenuItem$__AwsCodeBuildApp__Lcom_swarm_pages_Index$DrawerMenuItem()
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$99, mod$3);
     $m_Lfrontroute_package$();
     var e$7 = new $c_sjsr_AnonFunction0((() => {
-      var $$x45 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-      var $$x44 = $m_sr_ScalaRunTime$();
-      var $$x43 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).h2__Lcom_raquo_laminar_tags_HtmlTag());
-      var $$x42 = $m_sr_ScalaRunTime$();
-      var this$82 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-      var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-      var $$x41 = $n($$x43).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x42).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$82, "not found", renderable)])));
-      var $$x40 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
-      var $$x39 = $m_sr_ScalaRunTime$();
-      var this$84 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-      var this$83 = $n(unmatched$1);
-      var value = $f_sc_IterableOnceOps__mkString__T__T__T__T(this$83, "/", "/", "");
-      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-      return $n($$x45).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x44).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x41, $n($$x40).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x39).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$84, value, renderable$1)])))])))
+      var this$100 = $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$();
+      return $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this$100)
     }));
     $m_Lfrontroute_package$();
     return new $c_Lfrontroute_package$$anon$8(e$7)
+  })))));
+  var $$x3 = $m_Lfrontroute_package$();
+  var this$106 = $m_Lfrontroute_package$();
+  var this$103 = $m_Lfrontroute_package$();
+  var $$x2 = new $c_Lfrontroute_PathMatchers$$anon$14("app", this$103);
+  var this$104 = $m_Lfrontroute_package$();
+  var m$7 = $$x2.$div__Lfrontroute_PathMatcher__Lapp_tulz_tuplez_Composition__Lfrontroute_PathMatcher(new $c_Lfrontroute_PathMatchers$$anon$14("login", this$104), new $c_Lapp_tulz_tuplez_Composition$$anon$67());
+  var $$x1 = $n($$x3).addNullaryDirectiveApply__Lfrontroute_Directive__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$106, m$7));
+  $m_Lfrontroute_package$();
+  var e$8 = new $c_sjsr_AnonFunction0((() => {
+    var this$107 = $m_Lcom_swarm_pages_Login$();
+    return this$107.node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()
+  }));
+  $m_Lfrontroute_package$();
+  var routes = $n($$x52).wrapRefArray__AO__sci_ArraySeq(new ($d_Lfrontroute_Route.getArrayOf().constr)([$$x49, $$x43, $$x35, $$x29, $$x22, $$x17, $$x10, $$x4, $as_Lfrontroute_Route($n($$x1).apply__O__O(new $c_Lfrontroute_package$$anon$8(e$8))), $as_Lfrontroute_Route($n($m_Lfrontroute_package$().addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($m_Lfrontroute_package$().Lfrontroute_package$__f_extractUnmatchedPath, ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((unmatched) => {
+    var unmatched$1 = $as_sci_List(unmatched);
+    $m_Lfrontroute_package$();
+    var e$9 = new $c_sjsr_AnonFunction0((() => {
+      var $$x59 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+      var $$x58 = $m_sr_ScalaRunTime$();
+      var $$x57 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).h2__Lcom_raquo_laminar_tags_HtmlTag());
+      var $$x56 = $m_sr_ScalaRunTime$();
+      var this$111 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      var $$x55 = $n($$x57).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x56).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$111, "not found", renderable)])));
+      var $$x54 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x53 = $m_sr_ScalaRunTime$();
+      var this$113 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var this$112 = $n(unmatched$1);
+      var value = $f_sc_IterableOnceOps__mkString__T__T__T__T(this$112, "/", "/", "");
+      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return $n($$x59).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x58).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x55, $n($$x54).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x53).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$113, value, renderable$1)])))])))
+    }));
+    $m_Lfrontroute_package$();
+    return new $c_Lfrontroute_package$$anon$8(e$9)
   }))))]));
-  return $n($$x47).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x46).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lfrontroute_package$$anon$3(routes)])))
+  return $n($$x61).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x60).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lfrontroute_package$$anon$3(routes)])))
 });
 $c_Lcom_swarm_pages_Index$.prototype.skeleton__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(children) {
   var $$x4 = $m_Lcom_swarm_laminar_Drawer$();
@@ -5165,7 +5423,7 @@ $c_Lcom_swarm_pages_Index$.prototype.drawerMenu__Lcom_raquo_laminar_nodes_Reacti
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$15 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$1, false, false));
-  var onNext$1 = new $c_sjsr_AnonFunction1(((_$8) => {
+  var onNext$1 = new $c_sjsr_AnonFunction1(((_$12) => {
     $m_Lcom_swarm_services_AuthService$().logout__V()
   }));
   return $n($$x37).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x36).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x35, $$x25, $n($$x24).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x23).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x22, $$x21, $$x16, $$x11, $$x6, $n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $$x2, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$15, onNext$1)])))])))])))
@@ -5191,8 +5449,8 @@ $c_Lcom_swarm_pages_Index$.prototype.page__Lcom_raquo_laminar_nodes_ReactiveHtml
   var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x1 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$12) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$12);
+  var fn = new $c_sjsr_AnonFunction1(((_$16) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$16);
     $m_Lcom_swarm_services_AuthService$().enterApp__V()
   }));
   return this.skeleton__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_nodes_ReactiveHtmlElement.getArrayOf().constr)([$n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn), this.route__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()])))])))
@@ -5435,159 +5693,62 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__formSub
   }));
   return this$4.withRecover__F1__s_PartialFunction__Z__Lcom_raquo_airstream_core_Observer(onNext, $m_s_PartialFunction$().s_PartialFunction$__f_empty_pf, true)
 }
-function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__clear__V($thiz) {
-  var this$2 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
-  var value = new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(0, "", "", "", "", "", "", "", "", 0, "");
-  $f_Lcom_raquo_airstream_state_Var__set__O__V(this$2, value)
+function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x8 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x7 = $m_sr_ScalaRunTime$();
+  var $$x6 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x4 = $m_sr_ScalaRunTime$();
+  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x3 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("/adm/aws/codebuild/app");
+  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x1 = $m_sr_ScalaRunTime$();
+  var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  return $n($$x8).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x6).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "aws codebuild apps", renderable)])))]))), false), $m_Lcom_swarm_pages_comps_Theme$().breadcrumbItem__T__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement("aws codebuild app", true)])))
 }
-function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__goback__V($thiz) {
-  $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__clear__V($thiz);
-  $m_Lfrontroute_BrowserNavigation$().replaceState__O__sjs_js_Any__Z__V("/adm/aws/codebuild/app", ($m_Lfrontroute_BrowserNavigation$(), (void 0)), ($m_Lfrontroute_BrowserNavigation$(), true))
+function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__clear__V($thiz) {
+  var this$2 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
+  var value = new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(0, "", "", "", "", "", "", "", "", "", 0, "");
+  $f_Lcom_raquo_airstream_state_Var__set__O__V(this$2, value)
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__onClone__V($thiz) {
   if ($uZ(window.confirm("Are you sure?"))) {
     var $$x1 = $m_Lcom_swarm_api_ApiAwsCodeBuildApp$();
-    var this$1 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+    var this$1 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
     var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
-    $n($n($$x1).clone__I__s_concurrent_Future($n($as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O())).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-      var x$1$1 = $as_s_util_Try(x$1);
-      matchResult7: {
-        if ((x$1$1 instanceof $c_s_util_Success)) {
-          var r = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-          $m_Lfrontroute_BrowserNavigation$().replaceState__O__sjs_js_Any__Z__V(("/adm/aws/codebuild/app/form/" + $n($as_Lcom_swarm_models_Models$AwsCodeBuildApp($n(r).Lcom_swarm_api_ApiServer$ApiResult__f_data)).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id), ($m_Lfrontroute_BrowserNavigation$(), (void 0)), ($m_Lfrontroute_BrowserNavigation$(), true));
-          break matchResult7
-        };
-        if ((x$1$1 instanceof $c_s_util_Failure)) {
-          var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-          var this$7 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message);
-          var mod = new $c_sjsr_AnonFunction1(((_$3) => {
-            $as_s_Option(_$3);
-            var value = ("" + $n(err).getMessage__T());
-            return new $c_s_Some(value)
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-          break matchResult7
-        };
-        throw new $c_s_MatchError(x$1$1)
-      }
-    })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    $n($n($$x1).clone__I__s_concurrent_Future($n($as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O())).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   }
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__submit__Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__V($thiz, form) {
   var TransformerInto_this = new $c_Lio_scalaland_chimney_dsl_TransformerInto(form, new $c_Lio_scalaland_chimney_dsl_TransformerDefinition(($n($m_s_package$().s_package$__f_Vector), $m_sci_Vector0$())));
   var this$3 = $m_s_$less$colon$less$();
-  var overrideData = new $c_sjsr_AnonFunction1(((_$5) => {
-    $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$5);
+  var overrideData = new $c_sjsr_AnonFunction1(((_$4) => {
+    $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$4);
     return ""
   }));
   var TransformerInto_this$2 = TransformerInto_this.addOverride__O__Lio_scalaland_chimney_dsl_TransformerInto(overrideData);
-  var vector$macro$1 = $n($n(TransformerInto_this$2).Lio_scalaland_chimney_dsl_TransformerInto__f_td).Lio_scalaland_chimney_dsl_TransformerDefinition__f_runtimeData;
-  var awscodebuildappform$macro$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n(TransformerInto_this$2).Lio_scalaland_chimney_dsl_TransformerInto__f_source);
-  var stack = new $c_Lcom_swarm_models_Models$AwsCodeBuildApp($n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId, $as_T($n($as_F1($n(vector$macro$1).apply__I__O(0))).apply__O__O(awscodebuildappform$macro$1)));
-  $n((($n(form).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id === 0) ? $m_Lcom_swarm_api_ApiAwsCodeBuildApp$().save__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(stack) : $m_Lcom_swarm_api_ApiAwsCodeBuildApp$().update__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(stack))).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult10: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__goback__V($thiz);
-        break matchResult10
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$7 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message);
-        var mod = new $c_sjsr_AnonFunction1(((_$6) => {
-          $as_s_Option(_$6);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-        break matchResult10
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  var this$6 = $m_s_$less$colon$less$();
+  var overrideData$1 = new $c_sjsr_AnonFunction1(((_$6) => {
+    $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$6);
+    return ""
+  }));
+  var this$8 = $n(TransformerInto_this$2);
+  var TransformerInto_this$3 = this$8.addOverride__O__Lio_scalaland_chimney_dsl_TransformerInto(overrideData$1);
+  var this$9 = $m_s_$less$colon$less$();
+  var overrideData$2 = new $c_sjsr_AnonFunction1(((_$8) => {
+    $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$8);
+    return false
+  }));
+  var this$11 = $n(TransformerInto_this$3);
+  var TransformerInto_this$4 = this$11.addOverride__O__Lio_scalaland_chimney_dsl_TransformerInto(overrideData$2);
+  var vector$macro$1 = $n($n(TransformerInto_this$4).Lio_scalaland_chimney_dsl_TransformerInto__f_td).Lio_scalaland_chimney_dsl_TransformerDefinition__f_runtimeData;
+  var awscodebuildappform$macro$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n(TransformerInto_this$4).Lio_scalaland_chimney_dsl_TransformerInto__f_source);
+  var stack = new $c_Lcom_swarm_models_Models$AwsCodeBuildApp($n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase, $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars, $as_T($n($as_F1($n(vector$macro$1).apply__I__O(1))).apply__O__O(awscodebuildappform$macro$1)), $n(awscodebuildappform$macro$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId, $as_T($n($as_F1($n(vector$macro$1).apply__I__O(2))).apply__O__O(awscodebuildappform$macro$1)), $uZ($n($as_F1($n(vector$macro$1).apply__I__O(0))).apply__O__O(awscodebuildappform$macro$1)));
+  $n((($n(form).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id === 0) ? $m_Lcom_swarm_api_ApiAwsCodeBuildApp$().save__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(stack) : $m_Lcom_swarm_api_ApiAwsCodeBuildApp$().update__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(stack))).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__load__I__V($thiz, id) {
-  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult13: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var result = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var TransformerInto_this = new $c_Lio_scalaland_chimney_dsl_TransformerInto($n(result).Lcom_swarm_api_ApiServer$ApiResult__f_data, new $c_Lio_scalaland_chimney_dsl_TransformerDefinition(($n($m_s_package$().s_package$__f_Vector), $m_sci_Vector0$())));
-        $n(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_td);
-        var awscodebuildapp$macro$1 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_source);
-        var form = new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt);
-        var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
-        $f_Lcom_raquo_airstream_state_Var__set__O__V(this$4, form);
-        $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__loadStaks__I__V($thiz, form.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId);
-        break matchResult13
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$6 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message);
-        var mod = new $c_sjsr_AnonFunction1(((_$7) => {
-          $as_s_Option(_$7);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
-        break matchResult13
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
-}
-function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__loadStaks__I__V($thiz, stackId) {
-  $n($m_Lcom_swarm_api_ApiStack$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult14: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var result = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stackOptions);
-        var mod = new $c_sjsr_AnonFunction1(((items) => {
-          var items$1 = $as_sci_List(items);
-          var this$3 = $n($as_sci_List($n(result).Lcom_swarm_api_ApiServer$ApiResult__f_data));
-          var f = ((s) => {
-            var s$1 = $as_Lcom_swarm_models_Models$Stack(s);
-            var id = $n(s$1).Lcom_swarm_models_Models$Stack__f_id;
-            var text = $n(s$1).Lcom_swarm_models_Models$Stack__f_name;
-            var selected = (stackId === $n(s$1).Lcom_swarm_models_Models$Stack__f_id);
-            return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption(id, text, selected)
-          });
-          if ((this$3 === $m_sci_Nil$())) {
-            var $$x1 = $m_sci_Nil$()
-          } else {
-            var arg1 = this$3.head__O();
-            var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-            var t = h;
-            var rest = $as_sci_List(this$3.tail__O());
-            while ((rest !== $m_sci_Nil$())) {
-              var arg1$1 = $n(rest).head__O();
-              var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-              $n(t).sci_$colon$colon__f_next = nx;
-              t = nx;
-              rest = $as_sci_List($n(rest).tail__O())
-            };
-            var $$x1 = h
-          };
-          return $n($$x1).$colon$colon$colon__sci_List__sci_List(items$1)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod);
-        break matchResult14
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$6 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message);
-        var mod$1 = new $c_sjsr_AnonFunction1(((_$8) => {
-          $as_s_Option(_$8);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod$1);
-        break matchResult14
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, lbl, plholder, reader, writer) {
   var $$x13 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
@@ -5622,41 +5783,44 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInpu
   return $n($$x13).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x11, $n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $$x5, $n($$x4).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x2, $$x1, $f_Lcom_raquo_laminar_api_Laminar__controlled__Lcom_raquo_laminar_modifiers_KeyUpdater__Lcom_raquo_laminar_modifiers_EventListener__Lcom_raquo_laminar_modifiers_Binder(this$9, updater, listener)])))])))])))
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x91 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x90 = $m_sr_ScalaRunTime$();
+  var $$x96 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x95 = $m_sr_ScalaRunTime$();
+  var $$x94 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x93 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x92 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var fn = new $c_sjsr_AnonFunction1(((_$9) => {
     $as_Lcom_raquo_laminar_lifecycle_MountContext(_$9)
   }));
-  var $$x89 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
+  var $$x91 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
   var this$3 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var fn$1 = new $c_sjsr_AnonFunction1(((_$10) => {
     $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$10)
   }));
-  var $$x88 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$3, fn$1);
+  var $$x90 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$3, fn$1);
   var this$4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x87 = this$4.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("col-md-8 offset-2 col-12 mt-5 form");
-  var $$x86 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).h2__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x85 = $m_sr_ScalaRunTime$();
+  var $$x89 = this$4.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("col-md-8 offset-2 col-12 mt-5 form");
+  var $$x88 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).h2__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x87 = $m_sr_ScalaRunTime$();
   var this$5 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x84 = this$5.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var $$x86 = this$5.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
   var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x83 = $n($$x86).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x85).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x84, $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, "AWS CodeBuild App", renderable)])));
-  var $$x82 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
-  var $$x81 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).form__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x85 = $n($$x88).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x87).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x86, $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, "AWS CodeBuild App", renderable)])));
+  var $$x84 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
+  var $$x83 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).form__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x82 = $m_sr_ScalaRunTime$();
+  var $$x81 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x80 = $m_sr_ScalaRunTime$();
-  var $$x79 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x78 = $m_sr_ScalaRunTime$();
   var this$7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x77 = this$7.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("row");
-  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x79 = this$7.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("row");
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project = new $c_sjsr_AnonFunction1(((_$11) => {
     var _$11$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$11);
     return $n(_$11$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName
   }));
-  var $$x76 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$8, project, $m_s_None$());
-  var this$20 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x78 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$8, project, $m_s_None$());
+  var this$21 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod = new $c_sjsr_AnonFunction2(((state, s) => {
     var state$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state);
     var s$1 = $as_T(s);
@@ -5674,227 +5838,275 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__node__L
     var this$14 = $n(state$1);
     var awsUrl = this$14.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$15 = $n(state$1);
-    var codeBase = this$15.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var awsProjectName = this$15.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
     var this$16 = $n(state$1);
-    var buildVars = this$16.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var codeBase = this$16.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
     var this$17 = $n(state$1);
-    var stackId = this$17.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var buildVars = this$17.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
     var this$18 = $n(state$1);
-    var updatedAt = this$18.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id, s$1, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, codeBase, buildVars, stackId, updatedAt)
+    var stackId = this$18.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$19 = $n(state$1);
+    var updatedAt = this$19.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id, s$1, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, awsProjectName, codeBase, buildVars, stackId, updatedAt)
   }));
-  var $$x75 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Stack var name", "APP_NAME_VERSION", $$x76, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$20, mod));
-  var this$21 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x77 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Stack var name", "APP_NAME_VERSION", $$x78, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$21, mod));
+  var this$22 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$1 = new $c_sjsr_AnonFunction1(((_$12) => {
     var _$12$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$12);
     return $n(_$12$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag
   }));
-  var $$x74 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$21, project$1, $m_s_None$());
-  var this$33 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x76 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$22, project$1, $m_s_None$());
+  var this$35 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$1 = new $c_sjsr_AnonFunction2(((state$2, s$2) => {
     var state$3 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$2);
     var s$3 = $as_T(s$2);
     $n(state$3);
-    var this$22 = $n(state$3);
-    var id$1 = this$22.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$23 = $n(state$3);
-    var stackVarName = this$23.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
+    var id$1 = this$23.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$24 = $n(state$3);
-    var awsEcrRepositoryName$1 = this$24.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var stackVarName = this$24.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$25 = $n(state$3);
-    var awsAccountId$1 = this$25.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var awsEcrRepositoryName$1 = this$25.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$26 = $n(state$3);
-    var awsRegion$1 = this$26.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var awsAccountId$1 = this$26.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$27 = $n(state$3);
-    var awsUrl$1 = this$27.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var awsRegion$1 = this$27.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
     var this$28 = $n(state$3);
-    var codeBase$1 = this$28.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var awsUrl$1 = this$28.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$29 = $n(state$3);
-    var buildVars$1 = this$29.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var awsProjectName$1 = this$29.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
     var this$30 = $n(state$3);
-    var stackId$1 = this$30.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var codeBase$1 = this$30.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
     var this$31 = $n(state$3);
-    var updatedAt$1 = this$31.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$1, stackVarName, s$3, awsEcrRepositoryName$1, awsAccountId$1, awsRegion$1, awsUrl$1, codeBase$1, buildVars$1, stackId$1, updatedAt$1)
+    var buildVars$1 = this$31.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$32 = $n(state$3);
+    var stackId$1 = this$32.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$33 = $n(state$3);
+    var updatedAt$1 = this$33.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$1, stackVarName, s$3, awsEcrRepositoryName$1, awsAccountId$1, awsRegion$1, awsUrl$1, awsProjectName$1, codeBase$1, buildVars$1, stackId$1, updatedAt$1)
   }));
-  var $$x73 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Version", "1.0", $$x74, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$33, mod$1));
-  var this$34 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x75 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Version", "1.0", $$x76, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$35, mod$1));
+  var this$36 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$2 = new $c_sjsr_AnonFunction1(((_$13) => {
     var _$13$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$13);
     return $n(_$13$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase
   }));
-  var $$x72 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$34, project$2, $m_s_None$());
-  var this$46 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x74 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$36, project$2, $m_s_None$());
+  var this$49 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$2 = new $c_sjsr_AnonFunction2(((state$3$1, s$3$1) => {
     var state$4 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$3$1);
     var s$4 = $as_T(s$3$1);
     $n(state$4);
-    var this$35 = $n(state$4);
-    var id$2 = this$35.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
-    var this$36 = $n(state$4);
-    var stackVarName$1 = this$36.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$37 = $n(state$4);
-    var versionTag$1 = this$37.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
+    var id$2 = this$37.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$38 = $n(state$4);
-    var awsEcrRepositoryName$2 = this$38.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var stackVarName$1 = this$38.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$39 = $n(state$4);
-    var awsAccountId$2 = this$39.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var versionTag$1 = this$39.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$40 = $n(state$4);
-    var awsRegion$2 = this$40.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var awsEcrRepositoryName$2 = this$40.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$41 = $n(state$4);
-    var awsUrl$2 = this$41.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var awsAccountId$2 = this$41.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$42 = $n(state$4);
-    var buildVars$2 = this$42.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var awsRegion$2 = this$42.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
     var this$43 = $n(state$4);
-    var stackId$2 = this$43.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsUrl$2 = this$43.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$44 = $n(state$4);
-    var updatedAt$2 = this$44.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$2, stackVarName$1, versionTag$1, awsEcrRepositoryName$2, awsAccountId$2, awsRegion$2, awsUrl$2, s$4, buildVars$2, stackId$2, updatedAt$2)
+    var awsProjectName$2 = this$44.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
+    var this$45 = $n(state$4);
+    var buildVars$2 = this$45.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$46 = $n(state$4);
+    var stackId$2 = this$46.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$47 = $n(state$4);
+    var updatedAt$2 = this$47.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$2, stackVarName$1, versionTag$1, awsEcrRepositoryName$2, awsAccountId$2, awsRegion$2, awsUrl$2, awsProjectName$2, s$4, buildVars$2, stackId$2, updatedAt$2)
   }));
-  var $$x71 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Code base", "app/folder", $$x72, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$46, mod$2));
-  var this$47 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x73 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "Code base", "app/folder", $$x74, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$49, mod$2));
+  var this$50 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$3 = new $c_sjsr_AnonFunction1(((_$14) => {
     var _$14$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$14);
     return $n(_$14$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName
   }));
-  var $$x70 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$47, project$3, $m_s_None$());
-  var this$59 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x72 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$50, project$3, $m_s_None$());
+  var this$63 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$3 = new $c_sjsr_AnonFunction2(((state$4$1, s$4$1) => {
     var state$5 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$4$1);
     var s$5 = $as_T(s$4$1);
     $n(state$5);
-    var this$48 = $n(state$5);
-    var id$3 = this$48.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
-    var this$49 = $n(state$5);
-    var stackVarName$2 = this$49.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
-    var this$50 = $n(state$5);
-    var versionTag$2 = this$50.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$51 = $n(state$5);
-    var awsAccountId$3 = this$51.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var id$3 = this$51.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$52 = $n(state$5);
-    var awsRegion$3 = this$52.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var stackVarName$2 = this$52.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$53 = $n(state$5);
-    var awsUrl$3 = this$53.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var versionTag$2 = this$53.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$54 = $n(state$5);
-    var codeBase$2 = this$54.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var awsAccountId$3 = this$54.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$55 = $n(state$5);
-    var buildVars$3 = this$55.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var awsRegion$3 = this$55.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
     var this$56 = $n(state$5);
-    var stackId$3 = this$56.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsUrl$3 = this$56.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$57 = $n(state$5);
-    var updatedAt$3 = this$57.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$3, stackVarName$2, versionTag$2, s$5, awsAccountId$3, awsRegion$3, awsUrl$3, codeBase$2, buildVars$3, stackId$3, updatedAt$3)
+    var awsProjectName$3 = this$57.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
+    var this$58 = $n(state$5);
+    var codeBase$2 = this$58.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$59 = $n(state$5);
+    var buildVars$3 = this$59.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$60 = $n(state$5);
+    var stackId$3 = this$60.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$61 = $n(state$5);
+    var updatedAt$3 = this$61.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$3, stackVarName$2, versionTag$2, s$5, awsAccountId$3, awsRegion$3, awsUrl$3, awsProjectName$3, codeBase$2, buildVars$3, stackId$3, updatedAt$3)
   }));
-  var $$x69 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS ECR repository name", "app_repo", $$x70, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$59, mod$3));
-  var this$60 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x71 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS ECR repository name", "app_repo", $$x72, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$63, mod$3));
+  var this$64 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$4 = new $c_sjsr_AnonFunction1(((_$15) => {
     var _$15$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$15);
-    return $n(_$15$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId
+    return $n(_$15$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName
   }));
-  var $$x68 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$60, project$4, $m_s_None$());
-  var this$72 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x70 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$64, project$4, $m_s_None$());
+  var this$77 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$4 = new $c_sjsr_AnonFunction2(((state$5$1, s$5$1) => {
     var state$6 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$5$1);
     var s$6 = $as_T(s$5$1);
     $n(state$6);
-    var this$61 = $n(state$6);
-    var id$4 = this$61.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
-    var this$62 = $n(state$6);
-    var stackVarName$3 = this$62.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
-    var this$63 = $n(state$6);
-    var versionTag$3 = this$63.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
-    var this$64 = $n(state$6);
-    var awsEcrRepositoryName$3 = this$64.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$65 = $n(state$6);
-    var awsRegion$4 = this$65.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var id$4 = this$65.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$66 = $n(state$6);
-    var awsUrl$4 = this$66.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var stackVarName$3 = this$66.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$67 = $n(state$6);
-    var codeBase$3 = this$67.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var versionTag$3 = this$67.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$68 = $n(state$6);
-    var buildVars$4 = this$68.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var awsEcrRepositoryName$3 = this$68.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$69 = $n(state$6);
-    var stackId$4 = this$69.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsAccountId$4 = this$69.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$70 = $n(state$6);
-    var updatedAt$4 = this$70.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$4, stackVarName$3, versionTag$3, awsEcrRepositoryName$3, s$6, awsRegion$4, awsUrl$4, codeBase$3, buildVars$4, stackId$4, updatedAt$4)
+    var awsRegion$4 = this$70.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var this$71 = $n(state$6);
+    var awsUrl$4 = this$71.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var this$72 = $n(state$6);
+    var codeBase$3 = this$72.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$73 = $n(state$6);
+    var buildVars$4 = this$73.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$74 = $n(state$6);
+    var stackId$4 = this$74.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$75 = $n(state$6);
+    var updatedAt$4 = this$75.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$4, stackVarName$3, versionTag$3, awsEcrRepositoryName$3, awsAccountId$4, awsRegion$4, awsUrl$4, s$6, codeBase$3, buildVars$4, stackId$4, updatedAt$4)
   }));
-  var $$x67 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS Account ID", "...", $$x68, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$72, mod$4));
-  var this$73 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x69 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS Build Name", "app_build_name", $$x70, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$77, mod$4));
+  var this$78 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$5 = new $c_sjsr_AnonFunction1(((_$16) => {
     var _$16$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$16);
-    return $n(_$16$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion
+    return $n(_$16$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId
   }));
-  var $$x66 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$73, project$5, $m_s_None$());
-  var this$85 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var $$x68 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$78, project$5, $m_s_None$());
+  var this$91 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$5 = new $c_sjsr_AnonFunction2(((state$6$1, s$6$1) => {
     var state$7 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$6$1);
     var s$7 = $as_T(s$6$1);
     $n(state$7);
-    var this$74 = $n(state$7);
-    var id$5 = this$74.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
-    var this$75 = $n(state$7);
-    var stackVarName$4 = this$75.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
-    var this$76 = $n(state$7);
-    var versionTag$4 = this$76.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
-    var this$77 = $n(state$7);
-    var awsEcrRepositoryName$4 = this$77.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
-    var this$78 = $n(state$7);
-    var awsAccountId$4 = this$78.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$79 = $n(state$7);
-    var awsUrl$5 = this$79.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var id$5 = this$79.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$80 = $n(state$7);
-    var codeBase$4 = this$80.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var stackVarName$4 = this$80.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$81 = $n(state$7);
-    var buildVars$5 = this$81.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var versionTag$4 = this$81.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$82 = $n(state$7);
-    var stackId$5 = this$82.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsEcrRepositoryName$4 = this$82.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$83 = $n(state$7);
-    var updatedAt$5 = this$83.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$5, stackVarName$4, versionTag$4, awsEcrRepositoryName$4, awsAccountId$4, s$7, awsUrl$5, codeBase$4, buildVars$5, stackId$5, updatedAt$5)
+    var awsRegion$5 = this$83.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var this$84 = $n(state$7);
+    var awsUrl$5 = this$84.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var this$85 = $n(state$7);
+    var awsProjectName$4 = this$85.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
+    var this$86 = $n(state$7);
+    var codeBase$4 = this$86.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$87 = $n(state$7);
+    var buildVars$5 = this$87.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$88 = $n(state$7);
+    var stackId$5 = this$88.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$89 = $n(state$7);
+    var updatedAt$5 = this$89.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$5, stackVarName$4, versionTag$4, awsEcrRepositoryName$4, s$7, awsRegion$5, awsUrl$5, awsProjectName$4, codeBase$4, buildVars$5, stackId$5, updatedAt$5)
   }));
-  var $$x65 = $n($$x79).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x78).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x77, $$x75, $$x73, $$x71, $$x69, $$x67, $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS Region", "us-east-1", $$x66, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$85, mod$5))])));
+  var $$x67 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS Account ID", "...", $$x68, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$91, mod$5));
+  var this$92 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$6 = new $c_sjsr_AnonFunction1(((_$17) => {
+    var _$17$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$17);
+    return $n(_$17$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion
+  }));
+  var $$x66 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$92, project$6, $m_s_None$());
+  var this$105 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
+  var mod$6 = new $c_sjsr_AnonFunction2(((state$7$1, s$7$1) => {
+    var state$8 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$7$1);
+    var s$8 = $as_T(s$7$1);
+    $n(state$8);
+    var this$93 = $n(state$8);
+    var id$6 = this$93.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
+    var this$94 = $n(state$8);
+    var stackVarName$5 = this$94.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
+    var this$95 = $n(state$8);
+    var versionTag$5 = this$95.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
+    var this$96 = $n(state$8);
+    var awsEcrRepositoryName$5 = this$96.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var this$97 = $n(state$8);
+    var awsAccountId$5 = this$97.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var this$98 = $n(state$8);
+    var awsUrl$6 = this$98.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var this$99 = $n(state$8);
+    var awsProjectName$5 = this$99.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
+    var this$100 = $n(state$8);
+    var codeBase$5 = this$100.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$101 = $n(state$8);
+    var buildVars$6 = this$101.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$102 = $n(state$8);
+    var stackId$6 = this$102.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$103 = $n(state$8);
+    var updatedAt$6 = this$103.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$6, stackVarName$5, versionTag$5, awsEcrRepositoryName$5, awsAccountId$5, s$8, awsUrl$6, awsProjectName$5, codeBase$5, buildVars$6, stackId$6, updatedAt$6)
+  }));
+  var $$x65 = $n($$x81).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x80).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x79, $$x77, $$x75, $$x73, $$x71, $$x69, $$x67, $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__rowInput__T__T__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Observer__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, "AWS Region", "us-east-1", $$x66, $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$105, mod$6))])));
   var $$x64 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x63 = $m_sr_ScalaRunTime$();
-  var this$86 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x62 = this$86.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
+  var this$106 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x62 = this$106.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
   var $$x61 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).label__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x60 = $m_sr_ScalaRunTime$();
-  var this$87 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var this$107 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x59 = $n($$x61).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x60).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$87, "Stack", renderable$1)])));
+  var $$x59 = $n($$x61).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x60).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$107, "Stack", renderable$1)])));
   var $$x58 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).select__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x57 = $m_sr_ScalaRunTime$();
-  var this$88 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x56 = this$88.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
+  var this$108 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x56 = this$108.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
-  var this$95 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stackOptions).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$6 = new $c_sjsr_AnonFunction1(((_$17) => {
-    var _$17$1 = $as_sci_List(_$17);
-    var this$94 = $n(_$17$1);
+  var this$115 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stackOptions).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$7 = new $c_sjsr_AnonFunction1(((_$18) => {
+    var _$18$1 = $as_sci_List(_$18);
+    var this$114 = $n(_$18$1);
     var f = ((opt) => {
       var opt$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption(opt);
       var $$x54 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).option__Lcom_raquo_laminar_tags_HtmlTag());
       var $$x53 = $m_sr_ScalaRunTime$();
-      var this$91 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp());
-      var this$89 = $n(opt$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption__f_id;
-      var value = ("" + this$89);
-      var $$x52 = this$91.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value);
-      var this$92 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).selected__Lcom_raquo_laminar_keys_HtmlProp());
+      var this$111 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp());
+      var this$109 = $n(opt$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption__f_id;
+      var value = ("" + this$109);
+      var $$x52 = this$111.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value);
+      var this$112 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).selected__Lcom_raquo_laminar_keys_HtmlProp());
       var value$1 = $n(opt$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption__f_selected;
-      var $$x51 = this$92.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$1);
-      var this$93 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var $$x51 = this$112.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$1);
+      var this$113 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
       var value$2 = $n(opt$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption__f_text;
       var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-      return $n($$x54).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x53).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x52, $$x51, $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$93, value$2, renderable$2)])))
+      return $n($$x54).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x53).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x52, $$x51, $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$113, value$2, renderable$2)])))
     });
-    if ((this$94 === $m_sci_Nil$())) {
+    if ((this$114 === $m_sci_Nil$())) {
       return $m_sci_Nil$()
     } else {
-      var arg1 = this$94.head__O();
+      var arg1 = this$114.head__O();
       var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
       var t = h;
-      var rest = $as_sci_List(this$94.tail__O());
+      var rest = $as_sci_List(this$114.tail__O());
       while ((rest !== $m_sci_Nil$())) {
         var arg1$1 = $n(rest).head__O();
         var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
@@ -5905,247 +6117,253 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__node__L
       return h
     }
   }));
-  var childrenSource = new $c_Lcom_raquo_airstream_misc_MapSignal(this$95, project$6, $m_s_None$());
+  var childrenSource = new $c_Lcom_raquo_airstream_misc_MapSignal(this$115, project$7, $m_s_None$());
   var $$x55 = $m_Lcom_raquo_laminar_modifiers_ChildrenInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childrenSource, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable);
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onChange__Lcom_raquo_laminar_keys_EventProp();
-  var this$113 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
-  var this$112 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
-  var mod$6 = new $c_sjsr_AnonFunction2(((state$7$1, s$7$1) => {
-    var state$8 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$7$1);
-    var s$8 = $as_T(s$7$1);
-    $m_sc_StringOps$();
-    var this$100 = $m_jl_Integer$();
-    var stackId$1$1 = this$100.parseInt__T__I__I(s$8, 10);
-    var this$101 = $n(state$8);
-    var id$1$1 = this$101.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
-    var this$102 = $n(state$8);
-    var stackVarName$1$1 = this$102.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
-    var this$103 = $n(state$8);
-    var versionTag$1$1 = this$103.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
-    var this$104 = $n(state$8);
-    var awsEcrRepositoryName$1$1 = this$104.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
-    var this$105 = $n(state$8);
-    var awsAccountId$1$1 = this$105.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
-    var this$106 = $n(state$8);
-    var awsRegion$1$1 = this$106.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
-    var this$107 = $n(state$8);
-    var awsUrl$1$1 = this$107.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
-    var this$108 = $n(state$8);
-    var codeBase$1$1 = this$108.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
-    var this$109 = $n(state$8);
-    var buildVars$1$1 = this$109.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
-    var this$110 = $n(state$8);
-    var updatedAt$1$1 = this$110.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    $n(state$8);
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$1$1, stackVarName$1$1, versionTag$1$1, awsEcrRepositoryName$1$1, awsAccountId$1$1, awsRegion$1$1, awsUrl$1$1, codeBase$1$1, buildVars$1$1, stackId$1$1, updatedAt$1$1)
-  }));
-  var sink = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$112, mod$6);
-  var onNext = new $c_sjsr_AnonFunction1(((_$1) => {
-    var this$114 = $n(sink);
-    this$114.onNext__O__V(_$1)
-  }));
-  var $$x50 = $n($$x64).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x63).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x62, $$x59, $n($$x58).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x57).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x56, $$x55, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$113, onNext)])))])));
-  var $$x49 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x48 = $m_sr_ScalaRunTime$();
-  var this$115 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x47 = this$115.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
-  var $$x46 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).label__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x45 = $m_sr_ScalaRunTime$();
-  var this$116 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x44 = $n($$x46).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x45).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$116, "Build vars", renderable$3)])));
-  var $$x43 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).input__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x42 = $m_sr_ScalaRunTime$();
-  var this$117 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x41 = this$117.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
-  var this$118 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).placeholder__Lcom_raquo_laminar_keys_HtmlProp());
-  var $$x40 = this$118.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("VAR=1,VAR2=2");
-  $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var eventProp$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onInput__Lcom_raquo_laminar_keys_EventProp();
-  var this$132 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$1, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
-  var this$131 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var this$134 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
+  var this$133 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$7 = new $c_sjsr_AnonFunction2(((state$8$1, s$8$1) => {
     var state$9 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$8$1);
     var s$9 = $as_T(s$8$1);
-    $n(state$9);
-    var this$120 = $n(state$9);
-    var id$6 = this$120.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
+    $m_sc_StringOps$();
+    var this$120 = $m_jl_Integer$();
+    var stackId$1$1 = this$120.parseInt__T__I__I(s$9, 10);
     var this$121 = $n(state$9);
-    var stackVarName$5 = this$121.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
+    var id$1$1 = this$121.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$122 = $n(state$9);
-    var versionTag$5 = this$122.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
+    var stackVarName$1$1 = this$122.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$123 = $n(state$9);
-    var awsEcrRepositoryName$5 = this$123.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var versionTag$1$1 = this$123.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$124 = $n(state$9);
-    var awsAccountId$5 = this$124.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var awsEcrRepositoryName$1$1 = this$124.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$125 = $n(state$9);
-    var awsRegion$5 = this$125.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var awsAccountId$1$1 = this$125.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$126 = $n(state$9);
-    var awsUrl$6 = this$126.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
+    var awsRegion$1$1 = this$126.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
     var this$127 = $n(state$9);
-    var codeBase$5 = this$127.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var awsUrl$1$1 = this$127.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$128 = $n(state$9);
-    var stackId$6 = this$128.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsProjectName$1$1 = this$128.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
     var this$129 = $n(state$9);
-    var updatedAt$6 = this$129.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$6, stackVarName$5, versionTag$5, awsEcrRepositoryName$5, awsAccountId$5, awsRegion$5, awsUrl$6, codeBase$5, s$9, stackId$6, updatedAt$6)
+    var codeBase$1$1 = this$129.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$130 = $n(state$9);
+    var buildVars$1$1 = this$130.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$131 = $n(state$9);
+    var updatedAt$1$1 = this$131.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    $n(state$9);
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$1$1, stackVarName$1$1, versionTag$1$1, awsEcrRepositoryName$1$1, awsAccountId$1$1, awsRegion$1$1, awsUrl$1$1, awsProjectName$1$1, codeBase$1$1, buildVars$1$1, stackId$1$1, updatedAt$1$1)
   }));
-  var sink$1 = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$131, mod$7);
-  var onNext$1 = new $c_sjsr_AnonFunction1(((_$1$1) => {
-    var this$133 = $n(sink$1);
-    this$133.onNext__O__V(_$1$1)
+  var sink = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$133, mod$7);
+  var onNext = new $c_sjsr_AnonFunction1(((_$1) => {
+    var this$135 = $n(sink);
+    this$135.onNext__O__V(_$1)
   }));
-  var $$x39 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$132, onNext$1);
-  var $$x38 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp();
-  var this$134 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$7 = new $c_sjsr_AnonFunction1(((_$18) => {
-    var _$18$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$18);
-    return $n(_$18$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars
-  }));
-  var $$x37 = $n($$x49).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x48).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x47, $$x44, $n($$x43).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x42).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x41, $$x40, $$x39, $n($$x38).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_KeyUpdater(new $c_Lcom_raquo_airstream_misc_MapSignal(this$134, project$7, $m_s_None$()))])))])));
-  var $$x36 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x35 = $m_sr_ScalaRunTime$();
-  var this$135 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x34 = this$135.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
-  var $$x33 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).label__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x32 = $m_sr_ScalaRunTime$();
-  var this$136 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x31 = $n($$x33).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x32).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$136, "AWS URL", renderable$4)])));
-  var $$x30 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).input__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x29 = $m_sr_ScalaRunTime$();
-  var this$137 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x28 = this$137.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
-  var this$138 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).placeholder__Lcom_raquo_laminar_keys_HtmlProp());
-  var $$x27 = this$138.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("https://us-east-1.console.aws.amazon.com");
+  var $$x50 = $n($$x64).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x63).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x62, $$x59, $n($$x58).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x57).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x56, $$x55, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$134, onNext)])))])));
+  var $$x49 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x48 = $m_sr_ScalaRunTime$();
+  var this$136 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x47 = this$136.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
+  var $$x46 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).label__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x45 = $m_sr_ScalaRunTime$();
+  var this$137 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x44 = $n($$x46).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x45).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$137, "Build vars", renderable$3)])));
+  var $$x43 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).input__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x42 = $m_sr_ScalaRunTime$();
+  var this$138 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x41 = this$138.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
+  var this$139 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).placeholder__Lcom_raquo_laminar_keys_HtmlProp());
+  var $$x40 = this$139.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("VAR=1,VAR2=2");
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var eventProp$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onInput__Lcom_raquo_laminar_keys_EventProp();
-  var this$152 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$2, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
-  var this$151 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
+  var eventProp$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onInput__Lcom_raquo_laminar_keys_EventProp();
+  var this$154 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$1, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
+  var this$153 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
   var mod$8 = new $c_sjsr_AnonFunction2(((state$9$1, s$9$1) => {
     var state$10 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$9$1);
     var s$10 = $as_T(s$9$1);
     $n(state$10);
-    var this$140 = $n(state$10);
-    var id$7 = this$140.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$141 = $n(state$10);
-    var stackVarName$6 = this$141.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
+    var id$7 = this$141.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
     var this$142 = $n(state$10);
-    var versionTag$6 = this$142.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
+    var stackVarName$6 = this$142.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
     var this$143 = $n(state$10);
-    var awsEcrRepositoryName$6 = this$143.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var versionTag$6 = this$143.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
     var this$144 = $n(state$10);
-    var awsAccountId$6 = this$144.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var awsEcrRepositoryName$6 = this$144.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
     var this$145 = $n(state$10);
-    var awsRegion$6 = this$145.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var awsAccountId$6 = this$145.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
     var this$146 = $n(state$10);
-    var codeBase$6 = this$146.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var awsRegion$6 = this$146.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
     var this$147 = $n(state$10);
-    var buildVars$6 = this$147.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var awsUrl$7 = this$147.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl;
     var this$148 = $n(state$10);
-    var stackId$7 = this$148.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var awsProjectName$6 = this$148.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
     var this$149 = $n(state$10);
-    var updatedAt$7 = this$149.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$7, stackVarName$6, versionTag$6, awsEcrRepositoryName$6, awsAccountId$6, awsRegion$6, s$10, codeBase$6, buildVars$6, stackId$7, updatedAt$7)
+    var codeBase$6 = this$149.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$150 = $n(state$10);
+    var stackId$7 = this$150.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$151 = $n(state$10);
+    var updatedAt$7 = this$151.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$7, stackVarName$6, versionTag$6, awsEcrRepositoryName$6, awsAccountId$6, awsRegion$6, awsUrl$7, awsProjectName$6, codeBase$6, s$10, stackId$7, updatedAt$7)
   }));
-  var sink$2 = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$151, mod$8);
-  var onNext$2 = new $c_sjsr_AnonFunction1(((_$1$2) => {
-    var this$153 = $n(sink$2);
-    this$153.onNext__O__V(_$1$2)
+  var sink$1 = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$153, mod$8);
+  var onNext$1 = new $c_sjsr_AnonFunction1(((_$1$1) => {
+    var this$155 = $n(sink$1);
+    this$155.onNext__O__V(_$1$1)
   }));
-  var $$x26 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$152, onNext$2);
-  var $$x25 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp();
-  var this$154 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x39 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$154, onNext$1);
+  var $$x38 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp();
+  var this$156 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$8 = new $c_sjsr_AnonFunction1(((_$19) => {
     var _$19$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$19);
-    return $n(_$19$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl
+    return $n(_$19$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars
   }));
-  var $$x24 = $n($$x36).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x35).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x34, $$x31, $n($$x30).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x28, $$x27, $$x26, $n($$x25).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_KeyUpdater(new $c_Lcom_raquo_airstream_misc_MapSignal(this$154, project$8, $m_s_None$()))])))])));
-  var $$x23 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
-  var this$158 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var $$x37 = $n($$x49).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x48).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x47, $$x44, $n($$x43).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x42).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x41, $$x40, $$x39, $n($$x38).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_KeyUpdater(new $c_Lcom_raquo_airstream_misc_MapSignal(this$156, project$8, $m_s_None$()))])))])));
+  var $$x36 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x35 = $m_sr_ScalaRunTime$();
+  var this$157 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x34 = this$157.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-group");
+  var $$x33 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).label__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x32 = $m_sr_ScalaRunTime$();
+  var this$158 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x31 = $n($$x33).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x32).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$158, "AWS URL", renderable$4)])));
+  var $$x30 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).input__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x29 = $m_sr_ScalaRunTime$();
+  var this$159 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x28 = this$159.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control");
+  var this$160 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).placeholder__Lcom_raquo_laminar_keys_HtmlProp());
+  var $$x27 = this$160.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("https://us-east-1.console.aws.amazon.com");
+  $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var eventProp$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onInput__Lcom_raquo_laminar_keys_EventProp();
+  var this$175 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$2, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
+  var this$174 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
+  var mod$9 = new $c_sjsr_AnonFunction2(((state$10$1, s$10$1) => {
+    var state$11 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(state$10$1);
+    var s$11 = $as_T(s$10$1);
+    $n(state$11);
+    var this$162 = $n(state$11);
+    var id$8 = this$162.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id;
+    var this$163 = $n(state$11);
+    var stackVarName$7 = this$163.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName;
+    var this$164 = $n(state$11);
+    var versionTag$7 = this$164.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag;
+    var this$165 = $n(state$11);
+    var awsEcrRepositoryName$7 = this$165.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName;
+    var this$166 = $n(state$11);
+    var awsAccountId$7 = this$166.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId;
+    var this$167 = $n(state$11);
+    var awsRegion$7 = this$167.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion;
+    var this$168 = $n(state$11);
+    var awsProjectName$7 = this$168.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
+    var this$169 = $n(state$11);
+    var codeBase$7 = this$169.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+    var this$170 = $n(state$11);
+    var buildVars$7 = this$170.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+    var this$171 = $n(state$11);
+    var stackId$8 = this$171.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+    var this$172 = $n(state$11);
+    var updatedAt$8 = this$172.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+    return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id$8, stackVarName$7, versionTag$7, awsEcrRepositoryName$7, awsAccountId$7, awsRegion$7, s$11, awsProjectName$7, codeBase$7, buildVars$7, stackId$8, updatedAt$8)
+  }));
+  var sink$2 = $f_Lcom_raquo_airstream_state_Var__updater__F2__Lcom_raquo_airstream_core_Observer(this$174, mod$9);
+  var onNext$2 = new $c_sjsr_AnonFunction1(((_$1$2) => {
+    var this$176 = $n(sink$2);
+    this$176.onNext__O__V(_$1$2)
+  }));
+  var $$x26 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$175, onNext$2);
+  var $$x25 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp();
+  var this$177 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
   var project$9 = new $c_sjsr_AnonFunction1(((_$20) => {
-    var _$20$1 = $as_s_Option(_$20);
-    var this$155 = $n(_$20$1);
-    if (this$155.isEmpty__Z()) {
+    var _$20$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(_$20);
+    return $n(_$20$1).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl
+  }));
+  var $$x24 = $n($$x36).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x35).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x34, $$x31, $n($$x30).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x28, $$x27, $$x26, $n($$x25).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_KeyUpdater(new $c_Lcom_raquo_airstream_misc_MapSignal(this$177, project$9, $m_s_None$()))])))])));
+  var $$x23 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
+  var this$181 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$10 = new $c_sjsr_AnonFunction1(((_$21) => {
+    var _$21$1 = $as_s_Option(_$21);
+    var this$178 = $n(_$21$1);
+    if (this$178.isEmpty__Z()) {
       return $m_s_None$()
     } else {
-      var arg1$2 = this$155.get__O();
-      var s$11 = $as_T(arg1$2);
+      var arg1$2 = this$178.get__O();
+      var s$12 = $as_T(arg1$2);
       var $$x22 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
       var $$x21 = $m_sr_ScalaRunTime$();
-      var this$156 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-      var $$x20 = this$156.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var this$179 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x20 = this$179.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
       var $$x19 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
       var $$x18 = $m_sr_ScalaRunTime$();
-      var this$157 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var this$180 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
       var renderable$5 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-      return new $c_s_Some($n($$x22).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x21).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x20, $n($$x19).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x18).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$157, s$11, renderable$5)])))]))))
+      return new $c_s_Some($n($$x22).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x21).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x20, $n($$x19).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x18).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$180, s$12, renderable$5)])))]))))
     }
   }));
-  var $$x17 = $n($$x23).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$158, project$9, $m_s_None$()));
+  var $$x17 = $n($$x23).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$181, project$10, $m_s_None$()));
   var $$x16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
   var $$x15 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x14 = $m_sr_ScalaRunTime$();
   var $$x13 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).button__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x12 = $m_sr_ScalaRunTime$();
-  var this$159 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var this$182 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable$6 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x11 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$159, "SAVE", renderable$6);
-  var this$160 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).typ__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x10 = $n($$x13).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x11, this$160.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("submit")])));
+  var $$x11 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$182, "SAVE", renderable$6);
+  var this$183 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).typ__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x10 = $n($$x13).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x11, this$183.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("submit")])));
   var $$x9 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).button__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x8 = $m_sr_ScalaRunTime$();
-  var this$161 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var this$184 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable$7 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x7 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$161, "CANCEL", renderable$7);
+  var $$x7 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$184, "CANCEL", renderable$7);
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$3 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
-  var this$163 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$3, false, false));
-  var onNext$3 = new $c_sjsr_AnonFunction1(((_$21) => {
-    $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__goback__V($thiz)
+  var this$186 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$3, false, false));
+  var onNext$3 = new $c_sjsr_AnonFunction1(((_$22) => {
+    $thiz.com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$goback__V()
   }));
-  var $$x6 = $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$163, onNext$3)])));
+  var $$x6 = $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$186, onNext$3)])));
   var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).button__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x4 = $m_sr_ScalaRunTime$();
-  var this$164 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var this$187 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable$8 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x3 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$164, "CLONE", renderable$8);
-  var this$165 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x2 = this$165.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("pull-left");
+  var $$x3 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$187, "CLONE", renderable$8);
+  var this$188 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x2 = this$188.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("pull-left");
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
-  var this$167 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$4, false, false));
-  var onNext$4 = new $c_sjsr_AnonFunction1(((_$22) => {
+  var this$190 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$4, false, false));
+  var onNext$4 = new $c_sjsr_AnonFunction1(((_$23) => {
     $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__onClone__V($thiz)
   }));
-  var $$x1 = $n($$x15).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x10, $$x6, $n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $$x2, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$167, onNext$4)])))])));
+  var $$x1 = $n($$x15).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x10, $$x6, $n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $$x2, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$190, onNext$4)])))])));
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onSubmit__Lcom_raquo_laminar_keys_EventProp();
-  var this$171 = $n($n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$5, false, false)).preventDefault__Lcom_raquo_laminar_keys_EventProcessor()).mapTo__F0__Lcom_raquo_laminar_keys_EventProcessor(new $c_sjsr_AnonFunction0((() => {
-    var this$169 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar);
-    var this$170 = $n(this$169.Lcom_raquo_airstream_state_SourceVar__f_signal);
-    return $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$170)).get__O())
+  var this$194 = $n($n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$5, false, false)).preventDefault__Lcom_raquo_laminar_keys_EventProcessor()).mapTo__F0__Lcom_raquo_laminar_keys_EventProcessor(new $c_sjsr_AnonFunction0((() => {
+    var this$192 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
+    var this$193 = $n(this$192.Lcom_raquo_airstream_state_SourceVar__f_signal);
+    return $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$193)).get__O())
   }))));
   var sink$3 = $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__formSubmitter__Lcom_raquo_airstream_core_Observer($thiz);
   var onNext$5 = new $c_sjsr_AnonFunction1(((_$1$3) => {
-    var this$172 = $n(sink$3);
-    this$172.onNext__O__V(_$1$3)
+    var this$195 = $n(sink$3);
+    this$195.onNext__O__V(_$1$3)
   }));
-  return $n($$x91).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x90).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x89, $$x88, $$x87, $$x83, $$x82, $n($$x81).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x80).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x65, $$x50, $$x37, $$x24, $$x17, $$x16, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$171, onNext$5)])))])))
+  return $n($$x96).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x95).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x94, $n($$x93).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x92).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x91, $$x90, $$x89, $$x85, $$x84, $n($$x83).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x82).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x65, $$x50, $$x37, $$x24, $$x17, $$x16, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$194, onNext$5)])))])))])))
 }
 /** @constructor */
 function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$() {
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message = null;
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar = null;
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stackOptions = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stackOptions = null;
   $n_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$ = this;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stateVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var(new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(0, "", "", "", "", "", "", "", "", 0, ""));
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var(new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(0, "", "", "", "", "", "", "", "", "", 0, ""));
   var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
   var elem$1 = new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption(0, "Select..", false);
   var this$3 = $n($m_s_package$().s_package$__f_Nil);
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_stackOptions = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var(new $c_sci_$colon$colon(elem$1, this$3))
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stackOptions = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var(new $c_sci_$colon$colon(elem$1, this$3))
 }
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype = new $h_O();
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$;
@@ -6160,8 +6378,15 @@ $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype.apply__
 });
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype.apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function() {
   $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__clear__V(this);
-  $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__loadStaks__I__V(this, 0);
+  this.com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$loadStaks__I__V(0);
   return $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype.com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$goback__V = (function() {
+  $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__clear__V(this);
+  $m_Lfrontroute_BrowserNavigation$().replaceState__O__sjs_js_Any__Z__V("/adm/aws/codebuild/app", ($m_Lfrontroute_BrowserNavigation$(), (void 0)), ($m_Lfrontroute_BrowserNavigation$(), true))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$.prototype.com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$loadStaks__I__V = (function(stackId) {
+  $n($m_Lcom_swarm_api_ApiStack$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction(this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4(stackId, this)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 });
 var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$ = new $TypeData().initClass({
   Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$: 0
@@ -6178,212 +6403,124 @@ function $m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$() {
   return $n_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__load__V($thiz) {
-  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult1: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var result = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var this$2 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_awsApps);
-        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-          $as_sci_List(_$1);
-          return $as_sci_List($n(result).Lcom_swarm_api_ApiServer$ApiResult__f_data)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
-        break matchResult1
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message);
-        var mod$1 = new $c_sjsr_AnonFunction1(((_$2) => {
-          $as_s_Option(_$2);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod$1);
-        break matchResult1
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__remove__Lcom_swarm_models_Models$AwsCodeBuildApp__V($thiz, awsApp) {
   if ($uZ(window.confirm("Are you sure?"))) {
-    $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().delete__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(awsApp)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-      var x$1$1 = $as_s_util_Try(x$1);
-      matchResult2: {
-        if ((x$1$1 instanceof $c_s_util_Success)) {
-          var this$3 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_awsApps);
-          var mod = new $c_sjsr_AnonFunction1(((lst) => {
-            var lst$1 = $as_sci_List(lst);
-            var this$2 = $n(lst$1);
-            var f = ((_$3) => {
-              var _$3$1 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(_$3);
-              return ($n(_$3$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id === $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id)
-            });
-            var l = this$2;
-            block: {
-              var result;
-              while (true) {
-                if ($n(l).isEmpty__Z()) {
-                  var result = $m_sci_Nil$();
-                  break
-                } else {
-                  var h = $n(l).head__O();
-                  var t = $as_sci_List($n(l).tail__O());
-                  if (($uZ(f(h)) === true)) {
-                    l = t;
-                    continue
-                  };
-                  var start = l;
-                  var remaining = t;
-                  while (true) {
-                    if ($n(remaining).isEmpty__Z()) {
-                      var result = start;
-                      break block
-                    } else {
-                      var x = $n(remaining).head__O();
-                      if (($uZ(f(x)) !== true)) {
-                        remaining = $as_sci_List($n(remaining).tail__O());
-                        continue
-                      };
-                      var firstMiss = remaining;
-                      var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
-                      var toProcess = $as_sci_List($n(start).tail__O());
-                      var currentLast = newHead;
-                      while ((toProcess !== firstMiss)) {
-                        var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
-                        $n(currentLast).sci_$colon$colon__f_next = newElem;
-                        currentLast = newElem;
-                        toProcess = $as_sci_List($n(toProcess).tail__O())
-                      };
-                      var next = $as_sci_List($n(firstMiss).tail__O());
-                      var nextToCopy = next;
-                      while ((!$n(next).isEmpty__Z())) {
-                        var head = $n(next).head__O();
-                        if (($uZ(f(head)) !== true)) {
-                          next = $as_sci_List($n(next).tail__O())
-                        } else {
-                          while ((nextToCopy !== next)) {
-                            var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
-                            $n(currentLast).sci_$colon$colon__f_next = newElem$2;
-                            currentLast = newElem$2;
-                            nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
-                          };
-                          nextToCopy = $as_sci_List($n(next).tail__O());
-                          next = $as_sci_List($n(next).tail__O())
-                        }
-                      };
-                      if ((!$n(nextToCopy).isEmpty__Z())) {
-                        $n(currentLast).sci_$colon$colon__f_next = nextToCopy
-                      };
-                      var result = newHead;
-                      break block
-                    }
-                  }
-                }
-              }
-            };
-            return result
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
-          break matchResult2
-        };
-        if ((x$1$1 instanceof $c_s_util_Failure)) {
-          var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-          var this$5 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message);
-          var mod$1 = new $c_sjsr_AnonFunction1(((_$4) => {
-            $as_s_Option(_$4);
-            var value = ("" + $n(err).getMessage__T());
-            return new $c_s_Some(value)
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod$1);
-          break matchResult2
-        };
-        throw new $c_s_MatchError(x$1$1)
-      }
-    })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().delete__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(awsApp)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2(awsApp, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   }
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x8 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x7 = $m_sr_ScalaRunTime$();
-  var $$x6 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x4 = $m_sr_ScalaRunTime$();
-  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x3 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
-  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x1 = $m_sr_ScalaRunTime$();
-  var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  return $n($$x8).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x6).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "aws codebuild apps", renderable)])))]))), true)])))
+  return $m_Lcom_swarm_pages_comps_Theme$().breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_swarm_pages_comps_Theme$().breadcrumbItem__T__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement("aws codebuild apps", true)])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__buildInfo__Lcom_swarm_models_Models$AwsCodeBuildApp__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsApp) {
+  if ($n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_building) {
+    var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+    var $$x2 = $m_sr_ScalaRunTime$();
+    var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+    var $$x1 = this$1.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cog fa-spin fa-fw");
+    var this$2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+    return $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x1, this$2.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("app is on building")])))
+  } else {
+    var $$x6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+    var $$x5 = $m_sr_ScalaRunTime$();
+    var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+    var $$x4 = this$3.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-circle");
+    var this$4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+    return $n($$x6).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x4, this$4.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("no build")])))
+  }
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__tbRow__Lcom_swarm_models_Models$AwsCodeBuildApp__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsApp) {
-  var $$x35 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x34 = $m_sr_ScalaRunTime$();
-  var $$x33 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x32 = $m_sr_ScalaRunTime$();
+  var $$x51 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x50 = $m_sr_ScalaRunTime$();
+  var $$x49 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x48 = $m_sr_ScalaRunTime$();
   var this$3 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var this$1 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id;
   var value = ("" + this$1);
   var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x31 = $n($$x33).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x32).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$3, value, renderable)])));
-  var $$x30 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x29 = $m_sr_ScalaRunTime$();
-  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var $$x47 = $n($$x49).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x48).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$3, value, renderable)])));
+  var $$x46 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x45 = $m_sr_ScalaRunTime$();
+  var this$4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x44 = $n($$x46).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x45).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$4.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center"), $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__buildInfo__Lcom_swarm_models_Models$AwsCodeBuildApp__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsApp)])));
+  var $$x43 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x42 = $m_sr_ScalaRunTime$();
+  var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var value$1 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName;
   var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x28 = $n($$x30).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, value$1, renderable$1)])));
-  var $$x27 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x26 = $m_sr_ScalaRunTime$();
-  var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var $$x41 = $n($$x43).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x42).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, value$1, renderable$1)])));
+  var $$x40 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x39 = $m_sr_ScalaRunTime$();
+  var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var value$2 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag;
   var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x25 = $n($$x27).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x26).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, value$2, renderable$2)])));
-  var $$x24 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x23 = $m_sr_ScalaRunTime$();
-  var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var $$x38 = $n($$x40).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x39).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, value$2, renderable$2)])));
+  var $$x37 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x36 = $m_sr_ScalaRunTime$();
+  var this$7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var value$3 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
   var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x22 = $n($$x24).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x23).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, value$3, renderable$3)])));
-  var $$x21 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x20 = $m_sr_ScalaRunTime$();
-  var this$7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var value$4 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
+  var $$x35 = $n($$x37).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x36).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$7, value$3, renderable$3)])));
+  var $$x34 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x33 = $m_sr_ScalaRunTime$();
+  var this$8 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$4 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt;
   var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x19 = $n($$x21).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x20).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$7, value$4, renderable$4)])));
+  var $$x32 = $n($$x34).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x33).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$8, value$4, renderable$4)])));
+  var $$x31 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x30 = $m_sr_ScalaRunTime$();
+  var this$9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$5 = $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
+  var renderable$5 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x29 = $n($$x31).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x30).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$9, value$5, renderable$5)])));
+  var $$x28 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x27 = $m_sr_ScalaRunTime$();
+  var this$10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x26 = this$10.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var $$x25 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x24 = $m_sr_ScalaRunTime$();
+  var this$11 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var value$6 = ("/adm/aws/build/" + $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
+  var $$x23 = this$11.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$6);
+  var $$x22 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x21 = $m_sr_ScalaRunTime$();
+  var this$12 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x20 = $n($$x22).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x21).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$12.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-list")])));
+  var this$13 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+  var $$x19 = $n($$x28).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x27).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x26, $n($$x25).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x24).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x23, $$x20, this$13.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("show builds")])))])));
   var $$x18 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x17 = $m_sr_ScalaRunTime$();
-  var this$8 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x16 = this$8.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$14 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x16 = this$14.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
   var $$x15 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x14 = $m_sr_ScalaRunTime$();
-  var this$9 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var value$5 = ("/adm/aws/codebuild/app/form/" + $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
-  var $$x13 = this$9.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$5);
+  var this$15 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var value$7 = ("/adm/aws/codebuild/app/form/" + $n(awsApp).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
+  var $$x13 = this$15.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$7);
   var $$x12 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x11 = $m_sr_ScalaRunTime$();
-  var this$10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x10 = $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x16, $n($$x15).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x13, $n($$x12).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$10.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-edit")])))])))])));
+  var this$16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x10 = $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x16, $n($$x15).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x13, $n($$x12).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$16.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-edit")])))])))])));
   var $$x9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x8 = $m_sr_ScalaRunTime$();
-  var this$11 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x7 = this$11.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$17 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x7 = this$17.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
   var $$x6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x5 = $m_sr_ScalaRunTime$();
-  var this$12 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x4 = this$12.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var this$18 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x4 = this$18.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
   var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x2 = $m_sr_ScalaRunTime$();
-  var this$13 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-  var $$x1 = $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$13.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-trash")])));
+  var this$19 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x1 = $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$19.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-trash")])));
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
-  var this$16 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
-  var onNext = new $c_sjsr_AnonFunction1(((_$5) => {
+  var this$22 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
+  var onNext = new $c_sjsr_AnonFunction1(((_$3) => {
     $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__remove__Lcom_swarm_models_Models$AwsCodeBuildApp__V($thiz, awsApp)
   }));
-  return $n($$x35).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x34).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x31, $$x28, $$x25, $$x22, $$x19, $$x10, $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, $n($$x6).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x4, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$16, onNext)])))])))])))
+  return $n($$x51).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x50).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x47, $$x44, $$x41, $$x38, $$x35, $$x32, $$x29, $$x19, $$x10, $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, $n($$x6).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x4, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$22, onNext)])))])))])))
 }
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
   var $$x12 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).table__Lcom_raquo_laminar_tags_HtmlTag());
@@ -6396,7 +6533,7 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__tb__Lco
   var $$x6 = $m_sr_ScalaRunTime$();
   var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   $n($m_s_package$().s_package$__f_List);
-  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T.getArrayOf().constr)(["#", "repository", "version", "code base", "last update", "", ""]));
+  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T.getArrayOf().constr)(["#", "", "repository", "version", "code base", "last build", "last update", "", ""]));
   var this$5 = $n($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems));
   var f = ((s) => {
     var s$1 = $as_T(s);
@@ -6426,10 +6563,10 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__tb__Lco
   var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tbody__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x1 = $m_sr_ScalaRunTime$();
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
-  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_awsApps).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$6) => {
-    var _$6$1 = $as_sci_List(_$6);
-    var this$7 = $n(_$6$1);
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppList$$$awsApps).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$4) => {
+    var _$4$1 = $as_sci_List(_$4);
+    var this$7 = $n(_$4$1);
     var f$1 = ((awsApp) => {
       var awsApp$1 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(awsApp);
       return $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__tbRow__Lcom_swarm_models_Models$AwsCodeBuildApp__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsApp$1)
@@ -6458,8 +6595,8 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__node__L
   var $$x16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x15 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$7) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$7);
+  var fn = new $c_sjsr_AnonFunction1(((_$5) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$5);
     $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__load__V($thiz)
   }));
   var $$x14 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
@@ -6474,9 +6611,9 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__node__L
   var $$x7 = $n($$x12).pageActions__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_nodes_ReactiveHtmlElement.getArrayOf().constr)([$n($$x10).pageAction__Lcom_raquo_laminar_modifiers_Modifier__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$3, "New app", renderable)]))), "/adm/aws/codebuild/app/form")])));
   var $$x6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
   var this$7 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$8) => {
-    var _$8$1 = $as_s_Option(_$8);
-    var this$4 = $n(_$8$1);
+  var project = new $c_sjsr_AnonFunction1(((_$6) => {
+    var _$6$1 = $as_s_Option(_$6);
+    var this$4 = $n(_$6$1);
     if (this$4.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -6498,13 +6635,13 @@ function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__node__L
 /** @constructor */
 function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$() {
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message = null;
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_awsApps = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppList$$$awsApps = null;
   $n_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$ = this;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
   var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
   $n($m_s_package$().s_package$__f_List);
   var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_swarm_models_Models$AwsCodeBuildApp.getArrayOf().constr)([]));
-  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_awsApps = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems))
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppList$$$awsApps = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems))
 }
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$.prototype = new $h_O();
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$;
@@ -6588,33 +6725,787 @@ function $m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$() {
   };
   return $n_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppPage$
 }
-function $p_Lcom_swarm_pages_adm_stack_StackForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x15 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x14 = $m_sr_ScalaRunTime$();
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__loadAwsApp__I__s_Option__V($thiz, id, loadedCb) {
+  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2(loadedCb, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__load__V($thiz) {
+  var this$1 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp);
+  var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var this$3 = $n($as_s_Option($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O()));
+  if ((!this$3.isEmpty__Z())) {
+    var arg1 = this$3.get__O();
+    var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+    $n($m_Lcom_swarm_api_ApiAwsBuild$().list__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(app)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3()), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  }
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__remove__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild) {
+  if ($uZ(window.confirm("Are you sure?"))) {
+    $n($m_Lcom_swarm_api_ApiAwsBuild$().delete__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future(awsBuild)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4(awsBuild, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  }
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__update__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild) {
+  var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+  var mod = new $c_sjsr_AnonFunction1(((_$6) => {
+    $as_s_Option(_$6);
+    var id = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id;
+    var value = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(id);
+    return new $c_s_Some(value)
+  }));
+  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod);
+  $n($m_Lcom_swarm_api_ApiAwsBuild$().update__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future(awsBuild)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5(awsBuild, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__start__V($thiz) {
+  if ($uZ(window.confirm("Are you sure?"))) {
+    var this$3 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+    var mod = new $c_sjsr_AnonFunction1(((_$9) => {
+      $as_s_Option(_$9);
+      var value = $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+      return new $c_s_Some(value)
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
+    var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp);
+    var this$5 = $n(this$4.Lcom_raquo_airstream_state_SourceVar__f_signal);
+    var this$6 = $n($as_s_Option($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$5)).get__O()));
+    if ((!this$6.isEmpty__Z())) {
+      var arg1 = this$6.get__O();
+      var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+      $n($m_Lcom_swarm_api_ApiAwsBuild$().start__Lcom_swarm_models_Models$AwsCodeBuildApp__s_concurrent_Future(app)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6(app)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    }
+  }
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__stop__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild) {
+  if ($uZ(window.confirm("Are you sure?"))) {
+    var this$4 = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+    var mod = new $c_sjsr_AnonFunction1(((_$13) => {
+      $as_s_Option(_$13);
+      var id = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id;
+      var value = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(id);
+      return new $c_s_Some(value)
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod);
+    $n($m_Lcom_swarm_api_ApiAwsBuild$().stop__Lcom_swarm_models_Models$AwsBuild__s_concurrent_Future(awsBuild)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7(awsBuild, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  }
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
   var $$x13 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x12 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x11 = $m_sr_ScalaRunTime$();
+  var $$x12 = $m_sr_ScalaRunTime$();
+  var $$x11 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x10 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x9 = $m_sr_ScalaRunTime$();
   var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x10 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("/adm/stack");
-  var $$x9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x8 = $m_sr_ScalaRunTime$();
+  var $$x8 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("/adm/aws/codebuild/app");
+  var $$x7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x6 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x7 = $n($$x13).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x10, $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "stacks", renderable)])))]))), false);
+  var $$x5 = $n($$x11).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "aws codebuild apps", renderable)])))]))), false);
+  var $$x4 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$6 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$16) => {
+    var _$16$1 = $as_s_Option(_$16);
+    var this$4 = $n(_$16$1);
+    if (this$4.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1 = this$4.get__O();
+      var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+      var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x1 = $m_sr_ScalaRunTime$();
+      var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var value = (("aws builds for " + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName) + " ");
+      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, value, renderable$1)]))))
+    }
+  }));
+  return $n($$x13).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, $n($$x4).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$6, project, $m_s_None$())), true)])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__buildStatusElem__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_modifiers_Modifier($thiz, awsBuild) {
+  if (($n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_buildStatus === "IN_PROGRESS")) {
+    var $$x4 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
+    var this$6 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+    var project = new $c_sjsr_AnonFunction1(((_$17) => {
+      var _$17$1 = $as_s_Option(_$17);
+      var this$2 = $n(_$17$1);
+      if (this$2.isEmpty__Z()) {
+        return $m_s_None$()
+      } else {
+        var arg1 = this$2.get__O();
+        var x$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(arg1);
+        matchResult20: {
+          var $$x1;
+          if ((x$1 instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop)) {
+            var x$1$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(x$1);
+            var this$4 = $n(x$1$1);
+            var x115 = this$4.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id;
+            if ((x115 === $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id)) {
+              var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+              var $$x2 = $m_sr_ScalaRunTime$();
+              var this$5 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+              var $$x1 = $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$5.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cog fa-spin fa-fw")])));
+              break matchResult20
+            }
+          };
+          var $$x1 = $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__actionStop__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild)
+        };
+        return new $c_s_Some($$x1)
+      }
+    }));
+    return $n($$x4).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$6, project, $m_s_None$()))
+  } else {
+    var $$x7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+    var $$x6 = $m_sr_ScalaRunTime$();
+    var this$7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+    var $$x5 = this$7.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-circle");
+    var this$8 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+    return $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, this$8.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("no build")])))
+  }
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__actionStop__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild) {
+  var $$x7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x6 = $m_sr_ScalaRunTime$();
+  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x5 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var $$x4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x3 = $m_sr_ScalaRunTime$();
+  var this$2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x2 = $n($$x4).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$2.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-ban")])));
+  $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
+  var this$5 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
+  var onNext = new $c_sjsr_AnonFunction1(((_$18) => {
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__stop__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild)
+  }));
+  var $$x1 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$5, onNext);
+  var this$6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+  return $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, $$x2, $$x1, this$6.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("build cancel")])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__actionUpdate__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild) {
+  var $$x7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x6 = $m_sr_ScalaRunTime$();
+  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x5 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var $$x4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x3 = $m_sr_ScalaRunTime$();
+  var this$2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x2 = $n($$x4).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$2.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-refresh")])));
+  $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
+  var this$5 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
+  var onNext = new $c_sjsr_AnonFunction1(((_$19) => {
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__update__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild)
+  }));
+  var $$x1 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$5, onNext);
+  var this$6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+  return $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, $$x2, $$x1, this$6.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("build update")])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__tbRow__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild) {
+  var $$x55 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x54 = $m_sr_ScalaRunTime$();
+  var $$x53 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x52 = $m_sr_ScalaRunTime$();
+  var this$3 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var this$1 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id;
+  var value = ("" + this$1);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x51 = $n($$x53).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x52).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$3, value, renderable)])));
+  var $$x50 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x49 = $m_sr_ScalaRunTime$();
+  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$1 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_currentPhase;
+  var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x48 = $n($$x50).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x49).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, value$1, renderable$1)])));
+  var $$x47 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x46 = $m_sr_ScalaRunTime$();
+  var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$2 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_buildStatus;
+  var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x45 = $n($$x47).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x46).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, value$2, renderable$2)])));
+  var $$x44 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x43 = $m_sr_ScalaRunTime$();
+  var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$3 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_appVersionTag;
+  var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x42 = $n($$x44).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x43).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, value$3, renderable$3)])));
+  var $$x41 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x40 = $m_sr_ScalaRunTime$();
+  var this$7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$4 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_startTime;
+  var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x39 = $n($$x41).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x40).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$7, value$4, renderable$4)])));
+  var $$x38 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x37 = $m_sr_ScalaRunTime$();
+  var this$8 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$5 = $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_endTime;
+  var renderable$5 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x36 = $n($$x38).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x37).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$8, value$5, renderable$5)])));
+  var $$x35 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x34 = $m_sr_ScalaRunTime$();
+  var this$9 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x33 = this$9.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).styleAttr__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x32 = $n($$x35).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x34).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x33, this$10.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("width: 50px"), $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__buildStatusElem__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_modifiers_Modifier($thiz, awsBuild)])));
+  var $$x31 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x30 = $m_sr_ScalaRunTime$();
+  var this$11 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x29 = this$11.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$12 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).styleAttr__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x28 = this$12.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("width: 50px");
+  var $$x27 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$18 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$20) => {
+    var _$20$1 = $as_s_Option(_$20);
+    var this$14 = $n(_$20$1);
+    if (this$14.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1 = this$14.get__O();
+      var x$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(arg1);
+      matchResult21: {
+        var $$x24;
+        if ((x$1 instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update)) {
+          var x$1$1 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(x$1);
+          var this$16 = $n(x$1$1);
+          var x119 = this$16.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id;
+          if ((x119 === $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id)) {
+            var $$x26 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+            var $$x25 = $m_sr_ScalaRunTime$();
+            var this$17 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+            var $$x24 = $n($$x26).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x25).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$17.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cog fa-spin fa-fw")])));
+            break matchResult21
+          }
+        };
+        var $$x24 = $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__actionUpdate__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild)
+      };
+      return new $c_s_Some($$x24)
+    }
+  }));
+  var $$x23 = $n($$x31).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x30).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x29, $$x28, $n($$x27).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$18, project, $m_s_None$()))])));
+  var $$x22 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x21 = $m_sr_ScalaRunTime$();
+  var this$19 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x20 = this$19.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$20 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).styleAttr__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x19 = this$20.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("width: 50px");
+  var $$x18 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x17 = $m_sr_ScalaRunTime$();
+  var this$21 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var value$6 = ("/adm/aws/build/logs/" + $n(awsBuild).Lcom_swarm_models_Models$AwsBuild__f_id);
+  var $$x16 = this$21.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$6);
+  var $$x15 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x14 = $m_sr_ScalaRunTime$();
+  var this$22 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x13 = $n($$x15).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$22.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cogs")])));
+  var this$23 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+  var $$x12 = $n($$x22).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x21).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x20, $$x19, $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x16, $$x13, this$23.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("show build logs")])))])));
+  var $$x11 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).td__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x10 = $m_sr_ScalaRunTime$();
+  var this$24 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x9 = this$24.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("text-center");
+  var this$25 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).styleAttr__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x8 = this$25.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("width: 50px");
+  var $$x7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x6 = $m_sr_ScalaRunTime$();
+  var this$26 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x5 = this$26.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var $$x4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).i__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x3 = $m_sr_ScalaRunTime$();
+  var this$27 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x2 = $n($$x4).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x3).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$27.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-trash")])));
+  $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
+  var this$29 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
+  var onNext = new $c_sjsr_AnonFunction1(((_$21) => {
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__remove__Lcom_swarm_models_Models$AwsBuild__V($thiz, awsBuild)
+  }));
+  var $$x1 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$29, onNext);
+  var this$30 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).title__Lcom_raquo_laminar_keys_HtmlProp());
+  return $n($$x55).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x54).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x51, $$x48, $$x45, $$x42, $$x39, $$x36, $$x32, $$x23, $$x12, $n($$x11).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x10).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x9, $$x8, $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, $$x2, $$x1, this$30.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("build remove")])))])))])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x12 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).table__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x11 = $m_sr_ScalaRunTime$();
+  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+  var $$x10 = this$1.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("table table-striped table-dark table-bordered table-hover table-sm table-adm");
+  var $$x9 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).thead__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x8 = $m_sr_ScalaRunTime$();
+  var $$x7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x6 = $m_sr_ScalaRunTime$();
+  var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  $n($m_s_package$().s_package$__f_List);
+  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T.getArrayOf().constr)(["#", "phase", "status", "version", "start time", "end time", "", "", "", ""]));
+  var this$5 = $n($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems));
+  var f = ((s) => {
+    var s$1 = $as_T(s);
+    var $$x5 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).th__Lcom_raquo_laminar_tags_HtmlTag());
+    var $$x4 = $m_sr_ScalaRunTime$();
+    var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+    var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+    return $n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, s$1, renderable)])))
+  });
+  if ((this$5 === $m_sci_Nil$())) {
+    var nodes = $m_sci_Nil$()
+  } else {
+    var arg1 = this$5.head__O();
+    var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+    var t = h;
+    var rest = $as_sci_List(this$5.tail__O());
+    while ((rest !== $m_sci_Nil$())) {
+      var arg1$1 = $n(rest).head__O();
+      var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+      $n(t).sci_$colon$colon__f_next = nx;
+      t = nx;
+      rest = $as_sci_List($n(rest).tail__O())
+    };
+    var nodes = h
+  };
+  var $$x3 = $n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__nodeSeqToModifier__sc_Seq__Lcom_raquo_laminar_modifiers_Modifier(this$6, nodes)])))])));
+  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tbody__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x1 = $m_sr_ScalaRunTime$();
+  $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$22) => {
+    var _$22$1 = $as_sci_List(_$22);
+    var this$7 = $n(_$22$1);
+    var f$1 = ((awsBuild) => {
+      var awsBuild$1 = $as_Lcom_swarm_models_Models$AwsBuild(awsBuild);
+      return $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__tbRow__Lcom_swarm_models_Models$AwsBuild__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, awsBuild$1)
+    });
+    if ((this$7 === $m_sci_Nil$())) {
+      return $m_sci_Nil$()
+    } else {
+      var arg1$2 = this$7.head__O();
+      var h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+      var t$1 = h$1;
+      var rest$1 = $as_sci_List(this$7.tail__O());
+      while ((rest$1 !== $m_sci_Nil$())) {
+        var arg1$3 = $n(rest$1).head__O();
+        var nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
+        $n(t$1).sci_$colon$colon__f_next = nx$1;
+        t$1 = nx$1;
+        rest$1 = $as_sci_List($n(rest$1).tail__O())
+      };
+      return h$1
+    }
+  }));
+  var childrenSource = new $c_Lcom_raquo_airstream_misc_MapSignal(this$8, project, $m_s_None$());
+  return $n($$x12).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x10, $$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_raquo_laminar_modifiers_ChildrenInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childrenSource, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])))])))
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x34 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x33 = $m_sr_ScalaRunTime$();
+  var $$x32 = $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x31 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x30 = $m_sr_ScalaRunTime$();
+  var $$x29 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x28 = new $c_sjsr_AnonFunction1(((_$23) => {
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__start__V($thiz)
+  }));
+  var $$x27 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var signal = $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar).Lcom_raquo_airstream_state_SourceVar__f_signal;
+  var this$16 = $n($m_Lcom_raquo_airstream_combine_generated_CombinableSignal$().combineWith$extension__Lcom_raquo_airstream_core_Signal__Lcom_raquo_airstream_core_Source$SignalSource__Lapp_tulz_tuplez_Composition__Lcom_raquo_airstream_core_Signal(signal, $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp).Lcom_raquo_airstream_state_SourceVar__f_signal, new $c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1()));
+  var project = new $c_sjsr_AnonFunction1(((x$1) => {
+    var x$1$1 = $as_T2(x$1);
+    var event = $as_s_Option($n(x$1$1)._1__O());
+    var app = $as_s_Option($n(x$1$1)._2__O());
+    var this$4 = $n(event);
+    if (this$4.isEmpty__Z()) {
+      var $$x8 = $m_s_None$()
+    } else {
+      var arg1 = this$4.get__O();
+      var x$1$2 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(arg1);
+      var x = $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+      if (((x === null) ? (x$1$2 === null) : $n(x).equals__O__Z(x$1$2))) {
+        var $$x14 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+        var $$x13 = $m_sr_ScalaRunTime$();
+        var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+        var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+        var $$x12 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, "build starting.. ", renderable);
+        var $$x11 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+        var $$x10 = $m_sr_ScalaRunTime$();
+        var this$6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+        var $$x9 = $n($$x14).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x12, $n($$x11).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x10).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$6.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cog fa-spin fa-fw")])))])))
+      } else {
+        var this$7 = $n(app);
+        if (this$7.isEmpty__Z()) {
+          var $$x15 = true
+        } else {
+          var arg1$1 = this$7.get__O();
+          var _$24 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1$1);
+          var $$x15 = $n(_$24).Lcom_swarm_models_Models$AwsCodeBuildApp__f_building
+        };
+        var this$8 = $n(($$x15 ? this$7 : $m_s_None$()));
+        if (this$8.isEmpty__Z()) {
+          var $$x16 = $m_s_None$()
+        } else {
+          var arg1$2 = this$8.get__O();
+          $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1$2);
+          var $$x21 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+          var $$x20 = $m_sr_ScalaRunTime$();
+          var this$9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+          var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+          var $$x19 = $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$9, "build in progress.. ", renderable$1);
+          var $$x18 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+          var $$x17 = $m_sr_ScalaRunTime$();
+          var this$10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+          var $$x16 = new $c_s_Some($n($$x21).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x20).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x19, $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([this$10.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("fa fa-cog fa-spin fa-fw")])))]))))
+        };
+        var this$11 = $n($$x16);
+        if (this$11.isEmpty__Z()) {
+          var $$x24 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+          var $$x23 = $m_sr_ScalaRunTime$();
+          var this$12 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+          var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+          var $$x22 = $n($$x24).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x23).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$12, "build start", renderable$2)])))
+        } else {
+          var $$x22 = this$11.get__O()
+        };
+        var $$x9 = $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement($$x22)
+      };
+      var $$x8 = new $c_s_Some($$x9)
+    };
+    var this$13 = $n($$x8);
+    if (this$13.isEmpty__Z()) {
+      var $$x26 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+      var $$x25 = $m_sr_ScalaRunTime$();
+      var this$14 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      var value = $n($$x26).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x25).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$14, "build start", renderable$3)])));
+      return new $c_s_Some(value)
+    } else {
+      return this$13
+    }
+  }));
+  var $$x7 = $n($$x31).pageActions__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x30).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_nodes_ReactiveHtmlElement.getArrayOf().constr)([$n($$x29).pageAction__F1__Lcom_raquo_laminar_modifiers_Modifier__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($$x28, $n($$x27).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$16, project, $m_s_None$())))])));
+  var $$x6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$20 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$26) => {
+    var _$26$1 = $as_s_Option(_$26);
+    var this$17 = $n(_$26$1);
+    if (this$17.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$3 = this$17.get__O();
+      var s = $as_T(arg1$3);
+      var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x4 = $m_sr_ScalaRunTime$();
+      var this$18 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x3 = this$18.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x1 = $m_sr_ScalaRunTime$();
+      var this$19 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$19, s, renderable$4)])))]))))
+    }
+  }));
+  return $n($$x34).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x33).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x32, $$x7, $n($$x6).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$20, project$1, $m_s_None$())), $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz)])))
+}
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$() {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar = null;
+  $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$ = this;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
+  $n($m_s_package$().s_package$__f_List);
+  var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_swarm_models_Models$AwsBuild.getArrayOf().constr)([]));
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems));
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
+  var value = $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar = $n($$x2).apply__O__Lcom_raquo_airstream_state_Var(new $c_s_Some(value))
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype = new $h_O();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype.apply__I__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(id) {
+  var value = new $c_sjsr_AnonFunction0((() => {
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__load__V(this)
+  }));
+  $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__loadAwsApp__I__s_Option__V(this, id, new $c_s_Some(value));
+  return $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype.com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateApp__s_Option__I__V = (function(app, timeout) {
+  var this$1 = $n(app);
+  if ((!this$1.isEmpty__Z())) {
+    var arg1 = this$1.get__O();
+    var p = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+    $uI(window.setTimeout((() => {
+      $m_s_Console$().print__O__V("autoUpdateApp");
+      $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__loadAwsApp__I__s_Option__V(this, $n(p).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id, $m_s_None$())
+    }), timeout))
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype.com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateBuild__Lcom_swarm_models_Models$AwsBuild__V = (function(build) {
+  window.setTimeout((() => {
+    $m_s_Console$().print__O__V("autoUpdateBuild");
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__update__Lcom_swarm_models_Models$AwsBuild__V(this, build)
+  }), 5000.0)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$ = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$: 1,
+  O: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$;
+var $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$;
+function $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$() {
+  if ((!$n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$)) {
+    $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$ = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$()
+  };
+  return $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__loadAwsApp__I__V($thiz, id) {
+  $n($m_Lcom_swarm_api_ApiAwsCodeBuildApp$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__load__T__V($thiz, id) {
+  var $$x1 = $m_Lcom_swarm_api_ApiAwsBuild$();
+  $m_sc_StringOps$();
+  var this$3 = $m_jl_Integer$();
+  $n($n($$x1).get__I__s_concurrent_Future(this$3.parseInt__T__I__I(id, 10))).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__streamOpen__Lcom_swarm_models_Models$AwsBuild__V($thiz, build) {
+  $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient).open__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message, new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3(build, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__unmount__V($thiz) {
+  $n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient).close__V()
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x42 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x41 = $m_sr_ScalaRunTime$();
+  var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var fn = new $c_sjsr_AnonFunction1(((_$3) => {
+    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$3);
+    $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__unmount__V($thiz)
+  }));
+  var $$x40 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
+  var $$x39 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x38 = $m_sr_ScalaRunTime$();
+  var $$x37 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x36 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x35 = $m_sr_ScalaRunTime$();
+  var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x34 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("/adm/aws/codebuild/app");
+  var $$x33 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x32 = $m_sr_ScalaRunTime$();
+  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x31 = $n($$x37).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x36).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x35).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x34, $n($$x33).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x32).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, "aws codebuild apps", renderable)])))]))), false);
+  var $$x30 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x29 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsApp).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$4) => {
+    var _$4$1 = $as_s_Option(_$4);
+    var this$5 = $n(_$4$1);
+    if (this$5.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1 = this$5.get__O();
+      var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+      var $$x28 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x27 = $m_sr_ScalaRunTime$();
+      var this$6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+      var value = ("/adm/aws/build/" + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id);
+      var $$x26 = this$6.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value);
+      var $$x25 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x24 = $m_sr_ScalaRunTime$();
+      var this$7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var value$1 = (("aws builds for " + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName) + " ");
+      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x28).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x27).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x26, $n($$x25).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x24).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$7, value$1, renderable$1)])))]))))
+    }
+  }));
+  var $$x23 = $n($$x30).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$8, project, $m_s_None$())), false);
+  var $$x22 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x21 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$11 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsBuild).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$5) => {
+    var _$5$1 = $as_s_Option(_$5);
+    var this$9 = $n(_$5$1);
+    if (this$9.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$1 = this$9.get__O();
+      var build = $as_Lcom_swarm_models_Models$AwsBuild(arg1$1);
+      var $$x20 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x19 = $m_sr_ScalaRunTime$();
+      var this$10 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var value$2 = (("aws log build for " + $n(build).Lcom_swarm_models_Models$AwsBuild__f_buildId) + " ");
+      var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x20).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x19).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$10, value$2, renderable$2)]))))
+    }
+  }));
+  var $$x18 = $n($$x39).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x38).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x31, $$x23, $n($$x22).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x21).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$11, project$1, $m_s_None$())), true)])));
+  var $$x17 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
+  var this$15 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$2 = new $c_sjsr_AnonFunction1(((_$6) => {
+    var _$6$1 = $as_s_Option(_$6);
+    var this$12 = $n(_$6$1);
+    if (this$12.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$2 = this$12.get__O();
+      var s = $as_T(arg1$2);
+      var $$x16 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x15 = $m_sr_ScalaRunTime$();
+      var this$13 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x14 = this$13.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var $$x13 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x12 = $m_sr_ScalaRunTime$();
+      var this$14 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x16).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x15).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x14, $n($$x13).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$14, s, renderable$3)])))]))))
+    }
+  }));
+  var $$x11 = $n($$x17).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$15, project$2, $m_s_None$()));
+  var $$x10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
+  var $$x9 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
+  var this$20 = $n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsBuild).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$3 = new $c_sjsr_AnonFunction1(((_$7) => {
+    var _$7$1 = $as_s_Option(_$7);
+    var this$16 = $n(_$7$1);
+    if (this$16.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1$3 = this$16.get__O();
+      var build$1 = $as_Lcom_swarm_models_Models$AwsBuild(arg1$3);
+      var $$x8 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x7 = $m_sr_ScalaRunTime$();
+      var this$17 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+      var value$3 = $n(build$1).Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink;
+      var $$x6 = this$17.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value$3);
+      var this$18 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).target__Lcom_raquo_laminar_keys_HtmlProp());
+      var $$x5 = this$18.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("_blank");
+      var this$19 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var value$4 = ("deep link " + $n(build$1).Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink);
+      var renderable$4 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x8).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x6, $$x5, $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$19, value$4, renderable$4)]))))
+    }
+  }));
+  var $$x4 = $n($$x9).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$20, project$3, $m_s_None$()));
+  var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
+  var $$x2 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x1 = $m_sr_ScalaRunTime$();
+  $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children).Lcom_raquo_laminar_receivers_ChildrenReceiver$__f_command);
+  var this$22 = $n($n($n($thiz.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient).Lcom_swarm_api_WebSocketClient$WsClient__f_buss).Lcom_raquo_airstream_eventbus_EventBus__f_events);
+  var project$4 = new $c_sjsr_AnonFunction1(((msg) => {
+    var msg$1 = $as_Lcom_swarm_api_WebSocketClient$WsMsg(msg);
+    var this$21 = $m_Lcom_swarm_pages_comps_LogLineView$();
+    return $p_Lcom_swarm_pages_comps_LogLineView$__fromWsMsg__Lcom_swarm_api_WebSocketClient$WsMsg__Lcom_swarm_pages_comps_LogLineView(this$21, msg$1)
+  }));
+  var this$23 = new $c_Lcom_raquo_airstream_misc_MapStream(this$22, project$4, $m_s_None$());
+  var project$5 = new $c_sjsr_AnonFunction1(((_$8) => {
+    var _$8$1 = $as_Lcom_swarm_pages_comps_LogLineView(_$8);
+    return $n(_$8$1).node__Lcom_raquo_laminar_CollectionCommand$Prepend()
+  }));
+  var commands = new $c_Lcom_raquo_airstream_misc_MapStream(this$23, project$5, $m_s_None$());
+  var renderableNode = $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable;
+  return $n($$x42).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x41).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x40, $$x18, $$x11, $$x10, $$x4, $$x3, $n($$x2).terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_raquo_laminar_modifiers_ChildrenCommandInserter$().apply__Lcom_raquo_airstream_core_EventStream__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(commands, renderableNode)])))])))
+}
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$() {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsApp = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsBuild = null;
+  $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$ = this;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient = new $c_Lcom_swarm_api_WebSocketClient$WsClient();
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsApp = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsBuild = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$())
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype = new $h_O();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype.apply__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(id) {
+  $m_s_Console$().print__O__V("AwsBuildLogStream");
+  $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__load__T__V(this, id);
+  return $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$ = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildLogStream$", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$: 1,
+  O: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$;
+var $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$;
+function $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$() {
+  if ((!$n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$)) {
+    $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$ = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$()
+  };
+  return $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$
+}
+function $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x2 = $m_sr_ScalaRunTime$();
+  var $$x1 = $m_Lfrontroute_package$();
+  var this$2 = $m_Lfrontroute_package$();
+  var this$1 = $m_Lfrontroute_package$();
+  var m = $f_Lfrontroute_PathMatchers__long__Lfrontroute_PathMatcher(this$1);
+  return $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$as_Lcom_raquo_laminar_modifiers_Modifier($n($n($$x1).addDirectiveApply__Lfrontroute_Directive__Lapp_tulz_tuplez_ApplyConverter__F1($f_Lfrontroute_Directives__path__Lfrontroute_PathMatcher__Lfrontroute_Directive(this$2, m), ($m_Lfrontroute_package$(), new $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1()))).apply__O__O(new $c_sjsr_AnonFunction1(((id) => {
+    var t = $uJ(id);
+    var lo = t.RTLong__f_lo;
+    var hi = t.RTLong__f_hi;
+    $m_Lfrontroute_package$();
+    var e = new $c_sjsr_AnonFunction0(((id$2) => (() => $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().apply__I__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(id$2.RTLong__f_lo)))(new $c_RTLong(lo, hi)));
+    $m_Lfrontroute_package$();
+    return new $c_Lfrontroute_package$$anon$8(e)
+  }))))])))
+}
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$.prototype = new $h_O();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$.prototype;
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$ = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildPage$", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$: 1,
+  O: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$;
+var $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$;
+function $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$() {
+  if ((!$n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$)) {
+    $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$ = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$()
+  };
+  return $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildPage$
+}
+function $p_Lcom_swarm_pages_adm_stack_StackForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
+  var $$x8 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x7 = $m_sr_ScalaRunTime$();
   var $$x6 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x4 = $m_sr_ScalaRunTime$();
-  var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x3 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x3 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("/adm/stack");
   var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x1 = $m_sr_ScalaRunTime$();
-  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  return $n($$x15).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x14).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, $n($$x6).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, "stack", renderable$1)])))]))), true)])))
+  var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  return $n($$x8).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x6).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "stacks", renderable)])))]))), false), $m_Lcom_swarm_pages_comps_Theme$().breadcrumbItem__T__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement("stack", true)])))
 }
 function $p_Lcom_swarm_pages_adm_stack_StackForm$__mount__V($thiz) {
   var el = document.getElementById("stackContent");
-  $thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_editor.render(el)
+  $thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$editor.render(el)
 }
 function $p_Lcom_swarm_pages_adm_stack_StackForm$__formSubmitter__Lcom_raquo_airstream_core_Observer($thiz) {
   var this$4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Observer);
@@ -6644,76 +7535,31 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__submit__Lcom_swarm_pages_adm_
   var vector$macro$1 = $n($n(TransformerInto_this$2).Lio_scalaland_chimney_dsl_TransformerInto__f_td).Lio_scalaland_chimney_dsl_TransformerDefinition__f_runtimeData;
   var stackform$macro$1 = $as_Lcom_swarm_pages_adm_stack_StackForm$StackForm($n(TransformerInto_this$2).Lio_scalaland_chimney_dsl_TransformerInto__f_source);
   var stack = new $c_Lcom_swarm_models_Models$Stack($n(stackform$macro$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_id, $n(stackform$macro$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_name, $n(stackform$macro$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_content, $n(stackform$macro$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_enabled, $as_T($n($as_F1($n(vector$macro$1).apply__I__O(0))).apply__O__O(stackform$macro$1)));
-  $n((($n(form).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_id === 0) ? $m_Lcom_swarm_api_ApiStack$().save__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack) : $m_Lcom_swarm_api_ApiStack$().update__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack))).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult6: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        $m_Lcom_swarm_services_Router$().navigate__T__V("/adm/stack");
-        break matchResult6
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$7 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_message);
-        var mod = new $c_sjsr_AnonFunction1(((_$4) => {
-          $as_s_Option(_$4);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-        break matchResult6
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n((($n(form).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_id === 0) ? $m_Lcom_swarm_api_ApiStack$().save__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack) : $m_Lcom_swarm_api_ApiStack$().update__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack))).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_message, new $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_stack_StackForm$__load__I__V($thiz, id) {
-  $n($m_Lcom_swarm_api_ApiStack$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult9: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var result = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var TransformerInto_this = new $c_Lio_scalaland_chimney_dsl_TransformerInto($n(result).Lcom_swarm_api_ApiServer$ApiResult__f_data, new $c_Lio_scalaland_chimney_dsl_TransformerDefinition(($n($m_s_package$().s_package$__f_Vector), $m_sci_Vector0$())));
-        $n(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_td);
-        var stack$macro$1 = $as_Lcom_swarm_models_Models$Stack(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_source);
-        var form = new $c_Lcom_swarm_pages_adm_stack_StackForm$StackForm($n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_id, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_name, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_content, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_enabled);
-        var this$4 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar);
-        $f_Lcom_raquo_airstream_state_Var__set__O__V(this$4, form);
-        $thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_editor.codemirror.setValue(form.Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_content);
-        break matchResult9
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$6 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_message);
-        var mod = new $c_sjsr_AnonFunction1(((_$5) => {
-          $as_s_Option(_$5);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
-        break matchResult9
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiStack$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_message, new $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_stack_StackForm$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x50 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x49 = $m_sr_ScalaRunTime$();
+  var $$x52 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x51 = $m_sr_ScalaRunTime$();
+  var $$x50 = $p_Lcom_swarm_pages_adm_stack_StackForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x49 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x48 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$6) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$6);
+  var fn = new $c_sjsr_AnonFunction1(((_$4) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$4);
     $p_Lcom_swarm_pages_adm_stack_StackForm$__mount__V($thiz)
   }));
-  var $$x48 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
+  var $$x47 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
   var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn$1 = new $c_sjsr_AnonFunction1(((_$7) => {
-    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$7);
+  var fn$1 = new $c_sjsr_AnonFunction1(((_$5) => {
+    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$5);
     var this$4 = $m_s_Console$();
     var this$5 = $n(this$4.out__Ljava_io_PrintStream());
     this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V("unmount\n")
   }));
-  var $$x47 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$6, fn$1);
-  var $$x46 = $p_Lcom_swarm_pages_adm_stack_StackForm$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x46 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$6, fn$1);
   var this$7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
   var $$x45 = this$7.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("col-md-8 offset-2 col-12 mt-5");
   var $$x44 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).h2__Lcom_raquo_laminar_tags_HtmlTag());
@@ -6744,7 +7590,7 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__node__Lcom_raquo_laminar_node
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onInput__Lcom_raquo_laminar_keys_EventProp();
   var this$20 = $n($n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false)).mapToValue__Lcom_raquo_laminar_keys_EventProcessor());
-  var this$19 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar);
+  var this$19 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar);
   var mod = new $c_sjsr_AnonFunction2(((state, s) => {
     var state$1 = $as_Lcom_swarm_pages_adm_stack_StackForm$StackForm(state);
     var s$1 = $as_T(s);
@@ -6764,10 +7610,10 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__node__Lcom_raquo_laminar_node
   }));
   var $$x27 = new $c_Lcom_raquo_laminar_modifiers_EventListener(this$20, onNext);
   var $$x26 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).value__Lcom_raquo_laminar_keys_HtmlProp();
-  var this$22 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$8) => {
-    var _$8$1 = $as_Lcom_swarm_pages_adm_stack_StackForm$StackForm(_$8);
-    return $n(_$8$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_name
+  var this$22 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$6) => {
+    var _$6$1 = $as_Lcom_swarm_pages_adm_stack_StackForm$StackForm(_$6);
+    return $n(_$6$1).Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_name
   }));
   var $$x25 = $n($$x37).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x36).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x35, $$x32, $n($$x31).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x30).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x29, $$x28, $$x27, $n($$x26).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_KeyUpdater(new $c_Lcom_raquo_airstream_misc_MapSignal(this$22, project, $m_s_None$()))])))])));
   var $$x24 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
@@ -6787,9 +7633,9 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__node__Lcom_raquo_laminar_node
   var $$x15 = $n($$x24).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x23).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x22, $$x19, $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x16, this$26.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("form-control")])))])));
   var $$x14 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
   var this$30 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$1 = new $c_sjsr_AnonFunction1(((_$9) => {
-    var _$9$1 = $as_s_Option(_$9);
-    var this$27 = $n(_$9$1);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$7) => {
+    var _$7$1 = $as_s_Option(_$7);
+    var this$27 = $n(_$7$1);
     if (this$27.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -6829,13 +7675,13 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__node__Lcom_raquo_laminar_node
     var this$37 = $n(sink$1);
     this$37.onNext__O__V(_$1$1)
   }));
-  return $n($$x50).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x49).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x48, $$x47, $$x46, $$x45, $$x41, $$x40, $n($$x39).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x38).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x25, $$x15, $$x8, $$x7, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$36, onNext$1)])))])))
+  return $n($$x52).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x51).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x50, $n($$x49).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x48).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x47, $$x46, $$x45, $$x41, $$x40, $n($$x39).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x38).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x25, $$x15, $$x8, $$x7, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$36, onNext$1)])))])))])))
 }
 function $p_Lcom_swarm_pages_adm_stack_StackForm$__updateContent__Lcom_raquo_airstream_state_Var($thiz) {
-  var this$6 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar);
+  var this$6 = $n($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar);
   var mod = new $c_sjsr_AnonFunction1(((state) => {
     var state$1 = $as_Lcom_swarm_pages_adm_stack_StackForm$StackForm(state);
-    var content$1 = $as_T($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_editor.codemirror.getValue());
+    var content$1 = $as_T($thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$editor.codemirror.getValue());
     var this$2 = $n(state$1);
     var id$1 = this$2.Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_id;
     var this$3 = $n(state$1);
@@ -6846,17 +7692,17 @@ function $p_Lcom_swarm_pages_adm_stack_StackForm$__updateContent__Lcom_raquo_air
     return new $c_Lcom_swarm_pages_adm_stack_StackForm$StackForm(id$1, name$1, content$1, enabled$1)
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
-  return $thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar
+  return $thiz.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar
 }
 /** @constructor */
 function $c_Lcom_swarm_pages_adm_stack_StackForm$() {
   this.Lcom_swarm_pages_adm_stack_StackForm$__f_message = null;
-  this.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar = null;
-  this.Lcom_swarm_pages_adm_stack_StackForm$__f_editor = null;
+  this.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar = null;
+  this.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$editor = null;
   $n_Lcom_swarm_pages_adm_stack_StackForm$ = this;
   this.Lcom_swarm_pages_adm_stack_StackForm$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
-  this.Lcom_swarm_pages_adm_stack_StackForm$__f_stateVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var(new $c_Lcom_swarm_pages_adm_stack_StackForm$StackForm(0, "", "", true));
-  this.Lcom_swarm_pages_adm_stack_StackForm$__f_editor = new Editor()
+  this.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var(new $c_Lcom_swarm_pages_adm_stack_StackForm$StackForm(0, "", "", true));
+  this.Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$editor = new Editor()
 }
 $c_Lcom_swarm_pages_adm_stack_StackForm$.prototype = new $h_O();
 $c_Lcom_swarm_pages_adm_stack_StackForm$.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackForm$;
@@ -6884,130 +7730,11 @@ function $m_Lcom_swarm_pages_adm_stack_StackForm$() {
   return $n_Lcom_swarm_pages_adm_stack_StackForm$
 }
 function $p_Lcom_swarm_pages_adm_stack_StackList$__load__V($thiz) {
-  $n($m_Lcom_swarm_api_ApiStack$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult1: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var result = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var this$2 = $n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_stacks);
-        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-          $as_sci_List(_$1);
-          return $as_sci_List($n(result).Lcom_swarm_api_ApiServer$ApiResult__f_data)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
-        break matchResult1
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$4 = $n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_message);
-        var mod$1 = new $c_sjsr_AnonFunction1(((_$2) => {
-          $as_s_Option(_$2);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod$1);
-        break matchResult1
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiStack$().list__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_message, new $c_Lcom_swarm_pages_adm_stack_StackList$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_adm_stack_StackList$__remove__Lcom_swarm_models_Models$Stack__V($thiz, stack) {
   if ($uZ(window.confirm("Are you sure?"))) {
-    $n($m_Lcom_swarm_api_ApiStack$().delete__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-      var x$1$1 = $as_s_util_Try(x$1);
-      matchResult2: {
-        if ((x$1$1 instanceof $c_s_util_Success)) {
-          var this$3 = $n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_stacks);
-          var mod = new $c_sjsr_AnonFunction1(((lst) => {
-            var lst$1 = $as_sci_List(lst);
-            var this$2 = $n(lst$1);
-            var f = ((_$3) => {
-              var _$3$1 = $as_Lcom_swarm_models_Models$Stack(_$3);
-              return ($n(_$3$1).Lcom_swarm_models_Models$Stack__f_id === $n(stack).Lcom_swarm_models_Models$Stack__f_id)
-            });
-            var l = this$2;
-            block: {
-              var result;
-              while (true) {
-                if ($n(l).isEmpty__Z()) {
-                  var result = $m_sci_Nil$();
-                  break
-                } else {
-                  var h = $n(l).head__O();
-                  var t = $as_sci_List($n(l).tail__O());
-                  if (($uZ(f(h)) === true)) {
-                    l = t;
-                    continue
-                  };
-                  var start = l;
-                  var remaining = t;
-                  while (true) {
-                    if ($n(remaining).isEmpty__Z()) {
-                      var result = start;
-                      break block
-                    } else {
-                      var x = $n(remaining).head__O();
-                      if (($uZ(f(x)) !== true)) {
-                        remaining = $as_sci_List($n(remaining).tail__O());
-                        continue
-                      };
-                      var firstMiss = remaining;
-                      var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
-                      var toProcess = $as_sci_List($n(start).tail__O());
-                      var currentLast = newHead;
-                      while ((toProcess !== firstMiss)) {
-                        var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
-                        $n(currentLast).sci_$colon$colon__f_next = newElem;
-                        currentLast = newElem;
-                        toProcess = $as_sci_List($n(toProcess).tail__O())
-                      };
-                      var next = $as_sci_List($n(firstMiss).tail__O());
-                      var nextToCopy = next;
-                      while ((!$n(next).isEmpty__Z())) {
-                        var head = $n(next).head__O();
-                        if (($uZ(f(head)) !== true)) {
-                          next = $as_sci_List($n(next).tail__O())
-                        } else {
-                          while ((nextToCopy !== next)) {
-                            var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
-                            $n(currentLast).sci_$colon$colon__f_next = newElem$2;
-                            currentLast = newElem$2;
-                            nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
-                          };
-                          nextToCopy = $as_sci_List($n(next).tail__O());
-                          next = $as_sci_List($n(next).tail__O())
-                        }
-                      };
-                      if ((!$n(nextToCopy).isEmpty__Z())) {
-                        $n(currentLast).sci_$colon$colon__f_next = nextToCopy
-                      };
-                      var result = newHead;
-                      break block
-                    }
-                  }
-                }
-              }
-            };
-            return result
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
-          break matchResult2
-        };
-        if ((x$1$1 instanceof $c_s_util_Failure)) {
-          var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-          var this$5 = $n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_message);
-          var mod$1 = new $c_sjsr_AnonFunction1(((_$4) => {
-            $as_s_Option(_$4);
-            var value = ("" + $n(err).getMessage__T());
-            return new $c_s_Some(value)
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod$1);
-          break matchResult2
-        };
-        throw new $c_s_MatchError(x$1$1)
-      }
-    })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    $n($m_Lcom_swarm_api_ApiStack$().delete__Lcom_swarm_models_Models$Stack__s_concurrent_Future(stack)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_message, new $c_Lcom_swarm_pages_adm_stack_StackList$$anon$2(stack, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   }
 }
 function $p_Lcom_swarm_pages_adm_stack_StackList$__edit__Lcom_swarm_models_Models$Stack__V($thiz, stack) {
@@ -7017,18 +7744,7 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__mgr__Lcom_swarm_models_Models
   $m_Lcom_swarm_services_Router$().navigate__T__V(("/docker/stack/mgr/" + $n(stack).Lcom_swarm_models_Models$Stack__f_id))
 }
 function $p_Lcom_swarm_pages_adm_stack_StackList$__header__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x8 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x7 = $m_sr_ScalaRunTime$();
-  var $$x6 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x4 = $m_sr_ScalaRunTime$();
-  var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x3 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
-  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x1 = $m_sr_ScalaRunTime$();
-  var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  return $n($$x8).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x6).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "stacks", renderable)])))]))), true)])))
+  return $m_Lcom_swarm_pages_comps_Theme$().breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_swarm_pages_comps_Theme$().breadcrumbItem__T__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement("stacks", true)])))
 }
 function $p_Lcom_swarm_pages_adm_stack_StackList$__tbRow__Lcom_swarm_models_Models$Stack__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, stack) {
   var $$x43 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
@@ -7069,7 +7785,7 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__tbRow__Lcom_swarm_models_Mode
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$12 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
-  var onNext = new $c_sjsr_AnonFunction1(((_$5) => {
+  var onNext = new $c_sjsr_AnonFunction1(((_$3) => {
     $p_Lcom_swarm_pages_adm_stack_StackList$__mgr__Lcom_swarm_models_Models$Stack__V($thiz, stack)
   }));
   var $$x22 = $n($$x32).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x31).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x30, $n($$x29).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x28).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x27, $$x24, $$x23, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$12, onNext)])))])));
@@ -7091,7 +7807,7 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__tbRow__Lcom_swarm_models_Mode
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$18 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$1, false, false));
-  var onNext$1 = new $c_sjsr_AnonFunction1(((_$6) => {
+  var onNext$1 = new $c_sjsr_AnonFunction1(((_$4) => {
     $p_Lcom_swarm_pages_adm_stack_StackList$__edit__Lcom_swarm_models_Models$Stack__V($thiz, stack)
   }));
   var $$x11 = $n($$x21).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x20).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x19, $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x16, $$x13, $$x12, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$18, onNext$1)])))])));
@@ -7112,7 +7828,7 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__tbRow__Lcom_swarm_models_Mode
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$24 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp$2, false, false));
-  var onNext$2 = new $c_sjsr_AnonFunction1(((_$7) => {
+  var onNext$2 = new $c_sjsr_AnonFunction1(((_$5) => {
     $p_Lcom_swarm_pages_adm_stack_StackList$__remove__Lcom_swarm_models_Models$Stack__V($thiz, stack)
   }));
   return $n($$x43).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x42).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x39, $$x36, $$x33, $$x22, $$x11, $n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x5, $$x2, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$24, onNext$2)])))])))])))
@@ -7158,10 +7874,10 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__tb__Lcom_raquo_laminar_nodes_
   var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tbody__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x1 = $m_sr_ScalaRunTime$();
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
-  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_stacks).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$8) => {
-    var _$8$1 = $as_sci_List(_$8);
-    var this$7 = $n(_$8$1);
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_com$swarm$pages$adm$stack$StackList$$$stacks).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$6) => {
+    var _$6$1 = $as_sci_List(_$6);
+    var this$7 = $n(_$6$1);
     var f$1 = ((stack) => {
       var stack$1 = $as_Lcom_swarm_models_Models$Stack(stack);
       return $p_Lcom_swarm_pages_adm_stack_StackList$__tbRow__Lcom_swarm_models_Models$Stack__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, stack$1)
@@ -7190,8 +7906,8 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__node__Lcom_raquo_laminar_node
   var $$x16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x15 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$9) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$9);
+  var fn = new $c_sjsr_AnonFunction1(((_$7) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$7);
     $p_Lcom_swarm_pages_adm_stack_StackList$__load__V($thiz)
   }));
   var $$x14 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
@@ -7206,9 +7922,9 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__node__Lcom_raquo_laminar_node
   var $$x7 = $n($$x12).pageActions__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x11).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_nodes_ReactiveHtmlElement.getArrayOf().constr)([$n($$x10).pageAction__Lcom_raquo_laminar_modifiers_Modifier__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$3, "New Stack", renderable)]))), "/adm/stack/form")])));
   var $$x6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
   var this$7 = $n($n($thiz.Lcom_swarm_pages_adm_stack_StackList$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$10) => {
-    var _$10$1 = $as_s_Option(_$10);
-    var this$4 = $n(_$10$1);
+  var project = new $c_sjsr_AnonFunction1(((_$8) => {
+    var _$8$1 = $as_s_Option(_$8);
+    var this$4 = $n(_$8$1);
     if (this$4.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -7230,13 +7946,13 @@ function $p_Lcom_swarm_pages_adm_stack_StackList$__node__Lcom_raquo_laminar_node
 /** @constructor */
 function $c_Lcom_swarm_pages_adm_stack_StackList$() {
   this.Lcom_swarm_pages_adm_stack_StackList$__f_message = null;
-  this.Lcom_swarm_pages_adm_stack_StackList$__f_stacks = null;
+  this.Lcom_swarm_pages_adm_stack_StackList$__f_com$swarm$pages$adm$stack$StackList$$$stacks = null;
   $n_Lcom_swarm_pages_adm_stack_StackList$ = this;
   this.Lcom_swarm_pages_adm_stack_StackList$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
   var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
   $n($m_s_package$().s_package$__f_List);
   var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_swarm_models_Models$Stack.getArrayOf().constr)([]));
-  this.Lcom_swarm_pages_adm_stack_StackList$__f_stacks = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems))
+  this.Lcom_swarm_pages_adm_stack_StackList$__f_com$swarm$pages$adm$stack$StackList$$$stacks = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems))
 }
 $c_Lcom_swarm_pages_adm_stack_StackList$.prototype = new $h_O();
 $c_Lcom_swarm_pages_adm_stack_StackList$.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackList$;
@@ -7419,6 +8135,13 @@ $c_Lcom_swarm_pages_comps_Theme$.prototype.command__sci_Seq__sci_Seq = (function
     return $n($$x14).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x12, $$x1, $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).br__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])))])))
   }))))
 });
+$c_Lcom_swarm_pages_comps_Theme$.prototype.breadcrumbItem__T__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(label, active) {
+  var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x1 = $m_sr_ScalaRunTime$();
+  var this$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  return this.breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$1, label, renderable)]))), active)
+});
 $c_Lcom_swarm_pages_comps_Theme$.prototype.breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(label, active) {
   var $$x2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).li__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x1 = $m_sr_ScalaRunTime$();
@@ -7499,60 +8222,59 @@ function $m_Lcom_swarm_pages_comps_Theme$() {
   return $n_Lcom_swarm_pages_comps_Theme$
 }
 function $p_Lcom_swarm_pages_services_ServiceLS$__apiSync__V($thiz) {
-  $n($m_Lcom_swarm_api_ApiDockerService$().ls__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult1: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var data = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var this$2 = $n($thiz.Lcom_swarm_pages_services_ServiceLS$__f_servicesVar);
-        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-          $as_sci_List(_$1);
-          return $as_sci_List($n(data).Lcom_swarm_api_ApiServer$ApiResult__f_data)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
-        break matchResult1
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var x = ("ERROR: " + err);
-        var this$4 = $m_s_Console$();
-        var this$5 = $n(this$4.out__Ljava_io_PrintStream());
-        this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-        break matchResult1
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiDockerService$().ls__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_services_ServiceLS$__f_message, new $c_Lcom_swarm_pages_services_ServiceLS$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServiceLS$__node__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
-  var $$x11 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x10 = $m_sr_ScalaRunTime$();
-  var $$x9 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x8 = $m_sr_ScalaRunTime$();
-  var $$x7 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x5 = $m_sr_ScalaRunTime$();
+  var $$x18 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x17 = $m_sr_ScalaRunTime$();
+  var $$x16 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x15 = $m_sr_ScalaRunTime$();
+  var $$x14 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x13 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x12 = $m_sr_ScalaRunTime$();
   var this$1 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x4 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
-  var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x2 = $m_sr_ScalaRunTime$();
+  var $$x11 = this$1.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var $$x10 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x9 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x1 = $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "docker service ls", renderable)])));
+  var $$x8 = $n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "docker service ls", renderable)])));
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$5 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
   var onNext = new $c_sjsr_AnonFunction1(((_$2) => {
     $p_Lcom_swarm_pages_services_ServiceLS$__apiSync__V($thiz)
   }));
-  return $n($$x11).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x10).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x9).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x8).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x7).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x5).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x4, $$x1, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$5, onNext)]))), true)]))), $m_Lcom_swarm_pages_comps_Theme$().terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$p_Lcom_swarm_pages_services_ServiceLS$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz)])))])))
+  var $$x7 = $n($$x16).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x15).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x14).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x11, $$x8, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$5, onNext)]))), true)])));
+  var $$x6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
+  var this$9 = $n($n($thiz.Lcom_swarm_pages_services_ServiceLS$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$3) => {
+    var _$3$1 = $as_s_Option(_$3);
+    var this$6 = $n(_$3$1);
+    if (this$6.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1 = this$6.get__O();
+      var s = $as_T(arg1);
+      var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x4 = $m_sr_ScalaRunTime$();
+      var this$7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x3 = this$7.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var $$x2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x1 = $m_sr_ScalaRunTime$();
+      var this$8 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x3, $n($$x2).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$8, s, renderable$1)])))]))))
+    }
+  }));
+  return $n($$x18).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x7, $n($$x6).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$9, project, $m_s_None$())), $m_Lcom_swarm_pages_comps_Theme$().terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$p_Lcom_swarm_pages_services_ServiceLS$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz)])))])))
 }
 function $p_Lcom_swarm_pages_services_ServiceLS$__tb__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
   var $$x37 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).table__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x36 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$3) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$3);
+  var fn = new $c_sjsr_AnonFunction1(((_$4) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$4);
     $p_Lcom_swarm_pages_services_ServiceLS$__apiSync__V($thiz)
   }));
   var $$x35 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
@@ -7594,10 +8316,10 @@ function $p_Lcom_swarm_pages_services_ServiceLS$__tb__Lcom_raquo_laminar_nodes_R
   var $$x26 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tbody__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x25 = $m_sr_ScalaRunTime$();
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
-  var this$28 = $n($n($thiz.Lcom_swarm_pages_services_ServiceLS$__f_servicesVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$4) => {
-    var _$4$1 = $as_sci_List(_$4);
-    var this$27 = $n(_$4$1);
+  var this$28 = $n($n($thiz.Lcom_swarm_pages_services_ServiceLS$__f_com$swarm$pages$services$ServiceLS$$$servicesVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$5) => {
+    var _$5$1 = $as_sci_List(_$5);
+    var this$27 = $n(_$5$1);
     var f$1 = ((v) => {
       var v$1 = $as_Lcom_swarm_models_Models$Service(v);
       var $$x24 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
@@ -7682,12 +8404,14 @@ function $p_Lcom_swarm_pages_services_ServiceLS$__tb__Lcom_raquo_laminar_nodes_R
 }
 /** @constructor */
 function $c_Lcom_swarm_pages_services_ServiceLS$() {
-  this.Lcom_swarm_pages_services_ServiceLS$__f_servicesVar = null;
+  this.Lcom_swarm_pages_services_ServiceLS$__f_com$swarm$pages$services$ServiceLS$$$servicesVar = null;
+  this.Lcom_swarm_pages_services_ServiceLS$__f_message = null;
   $n_Lcom_swarm_pages_services_ServiceLS$ = this;
   var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
   $n($m_s_package$().s_package$__f_List);
   var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_swarm_models_Models$Service.getArrayOf().constr)([]));
-  this.Lcom_swarm_pages_services_ServiceLS$__f_servicesVar = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems))
+  this.Lcom_swarm_pages_services_ServiceLS$__f_com$swarm$pages$services$ServiceLS$$$servicesVar = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems));
+  this.Lcom_swarm_pages_services_ServiceLS$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$())
 }
 $c_Lcom_swarm_pages_services_ServiceLS$.prototype = new $h_O();
 $c_Lcom_swarm_pages_services_ServiceLS$.prototype.constructor = $c_Lcom_swarm_pages_services_ServiceLS$;
@@ -7710,110 +8434,100 @@ function $m_Lcom_swarm_pages_services_ServiceLS$() {
   };
   return $n_Lcom_swarm_pages_services_ServiceLS$
 }
-function $p_Lcom_swarm_pages_services_ServiceLogStream$__mount__T__V($thiz, serviceName) {
-  $n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient).open__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult4: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var msgType = $n($s_Lcom_swarm_api_WebSocketClient$WsMsgType$__logStart__Lcom_swarm_api_WebSocketClient$WsMsgType()).toString__T();
-        var msg = $n($m_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter()).toNative__O__sjs_js_Any(new $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(serviceName, 100));
-        var msg$1 = new $c_Lcom_swarm_api_WebSocketClient$WsMsg(msgType, msg);
-        $n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient).send__Lcom_swarm_api_WebSocketClient$WsMsg__V(msg$1);
-        break matchResult4
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$5 = $n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_message);
-        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-          $as_s_Option(_$1);
-          var value = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod);
-        break matchResult4
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+function $p_Lcom_swarm_pages_services_ServiceLogStream$__mount__T__T__V($thiz, serviceName, serviceId) {
+  $n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient).open__s_concurrent_Future()).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_message, new $c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2(serviceName, serviceId, $thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServiceLogStream$__unmount__V($thiz) {
-  $n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient).close__V()
+  $n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient).close__V()
 }
-function $p_Lcom_swarm_pages_services_ServiceLogStream$__node__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, serviceName) {
-  var $$x23 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x22 = $m_sr_ScalaRunTime$();
+function $p_Lcom_swarm_pages_services_ServiceLogStream$__node__T__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, serviceName, serviceId) {
+  var $$x30 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x29 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$2) => {
-    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$2);
+  var fn = new $c_sjsr_AnonFunction1(((_$1) => {
+    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$1);
     $p_Lcom_swarm_pages_services_ServiceLogStream$__unmount__V($thiz)
   }));
-  var $$x21 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
-  var $$x20 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x19 = $m_sr_ScalaRunTime$();
+  var $$x28 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
+  var $$x27 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x26 = $m_sr_ScalaRunTime$();
+  var $$x25 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x24 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x23 = $m_sr_ScalaRunTime$();
+  var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var value = ("/docker/service/ps/" + serviceId);
+  var $$x22 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter(value);
+  var $$x21 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x20 = $m_sr_ScalaRunTime$();
+  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$1 = ("docker ps " + serviceName);
+  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x19 = $n($$x25).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x24).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x23).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x22, $n($$x21).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x20).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, value$1, renderable)])))]))), false);
   var $$x18 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x17 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x16 = $m_sr_ScalaRunTime$();
-  var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x15 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var this$5 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
+  var $$x15 = this$5.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
   var $$x14 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x13 = $m_sr_ScalaRunTime$();
-  var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  var $$x12 = $n($$x20).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x19).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x18).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x16).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x15, $n($$x14).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, "service logs", renderable)])))]))), true)])));
+  var this$6 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value$2 = ("service logs " + serviceName);
+  var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+  var $$x12 = $n($$x27).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x26).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x19, $n($$x18).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x16).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x15, $n($$x14).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$6, value$2, renderable$1)])))]))), true)])));
   var $$x11 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
-  var this$8 = $n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$3) => {
-    var _$3$1 = $as_s_Option(_$3);
-    var this$5 = $n(_$3$1);
-    if (this$5.isEmpty__Z()) {
+  var this$10 = $n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$2) => {
+    var _$2$1 = $as_s_Option(_$2);
+    var this$7 = $n(_$2$1);
+    if (this$7.isEmpty__Z()) {
       return $m_s_None$()
     } else {
-      var arg1 = this$5.get__O();
+      var arg1 = this$7.get__O();
       var s = $as_T(arg1);
       var $$x10 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
       var $$x9 = $m_sr_ScalaRunTime$();
-      var this$6 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
-      var $$x8 = this$6.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var this$8 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x8 = this$8.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
       var $$x7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
       var $$x6 = $m_sr_ScalaRunTime$();
-      var this$7 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-      return new $c_s_Some($n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$7, s, renderable$1)])))]))))
+      var this$9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$2 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$9, s, renderable$2)])))]))))
     }
   }));
-  var $$x5 = $n($$x11).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$8, project, $m_s_None$()));
+  var $$x5 = $n($$x11).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$10, project, $m_s_None$()));
   var $$x4 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).hr__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([])));
   var $$x3 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x2 = $m_sr_ScalaRunTime$();
-  var this$9 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn$1 = new $c_sjsr_AnonFunction1(((_$4) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$4);
-    $p_Lcom_swarm_pages_services_ServiceLogStream$__mount__T__V($thiz, serviceName)
+  var this$11 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var fn$1 = new $c_sjsr_AnonFunction1(((_$3) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$3);
+    $p_Lcom_swarm_pages_services_ServiceLogStream$__mount__T__T__V($thiz, serviceName, serviceId)
   }));
-  var $$x1 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$9, fn$1);
+  var $$x1 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$11, fn$1);
   $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children).Lcom_raquo_laminar_receivers_ChildrenReceiver$__f_command);
-  var this$11 = $n($n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient).Lcom_swarm_api_WebSocketClient$WsClient__f_buss).Lcom_raquo_airstream_eventbus_EventBus__f_events);
+  var this$13 = $n($n($n($thiz.Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient).Lcom_swarm_api_WebSocketClient$WsClient__f_buss).Lcom_raquo_airstream_eventbus_EventBus__f_events);
   var project$1 = new $c_sjsr_AnonFunction1(((msg) => {
     var msg$1 = $as_Lcom_swarm_api_WebSocketClient$WsMsg(msg);
-    var this$10 = $m_Lcom_swarm_pages_comps_LogLineView$();
-    return $p_Lcom_swarm_pages_comps_LogLineView$__fromWsMsg__Lcom_swarm_api_WebSocketClient$WsMsg__Lcom_swarm_pages_comps_LogLineView(this$10, msg$1)
+    var this$12 = $m_Lcom_swarm_pages_comps_LogLineView$();
+    return $p_Lcom_swarm_pages_comps_LogLineView$__fromWsMsg__Lcom_swarm_api_WebSocketClient$WsMsg__Lcom_swarm_pages_comps_LogLineView(this$12, msg$1)
   }));
-  var this$12 = new $c_Lcom_raquo_airstream_misc_MapStream(this$11, project$1, $m_s_None$());
-  var project$2 = new $c_sjsr_AnonFunction1(((_$5) => {
-    var _$5$1 = $as_Lcom_swarm_pages_comps_LogLineView(_$5);
-    return $n(_$5$1).node__Lcom_raquo_laminar_CollectionCommand$Prepend()
+  var this$14 = new $c_Lcom_raquo_airstream_misc_MapStream(this$13, project$1, $m_s_None$());
+  var project$2 = new $c_sjsr_AnonFunction1(((_$4) => {
+    var _$4$1 = $as_Lcom_swarm_pages_comps_LogLineView(_$4);
+    return $n(_$4$1).node__Lcom_raquo_laminar_CollectionCommand$Prepend()
   }));
-  var commands = new $c_Lcom_raquo_airstream_misc_MapStream(this$12, project$2, $m_s_None$());
+  var commands = new $c_Lcom_raquo_airstream_misc_MapStream(this$14, project$2, $m_s_None$());
   var renderableNode = $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable;
-  return $n($$x23).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x22).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x21, $$x12, $$x5, $$x4, $n($$x3).terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x1, $m_Lcom_raquo_laminar_modifiers_ChildrenCommandInserter$().apply__Lcom_raquo_airstream_core_EventStream__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(commands, renderableNode)])))])))
+  return $n($$x30).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x28, $$x12, $$x5, $$x4, $n($$x3).terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x1, $m_Lcom_raquo_laminar_modifiers_ChildrenCommandInserter$().apply__Lcom_raquo_airstream_core_EventStream__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(commands, renderableNode)])))])))
 }
 /** @constructor */
 function $c_Lcom_swarm_pages_services_ServiceLogStream$() {
   this.Lcom_swarm_pages_services_ServiceLogStream$__f_message = null;
-  this.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient = null;
+  this.Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient = null;
   $n_Lcom_swarm_pages_services_ServiceLogStream$ = this;
   this.Lcom_swarm_pages_services_ServiceLogStream$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
-  this.Lcom_swarm_pages_services_ServiceLogStream$__f_wsClient = new $c_Lcom_swarm_api_WebSocketClient$WsClient()
+  this.Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient = new $c_Lcom_swarm_api_WebSocketClient$WsClient()
 }
 $c_Lcom_swarm_pages_services_ServiceLogStream$.prototype = new $h_O();
 $c_Lcom_swarm_pages_services_ServiceLogStream$.prototype.constructor = $c_Lcom_swarm_pages_services_ServiceLogStream$;
@@ -7837,13 +8551,22 @@ function $m_Lcom_swarm_pages_services_ServiceLogStream$() {
   return $n_Lcom_swarm_pages_services_ServiceLogStream$
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceRm__O__V($thiz, ev) {
-  var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName);
-  var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var name = $as_T($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
-  var cmd = ("docker service rm " + name);
+  matchResult5: {
+    var name$2;
+    var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service);
+    var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
+    var x6 = $as_T2($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
+    if ((x6 !== null)) {
+      var name = $as_T($n(x6)._1__O());
+      var name$2 = name;
+      break matchResult5
+    };
+    throw new $c_s_MatchError(x6)
+  };
+  var cmd = ("docker service rm " + name$2);
   var this$7 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-  var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-    $as_Lcom_swarm_pages_services_TerminalView(_$1);
+  var mod = new $c_sjsr_AnonFunction1(((_$2) => {
+    $as_Lcom_swarm_pages_services_TerminalView(_$2);
     var typ = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Loading__Lcom_swarm_pages_comps_Theme$CmdType();
     var elem$1 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(cmd, typ);
     var this$5 = $n($m_s_package$().s_package$__f_Nil);
@@ -7851,19 +8574,28 @@ function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceRm__O__V($thiz, e
     return new $c_Lcom_swarm_pages_services_TerminalView$Cmd(cmdList)
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-  $n($m_Lcom_swarm_api_ApiDockerService$().rm__T__s_concurrent_Future(name)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
+  $n($m_Lcom_swarm_api_ApiDockerService$().rm__T__s_concurrent_Future(name$2)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
     var r$1 = $as_s_util_Try(r);
     $p_Lcom_swarm_pages_services_ServicePS$__cmdExecuteResult__T__s_util_Try__V($thiz, cmd, r$1)
   })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceUpdate__O__V($thiz, ev) {
-  var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName);
-  var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var name = $as_T($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
-  var cmd = (("docker service update " + name) + " --force");
+  matchResult6: {
+    var name$2;
+    var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service);
+    var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
+    var x9 = $as_T2($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
+    if ((x9 !== null)) {
+      var name = $as_T($n(x9)._1__O());
+      var name$2 = name;
+      break matchResult6
+    };
+    throw new $c_s_MatchError(x9)
+  };
+  var cmd = (("docker service update " + name$2) + " --force");
   var this$7 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-  var mod = new $c_sjsr_AnonFunction1(((_$2) => {
-    $as_Lcom_swarm_pages_services_TerminalView(_$2);
+  var mod = new $c_sjsr_AnonFunction1(((_$3) => {
+    $as_Lcom_swarm_pages_services_TerminalView(_$3);
     var typ = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Loading__Lcom_swarm_pages_comps_Theme$CmdType();
     var elem$2 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(cmd, typ);
     var this$5 = $n($m_s_package$().s_package$__f_Nil);
@@ -7871,19 +8603,28 @@ function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceUpdate__O__V($thi
     return new $c_Lcom_swarm_pages_services_TerminalView$Cmd(cmdList)
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-  $n($m_Lcom_swarm_api_ApiDockerService$().update__T__s_concurrent_Future(name)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
+  $n($m_Lcom_swarm_api_ApiDockerService$().update__T__s_concurrent_Future(name$2)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
     var r$1 = $as_s_util_Try(r);
     $p_Lcom_swarm_pages_services_ServicePS$__cmdExecuteResult__T__s_util_Try__V($thiz, cmd, r$1)
   })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceLogsGet__O__V($thiz, ev) {
-  var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName);
-  var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var name = $as_T($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
-  var cmd = ("docker service logs " + name);
+  matchResult7: {
+    var name$2;
+    var this$1 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service);
+    var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
+    var x12 = $as_T2($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O());
+    if ((x12 !== null)) {
+      var name = $as_T($n(x12)._1__O());
+      var name$2 = name;
+      break matchResult7
+    };
+    throw new $c_s_MatchError(x12)
+  };
+  var cmd = ("docker service logs " + name$2);
   var this$7 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-  var mod = new $c_sjsr_AnonFunction1(((_$3) => {
-    $as_Lcom_swarm_pages_services_TerminalView(_$3);
+  var mod = new $c_sjsr_AnonFunction1(((_$4) => {
+    $as_Lcom_swarm_pages_services_TerminalView(_$4);
     var typ = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Loading__Lcom_swarm_pages_comps_Theme$CmdType();
     var elem$3 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(cmd, typ);
     var this$5 = $n($m_s_package$().s_package$__f_Nil);
@@ -7891,173 +8632,187 @@ function $p_Lcom_swarm_pages_services_ServicePS$__dockerServiceLogsGet__O__V($th
     return new $c_Lcom_swarm_pages_services_TerminalView$Cmd(cmdList)
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
-  $n($m_Lcom_swarm_api_ApiDockerService$().logs__T__s_concurrent_Future(name)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
+  $n($m_Lcom_swarm_api_ApiDockerService$().logs__T__s_concurrent_Future(name$2)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((r) => {
     var r$1 = $as_s_util_Try(r);
     $p_Lcom_swarm_pages_services_ServicePS$__cmdExecuteResult__T__s_util_Try__V($thiz, cmd, r$1)
   })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__cmdExecuteResult__T__s_util_Try__V($thiz, cmd, r) {
-  matchResult5: {
+  matchResult8: {
     var lines;
     if ((r instanceof $c_s_util_Success)) {
-      var x10 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(r)).s_util_Success__f_value);
-      if ((x10 !== null)) {
-        var this$2 = $n(x10);
-        var x12 = $as_Lcom_swarm_models_Models$CmdResult(this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data);
-        if ((x12 !== null)) {
-          var this$4 = $n(x12);
-          var x14 = this$4.Lcom_swarm_models_Models$CmdResult__f_error;
-          var this$5 = $n(x12);
-          var x15 = this$5.Lcom_swarm_models_Models$CmdResult__f_messages;
-          var this$6 = $n(x14);
-          if ($uZ((this$6.isEmpty__Z() ? false : this$6.get__O()))) {
-            var this$7 = $n(x15);
-            if (this$7.isEmpty__Z()) {
-              var this$8 = $n($m_s_package$().s_package$__f_Nil);
-              var $$x1 = new $c_sci_$colon$colon("unknown error", this$8)
-            } else {
-              var $$x1 = this$7.get__O()
-            };
-            var this$10 = $n($as_sci_List($$x1));
-            var f = ((s) => {
-              var s$1 = $as_T(s);
-              var typ = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
-              return new $c_Lcom_swarm_pages_comps_Theme$CmdLine(s$1, typ)
-            });
-            if ((this$10 === $m_sci_Nil$())) {
-              var lines = $m_sci_Nil$();
-              break matchResult5
-            } else {
-              var arg1 = this$10.head__O();
-              var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-              var t = h;
-              var rest = $as_sci_List(this$10.tail__O());
-              while ((rest !== $m_sci_Nil$())) {
-                var arg1$1 = $n(rest).head__O();
-                var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-                $n(t).sci_$colon$colon__f_next = nx;
-                t = nx;
-                rest = $as_sci_List($n(rest).tail__O())
+      var x30 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(r)).s_util_Success__f_value);
+      if ((x30 !== null)) {
+        var this$2 = $n(x30);
+        var x32 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+        var this$3 = $n(x30);
+        var x33 = this$3.Lcom_swarm_api_ApiServer$ApiResult__f_error;
+        var this$4 = $n(x30);
+        var x34 = this$4.Lcom_swarm_api_ApiServer$ApiResult__f_message;
+        var this$5 = $n(x30);
+        var x35 = this$5.Lcom_swarm_api_ApiServer$ApiResult__f_messages;
+        if ((x32 instanceof $c_s_Some)) {
+          var x37 = $as_Lcom_swarm_models_Models$CmdResult($n($as_s_Some(x32)).s_Some__f_value);
+          if ((x37 !== null)) {
+            var this$7 = $n(x37);
+            var x39 = this$7.Lcom_swarm_models_Models$CmdResult__f_error;
+            var this$8 = $n(x37);
+            var x40 = this$8.Lcom_swarm_models_Models$CmdResult__f_messages;
+            var this$9 = $n(x39);
+            if ($uZ((this$9.isEmpty__Z() ? false : this$9.get__O()))) {
+              var this$10 = $n(x40);
+              if (this$10.isEmpty__Z()) {
+                var this$11 = $n($m_s_package$().s_package$__f_Nil);
+                var $$x1 = new $c_sci_$colon$colon("unknown error", this$11)
+              } else {
+                var $$x1 = this$10.get__O()
               };
-              var lines = h;
-              break matchResult5
-            }
-          } else {
-            var this$11 = $n(x15);
-            if (this$11.isEmpty__Z()) {
-              var this$12 = $n($m_s_package$().s_package$__f_Nil);
-              var $$x2 = new $c_sci_$colon$colon("unknow result", this$12)
+              var this$13 = $n($as_sci_List($$x1));
+              var f = ((s) => {
+                var s$1 = $as_T(s);
+                var typ = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
+                return new $c_Lcom_swarm_pages_comps_Theme$CmdLine(s$1, typ)
+              });
+              if ((this$13 === $m_sci_Nil$())) {
+                var lines = $m_sci_Nil$();
+                break matchResult8
+              } else {
+                var arg1 = this$13.head__O();
+                var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+                var t = h;
+                var rest = $as_sci_List(this$13.tail__O());
+                while ((rest !== $m_sci_Nil$())) {
+                  var arg1$1 = $n(rest).head__O();
+                  var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+                  $n(t).sci_$colon$colon__f_next = nx;
+                  t = nx;
+                  rest = $as_sci_List($n(rest).tail__O())
+                };
+                var lines = h;
+                break matchResult8
+              }
             } else {
-              var $$x2 = this$11.get__O()
-            };
-            var this$14 = $n($as_sci_List($$x2));
-            var f$1 = ((s$2) => {
-              var s$3 = $as_T(s$2);
-              var typ$1 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Done__Lcom_swarm_pages_comps_Theme$CmdType();
-              return new $c_Lcom_swarm_pages_comps_Theme$CmdLine(s$3, typ$1)
-            });
-            if ((this$14 === $m_sci_Nil$())) {
-              var lines = $m_sci_Nil$();
-              break matchResult5
-            } else {
-              var arg1$2 = this$14.head__O();
-              var h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
-              var t$1 = h$1;
-              var rest$1 = $as_sci_List(this$14.tail__O());
-              while ((rest$1 !== $m_sci_Nil$())) {
-                var arg1$3 = $n(rest$1).head__O();
-                var nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
-                $n(t$1).sci_$colon$colon__f_next = nx$1;
-                t$1 = nx$1;
-                rest$1 = $as_sci_List($n(rest$1).tail__O())
+              var this$14 = $n(x40);
+              if (this$14.isEmpty__Z()) {
+                var this$15 = $n($m_s_package$().s_package$__f_Nil);
+                var $$x2 = new $c_sci_$colon$colon("unknow result", this$15)
+              } else {
+                var $$x2 = this$14.get__O()
               };
-              var lines = h$1;
-              break matchResult5
+              var this$17 = $n($as_sci_List($$x2));
+              var f$1 = ((s$2) => {
+                var s$3 = $as_T(s$2);
+                var typ$1 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Done__Lcom_swarm_pages_comps_Theme$CmdType();
+                return new $c_Lcom_swarm_pages_comps_Theme$CmdLine(s$3, typ$1)
+              });
+              if ((this$17 === $m_sci_Nil$())) {
+                var lines = $m_sci_Nil$();
+                break matchResult8
+              } else {
+                var arg1$2 = this$17.head__O();
+                var h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+                var t$1 = h$1;
+                var rest$1 = $as_sci_List(this$17.tail__O());
+                while ((rest$1 !== $m_sci_Nil$())) {
+                  var arg1$3 = $n(rest$1).head__O();
+                  var nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
+                  $n(t$1).sci_$colon$colon__f_next = nx$1;
+                  t$1 = nx$1;
+                  rest$1 = $as_sci_List($n(rest$1).tail__O())
+                };
+                var lines = h$1;
+                break matchResult8
+              }
             }
           }
+        };
+        if (((x33 instanceof $c_s_Some) && ($uZ($n($as_s_Some(x33)).s_Some__f_value) === true))) {
+          var this$18 = $n(x34);
+          if (this$18.isEmpty__Z()) {
+            var this$19 = $n(x35);
+            if (this$19.isEmpty__Z()) {
+              var $$x3 = $m_s_None$()
+            } else {
+              var arg1$4 = this$19.get__O();
+              var _$5 = $as_sci_List(arg1$4);
+              var this$20 = $n(_$5);
+              var $$x3 = new $c_s_Some($f_sc_IterableOnceOps__mkString__T__T__T__T(this$20, "", ", ", ""))
+            }
+          } else {
+            var $$x3 = this$18
+          };
+          var this$21 = $n($$x3);
+          var text = $as_T((this$21.isEmpty__Z() ? "unknown error" : this$21.get__O()));
+          var typ$2 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
+          var elem$4 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(text, typ$2);
+          var this$23 = $n($m_s_package$().s_package$__f_Nil);
+          var lines = new $c_sci_$colon$colon(elem$4, this$23);
+          break matchResult8
         }
-      }
+      };
+      var typ$3 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
+      var elem$5 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine("unknown error", typ$3);
+      var this$25 = $n($m_s_package$().s_package$__f_Nil);
+      var lines = new $c_sci_$colon$colon(elem$5, this$25);
+      break matchResult8
     };
     if ((r instanceof $c_s_util_Failure)) {
       var exception = $n($as_s_util_Failure(r)).s_util_Failure__f_exception;
-      var text = $n(exception).getMessage__T();
-      var typ$2 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
-      var elem$4 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(text, typ$2);
-      var this$16 = $n($m_s_package$().s_package$__f_Nil);
-      var lines = new $c_sci_$colon$colon(elem$4, this$16);
-      break matchResult5
+      var text$1 = $n(exception).getMessage__T();
+      var typ$4 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Error__Lcom_swarm_pages_comps_Theme$CmdType();
+      var elem$6 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(text$1, typ$4);
+      var this$27 = $n($m_s_package$().s_package$__f_Nil);
+      var lines = new $c_sci_$colon$colon(elem$6, this$27);
+      break matchResult8
     };
     throw new $c_s_MatchError(r)
   };
-  var this$20 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-  var mod = new $c_sjsr_AnonFunction1(((_$4) => {
-    $as_Lcom_swarm_pages_services_TerminalView(_$4);
-    var typ$3 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Done__Lcom_swarm_pages_comps_Theme$CmdType();
-    var elem$5 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(cmd, typ$3);
-    var this$18 = $n(lines);
-    var cmdList = new $c_sci_$colon$colon(elem$5, this$18);
+  var this$31 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
+  var mod = new $c_sjsr_AnonFunction1(((_$6) => {
+    $as_Lcom_swarm_pages_services_TerminalView(_$6);
+    var typ$5 = $s_Lcom_swarm_pages_comps_Theme$CmdType$__Done__Lcom_swarm_pages_comps_Theme$CmdType();
+    var elem$7 = new $c_Lcom_swarm_pages_comps_Theme$CmdLine(cmd, typ$5);
+    var this$29 = $n(lines);
+    var cmdList = new $c_sci_$colon$colon(elem$7, this$29);
     return new $c_Lcom_swarm_pages_services_TerminalView$Cmd(cmdList)
   }));
-  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$20, mod)
+  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$31, mod)
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__extractServiceName__sci_List__V($thiz, services) {
   var this$1 = $n(services);
   if ((!this$1.isEmpty__Z())) {
-    var this$3 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName);
-    var mod = new $c_sjsr_AnonFunction1(((_$5) => {
-      $as_T(_$5);
-      return $n($as_Lcom_swarm_models_Models$Service($n(services).head__O())).serviceName__T()
+    var this$4 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service);
+    var mod = new $c_sjsr_AnonFunction1(((s) => {
+      var s$1 = $as_T2(s);
+      var _1 = $n($as_Lcom_swarm_models_Models$Service($n(services).head__O())).serviceName__T();
+      var _2 = $n(s$1)._2__O();
+      return new $c_T2(_1, _2)
     }));
-    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod)
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod)
   }
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__apiSync__T__V($thiz, id) {
-  $n($m_Lcom_swarm_api_ApiDockerService$().ps__T__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult6: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var data = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        $p_Lcom_swarm_pages_services_ServicePS$__extractServiceName__sci_List__V($thiz, $as_sci_List($n(data).Lcom_swarm_api_ApiServer$ApiResult__f_data));
-        var this$3 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_servicesVar);
-        var mod = new $c_sjsr_AnonFunction1(((_$6) => {
-          $as_s_Option(_$6);
-          var value = $n(data).Lcom_swarm_api_ApiServer$ApiResult__f_data;
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
-        break matchResult6
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var x = ("ERROR: " + err);
-        var this$5 = $m_s_Console$();
-        var this$6 = $n(this$5.out__Ljava_io_PrintStream());
-        this$6.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-        break matchResult6
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiDockerService$().ps__T__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_services_ServicePS$__f_message, new $c_Lcom_swarm_pages_services_ServicePS$$anon$2($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__unmount__V($thiz) {
   var this$2 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-  var mod = new $c_sjsr_AnonFunction1(((_$7) => {
-    $as_Lcom_swarm_pages_services_TerminalView(_$7);
+  var mod = new $c_sjsr_AnonFunction1(((_$8) => {
+    $as_Lcom_swarm_pages_services_TerminalView(_$8);
     return $s_Lcom_swarm_pages_services_TerminalView$__Table__Lcom_swarm_pages_services_TerminalView()
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
-  var this$3 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_servicesVar);
-  var mod$1 = new $c_sjsr_AnonFunction1(((_$8) => {
-    $as_s_Option(_$8);
+  var this$3 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_com$swarm$pages$services$ServicePS$$$servicesVar);
+  var mod$1 = new $c_sjsr_AnonFunction1(((_$9) => {
+    $as_s_Option(_$9);
     return $m_s_None$()
   }));
   $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod$1);
-  var this$4 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName);
-  var mod$2 = new $c_sjsr_AnonFunction1(((_$9) => {
-    $as_T(_$9);
-    return ""
+  var this$5 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service);
+  var mod$2 = new $c_sjsr_AnonFunction1(((_$10) => {
+    $as_T2(_$10);
+    return new $c_T2("", "")
   }));
-  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$4, mod$2)
+  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod$2)
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__actions__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
   var $$x21 = $m_Lcom_swarm_pages_comps_Theme$();
@@ -8095,77 +8850,103 @@ function $p_Lcom_swarm_pages_services_ServicePS$__actions__Lcom_raquo_laminar_no
   var this$5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var renderable$3 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
   var $$x1 = $n($$x3).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x2).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$5, "log stream", renderable$3)])));
-  var this$6 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((s) => {
-    var s$1 = $as_T(s);
-    return ("/docker/service/log/stream/" + s$1)
+  var this$6 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((x$1) => {
+    var x$1$1 = $as_T2(x$1);
+    var name = $as_T($n(x$1$1)._1__O());
+    var id = $as_T($n(x$1$1)._2__O());
+    return ((("/docker/service/log/stream/" + name) + "/") + id)
   }));
   return $n($$x21).pageActions__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x20).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_nodes_ReactiveHtmlElement.getArrayOf().constr)([$$x15, $$x10, $$x5, $n($$x4).pageAction__Lcom_raquo_laminar_modifiers_Modifier__Lcom_raquo_airstream_core_Signal__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($$x1, new $c_Lcom_raquo_airstream_misc_MapSignal(this$6, project, $m_s_None$()))])))
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__node__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, id) {
-  var $$x16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x15 = $m_sr_ScalaRunTime$();
+  var $$x23 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x22 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$10) => {
-    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$10);
+  var fn = new $c_sjsr_AnonFunction1(((_$11) => {
+    $as_Lcom_raquo_laminar_nodes_ReactiveHtmlElement(_$11);
     $p_Lcom_swarm_pages_services_ServicePS$__unmount__V($thiz)
   }));
-  var $$x14 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
-  var $$x13 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x12 = $m_sr_ScalaRunTime$();
-  var $$x11 = $m_Lcom_swarm_pages_comps_Theme$();
-  var $$x10 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
-  var $$x9 = $m_sr_ScalaRunTime$();
+  var $$x21 = $f_Lcom_raquo_laminar_api_Laminar__onUnmountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
+  var $$x20 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x19 = $m_sr_ScalaRunTime$();
+  var $$x18 = $m_Lcom_swarm_pages_comps_Theme$();
+  var $$x17 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).a__Lcom_raquo_laminar_tags_HtmlTag();
+  var $$x16 = $m_sr_ScalaRunTime$();
   var this$3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).href__Lcom_raquo_laminar_keys_HtmlAttr());
-  var $$x8 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
-  var $$x7 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
-  var $$x6 = $m_sr_ScalaRunTime$();
+  var $$x15 = this$3.$colon$eq__O__Lcom_raquo_laminar_modifiers_KeySetter("#");
+  var $$x14 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag());
+  var $$x13 = $m_sr_ScalaRunTime$();
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child);
-  var this$5 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_serviceName).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((s) => {
-    var s$1 = $as_T(s);
+  var this$5 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_service).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((x$1) => {
+    var x$1$1 = $as_T2(x$1);
+    var name = $as_T($n(x$1$1)._1__O());
+    $as_T($n(x$1$1)._2__O());
     var this$4 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-    var value = ("docker service ps " + s$1);
+    var value = ("docker service ps " + name);
     var renderable = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
     return $f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$4, value, renderable)
   }));
   var childSource = new $c_Lcom_raquo_airstream_misc_MapSignal(this$5, project, $m_s_None$());
-  var $$x5 = $n($$x7).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x6).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_raquo_laminar_modifiers_ChildInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childSource, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])));
+  var $$x12 = $n($$x14).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x13).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$m_Lcom_raquo_laminar_modifiers_ChildInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childSource, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])));
   $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
   var eventProp = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).onClick__Lcom_raquo_laminar_keys_EventProp();
   var this$9 = $n($m_Lcom_raquo_laminar_keys_EventProcessor$().empty__Lcom_raquo_laminar_keys_EventProp__Z__Z__Lcom_raquo_laminar_keys_EventProcessor(eventProp, false, false));
-  var onNext = new $c_sjsr_AnonFunction1(((_$11) => {
+  var onNext = new $c_sjsr_AnonFunction1(((_$13) => {
     var this$8 = $n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar);
-    var mod = new $c_sjsr_AnonFunction1(((_$12) => {
-      $as_Lcom_swarm_pages_services_TerminalView(_$12);
+    var mod = new $c_sjsr_AnonFunction1(((_$14) => {
+      $as_Lcom_swarm_pages_services_TerminalView(_$14);
       return $s_Lcom_swarm_pages_services_TerminalView$__Table__Lcom_swarm_pages_services_TerminalView()
     }));
     $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$8, mod)
   }));
-  var $$x4 = $n($$x13).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x12).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x11).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x10).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x9).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x8, $$x5, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$9, onNext)]))), true)])));
-  var $$x3 = $p_Lcom_swarm_pages_services_ServicePS$__actions__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x11 = $n($$x20).breadcrumb__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x19).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$n($$x18).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x17).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x16).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x15, $$x12, new $c_Lcom_raquo_laminar_modifiers_EventListener(this$9, onNext)]))), true)])));
+  var $$x10 = $p_Lcom_swarm_pages_services_ServicePS$__actions__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
+  var $$x9 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
+  var this$13 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$15) => {
+    var _$15$1 = $as_s_Option(_$15);
+    var this$10 = $n(_$15$1);
+    if (this$10.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      var arg1 = this$10.get__O();
+      var s = $as_T(arg1);
+      var $$x8 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x7 = $m_sr_ScalaRunTime$();
+      var this$11 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_cls);
+      var $$x6 = this$11.$colon$eq__T__Lcom_raquo_laminar_modifiers_CompositeKeySetter("alert alert-danger");
+      var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).span__Lcom_raquo_laminar_tags_HtmlTag();
+      var $$x4 = $m_sr_ScalaRunTime$();
+      var this$12 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var renderable$1 = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
+      return new $c_s_Some($n($$x8).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x7).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x6, $n($$x5).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x4).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$12, s, renderable$1)])))]))))
+    }
+  }));
+  var $$x3 = $n($$x9).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$13, project$1, $m_s_None$()));
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child);
-  var this$13 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$1 = new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_Lcom_swarm_pages_services_TerminalView(x$1);
+  var this$17 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$2 = new $c_sjsr_AnonFunction1(((x$1$2) => {
+    var x$1$3 = $as_Lcom_swarm_pages_services_TerminalView(x$1$2);
     var x = $s_Lcom_swarm_pages_services_TerminalView$__Table__Lcom_swarm_pages_services_TerminalView();
-    if (((x === null) ? (x$1$1 === null) : $n(x).equals__O__Z(x$1$1))) {
+    if (((x === null) ? (x$1$3 === null) : $n(x).equals__O__Z(x$1$3))) {
       return $m_Lcom_swarm_pages_comps_Theme$().terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$p_Lcom_swarm_pages_services_ServicePS$__tb__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, id)])))
     };
-    if ((x$1$1 instanceof $c_Lcom_swarm_pages_services_TerminalView$Cmd)) {
-      var x$1$2 = $as_Lcom_swarm_pages_services_TerminalView$Cmd(x$1$1);
-      var this$11 = $n(x$1$2);
-      var x24 = this$11.Lcom_swarm_pages_services_TerminalView$Cmd__f_cmdList;
+    if ((x$1$3 instanceof $c_Lcom_swarm_pages_services_TerminalView$Cmd)) {
+      var x$1$4 = $as_Lcom_swarm_pages_services_TerminalView$Cmd(x$1$3);
+      var this$15 = $n(x$1$4);
+      var x50 = this$15.Lcom_swarm_pages_services_TerminalView$Cmd__f_cmdList;
       var $$x2 = $m_Lcom_swarm_pages_comps_Theme$();
       var $$x1 = $m_sr_ScalaRunTime$();
-      var this$12 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-      var nodes = $m_Lcom_swarm_pages_comps_Theme$().command__sci_Seq__sci_Seq(x24);
-      return $n($$x2).terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__nodeSeqToModifier__sc_Seq__Lcom_raquo_laminar_modifiers_Modifier(this$12, nodes)])))
+      var this$16 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+      var nodes = $m_Lcom_swarm_pages_comps_Theme$().command__sci_Seq__sci_Seq(x50);
+      return $n($$x2).terminal__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x1).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__nodeSeqToModifier__sc_Seq__Lcom_raquo_laminar_modifiers_Modifier(this$16, nodes)])))
     };
-    throw new $c_s_MatchError(x$1$1)
+    throw new $c_s_MatchError(x$1$3)
   }));
-  var childSource$1 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$13, project$1, $m_s_None$());
-  return $n($$x16).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x15).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x14, $$x4, $$x3, $m_Lcom_raquo_laminar_modifiers_ChildInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childSource$1, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])))
+  var childSource$1 = new $c_Lcom_raquo_airstream_misc_MapSignal(this$17, project$2, $m_s_None$());
+  return $n($$x23).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x22).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x21, $$x11, $$x10, $$x3, $m_Lcom_raquo_laminar_modifiers_ChildInserter$().apply__Lcom_raquo_airstream_core_Observable__Lcom_raquo_laminar_modifiers_RenderableNode__Lcom_raquo_laminar_modifiers_Inserter(childSource$1, $m_Lcom_raquo_laminar_modifiers_RenderableNode$().Lcom_raquo_laminar_modifiers_RenderableNode$__f_nodeRenderable)])))
 }
 function $p_Lcom_swarm_pages_services_ServicePS$__tbr__Lcom_swarm_models_Models$Service__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, service) {
   var $$x28 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tr__Lcom_raquo_laminar_tags_HtmlTag());
@@ -8247,9 +9028,9 @@ function $p_Lcom_swarm_pages_services_ServicePS$__tbr__Lcom_swarm_models_Models$
     var $$x1 = true
   } else {
     var arg1$1 = this$24.get__O();
-    var _$13 = $as_T(arg1$1);
+    var _$16 = $as_T(arg1$1);
     $m_sc_StringOps$();
-    var this$27 = $n(_$13);
+    var this$27 = $n(_$16);
     var $$x1 = (!(this$27 === ""))
   };
   var this$28 = $n(($$x1 ? this$24 : $m_s_None$()));
@@ -8261,8 +9042,8 @@ function $p_Lcom_swarm_pages_services_ServicePS$__tb__T__Lcom_raquo_laminar_node
   var $$x16 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).table__Lcom_raquo_laminar_tags_HtmlTag());
   var $$x15 = $m_sr_ScalaRunTime$();
   var this$2 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var fn = new $c_sjsr_AnonFunction1(((_$14) => {
-    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$14);
+  var fn = new $c_sjsr_AnonFunction1(((_$17) => {
+    $as_Lcom_raquo_laminar_lifecycle_MountContext(_$17);
     $p_Lcom_swarm_pages_services_ServicePS$__apiSync__T__V($thiz, id)
   }));
   var $$x14 = $f_Lcom_raquo_laminar_api_Laminar__onMountCallback__F1__Lcom_raquo_laminar_modifiers_Modifier(this$2, fn);
@@ -8304,16 +9085,16 @@ function $p_Lcom_swarm_pages_services_ServicePS$__tb__T__Lcom_raquo_laminar_node
   var $$x5 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).tbody__Lcom_raquo_laminar_tags_HtmlTag();
   var $$x4 = $m_sr_ScalaRunTime$();
   $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_children);
-  var this$12 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_servicesVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$15) => {
-    var _$15$1 = $as_s_Option(_$15);
-    var this$8 = $n(_$15$1);
+  var this$12 = $n($n($thiz.Lcom_swarm_pages_services_ServicePS$__f_com$swarm$pages$services$ServicePS$$$servicesVar).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$18) => {
+    var _$18$1 = $as_s_Option(_$18);
+    var this$8 = $n(_$18$1);
     if (this$8.isEmpty__Z()) {
       var $$x1 = $m_s_None$()
     } else {
       var arg1$2 = this$8.get__O();
-      var _$16 = $as_sci_List(arg1$2);
-      var this$9 = $n(_$16);
+      var _$19 = $as_sci_List(arg1$2);
+      var this$9 = $n(_$19);
       var f$1 = ((service) => {
         var service$1 = $as_Lcom_swarm_models_Models$Service(service);
         return $p_Lcom_swarm_pages_services_ServicePS$__tbr__Lcom_swarm_models_Models$Service__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz, service$1)
@@ -8351,13 +9132,15 @@ function $p_Lcom_swarm_pages_services_ServicePS$__tb__T__Lcom_raquo_laminar_node
 }
 /** @constructor */
 function $c_Lcom_swarm_pages_services_ServicePS$() {
-  this.Lcom_swarm_pages_services_ServicePS$__f_servicesVar = null;
+  this.Lcom_swarm_pages_services_ServicePS$__f_com$swarm$pages$services$ServicePS$$$servicesVar = null;
   this.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar = null;
-  this.Lcom_swarm_pages_services_ServicePS$__f_serviceName = null;
+  this.Lcom_swarm_pages_services_ServicePS$__f_service = null;
+  this.Lcom_swarm_pages_services_ServicePS$__f_message = null;
   $n_Lcom_swarm_pages_services_ServicePS$ = this;
-  this.Lcom_swarm_pages_services_ServicePS$__f_servicesVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  this.Lcom_swarm_pages_services_ServicePS$__f_com$swarm$pages$services$ServicePS$$$servicesVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
   this.Lcom_swarm_pages_services_ServicePS$__f_terminalViewVar = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($s_Lcom_swarm_pages_services_TerminalView$__Table__Lcom_swarm_pages_services_TerminalView());
-  this.Lcom_swarm_pages_services_ServicePS$__f_serviceName = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var("")
+  this.Lcom_swarm_pages_services_ServicePS$__f_service = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var(new $c_T2("", ""));
+  this.Lcom_swarm_pages_services_ServicePS$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$())
 }
 $c_Lcom_swarm_pages_services_ServicePS$.prototype = new $h_O();
 $c_Lcom_swarm_pages_services_ServicePS$.prototype.constructor = $c_Lcom_swarm_pages_services_ServicePS$;
@@ -8366,6 +9149,15 @@ function $h_Lcom_swarm_pages_services_ServicePS$() {
   /*<skip>*/
 }
 $h_Lcom_swarm_pages_services_ServicePS$.prototype = $c_Lcom_swarm_pages_services_ServicePS$.prototype;
+$c_Lcom_swarm_pages_services_ServicePS$.prototype.apply__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function(id) {
+  var this$3 = $n(this.Lcom_swarm_pages_services_ServicePS$__f_service);
+  var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+    $as_T2(_$1);
+    return new $c_T2("", id)
+  }));
+  $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
+  return $p_Lcom_swarm_pages_services_ServicePS$__node__T__Lcom_raquo_laminar_nodes_ReactiveHtmlElement(this, id)
+});
 var $d_Lcom_swarm_pages_services_ServicePS$ = new $TypeData().initClass({
   Lcom_swarm_pages_services_ServicePS$: 0
 }, false, "com.swarm.pages.services.ServicePS$", {
@@ -8381,40 +9173,13 @@ function $m_Lcom_swarm_pages_services_ServicePS$() {
   return $n_Lcom_swarm_pages_services_ServicePS$
 }
 function $p_Lcom_swarm_pages_stacks_StackManager$__load__I__V($thiz, id) {
-  $n($m_Lcom_swarm_api_ApiStack$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-    var x$1$1 = $as_s_util_Try(x$1);
-    matchResult1: {
-      if ((x$1$1 instanceof $c_s_util_Success)) {
-        var s = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-        var this$3 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack);
-        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
-          $as_s_Option(_$1);
-          var value = $n(s).Lcom_swarm_api_ApiServer$ApiResult__f_data;
-          return new $c_s_Some(value)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
-        break matchResult1
-      };
-      if ((x$1$1 instanceof $c_s_util_Failure)) {
-        var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-        var this$5 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message);
-        var mod$1 = new $c_sjsr_AnonFunction1(((_$2) => {
-          $as_s_Option(_$2);
-          var value$1 = ("" + $n(err).getMessage__T());
-          return new $c_s_Some(value$1)
-        }));
-        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod$1);
-        break matchResult1
-      };
-      throw new $c_s_MatchError(x$1$1)
-    }
-  })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+  $n($m_Lcom_swarm_api_ApiStack$().get__I__s_concurrent_Future(id)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message, new $c_Lcom_swarm_pages_stacks_StackManager$$anon$1($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
 }
 function $p_Lcom_swarm_pages_stacks_StackManager$__exec__T__V($thiz, action) {
   var this$1 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message);
   var value = $m_s_None$();
   $f_Lcom_raquo_airstream_state_Var__set__O__V(this$1, value);
-  var this$4 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_results);
+  var this$4 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results);
   var elem$1 = (("$ " + action) + "...");
   var this$2 = $n($m_s_package$().s_package$__f_Nil);
   var value$1 = new $c_sci_$colon$colon(elem$1, this$2);
@@ -8422,77 +9187,25 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__exec__T__V($thiz, action) {
   $f_Lcom_raquo_airstream_state_Var__set__O__V(this$4, value$2)
 }
 function $p_Lcom_swarm_pages_stacks_StackManager$__rm__O__V($thiz, ev) {
-  var this$1 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack);
+  var this$1 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack);
   var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
   var this$3 = $n($as_s_Option($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O()));
   if ((!this$3.isEmpty__Z())) {
     var arg1 = this$3.get__O();
     var f = $as_Lcom_swarm_models_Models$Stack(arg1);
     $p_Lcom_swarm_pages_stacks_StackManager$__exec__T__V($thiz, ("stack rm " + $n(f).Lcom_swarm_models_Models$Stack__f_name));
-    $n($m_Lcom_swarm_api_ApiDockerStack$().rm__T__s_concurrent_Future($n(f).Lcom_swarm_models_Models$Stack__f_name)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-      var x$1$1 = $as_s_util_Try(x$1);
-      matchResult2: {
-        if ((x$1$1 instanceof $c_s_util_Success)) {
-          var s = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-          var this$5 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_results);
-          var mod = new $c_sjsr_AnonFunction1(((_$3) => {
-            $as_s_Option(_$3);
-            return $n($as_Lcom_swarm_models_Models$CmdResult($n(s).Lcom_swarm_api_ApiServer$ApiResult__f_data)).Lcom_swarm_models_Models$CmdResult__f_messages
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod);
-          break matchResult2
-        };
-        if ((x$1$1 instanceof $c_s_util_Failure)) {
-          var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-          var this$7 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message);
-          var mod$1 = new $c_sjsr_AnonFunction1(((_$4) => {
-            $as_s_Option(_$4);
-            var value = ("" + $n(err).getMessage__T());
-            return new $c_s_Some(value)
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod$1);
-          break matchResult2
-        };
-        throw new $c_s_MatchError(x$1$1)
-      }
-    })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    $n($m_Lcom_swarm_api_ApiDockerStack$().rm__T__s_concurrent_Future($n(f).Lcom_swarm_models_Models$Stack__f_name)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message, new $c_Lcom_swarm_pages_stacks_StackManager$$anon$2()), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   }
 }
 function $p_Lcom_swarm_pages_stacks_StackManager$__deploy__O__V($thiz, ev) {
-  var this$1 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack);
+  var this$1 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack);
   var this$2 = $n(this$1.Lcom_raquo_airstream_state_SourceVar__f_signal);
   var this$3 = $n($as_s_Option($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$2)).get__O()));
   if ((!this$3.isEmpty__Z())) {
     var arg1 = this$3.get__O();
     var f = $as_Lcom_swarm_models_Models$Stack(arg1);
     $p_Lcom_swarm_pages_stacks_StackManager$__exec__T__V($thiz, ("stack deploy " + $n(f).Lcom_swarm_models_Models$Stack__f_name));
-    $n($m_Lcom_swarm_api_ApiDockerStack$().deploy__T__s_concurrent_Future($n(f).Lcom_swarm_models_Models$Stack__f_name)).onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((x$1) => {
-      var x$1$1 = $as_s_util_Try(x$1);
-      matchResult3: {
-        if ((x$1$1 instanceof $c_s_util_Success)) {
-          var s = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x$1$1)).s_util_Success__f_value);
-          var this$5 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_results);
-          var mod = new $c_sjsr_AnonFunction1(((_$5) => {
-            $as_s_Option(_$5);
-            return $n($as_Lcom_swarm_models_Models$CmdResult($n(s).Lcom_swarm_api_ApiServer$ApiResult__f_data)).Lcom_swarm_models_Models$CmdResult__f_messages
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$5, mod);
-          break matchResult3
-        };
-        if ((x$1$1 instanceof $c_s_util_Failure)) {
-          var err = $n($as_s_util_Failure(x$1$1)).s_util_Failure__f_exception;
-          var this$7 = $n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message);
-          var mod$1 = new $c_sjsr_AnonFunction1(((_$6) => {
-            $as_s_Option(_$6);
-            var value = ("" + $n(err).getMessage__T());
-            return new $c_s_Some(value)
-          }));
-          $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod$1);
-          break matchResult3
-        };
-        throw new $c_s_MatchError(x$1$1)
-      }
-    })), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
+    $n($m_Lcom_swarm_api_ApiDockerStack$().deploy__T__s_concurrent_Future($n(f).Lcom_swarm_models_Models$Stack__f_name)).onComplete__F1__s_concurrent_ExecutionContext__V($m_Lcom_swarm_util_ApiErrorHandle$().handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message, new $c_Lcom_swarm_pages_stacks_StackManager$$anon$3()), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor())
   }
 }
 function $p_Lcom_swarm_pages_stacks_StackManager$__actions__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz) {
@@ -8503,10 +9216,10 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__actions__Lcom_raquo_laminar_n
     $p_Lcom_swarm_pages_stacks_StackManager$__rm__O__V($thiz, ev)
   }));
   var $$x9 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
-  var this$5 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$7) => {
-    var _$7$1 = $as_s_Option(_$7);
-    var this$3 = $n(_$7$1);
+  var this$5 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$4) => {
+    var _$4$1 = $as_s_Option(_$4);
+    var this$3 = $n(_$4$1);
     if (this$3.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8526,10 +9239,10 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__actions__Lcom_raquo_laminar_n
     $p_Lcom_swarm_pages_stacks_StackManager$__deploy__O__V($thiz, ev$2)
   }));
   var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
-  var this$8 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$1 = new $c_sjsr_AnonFunction1(((_$8) => {
-    var _$8$1 = $as_s_Option(_$8);
-    var this$6 = $n(_$8$1);
+  var this$8 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$5) => {
+    var _$5$1 = $as_s_Option(_$5);
+    var this$6 = $n(_$5$1);
     if (this$6.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8562,10 +9275,10 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__node__Lcom_raquo_laminar_node
   var $$x31 = $n($$x37).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x36).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x35).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$$x34, $n($$x33).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x32).wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$2, "stacks", renderable)])))]))), false);
   var $$x30 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x29 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
-  var this$7 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project = new $c_sjsr_AnonFunction1(((_$9) => {
-    var _$9$1 = $as_s_Option(_$9);
-    var this$4 = $n(_$9$1);
+  var this$7 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project = new $c_sjsr_AnonFunction1(((_$6) => {
+    var _$6$1 = $as_s_Option(_$6);
+    var this$4 = $n(_$6$1);
     if (this$4.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8587,10 +9300,10 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__node__Lcom_raquo_laminar_node
   var $$x23 = $n($$x30).breadcrumbItem__Lcom_raquo_laminar_modifiers_Modifier__Z__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($n($$x29).$less$minus$minus__Lcom_raquo_airstream_core_Source__Lcom_raquo_laminar_modifiers_Inserter(new $c_Lcom_raquo_airstream_misc_MapSignal(this$7, project, $m_s_None$())), false);
   var $$x22 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x21 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
-  var this$11 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$1 = new $c_sjsr_AnonFunction1(((_$10) => {
-    var _$10$1 = $as_s_Option(_$10);
-    var this$8 = $n(_$10$1);
+  var this$11 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$1 = new $c_sjsr_AnonFunction1(((_$7) => {
+    var _$7$1 = $as_s_Option(_$7);
+    var this$8 = $n(_$7$1);
     if (this$8.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8612,9 +9325,9 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__node__Lcom_raquo_laminar_node
   var $$x14 = $p_Lcom_swarm_pages_stacks_StackManager$__actions__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($thiz);
   var $$x13 = $n($n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe);
   var this$15 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_message).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$2 = new $c_sjsr_AnonFunction1(((_$11) => {
-    var _$11$1 = $as_s_Option(_$11);
-    var this$12 = $n(_$11$1);
+  var project$2 = new $c_sjsr_AnonFunction1(((_$8) => {
+    var _$8$1 = $as_s_Option(_$8);
+    var this$12 = $n(_$8$1);
     if (this$12.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8636,10 +9349,10 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__node__Lcom_raquo_laminar_node
   var $$x5 = $m_Lcom_swarm_pages_comps_Theme$();
   var $$x4 = $m_sr_ScalaRunTime$();
   var $$x3 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_child).Lcom_raquo_laminar_receivers_ChildReceiver$__f_maybe;
-  var this$18 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_results).Lcom_raquo_airstream_state_SourceVar__f_signal);
-  var project$3 = new $c_sjsr_AnonFunction1(((_$12) => {
-    var _$12$1 = $as_s_Option(_$12);
-    var this$16 = $n(_$12$1);
+  var this$18 = $n($n($thiz.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results).Lcom_raquo_airstream_state_SourceVar__f_signal);
+  var project$3 = new $c_sjsr_AnonFunction1(((_$9) => {
+    var _$9$1 = $as_s_Option(_$9);
+    var this$16 = $n(_$9$1);
     if (this$16.isEmpty__Z()) {
       return $m_s_None$()
     } else {
@@ -8675,15 +9388,15 @@ function $p_Lcom_swarm_pages_stacks_StackManager$__node__Lcom_raquo_laminar_node
 /** @constructor */
 function $c_Lcom_swarm_pages_stacks_StackManager$() {
   this.Lcom_swarm_pages_stacks_StackManager$__f_message = null;
-  this.Lcom_swarm_pages_stacks_StackManager$__f_stack = null;
-  this.Lcom_swarm_pages_stacks_StackManager$__f_results = null;
+  this.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack = null;
+  this.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results = null;
   $n_Lcom_swarm_pages_stacks_StackManager$ = this;
   this.Lcom_swarm_pages_stacks_StackManager$__f_message = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
-  this.Lcom_swarm_pages_stacks_StackManager$__f_stack = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
+  this.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var).apply__O__Lcom_raquo_airstream_state_Var($m_s_None$());
   var $$x1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).Lcom_raquo_laminar_api_package$$anon$1__f_Var;
   var this$1 = $n($m_s_package$().s_package$__f_Nil);
   var value = new $c_sci_$colon$colon("waiting by action..", this$1);
-  this.Lcom_swarm_pages_stacks_StackManager$__f_results = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var(new $c_s_Some(value))
+  this.Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results = $n($$x1).apply__O__Lcom_raquo_airstream_state_Var(new $c_s_Some(value))
 }
 $c_Lcom_swarm_pages_stacks_StackManager$.prototype = new $h_O();
 $c_Lcom_swarm_pages_stacks_StackManager$.prototype.constructor = $c_Lcom_swarm_pages_stacks_StackManager$;
@@ -8911,6 +9624,37 @@ function $m_Lcom_swarm_services_Router$() {
     $n_Lcom_swarm_services_Router$ = new $c_Lcom_swarm_services_Router$()
   };
   return $n_Lcom_swarm_services_Router$
+}
+/** @constructor */
+function $c_Lcom_swarm_util_ApiErrorHandle$() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_util_ApiErrorHandle$.prototype = new $h_O();
+$c_Lcom_swarm_util_ApiErrorHandle$.prototype.constructor = $c_Lcom_swarm_util_ApiErrorHandle$;
+/** @constructor */
+function $h_Lcom_swarm_util_ApiErrorHandle$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_util_ApiErrorHandle$.prototype = $c_Lcom_swarm_util_ApiErrorHandle$.prototype;
+$c_Lcom_swarm_util_ApiErrorHandle$.prototype.handle__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction = (function(message, fn) {
+  return $n(fn).orElse__s_PartialFunction__s_PartialFunction(new $c_Lcom_swarm_util_ApiErrorHandle$$anon$1(message, this))
+});
+$c_Lcom_swarm_util_ApiErrorHandle$.prototype.handleUnit__Lcom_raquo_airstream_state_Var__s_PartialFunction__s_PartialFunction = (function(message, fn) {
+  return $n(fn).orElse__s_PartialFunction__s_PartialFunction(new $c_Lcom_swarm_util_ApiErrorHandle$$anon$2(message, this))
+});
+var $d_Lcom_swarm_util_ApiErrorHandle$ = new $TypeData().initClass({
+  Lcom_swarm_util_ApiErrorHandle$: 0
+}, false, "com.swarm.util.ApiErrorHandle$", {
+  Lcom_swarm_util_ApiErrorHandle$: 1,
+  O: 1
+});
+$c_Lcom_swarm_util_ApiErrorHandle$.prototype.$classData = $d_Lcom_swarm_util_ApiErrorHandle$;
+var $n_Lcom_swarm_util_ApiErrorHandle$;
+function $m_Lcom_swarm_util_ApiErrorHandle$() {
+  if ((!$n_Lcom_swarm_util_ApiErrorHandle$)) {
+    $n_Lcom_swarm_util_ApiErrorHandle$ = new $c_Lcom_swarm_util_ApiErrorHandle$()
+  };
+  return $n_Lcom_swarm_util_ApiErrorHandle$
 }
 /** @constructor */
 function $c_Lcom_swarm_util_Cookie$() {
@@ -13513,6 +14257,30 @@ var $d_F1 = new $TypeData().initClass({
   F1: 1,
   O: 1
 });
+function $f_F2__tupled__F1($thiz) {
+  return new $c_sjsr_AnonFunction1(((x0$1$2) => {
+    var x0$1 = $as_T2(x0$1$2);
+    if ((x0$1 !== null)) {
+      var x1$2 = $n(x0$1)._1__O();
+      var x2 = $n(x0$1)._2__O();
+      return $thiz.apply__O__O__O(x1$2, x2)
+    } else {
+      throw new $c_s_MatchError(x0$1)
+    }
+  }))
+}
+function $is_F2(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F2)))
+}
+function $as_F2(obj) {
+  return (($is_F2(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Function2"))
+}
+function $isArrayOf_F2(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.F2)))
+}
+function $asArrayOf_F2(obj, depth) {
+  return (($isArrayOf_F2(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Function2;", depth))
+}
 function $is_F3(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F3)))
 }
@@ -13552,6 +14320,9 @@ function $h_s_PartialFunction$() {
   /*<skip>*/
 }
 $h_s_PartialFunction$.prototype = $c_s_PartialFunction$.prototype;
+$c_s_PartialFunction$.prototype.scala$PartialFunction$$fallbackOccurred__O__Z = (function(x) {
+  return (this.s_PartialFunction$__f_fallback_fn === x)
+});
 var $d_s_PartialFunction$ = new $TypeData().initClass({
   s_PartialFunction$: 0
 }, false, "scala.PartialFunction$", {
@@ -16324,6 +17095,30 @@ $c_s_util_hashing_MurmurHash3.prototype.arrayHash$mVc$sp__Ajl_Void__I__I = (func
   }
 });
 /** @constructor */
+function $c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3() {
+  /*<skip>*/
+}
+$c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype = new $h_Lapp_tulz_tuplez_ApplyConverter();
+$c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype.constructor = $c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3;
+/** @constructor */
+function $h_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3() {
+  /*<skip>*/
+}
+$h_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype = $c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype;
+$c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype.apply__O__F1 = (function(f) {
+  var fn = $as_F2(f);
+  var this$1 = $n(fn);
+  return $f_F2__tupled__F1(this$1)
+});
+var $d_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3 = new $TypeData().initClass({
+  Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3: 0
+}, false, "app.tulz.tuplez.ApplyConverterInstances$$anon$3", {
+  Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3: 1,
+  Lapp_tulz_tuplez_ApplyConverter: 1,
+  O: 1
+});
+$c_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3.prototype.$classData = $d_Lapp_tulz_tuplez_ApplyConverterInstances$$anon$3;
+/** @constructor */
 function $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1() {
   /*<skip>*/
 }
@@ -16334,6 +17129,10 @@ function $h_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1() {
   /*<skip>*/
 }
 $h_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1.prototype = $c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1.prototype;
+$c_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1.prototype.apply__O__F1 = (function(f) {
+  var fn = $as_F1(f);
+  return fn
+});
 var $d_Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1 = new $TypeData().initClass({
   Lapp_tulz_tuplez_ApplyConverterInstancesPriLow$$anon$1: 0
 }, false, "app.tulz.tuplez.ApplyConverterInstancesPriLow$$anon$1", {
@@ -16365,6 +17164,28 @@ var $d_Lapp_tulz_tuplez_Composition$$anon$67 = new $TypeData().initClass({
   O: 1
 });
 $c_Lapp_tulz_tuplez_Composition$$anon$67.prototype.$classData = $d_Lapp_tulz_tuplez_Composition$$anon$67;
+/** @constructor */
+function $c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1() {
+  /*<skip>*/
+}
+$c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype = new $h_Lapp_tulz_tuplez_Composition();
+$c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype.constructor = $c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1;
+/** @constructor */
+function $h_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1() {
+  /*<skip>*/
+}
+$h_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype = $c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype;
+$c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype.compose__O__O__O = (function(a, b) {
+  return new $c_T2(a, b)
+});
+var $d_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1 = new $TypeData().initClass({
+  Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1: 0
+}, false, "app.tulz.tuplez.Composition_Pri0$$anon$1", {
+  Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1: 1,
+  Lapp_tulz_tuplez_Composition: 1,
+  O: 1
+});
+$c_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1.prototype.$classData = $d_Lapp_tulz_tuplez_Composition\uff3fPri0$$anon$1;
 /** @constructor */
 function $c_Lapp_tulz_tuplez_Composition\uff3fPri10$$anon$65() {
   /*<skip>*/
@@ -17277,19 +18098,59 @@ $h_Lcom_swarm_api_ApiServer$ApiResult$$anon$1.prototype = $c_Lcom_swarm_api_ApiS
 $c_Lcom_swarm_api_ApiServer$ApiResult$$anon$1.prototype.toNative__Lcom_swarm_api_ApiServer$ApiResult__sjs_js_Any = (function(a) {
   var this$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var res$proxy1 = $p_Lorg_getshaka_nativeconverter_NativeConverter$__productToNative$default$3__sjs_js_Dynamic(this$2);
-  var nc = this.Lcom_swarm_api_ApiServer$ApiResult$$anon$1__f_x$0$1;
-  var nativeElem = $n(nc).toNative__O__sjs_js_Any($n(a).productElement__I__O(0));
+  var evidence$17 = this.Lcom_swarm_api_ApiServer$ApiResult$$anon$1__f_x$0$1;
+  var nc = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17);
+  var a$1 = $as_s_Option($n(a).productElement__I__O(0));
+  var nativeElem = nc.toNative__s_Option__sjs_js_Any(a$1);
   res$proxy1.data = nativeElem;
+  var evidence$17$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$BooleanConv$();
+  var nc$2 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$1);
+  var a$2 = $as_s_Option($n(a).productElement__I__O(1));
+  var nativeElem$2 = nc$2.toNative__s_Option__sjs_js_Any(a$2);
+  res$proxy1.error = nativeElem$2;
+  var evidence$17$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var nc$3 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$2);
+  var a$3 = $as_s_Option($n(a).productElement__I__O(2));
+  var nativeElem$3 = nc$3.toNative__s_Option__sjs_js_Any(a$3);
+  res$proxy1.message = nativeElem$3;
+  var evidence$12 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var evidence$17$3 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$ListConv(evidence$12);
+  var nc$4 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$3);
+  var a$4 = $as_s_Option($n(a).productElement__I__O(3));
+  var nativeElem$4 = nc$4.toNative__s_Option__sjs_js_Any(a$4);
+  res$proxy1.messages = nativeElem$4;
   return res$proxy1
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult$$anon$1.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_api_ApiServer$ApiResult = (function(ps) {
   var this$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var jsDict = this$1.org$getshaka$nativeconverter$NativeConverter$$$asJSDict__Lorg_getshaka_nativeconverter_ParseState__sjs_js_Dictionary(ps);
-  var dimensions = new $ac_I(new Int32Array([1]));
+  var dimensions = new $ac_I(new Int32Array([4]));
   var resArr = $asArrayOf_O($m_jl_reflect_Array$().newInstance__jl_Class__AI__O($d_O.getClassOf(), dimensions), 1);
-  var nc = this.Lcom_swarm_api_ApiServer$ApiResult$$anon$1__f_x$0$1;
+  var evidence$17 = this.Lcom_swarm_api_ApiServer$ApiResult$$anon$1__f_x$0$1;
+  var nc = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17);
   var elementJs = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "data")) ? jsDict.data : null);
-  $n(resArr).set(0, $n(nc).fromNative__Lorg_getshaka_nativeconverter_ParseState__O($n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("data", elementJs)));
+  var $$x1 = $n(resArr);
+  var ps$1 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("data", elementJs);
+  $$x1.set(0, nc.fromNative__Lorg_getshaka_nativeconverter_ParseState__s_Option(ps$1));
+  var evidence$17$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$BooleanConv$();
+  var nc$2 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$1);
+  var elementJs$2 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "error")) ? jsDict.error : null);
+  var $$x2 = $n(resArr);
+  var ps$2 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("error", elementJs$2);
+  $$x2.set(1, nc$2.fromNative__Lorg_getshaka_nativeconverter_ParseState__s_Option(ps$2));
+  var evidence$17$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var nc$3 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$2);
+  var elementJs$3 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "message")) ? jsDict.message : null);
+  var $$x3 = $n(resArr);
+  var ps$3 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("message", elementJs$3);
+  $$x3.set(2, nc$3.fromNative__Lorg_getshaka_nativeconverter_ParseState__s_Option(ps$3));
+  var evidence$12 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var evidence$17$3 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$ListConv(evidence$12);
+  var nc$4 = new $c_Lorg_getshaka_nativeconverter_NativeConverter$OptionCodec(evidence$17$3);
+  var elementJs$4 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "messages")) ? jsDict.messages : null);
+  var $$x4 = $n(resArr);
+  var ps$4 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("messages", elementJs$4);
+  $$x4.set(3, nc$4.fromNative__Lorg_getshaka_nativeconverter_ParseState__s_Option(ps$4));
   return $as_Lcom_swarm_api_ApiServer$ApiResult($n(this.Lcom_swarm_api_ApiServer$ApiResult$$anon$1__f_p$1).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult$$anon$1.prototype.toNative__O__sjs_js_Any = (function(a) {
@@ -17307,28 +18168,28 @@ var $d_Lcom_swarm_api_ApiServer$ApiResult$$anon$1 = new $TypeData().initClass({
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult$$anon$1.prototype.$classData = $d_Lcom_swarm_api_ApiServer$ApiResult$$anon$1;
 /** @constructor */
-function $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15(p$27, outer) {
-  this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15__f_p$13 = null;
-  this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15__f_p$13 = p$27;
+function $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17(p$31, outer) {
+  this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17__f_p$15 = null;
+  this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17__f_p$15 = p$31;
   if ((outer === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   }
 }
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype = new $h_O();
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.constructor = $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15;
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype = new $h_O();
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.constructor = $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17;
 /** @constructor */
-function $h_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15() {
+function $h_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17() {
   /*<skip>*/
 }
-$h_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype = $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype;
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.toNative__Lcom_swarm_api_WebSocketClient$WsMsg__sjs_js_Any = (function(a) {
+$h_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype = $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype;
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.toNative__Lcom_swarm_api_WebSocketClient$WsMsg__sjs_js_Any = (function(a) {
   var this$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
-  var res$proxy13 = $p_Lorg_getshaka_nativeconverter_NativeConverter$__productToNative$default$3__sjs_js_Dynamic(this$2);
-  res$proxy13.msgType = $n(a).productElement__I__O(0);
-  res$proxy13.msg = $n(a).productElement__I__O(1);
-  return res$proxy13
+  var res$proxy15 = $p_Lorg_getshaka_nativeconverter_NativeConverter$__productToNative$default$3__sjs_js_Dynamic(this$2);
+  res$proxy15.msgType = $n(a).productElement__I__O(0);
+  res$proxy15.msg = $n(a).productElement__I__O(1);
+  return res$proxy15
 });
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_api_WebSocketClient$WsMsg = (function(ps) {
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_api_WebSocketClient$WsMsg = (function(ps) {
   var this$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var jsDict = this$1.org$getshaka$nativeconverter$NativeConverter$$$asJSDict__Lorg_getshaka_nativeconverter_ParseState__sjs_js_Dictionary(ps);
   var dimensions = new $ac_I(new Int32Array([2]));
@@ -17342,26 +18203,145 @@ $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.fromNative__Lorg_gets
   var $$x2 = $n(resArr);
   var ps$2 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("msg", elementJs$2);
   $$x2.set(1, $n(ps$2).Lorg_getshaka_nativeconverter_ParseState__f_json);
-  return $as_Lcom_swarm_api_WebSocketClient$WsMsg($n(this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15__f_p$13).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
+  return $as_Lcom_swarm_api_WebSocketClient$WsMsg($n(this.Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17__f_p$15).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
 });
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.toNative__O__sjs_js_Any = (function(a) {
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.toNative__O__sjs_js_Any = (function(a) {
   return this.toNative__Lcom_swarm_api_WebSocketClient$WsMsg__sjs_js_Any($as_Lcom_swarm_api_WebSocketClient$WsMsg(a))
 });
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__O = (function(ps) {
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__O = (function(ps) {
   return this.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_api_WebSocketClient$WsMsg(ps)
 });
-var $d_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15 = new $TypeData().initClass({
-  Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15: 0
-}, false, "com.swarm.api.WebSocketClient$WsMsg$$anon$15", {
-  Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15: 1,
+var $d_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17 = new $TypeData().initClass({
+  Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17: 0
+}, false, "com.swarm.api.WebSocketClient$WsMsg$$anon$17", {
+  Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17: 1,
   O: 1,
   Lorg_getshaka_nativeconverter_NativeConverter: 1
 });
-$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15.prototype.$classData = $d_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15;
+$c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17.prototype.$classData = $d_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17;
 /** @constructor */
-function $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4(p$8, outer) {
+function $c_Lcom_swarm_models_Models$AwsBuild$$anon$5(p$10, outer) {
+  this.Lcom_swarm_models_Models$AwsBuild$$anon$5__f_p$5 = null;
+  this.Lcom_swarm_models_Models$AwsBuild$$anon$5__f_p$5 = p$10;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype = new $h_O();
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.constructor = $c_Lcom_swarm_models_Models$AwsBuild$$anon$5;
+/** @constructor */
+function $h_Lcom_swarm_models_Models$AwsBuild$$anon$5() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype = $c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype;
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.toNative__Lcom_swarm_models_Models$AwsBuild__sjs_js_Any = (function(a) {
+  var this$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
+  var res$proxy13 = $p_Lorg_getshaka_nativeconverter_NativeConverter$__productToNative$default$3__sjs_js_Dynamic(this$2);
+  res$proxy13.id = $n(a).productElement__I__O(0);
+  res$proxy13.buildId = $n(a).productElement__I__O(1);
+  res$proxy13.awsCodebuildAppId = $n(a).productElement__I__O(2);
+  res$proxy13.logsGroupName = $n(a).productElement__I__O(3);
+  res$proxy13.logsStreamName = $n(a).productElement__I__O(4);
+  res$proxy13.logsDeepLink = $n(a).productElement__I__O(5);
+  res$proxy13.startTime = $n(a).productElement__I__O(6);
+  res$proxy13.endTime = $n(a).productElement__I__O(7);
+  res$proxy13.currentPhase = $n(a).productElement__I__O(8);
+  res$proxy13.buildStatus = $n(a).productElement__I__O(9);
+  res$proxy13.appVersionTag = $n(a).productElement__I__O(10);
+  res$proxy13.createdAt = $n(a).productElement__I__O(11);
+  res$proxy13.updatedAt = $n(a).productElement__I__O(12);
+  return res$proxy13
+});
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_models_Models$AwsBuild = (function(ps) {
+  var this$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
+  var jsDict = this$1.org$getshaka$nativeconverter$NativeConverter$$$asJSDict__Lorg_getshaka_nativeconverter_ParseState__sjs_js_Dictionary(ps);
+  var dimensions = new $ac_I(new Int32Array([13]));
+  var resArr = $asArrayOf_O($m_jl_reflect_Array$().newInstance__jl_Class__AI__O($d_O.getClassOf(), dimensions), 1);
+  var nc = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
+  var elementJs = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "id")) ? jsDict.id : null);
+  var $$x1 = $n(resArr);
+  var ps$1 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("id", elementJs);
+  $$x1.set(0, nc.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$1));
+  var nc$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$2 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "buildId")) ? jsDict.buildId : null);
+  var $$x2 = $n(resArr);
+  var ps$2 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("buildId", elementJs$2);
+  $$x2.set(1, nc$2.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$2));
+  var nc$3 = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
+  var elementJs$3 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "awsCodebuildAppId")) ? jsDict.awsCodebuildAppId : null);
+  var $$x3 = $n(resArr);
+  var ps$3 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("awsCodebuildAppId", elementJs$3);
+  $$x3.set(2, nc$3.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$3));
+  var nc$4 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$4 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "logsGroupName")) ? jsDict.logsGroupName : null);
+  var $$x4 = $n(resArr);
+  var ps$4 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("logsGroupName", elementJs$4);
+  $$x4.set(3, nc$4.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$4));
+  var nc$5 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$5 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "logsStreamName")) ? jsDict.logsStreamName : null);
+  var $$x5 = $n(resArr);
+  var ps$5 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("logsStreamName", elementJs$5);
+  $$x5.set(4, nc$5.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$5));
+  var nc$6 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$6 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "logsDeepLink")) ? jsDict.logsDeepLink : null);
+  var $$x6 = $n(resArr);
+  var ps$6 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("logsDeepLink", elementJs$6);
+  $$x6.set(5, nc$6.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$6));
+  var nc$7 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$7 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "startTime")) ? jsDict.startTime : null);
+  var $$x7 = $n(resArr);
+  var ps$7 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("startTime", elementJs$7);
+  $$x7.set(6, nc$7.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$7));
+  var nc$8 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$8 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "endTime")) ? jsDict.endTime : null);
+  var $$x8 = $n(resArr);
+  var ps$8 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("endTime", elementJs$8);
+  $$x8.set(7, nc$8.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$8));
+  var nc$9 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$9 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "currentPhase")) ? jsDict.currentPhase : null);
+  var $$x9 = $n(resArr);
+  var ps$9 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("currentPhase", elementJs$9);
+  $$x9.set(8, nc$9.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$9));
+  var nc$10 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$10 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "buildStatus")) ? jsDict.buildStatus : null);
+  var $$x10 = $n(resArr);
+  var ps$10 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("buildStatus", elementJs$10);
+  $$x10.set(9, nc$10.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$10));
+  var nc$11 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$11 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "appVersionTag")) ? jsDict.appVersionTag : null);
+  var $$x11 = $n(resArr);
+  var ps$11 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("appVersionTag", elementJs$11);
+  $$x11.set(10, nc$11.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$11));
+  var nc$12 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$12 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "createdAt")) ? jsDict.createdAt : null);
+  var $$x12 = $n(resArr);
+  var ps$12 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("createdAt", elementJs$12);
+  $$x12.set(11, nc$12.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$12));
+  var nc$13 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$13 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "updatedAt")) ? jsDict.updatedAt : null);
+  var $$x13 = $n(resArr);
+  var ps$13 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("updatedAt", elementJs$13);
+  $$x13.set(12, nc$13.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$13));
+  return $as_Lcom_swarm_models_Models$AwsBuild($n(this.Lcom_swarm_models_Models$AwsBuild$$anon$5__f_p$5).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
+});
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.toNative__O__sjs_js_Any = (function(a) {
+  return this.toNative__Lcom_swarm_models_Models$AwsBuild__sjs_js_Any($as_Lcom_swarm_models_Models$AwsBuild(a))
+});
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__O = (function(ps) {
+  return this.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_models_Models$AwsBuild(ps)
+});
+var $d_Lcom_swarm_models_Models$AwsBuild$$anon$5 = new $TypeData().initClass({
+  Lcom_swarm_models_Models$AwsBuild$$anon$5: 0
+}, false, "com.swarm.models.Models$AwsBuild$$anon$5", {
+  Lcom_swarm_models_Models$AwsBuild$$anon$5: 1,
+  O: 1,
+  Lorg_getshaka_nativeconverter_NativeConverter: 1
+});
+$c_Lcom_swarm_models_Models$AwsBuild$$anon$5.prototype.$classData = $d_Lcom_swarm_models_Models$AwsBuild$$anon$5;
+/** @constructor */
+function $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4(p$9, outer) {
   this.Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4__f_p$4 = null;
-  this.Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4__f_p$4 = p$8;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4__f_p$4 = p$9;
   if ((outer === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   }
@@ -17383,16 +18363,19 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4.prototype.toNative__Lcom_swa
   res$proxy12.awsAccountId = $n(a).productElement__I__O(4);
   res$proxy12.awsRegion = $n(a).productElement__I__O(5);
   res$proxy12.awsUrl = $n(a).productElement__I__O(6);
-  res$proxy12.codeBase = $n(a).productElement__I__O(7);
-  res$proxy12.buildVars = $n(a).productElement__I__O(8);
-  res$proxy12.stackId = $n(a).productElement__I__O(9);
-  res$proxy12.updatedAt = $n(a).productElement__I__O(10);
+  res$proxy12.awsProjectName = $n(a).productElement__I__O(7);
+  res$proxy12.codeBase = $n(a).productElement__I__O(8);
+  res$proxy12.buildVars = $n(a).productElement__I__O(9);
+  res$proxy12.lastBuildAt = $n(a).productElement__I__O(10);
+  res$proxy12.stackId = $n(a).productElement__I__O(11);
+  res$proxy12.updatedAt = $n(a).productElement__I__O(12);
+  res$proxy12.building = $n(a).productElement__I__O(13);
   return res$proxy12
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_models_Models$AwsCodeBuildApp = (function(ps) {
   var this$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var jsDict = this$1.org$getshaka$nativeconverter$NativeConverter$$$asJSDict__Lorg_getshaka_nativeconverter_ParseState__sjs_js_Dictionary(ps);
-  var dimensions = new $ac_I(new Int32Array([11]));
+  var dimensions = new $ac_I(new Int32Array([14]));
   var resArr = $asArrayOf_O($m_jl_reflect_Array$().newInstance__jl_Class__AI__O($d_O.getClassOf(), dimensions), 1);
   var nc = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
   var elementJs = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "id")) ? jsDict.id : null);
@@ -17430,25 +18413,40 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4.prototype.fromNative__Lorg_g
   var ps$7 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("awsUrl", elementJs$7);
   $$x7.set(6, nc$7.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$7));
   var nc$8 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
-  var elementJs$8 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "codeBase")) ? jsDict.codeBase : null);
+  var elementJs$8 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "awsProjectName")) ? jsDict.awsProjectName : null);
   var $$x8 = $n(resArr);
-  var ps$8 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("codeBase", elementJs$8);
+  var ps$8 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("awsProjectName", elementJs$8);
   $$x8.set(7, nc$8.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$8));
   var nc$9 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
-  var elementJs$9 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "buildVars")) ? jsDict.buildVars : null);
+  var elementJs$9 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "codeBase")) ? jsDict.codeBase : null);
   var $$x9 = $n(resArr);
-  var ps$9 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("buildVars", elementJs$9);
+  var ps$9 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("codeBase", elementJs$9);
   $$x9.set(8, nc$9.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$9));
-  var nc$10 = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
-  var elementJs$10 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "stackId")) ? jsDict.stackId : null);
+  var nc$10 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$10 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "buildVars")) ? jsDict.buildVars : null);
   var $$x10 = $n(resArr);
-  var ps$10 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("stackId", elementJs$10);
-  $$x10.set(9, nc$10.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$10));
+  var ps$10 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("buildVars", elementJs$10);
+  $$x10.set(9, nc$10.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$10));
   var nc$11 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
-  var elementJs$11 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "updatedAt")) ? jsDict.updatedAt : null);
+  var elementJs$11 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "lastBuildAt")) ? jsDict.lastBuildAt : null);
   var $$x11 = $n(resArr);
-  var ps$11 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("updatedAt", elementJs$11);
+  var ps$11 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("lastBuildAt", elementJs$11);
   $$x11.set(10, nc$11.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$11));
+  var nc$12 = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
+  var elementJs$12 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "stackId")) ? jsDict.stackId : null);
+  var $$x12 = $n(resArr);
+  var ps$12 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("stackId", elementJs$12);
+  $$x12.set(11, nc$12.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$12));
+  var nc$13 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$13 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "updatedAt")) ? jsDict.updatedAt : null);
+  var $$x13 = $n(resArr);
+  var ps$13 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("updatedAt", elementJs$13);
+  $$x13.set(12, nc$13.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$13));
+  var nc$14 = $m_Lorg_getshaka_nativeconverter_NativeConverter$BooleanConv$();
+  var elementJs$14 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "building")) ? jsDict.building : null);
+  var $$x14 = $n(resArr);
+  var ps$14 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("building", elementJs$14);
+  $$x14.set(13, nc$14.fromNative__Lorg_getshaka_nativeconverter_ParseState__Z(ps$14));
   return $as_Lcom_swarm_models_Models$AwsCodeBuildApp($n(this.Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4__f_p$4).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4.prototype.toNative__O__sjs_js_Any = (function(a) {
@@ -17466,9 +18464,9 @@ var $d_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4 = new $TypeData().initCl
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4.prototype.$classData = $d_Lcom_swarm_models_Models$AwsCodeBuildApp$$anon$4;
 /** @constructor */
-function $c_Lcom_swarm_models_Models$CmdResult$$anon$2(p$6, outer) {
+function $c_Lcom_swarm_models_Models$CmdResult$$anon$2(p$7, outer) {
   this.Lcom_swarm_models_Models$CmdResult$$anon$2__f_p$2 = null;
-  this.Lcom_swarm_models_Models$CmdResult$$anon$2__f_p$2 = p$6;
+  this.Lcom_swarm_models_Models$CmdResult$$anon$2__f_p$2 = p$7;
   if ((outer === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   }
@@ -17531,9 +18529,9 @@ var $d_Lcom_swarm_models_Models$CmdResult$$anon$2 = new $TypeData().initClass({
 });
 $c_Lcom_swarm_models_Models$CmdResult$$anon$2.prototype.$classData = $d_Lcom_swarm_models_Models$CmdResult$$anon$2;
 /** @constructor */
-function $c_Lcom_swarm_models_Models$Service$$anon$1(p$5, outer) {
+function $c_Lcom_swarm_models_Models$Service$$anon$1(p$6, outer) {
   this.Lcom_swarm_models_Models$Service$$anon$1__f_p$1 = null;
-  this.Lcom_swarm_models_Models$Service$$anon$1__f_p$1 = p$5;
+  this.Lcom_swarm_models_Models$Service$$anon$1__f_p$1 = p$6;
   if ((outer === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   }
@@ -17661,9 +18659,9 @@ var $d_Lcom_swarm_models_Models$Service$$anon$1 = new $TypeData().initClass({
 });
 $c_Lcom_swarm_models_Models$Service$$anon$1.prototype.$classData = $d_Lcom_swarm_models_Models$Service$$anon$1;
 /** @constructor */
-function $c_Lcom_swarm_models_Models$Stack$$anon$3(p$7, outer) {
+function $c_Lcom_swarm_models_Models$Stack$$anon$3(p$8, outer) {
   this.Lcom_swarm_models_Models$Stack$$anon$3__f_p$3 = null;
-  this.Lcom_swarm_models_Models$Stack$$anon$3__f_p$3 = p$7;
+  this.Lcom_swarm_models_Models$Stack$$anon$3__f_p$3 = p$8;
   if ((outer === null)) {
     throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
   }
@@ -17750,24 +18748,30 @@ $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$$anon$1.prototype.toNa
   var this$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var res$proxy1 = $p_Lorg_getshaka_nativeconverter_NativeConverter$__productToNative$default$3__sjs_js_Dynamic(this$2);
   res$proxy1.serviceName = $n(a).productElement__I__O(0);
-  res$proxy1.tail = $n(a).productElement__I__O(1);
+  res$proxy1.serviceId = $n(a).productElement__I__O(1);
+  res$proxy1.tail = $n(a).productElement__I__O(2);
   return res$proxy1
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$$anon$1.prototype.fromNative__Lorg_getshaka_nativeconverter_ParseState__Lcom_swarm_pages_services_ServiceLogStream$ServiceName = (function(ps) {
   var this$1 = $m_Lorg_getshaka_nativeconverter_NativeConverter$();
   var jsDict = this$1.org$getshaka$nativeconverter$NativeConverter$$$asJSDict__Lorg_getshaka_nativeconverter_ParseState__sjs_js_Dictionary(ps);
-  var dimensions = new $ac_I(new Int32Array([2]));
+  var dimensions = new $ac_I(new Int32Array([3]));
   var resArr = $asArrayOf_O($m_jl_reflect_Array$().newInstance__jl_Class__AI__O($d_O.getClassOf(), dimensions), 1);
   var nc = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
   var elementJs = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "serviceName")) ? jsDict.serviceName : null);
   var $$x1 = $n(resArr);
   var ps$1 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("serviceName", elementJs);
   $$x1.set(0, nc.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$1));
-  var nc$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
-  var elementJs$2 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "tail")) ? jsDict.tail : null);
+  var nc$2 = $m_Lorg_getshaka_nativeconverter_NativeConverter$StringConv$();
+  var elementJs$2 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "serviceId")) ? jsDict.serviceId : null);
   var $$x2 = $n(resArr);
-  var ps$2 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("tail", elementJs$2);
-  $$x2.set(1, nc$2.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$2));
+  var ps$2 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("serviceId", elementJs$2);
+  $$x2.set(1, nc$2.fromNative__Lorg_getshaka_nativeconverter_ParseState__T(ps$2));
+  var nc$3 = $m_Lorg_getshaka_nativeconverter_NativeConverter$IntConv$();
+  var elementJs$3 = ($uZ($m_sjs_js_WrappedDictionary$Cache$().sjs_js_WrappedDictionary$Cache$__f_safeHasOwnProperty.call(jsDict, "tail")) ? jsDict.tail : null);
+  var $$x3 = $n(resArr);
+  var ps$3 = $n(ps).atKey__T__sjs_js_Any__Lorg_getshaka_nativeconverter_ParseState("tail", elementJs$3);
+  $$x3.set(2, nc$3.fromNative__Lorg_getshaka_nativeconverter_ParseState__I(ps$3));
   return $as_Lcom_swarm_pages_services_ServiceLogStream$ServiceName($n(this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName$$anon$1__f_p$1).fromProduct__s_Product__O(new $c_Lorg_getshaka_nativeconverter_ArrayProduct(resArr)))
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$$anon$1.prototype.toNative__O__sjs_js_Any = (function(a) {
@@ -19345,6 +20349,9 @@ $h_s_Console$.prototype = $c_s_Console$.prototype;
 $c_s_Console$.prototype.out__Ljava_io_PrintStream = (function() {
   return $as_Ljava_io_PrintStream($n(this.s_Console$__f_outVar).s_util_DynamicVariable__f_v)
 });
+$c_s_Console$.prototype.print__O__V = (function(obj) {
+  $n(this.out__Ljava_io_PrintStream()).print__T__V(((obj === null) ? "null" : $dp_toString__T($n(obj))))
+});
 var $d_s_Console$ = new $TypeData().initClass({
   s_Console$: 0
 }, false, "scala.Console$", {
@@ -20067,6 +21074,14 @@ $c_Lcom_raquo_airstream_core_AirstreamError$.prototype.com$raquo$airstream$core$
   };
   return ((message + "; cause: ") + $$x1)
 });
+$c_Lcom_raquo_airstream_core_AirstreamError$.prototype.com$raquo$airstream$core$AirstreamError$$$CombinedError$superArg$1__sci_Seq__T = (function(causes) {
+  var this$2 = $m_s_$less$colon$less$();
+  var this$4 = $n($as_sc_IterableOnceOps($n($as_sc_IterableOps($n(causes).flatten__F1__O(this$2.s_$less$colon$less$__f_singleton))).map__F1__O(new $c_sjsr_AnonFunction1(((_$2) => {
+    var _$2$1 = $as_jl_Throwable(_$2);
+    return $n(_$2$1).getMessage__T()
+  })))));
+  return ("CombinedError: " + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$4, "", "; ", ""))
+});
 $c_Lcom_raquo_airstream_core_AirstreamError$.prototype.registerUnhandledErrorCallback__F1__V = (function(fn) {
   var this$1 = $n(this.Lcom_raquo_airstream_core_AirstreamError$__f_unhandledErrorCallbacks);
   $as_scm_Buffer(this$1.addOne__O__scm_Growable(fn))
@@ -20677,7 +21692,7 @@ $c_Lcom_swarm_api_ApiServer$ApiResult$.prototype.derived$NativeConverter__Lorg_g
   return new $c_Lcom_swarm_api_ApiServer$ApiResult$$anon$1(x$0, m$proxy1, this)
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult$.prototype.fromProduct__s_Product__Lcom_swarm_api_ApiServer$ApiResult = (function(x$0) {
-  return new $c_Lcom_swarm_api_ApiServer$ApiResult($n(x$0).productElement__I__O(0))
+  return new $c_Lcom_swarm_api_ApiServer$ApiResult($as_s_Option($n(x$0).productElement__I__O(0)), $as_s_Option($n(x$0).productElement__I__O(1)), $as_s_Option($n(x$0).productElement__I__O(2)), $as_s_Option($n(x$0).productElement__I__O(3)))
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult$.prototype.fromProduct__s_Product__O = (function(p) {
   return this.fromProduct__s_Product__Lcom_swarm_api_ApiServer$ApiResult(p)
@@ -20715,8 +21730,8 @@ $c_Lcom_swarm_api_WebSocketClient$WsMsg$.prototype.toString__T = (function() {
 });
 $c_Lcom_swarm_api_WebSocketClient$WsMsg$.prototype.derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter = (function() {
   if ((!this.Lcom_swarm_api_WebSocketClient$WsMsg$__f_derived$NativeConverterbitmap$2)) {
-    var m$proxy14 = $m_Lcom_swarm_api_WebSocketClient$WsMsg$();
-    this.Lcom_swarm_api_WebSocketClient$WsMsg$__f_derived$NativeConverter$lzy2 = new $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$15(m$proxy14, this);
+    var m$proxy16 = $m_Lcom_swarm_api_WebSocketClient$WsMsg$();
+    this.Lcom_swarm_api_WebSocketClient$WsMsg$__f_derived$NativeConverter$lzy2 = new $c_Lcom_swarm_api_WebSocketClient$WsMsg$$anon$17(m$proxy16, this);
     this.Lcom_swarm_api_WebSocketClient$WsMsg$__f_derived$NativeConverterbitmap$2 = true
   };
   return this.Lcom_swarm_api_WebSocketClient$WsMsg$__f_derived$NativeConverter$lzy2
@@ -20767,6 +21782,10 @@ function $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped__Lcom_swarm_api_W
   $m_Lcom_swarm_api_WebSocketClient$WsMsgType$();
   return $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped
 }
+function $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart__Lcom_swarm_api_WebSocketClient$WsMsgType() {
+  $m_Lcom_swarm_api_WebSocketClient$WsMsgType$();
+  return $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart
+}
 /** @constructor */
 function $c_Lcom_swarm_api_WebSocketClient$WsMsgType$() {
   $n_Lcom_swarm_api_WebSocketClient$WsMsgType$ = this;
@@ -20776,12 +21795,14 @@ function $c_Lcom_swarm_api_WebSocketClient$WsMsgType$() {
   $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__info = new $c_Lcom_swarm_api_WebSocketClient$WsMsgType$$anon$1(3, "info", this);
   $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__log = new $c_Lcom_swarm_api_WebSocketClient$WsMsgType$$anon$1(4, "log", this);
   $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped = new $c_Lcom_swarm_api_WebSocketClient$WsMsgType$$anon$1(5, "stopped", this);
+  $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart = new $c_Lcom_swarm_api_WebSocketClient$WsMsgType$$anon$1(6, "awsLogsStreamStart", this);
   $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__logStart__Lcom_swarm_api_WebSocketClient$WsMsgType();
   $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__logStop__Lcom_swarm_api_WebSocketClient$WsMsgType();
   $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__error__Lcom_swarm_api_WebSocketClient$WsMsgType();
   $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__info__Lcom_swarm_api_WebSocketClient$WsMsgType();
   $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__log__Lcom_swarm_api_WebSocketClient$WsMsgType();
-  $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped__Lcom_swarm_api_WebSocketClient$WsMsgType()
+  $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped__Lcom_swarm_api_WebSocketClient$WsMsgType();
+  $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart__Lcom_swarm_api_WebSocketClient$WsMsgType()
 }
 $c_Lcom_swarm_api_WebSocketClient$WsMsgType$.prototype = new $h_O();
 $c_Lcom_swarm_api_WebSocketClient$WsMsgType$.prototype.constructor = $c_Lcom_swarm_api_WebSocketClient$WsMsgType$;
@@ -20816,6 +21837,10 @@ $c_Lcom_swarm_api_WebSocketClient$WsMsgType$.prototype.valueOf__T__Lcom_swarm_ap
       return $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped__Lcom_swarm_api_WebSocketClient$WsMsgType();
       break
     }
+    case "awsLogsStreamStart": {
+      return $s_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart__Lcom_swarm_api_WebSocketClient$WsMsgType();
+      break
+    }
     default: {
       throw $ct_jl_IllegalArgumentException__T__(new $c_jl_IllegalArgumentException(), ("enum case not found: " + \u03b4name))
     }
@@ -20836,6 +21861,51 @@ function $m_Lcom_swarm_api_WebSocketClient$WsMsgType$() {
     $n_Lcom_swarm_api_WebSocketClient$WsMsgType$ = new $c_Lcom_swarm_api_WebSocketClient$WsMsgType$()
   };
   return $n_Lcom_swarm_api_WebSocketClient$WsMsgType$
+}
+/** @constructor */
+function $c_Lcom_swarm_models_Models$AwsBuild$() {
+  this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverter$lzy5 = null;
+  this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverterbitmap$5 = false
+}
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype = new $h_O();
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.constructor = $c_Lcom_swarm_models_Models$AwsBuild$;
+/** @constructor */
+function $h_Lcom_swarm_models_Models$AwsBuild$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_models_Models$AwsBuild$.prototype = $c_Lcom_swarm_models_Models$AwsBuild$.prototype;
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.toString__T = (function() {
+  return "AwsBuild"
+});
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter = (function() {
+  if ((!this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverterbitmap$5)) {
+    var m$proxy15 = $m_Lcom_swarm_models_Models$AwsBuild$();
+    this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverter$lzy5 = new $c_Lcom_swarm_models_Models$AwsBuild$$anon$5(m$proxy15, this);
+    this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverterbitmap$5 = true
+  };
+  return this.Lcom_swarm_models_Models$AwsBuild$__f_derived$NativeConverter$lzy5
+});
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.fromProduct__s_Product__Lcom_swarm_models_Models$AwsBuild = (function(x$0) {
+  return new $c_Lcom_swarm_models_Models$AwsBuild($uI($n(x$0).productElement__I__O(0)), $as_T($n(x$0).productElement__I__O(1)), $uI($n(x$0).productElement__I__O(2)), $as_T($n(x$0).productElement__I__O(3)), $as_T($n(x$0).productElement__I__O(4)), $as_T($n(x$0).productElement__I__O(5)), $as_T($n(x$0).productElement__I__O(6)), $as_T($n(x$0).productElement__I__O(7)), $as_T($n(x$0).productElement__I__O(8)), $as_T($n(x$0).productElement__I__O(9)), $as_T($n(x$0).productElement__I__O(10)), $as_T($n(x$0).productElement__I__O(11)), $as_T($n(x$0).productElement__I__O(12)))
+});
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.fromProduct__s_Product__O = (function(p) {
+  return this.fromProduct__s_Product__Lcom_swarm_models_Models$AwsBuild(p)
+});
+var $d_Lcom_swarm_models_Models$AwsBuild$ = new $TypeData().initClass({
+  Lcom_swarm_models_Models$AwsBuild$: 0
+}, false, "com.swarm.models.Models$AwsBuild$", {
+  Lcom_swarm_models_Models$AwsBuild$: 1,
+  O: 1,
+  s_deriving_Mirror: 1,
+  s_deriving_Mirror$Product: 1
+});
+$c_Lcom_swarm_models_Models$AwsBuild$.prototype.$classData = $d_Lcom_swarm_models_Models$AwsBuild$;
+var $n_Lcom_swarm_models_Models$AwsBuild$;
+function $m_Lcom_swarm_models_Models$AwsBuild$() {
+  if ((!$n_Lcom_swarm_models_Models$AwsBuild$)) {
+    $n_Lcom_swarm_models_Models$AwsBuild$ = new $c_Lcom_swarm_models_Models$AwsBuild$()
+  };
+  return $n_Lcom_swarm_models_Models$AwsBuild$
 }
 /** @constructor */
 function $c_Lcom_swarm_models_Models$AwsCodeBuildApp$() {
@@ -20861,7 +21931,7 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp$.prototype.derived$NativeConverter__
   return this.Lcom_swarm_models_Models$AwsCodeBuildApp$__f_derived$NativeConverter$lzy4
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp$.prototype.fromProduct__s_Product__Lcom_swarm_models_Models$AwsCodeBuildApp = (function(x$0) {
-  return new $c_Lcom_swarm_models_Models$AwsCodeBuildApp($uI($n(x$0).productElement__I__O(0)), $as_T($n(x$0).productElement__I__O(1)), $as_T($n(x$0).productElement__I__O(2)), $as_T($n(x$0).productElement__I__O(3)), $as_T($n(x$0).productElement__I__O(4)), $as_T($n(x$0).productElement__I__O(5)), $as_T($n(x$0).productElement__I__O(6)), $as_T($n(x$0).productElement__I__O(7)), $as_T($n(x$0).productElement__I__O(8)), $uI($n(x$0).productElement__I__O(9)), $as_T($n(x$0).productElement__I__O(10)))
+  return new $c_Lcom_swarm_models_Models$AwsCodeBuildApp($uI($n(x$0).productElement__I__O(0)), $as_T($n(x$0).productElement__I__O(1)), $as_T($n(x$0).productElement__I__O(2)), $as_T($n(x$0).productElement__I__O(3)), $as_T($n(x$0).productElement__I__O(4)), $as_T($n(x$0).productElement__I__O(5)), $as_T($n(x$0).productElement__I__O(6)), $as_T($n(x$0).productElement__I__O(7)), $as_T($n(x$0).productElement__I__O(8)), $as_T($n(x$0).productElement__I__O(9)), $as_T($n(x$0).productElement__I__O(10)), $uI($n(x$0).productElement__I__O(11)), $as_T($n(x$0).productElement__I__O(12)), $uZ($n(x$0).productElement__I__O(13)))
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp$.prototype.fromProduct__s_Product__O = (function(p) {
   return this.fromProduct__s_Product__Lcom_swarm_models_Models$AwsCodeBuildApp(p)
@@ -21061,6 +22131,43 @@ function $m_Lcom_swarm_pages_Index$DrawerMenuItem$() {
     $n_Lcom_swarm_pages_Index$DrawerMenuItem$ = new $c_Lcom_swarm_pages_Index$DrawerMenuItem$()
   };
   return $n_Lcom_swarm_pages_Index$DrawerMenuItem$
+}
+function $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event() {
+  $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$();
+  return $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start
+}
+function $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event() {
+  $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$();
+  return $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing
+}
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$() {
+  $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$ = this;
+  $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1(2, "Start", this);
+  $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1(3, "Nothing", this)
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$.prototype = new $h_O();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$.prototype;
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$ = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$: 1,
+  O: 1,
+  s_deriving_Mirror: 1,
+  s_deriving_Mirror$Sum: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$;
+var $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$;
+function $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$() {
+  if ((!$n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$)) {
+    $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$ = new $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$()
+  };
+  return $n_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$
 }
 function $p_Lcom_swarm_pages_comps_LogLineView$__fromWsMsg__Lcom_swarm_api_WebSocketClient$WsMsg__Lcom_swarm_pages_comps_LogLineView($thiz, msg) {
   matchResult4: {
@@ -21334,7 +22441,7 @@ $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$.prototype.derived$Nat
   return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName$__f_derived$NativeConverter$lzy1
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$.prototype.fromProduct__s_Product__Lcom_swarm_pages_services_ServiceLogStream$ServiceName = (function(x$0) {
-  return new $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName($as_T($n(x$0).productElement__I__O(0)), $uI($n(x$0).productElement__I__O(1)))
+  return new $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName($as_T($n(x$0).productElement__I__O(0)), $as_T($n(x$0).productElement__I__O(1)), $uI($n(x$0).productElement__I__O(2)))
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$.prototype.fromProduct__s_Product__O = (function(p) {
   return this.fromProduct__s_Product__Lcom_swarm_pages_services_ServiceLogStream$ServiceName(p)
@@ -22062,6 +23169,10 @@ $c_sc_IterableFactory$Delegate.prototype.from__sc_IterableOnce__O = (function(it
 $c_sc_IterableFactory$Delegate.prototype.newBuilder__scm_Builder = (function() {
   return $n(this.sc_IterableFactory$Delegate__f_delegate).newBuilder__scm_Builder()
 });
+function $f_sc_IterableOps__headOption__s_Option($thiz) {
+  var it = $thiz.iterator__sc_Iterator();
+  return ($n(it).hasNext__Z() ? new $c_s_Some($n(it).next__O()) : $m_s_None$())
+}
 function $f_sc_IterableOps__sizeCompare__I__I($thiz, otherSize) {
   if ((otherSize < 0)) {
     return 1
@@ -23309,6 +24420,9 @@ function $h_sr_AbstractPartialFunction() {
   /*<skip>*/
 }
 $h_sr_AbstractPartialFunction.prototype = $c_sr_AbstractPartialFunction.prototype;
+$c_sr_AbstractPartialFunction.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this, that)
+});
 $c_sr_AbstractPartialFunction.prototype.toString__T = (function() {
   return "<function1>"
 });
@@ -24014,9 +25128,15 @@ var $d_Lcom_swarm_api_ApiAuth$ApiAuthResult = new $TypeData().initClass({
 });
 $c_Lcom_swarm_api_ApiAuth$ApiAuthResult.prototype.$classData = $d_Lcom_swarm_api_ApiAuth$ApiAuthResult;
 /** @constructor */
-function $c_Lcom_swarm_api_ApiServer$ApiResult(data) {
+function $c_Lcom_swarm_api_ApiServer$ApiResult(data, error, message, messages) {
   this.Lcom_swarm_api_ApiServer$ApiResult__f_data = null;
-  this.Lcom_swarm_api_ApiServer$ApiResult__f_data = data
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_error = null;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_message = null;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_messages = null;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_data = data;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_error = error;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_message = message;
+  this.Lcom_swarm_api_ApiServer$ApiResult__f_messages = messages
 }
 $c_Lcom_swarm_api_ApiServer$ApiResult.prototype = new $h_O();
 $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.constructor = $c_Lcom_swarm_api_ApiServer$ApiResult;
@@ -24038,8 +25158,29 @@ $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.equals__O__Z = (function(x$0) {
   } else if ((x$0 instanceof $c_Lcom_swarm_api_ApiServer$ApiResult)) {
     var x$0$2 = $as_Lcom_swarm_api_ApiServer$ApiResult(x$0);
     var x = this.Lcom_swarm_api_ApiServer$ApiResult__f_data;
-    var y = $n(x$0$2).Lcom_swarm_api_ApiServer$ApiResult__f_data;
-    if ($m_sr_BoxesRunTime$().equals__O__O__Z(x, y)) {
+    var x$2 = $n(x$0$2).Lcom_swarm_api_ApiServer$ApiResult__f_data;
+    if (((x === null) ? (x$2 === null) : $n(x).equals__O__Z(x$2))) {
+      var x$3 = this.Lcom_swarm_api_ApiServer$ApiResult__f_error;
+      var x$4 = $n(x$0$2).Lcom_swarm_api_ApiServer$ApiResult__f_error;
+      var $$x3 = ((x$3 === null) ? (x$4 === null) : $n(x$3).equals__O__Z(x$4))
+    } else {
+      var $$x3 = false
+    };
+    if ($$x3) {
+      var x$5 = this.Lcom_swarm_api_ApiServer$ApiResult__f_message;
+      var x$6 = $n(x$0$2).Lcom_swarm_api_ApiServer$ApiResult__f_message;
+      var $$x2 = ((x$5 === null) ? (x$6 === null) : $n(x$5).equals__O__Z(x$6))
+    } else {
+      var $$x2 = false
+    };
+    if ($$x2) {
+      var x$7 = this.Lcom_swarm_api_ApiServer$ApiResult__f_messages;
+      var x$8 = $n(x$0$2).Lcom_swarm_api_ApiServer$ApiResult__f_messages;
+      var $$x1 = ((x$7 === null) ? (x$8 === null) : $n(x$7).equals__O__Z(x$8))
+    } else {
+      var $$x1 = false
+    };
+    if ($$x1) {
       $n(x$0$2);
       return true
     } else {
@@ -24053,16 +25194,33 @@ $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.productArity__I = (function() {
-  return 1
+  return 4
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.productPrefix__T = (function() {
   return "ApiResult"
 });
 $c_Lcom_swarm_api_ApiServer$ApiResult.prototype.productElement__I__O = (function(n) {
-  if ((n === 0)) {
-    return this.Lcom_swarm_api_ApiServer$ApiResult__f_data
-  };
-  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+  switch (n) {
+    case 0: {
+      return this.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      break
+    }
+    case 1: {
+      return this.Lcom_swarm_api_ApiServer$ApiResult__f_error;
+      break
+    }
+    case 2: {
+      return this.Lcom_swarm_api_ApiServer$ApiResult__f_message;
+      break
+    }
+    case 3: {
+      return this.Lcom_swarm_api_ApiServer$ApiResult__f_messages;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+    }
+  }
 });
 function $as_Lcom_swarm_api_ApiServer$ApiResult(obj) {
   return (((obj instanceof $c_Lcom_swarm_api_ApiServer$ApiResult) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.api.ApiServer$ApiResult"))
@@ -24164,7 +25322,204 @@ var $d_Lcom_swarm_api_WebSocketClient$WsMsg = new $TypeData().initClass({
 });
 $c_Lcom_swarm_api_WebSocketClient$WsMsg.prototype.$classData = $d_Lcom_swarm_api_WebSocketClient$WsMsg;
 /** @constructor */
-function $c_Lcom_swarm_models_Models$AwsCodeBuildApp(id, stackVarName, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, codeBase, buildVars, stackId, updatedAt) {
+function $c_Lcom_swarm_models_Models$AwsBuild(id, buildId, awsCodebuildAppId, logsGroupName, logsStreamName, logsDeepLink, startTime, endTime, currentPhase, buildStatus, appVersionTag, createdAt, updatedAt) {
+  this.Lcom_swarm_models_Models$AwsBuild__f_id = 0;
+  this.Lcom_swarm_models_Models$AwsBuild__f_buildId = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId = 0;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsGroupName = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsStreamName = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_startTime = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_endTime = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_buildStatus = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_appVersionTag = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_createdAt = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_updatedAt = null;
+  this.Lcom_swarm_models_Models$AwsBuild__f_id = id;
+  this.Lcom_swarm_models_Models$AwsBuild__f_buildId = buildId;
+  this.Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId = awsCodebuildAppId;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsGroupName = logsGroupName;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsStreamName = logsStreamName;
+  this.Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink = logsDeepLink;
+  this.Lcom_swarm_models_Models$AwsBuild__f_startTime = startTime;
+  this.Lcom_swarm_models_Models$AwsBuild__f_endTime = endTime;
+  this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase = currentPhase;
+  this.Lcom_swarm_models_Models$AwsBuild__f_buildStatus = buildStatus;
+  this.Lcom_swarm_models_Models$AwsBuild__f_appVersionTag = appVersionTag;
+  this.Lcom_swarm_models_Models$AwsBuild__f_createdAt = createdAt;
+  this.Lcom_swarm_models_Models$AwsBuild__f_updatedAt = updatedAt
+}
+$c_Lcom_swarm_models_Models$AwsBuild.prototype = new $h_O();
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.constructor = $c_Lcom_swarm_models_Models$AwsBuild;
+/** @constructor */
+function $h_Lcom_swarm_models_Models$AwsBuild() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_models_Models$AwsBuild.prototype = $c_Lcom_swarm_models_Models$AwsBuild.prototype;
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_s_Product$$anon$1(this)
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.hashCode__I = (function() {
+  var acc = (-889275714);
+  var hash = acc;
+  var data = $f_T__hashCode__I("AwsBuild");
+  acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+  var hash$1 = acc;
+  var data$1 = this.Lcom_swarm_models_Models$AwsBuild__f_id;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+  var hash$2 = acc;
+  var x = this.Lcom_swarm_models_Models$AwsBuild__f_buildId;
+  var data$2 = $m_sr_Statics$().anyHash__O__I(x);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+  var hash$3 = acc;
+  var data$3 = this.Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+  var hash$4 = acc;
+  var x$1 = this.Lcom_swarm_models_Models$AwsBuild__f_logsGroupName;
+  var data$4 = $m_sr_Statics$().anyHash__O__I(x$1);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+  var hash$5 = acc;
+  var x$2 = this.Lcom_swarm_models_Models$AwsBuild__f_logsStreamName;
+  var data$5 = $m_sr_Statics$().anyHash__O__I(x$2);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+  var hash$6 = acc;
+  var x$3 = this.Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink;
+  var data$6 = $m_sr_Statics$().anyHash__O__I(x$3);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+  var hash$7 = acc;
+  var x$4 = this.Lcom_swarm_models_Models$AwsBuild__f_startTime;
+  var data$7 = $m_sr_Statics$().anyHash__O__I(x$4);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
+  var hash$8 = acc;
+  var x$5 = this.Lcom_swarm_models_Models$AwsBuild__f_endTime;
+  var data$8 = $m_sr_Statics$().anyHash__O__I(x$5);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
+  var hash$9 = acc;
+  var x$6 = this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase;
+  var data$9 = $m_sr_Statics$().anyHash__O__I(x$6);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
+  var hash$10 = acc;
+  var x$7 = this.Lcom_swarm_models_Models$AwsBuild__f_buildStatus;
+  var data$10 = $m_sr_Statics$().anyHash__O__I(x$7);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
+  var hash$11 = acc;
+  var x$8 = this.Lcom_swarm_models_Models$AwsBuild__f_appVersionTag;
+  var data$11 = $m_sr_Statics$().anyHash__O__I(x$8);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$11, data$11);
+  var hash$12 = acc;
+  var x$9 = this.Lcom_swarm_models_Models$AwsBuild__f_createdAt;
+  var data$12 = $m_sr_Statics$().anyHash__O__I(x$9);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$12, data$12);
+  var hash$13 = acc;
+  var x$10 = this.Lcom_swarm_models_Models$AwsBuild__f_updatedAt;
+  var data$13 = $m_sr_Statics$().anyHash__O__I(x$10);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$13, data$13);
+  var hash$14 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$14, 13)
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lcom_swarm_models_Models$AwsBuild)) {
+    var x$0$2 = $as_Lcom_swarm_models_Models$AwsBuild(x$0);
+    return ((((((((((((((this.Lcom_swarm_models_Models$AwsBuild__f_id === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_id) && (this.Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId)) && (this.Lcom_swarm_models_Models$AwsBuild__f_buildId === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_buildId)) && (this.Lcom_swarm_models_Models$AwsBuild__f_logsGroupName === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_logsGroupName)) && (this.Lcom_swarm_models_Models$AwsBuild__f_logsStreamName === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_logsStreamName)) && (this.Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink)) && (this.Lcom_swarm_models_Models$AwsBuild__f_startTime === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_startTime)) && (this.Lcom_swarm_models_Models$AwsBuild__f_endTime === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_endTime)) && (this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_currentPhase)) && (this.Lcom_swarm_models_Models$AwsBuild__f_buildStatus === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_buildStatus)) && (this.Lcom_swarm_models_Models$AwsBuild__f_appVersionTag === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_appVersionTag)) && (this.Lcom_swarm_models_Models$AwsBuild__f_createdAt === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_createdAt)) && (this.Lcom_swarm_models_Models$AwsBuild__f_updatedAt === $n(x$0$2).Lcom_swarm_models_Models$AwsBuild__f_updatedAt)) && ($n(x$0$2), true))
+  } else {
+    return false
+  }
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.productArity__I = (function() {
+  return 13
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.productPrefix__T = (function() {
+  return "AwsBuild"
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.productElement__I__O = (function(n) {
+  switch (n) {
+    case 0: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_id;
+      break
+    }
+    case 1: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_buildId;
+      break
+    }
+    case 2: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId;
+      break
+    }
+    case 3: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_logsGroupName;
+      break
+    }
+    case 4: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_logsStreamName;
+      break
+    }
+    case 5: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_logsDeepLink;
+      break
+    }
+    case 6: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_startTime;
+      break
+    }
+    case 7: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_endTime;
+      break
+    }
+    case 8: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase;
+      break
+    }
+    case 9: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_buildStatus;
+      break
+    }
+    case 10: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_appVersionTag;
+      break
+    }
+    case 11: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_createdAt;
+      break
+    }
+    case 12: {
+      return this.Lcom_swarm_models_Models$AwsBuild__f_updatedAt;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+    }
+  }
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.completed__Z = (function() {
+  return (this.Lcom_swarm_models_Models$AwsBuild__f_currentPhase === "COMPLETED")
+});
+function $as_Lcom_swarm_models_Models$AwsBuild(obj) {
+  return (((obj instanceof $c_Lcom_swarm_models_Models$AwsBuild) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.models.Models$AwsBuild"))
+}
+function $isArrayOf_Lcom_swarm_models_Models$AwsBuild(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_swarm_models_Models$AwsBuild)))
+}
+function $asArrayOf_Lcom_swarm_models_Models$AwsBuild(obj, depth) {
+  return (($isArrayOf_Lcom_swarm_models_Models$AwsBuild(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.models.Models$AwsBuild;", depth))
+}
+var $d_Lcom_swarm_models_Models$AwsBuild = new $TypeData().initClass({
+  Lcom_swarm_models_Models$AwsBuild: 0
+}, false, "com.swarm.models.Models$AwsBuild", {
+  Lcom_swarm_models_Models$AwsBuild: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_models_Models$AwsBuild.prototype.$classData = $d_Lcom_swarm_models_Models$AwsBuild;
+/** @constructor */
+function $c_Lcom_swarm_models_Models$AwsCodeBuildApp(id, stackVarName, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, awsProjectName, codeBase, buildVars, lastBuildAt, stackId, updatedAt, building) {
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_id = 0;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag = null;
@@ -24172,10 +25527,13 @@ function $c_Lcom_swarm_models_Models$AwsCodeBuildApp(id, stackVarName, versionTa
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl = null;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars = null;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt = null;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId = 0;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt = null;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_building = false;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_id = id;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName = stackVarName;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag = versionTag;
@@ -24183,10 +25541,13 @@ function $c_Lcom_swarm_models_Models$AwsCodeBuildApp(id, stackVarName, versionTa
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId = awsAccountId;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion = awsRegion;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl = awsUrl;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName = awsProjectName;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase = codeBase;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars = buildVars;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt = lastBuildAt;
   this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId = stackId;
-  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt = updatedAt
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt = updatedAt;
+  this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_building = building
 }
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype = new $h_O();
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.constructor = $c_Lcom_swarm_models_Models$AwsCodeBuildApp;
@@ -24231,29 +25592,40 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.hashCode__I = (function() 
   var data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
   acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
   var hash$8 = acc;
-  var x$6 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
+  var x$6 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName;
   var data$8 = $m_sr_Statics$().anyHash__O__I(x$6);
   acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
   var hash$9 = acc;
-  var x$7 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars;
+  var x$7 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
   var data$9 = $m_sr_Statics$().anyHash__O__I(x$7);
   acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
   var hash$10 = acc;
-  var data$10 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId;
+  var x$8 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars;
+  var data$10 = $m_sr_Statics$().anyHash__O__I(x$8);
   acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
   var hash$11 = acc;
-  var x$8 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
-  var data$11 = $m_sr_Statics$().anyHash__O__I(x$8);
+  var x$9 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt;
+  var data$11 = $m_sr_Statics$().anyHash__O__I(x$9);
   acc = $m_sr_Statics$().mix__I__I__I(hash$11, data$11);
   var hash$12 = acc;
-  return $m_sr_Statics$().finalizeHash__I__I__I(hash$12, 11)
+  var data$12 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$12, data$12);
+  var hash$13 = acc;
+  var x$10 = this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
+  var data$13 = $m_sr_Statics$().anyHash__O__I(x$10);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$13, data$13);
+  var hash$14 = acc;
+  var data$14 = (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_building ? 1231 : 1237);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$14, data$14);
+  var hash$15 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$15, 14)
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
   } else if ((x$0 instanceof $c_Lcom_swarm_models_Models$AwsCodeBuildApp)) {
     var x$0$2 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(x$0);
-    return ((((((((((((this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_id === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt)) && ($n(x$0$2), true))
+    return (((((((((((((((this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_id === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_building === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_building)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt)) && (this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt === $n(x$0$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt)) && ($n(x$0$2), true))
   } else {
     return false
   }
@@ -24262,7 +25634,7 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.toString__T = (function() 
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.productArity__I = (function() {
-  return 11
+  return 14
 });
 $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.productPrefix__T = (function() {
   return "AwsCodeBuildApp"
@@ -24298,19 +25670,31 @@ $c_Lcom_swarm_models_Models$AwsCodeBuildApp.prototype.productElement__I__O = (fu
       break
     }
     case 7: {
-      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName;
       break
     }
     case 8: {
-      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars;
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
       break
     }
     case 9: {
-      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId;
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars;
       break
     }
     case 10: {
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt;
+      break
+    }
+    case 11: {
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId;
+      break
+    }
+    case 12: {
       return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
+      break
+    }
+    case 13: {
+      return this.Lcom_swarm_models_Models$AwsCodeBuildApp__f_building;
       break
     }
     default: {
@@ -24599,14 +25983,14 @@ var $d_Lcom_swarm_models_Models$Service = new $TypeData().initClass({
 });
 $c_Lcom_swarm_models_Models$Service.prototype.$classData = $d_Lcom_swarm_models_Models$Service;
 function $p_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__validateStrings__Z($thiz) {
-  return (!$n($n($m_s_package$().s_package$__f_Seq).apply__sci_Seq__sc_SeqOps($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T.getArrayOf().constr)([$thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars])))).exists__F1__Z(new $c_sjsr_AnonFunction1(((_$1) => {
+  return (!$n($n($m_s_package$().s_package$__f_Seq).apply__sci_Seq__sc_SeqOps($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T.getArrayOf().constr)([$thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase, $thiz.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars])))).exists__F1__Z(new $c_sjsr_AnonFunction1(((_$1) => {
     var _$1$1 = $as_T(_$1);
     var this$2 = $n($f_T__trim__T($n(_$1$1)));
     return (this$2 === "")
   }))))
 }
 /** @constructor */
-function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id, stackVarName, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, codeBase, buildVars, stackId, updatedAt) {
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(id, stackVarName, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, awsProjectName, codeBase, buildVars, stackId, updatedAt) {
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id = 0;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag = null;
@@ -24614,6 +25998,7 @@ function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBu
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars = null;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId = 0;
@@ -24625,6 +26010,7 @@ function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBu
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId = awsAccountId;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion = awsRegion;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl = awsUrl;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName = awsProjectName;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase = codeBase;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars = buildVars;
   this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId = stackId;
@@ -24673,29 +26059,33 @@ $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppFor
   var data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
   acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
   var hash$8 = acc;
-  var x$6 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+  var x$6 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
   var data$8 = $m_sr_Statics$().anyHash__O__I(x$6);
   acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
   var hash$9 = acc;
-  var x$7 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+  var x$7 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
   var data$9 = $m_sr_Statics$().anyHash__O__I(x$7);
   acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
   var hash$10 = acc;
-  var data$10 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+  var x$8 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+  var data$10 = $m_sr_Statics$().anyHash__O__I(x$8);
   acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
   var hash$11 = acc;
-  var x$8 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
-  var data$11 = $m_sr_Statics$().anyHash__O__I(x$8);
+  var data$11 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
   acc = $m_sr_Statics$().mix__I__I__I(hash$11, data$11);
   var hash$12 = acc;
-  return $m_sr_Statics$().finalizeHash__I__I__I(hash$12, 11)
+  var x$9 = this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
+  var data$12 = $m_sr_Statics$().anyHash__O__I(x$9);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$12, data$12);
+  var hash$13 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$13, 12)
 });
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
   } else if ((x$0 instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm)) {
     var x$0$2 = $as_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm(x$0);
-    return (((((((((((this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt))
+    return ((((((((((((this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_id) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackVarName)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_versionTag)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsEcrRepositoryName)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsAccountId)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsRegion)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsUrl)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars)) && (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt))
   } else {
     return false
   }
@@ -24704,7 +26094,7 @@ $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppFor
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm.prototype.productArity__I = (function() {
-  return 11
+  return 12
 });
 $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm.prototype.productPrefix__T = (function() {
   return "AwsCodeBuildAppForm"
@@ -24740,18 +26130,22 @@ $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppFor
       break
     }
     case 7: {
-      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
+      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_awsProjectName;
       break
     }
     case 8: {
-      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
+      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_codeBase;
       break
     }
     case 9: {
-      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_buildVars;
       break
     }
     case 10: {
+      return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId;
+      break
+    }
+    case 11: {
       return this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_updatedAt;
       break
     }
@@ -25224,10 +26618,12 @@ var $d_Lcom_swarm_pages_comps_Theme$CmdLine = new $TypeData().initClass({
 });
 $c_Lcom_swarm_pages_comps_Theme$CmdLine.prototype.$classData = $d_Lcom_swarm_pages_comps_Theme$CmdLine;
 /** @constructor */
-function $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(serviceName, tail) {
+function $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(serviceName, serviceId, tail) {
   this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName = null;
+  this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId = null;
   this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail = 0;
   this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName = serviceName;
+  this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId = serviceId;
   this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail = tail
 }
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype = new $h_O();
@@ -25250,17 +26646,21 @@ $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.hashCode__I 
   var data$1 = $m_sr_Statics$().anyHash__O__I(x);
   acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
   var hash$2 = acc;
-  var data$2 = this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail;
+  var x$1 = this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId;
+  var data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
   acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
   var hash$3 = acc;
-  return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 2)
+  var data$3 = this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+  var hash$4 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 3)
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
   } else if ((x$0 instanceof $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName)) {
     var x$0$2 = $as_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(x$0);
-    return ((this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail === $n(x$0$2).Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail) && (this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName === $n(x$0$2).Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName))
+    return (((this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail === $n(x$0$2).Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail) && (this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName === $n(x$0$2).Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName)) && (this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId === $n(x$0$2).Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId))
   } else {
     return false
   }
@@ -25269,19 +26669,29 @@ $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.toString__T 
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.productArity__I = (function() {
-  return 2
+  return 3
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.productPrefix__T = (function() {
   return "ServiceName"
 });
 $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName.prototype.productElement__I__O = (function(n) {
-  if ((n === 0)) {
-    return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName
-  };
-  if ((n === 1)) {
-    return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail
-  };
-  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+  switch (n) {
+    case 0: {
+      return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceName;
+      break
+    }
+    case 1: {
+      return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_serviceId;
+      break
+    }
+    case 2: {
+      return this.Lcom_swarm_pages_services_ServiceLogStream$ServiceName__f_tail;
+      break
+    }
+    default: {
+      throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+    }
+  }
 });
 function $as_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(obj) {
   return (((obj instanceof $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.pages.services.ServiceLogStream$ServiceName"))
@@ -26450,10 +27860,7 @@ $c_Lfrontroute_package$$anon$4.prototype.apply__Lfrontroute_Location__Lfrontrout
   var directive$2 = this.Lfrontroute_package$$anon$4__f_directive$7;
   var hac$2 = this.Lfrontroute_package$$anon$4__f_hac$3;
   var subRoute$2 = this.Lfrontroute_package$$anon$4__f_subRoute$6;
-  var $$x1 = $n(directive$2).Lfrontroute_Directive__f_tapply;
-  $n(hac$2);
-  var fn = $as_F1(subRoute$2);
-  return $as_Lfrontroute_RouteResult($n($as_F3($n($$x1).apply__O__O(fn))).apply__O__O__O__O(location, previous, state))
+  return $as_Lfrontroute_RouteResult($n($as_F3($n($n(directive$2).Lfrontroute_Directive__f_tapply).apply__O__O($n(hac$2).apply__O__F1(subRoute$2)))).apply__O__O__O__O(location, previous, state))
 });
 $c_Lfrontroute_package$$anon$4.prototype.apply__O__O__O__O = (function(v1, v2, v3) {
   return this.apply__Lfrontroute_Location__Lfrontroute_internal_RoutingState__Lfrontroute_internal_RoutingState__Lfrontroute_RouteResult($as_Lfrontroute_Location(v1), $as_Lfrontroute_internal_RoutingState(v2), $as_Lfrontroute_internal_RoutingState(v3))
@@ -26930,6 +28337,9 @@ $c_s_PartialFunction$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
 $c_s_PartialFunction$$anon$1.prototype.apply__O__E = (function(x) {
   throw new $c_s_MatchError(x)
 });
+$c_s_PartialFunction$$anon$1.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return that
+});
 $c_s_PartialFunction$$anon$1.prototype.apply__O__O = (function(v1) {
   this.apply__O__E(v1)
 });
@@ -27152,6 +28562,16 @@ function $f_sc_StrictOptimizedIterableOps__flatMap__F1__O($thiz, f) {
   };
   return $n(b).result__O()
 }
+function $f_sc_StrictOptimizedIterableOps__flatten__F1__O($thiz, toIterableOnce) {
+  var b = $n($thiz.iterableFactory__sc_IterableFactory()).newBuilder__scm_Builder();
+  var it = $thiz.iterator__sc_Iterator();
+  while ($n(it).hasNext__Z()) {
+    var this$1 = $n(b);
+    var xs = $as_sc_IterableOnce($n(toIterableOnce).apply__O__O($n(it).next__O()));
+    this$1.addAll__sc_IterableOnce__scm_Growable(xs)
+  };
+  return $n(b).result__O()
+}
 function $f_sc_StrictOptimizedIterableOps__zipWithIndex__O($thiz) {
   var b = $n($thiz.iterableFactory__sc_IterableFactory()).newBuilder__scm_Builder();
   var i = 0;
@@ -27221,6 +28641,39 @@ function $h_sci_LazyList$() {
 $h_sci_LazyList$.prototype = $c_sci_LazyList$.prototype;
 $c_sci_LazyList$.prototype.apply__sci_Seq__O = (function(elems) {
   return this.from__sc_IterableOnce__sci_LazyList(elems)
+});
+$c_sci_LazyList$.prototype.scala$collection$immutable$LazyList$$flatMapImpl__sci_LazyList__F1__sci_LazyList = (function(ll, f) {
+  var restRef = new $c_sr_ObjectRef(ll);
+  var state$1 = new $c_sjsr_AnonFunction0((() => {
+    var it = new $c_sr_ObjectRef(null);
+    var itHasNext = false;
+    var elem = $as_sci_LazyList(restRef.sr_ObjectRef__f_elem);
+    var rest = new $c_sr_ObjectRef(elem);
+    while (((!itHasNext) && (!$n($as_sci_LazyList(rest.sr_ObjectRef__f_elem)).isEmpty__Z()))) {
+      var this$5 = $n($as_sci_LazyList(rest.sr_ObjectRef__f_elem));
+      it.sr_ObjectRef__f_elem = $n($as_sc_IterableOnce($n(f).apply__O__O($n(this$5.scala$collection$immutable$LazyList$$state__sci_LazyList$State()).head__O()))).iterator__sc_Iterator();
+      itHasNext = $n($as_sc_Iterator(it.sr_ObjectRef__f_elem)).hasNext__Z();
+      if ((!itHasNext)) {
+        var this$6 = $n($as_sci_LazyList(rest.sr_ObjectRef__f_elem));
+        rest.sr_ObjectRef__f_elem = $n(this$6.scala$collection$immutable$LazyList$$state__sci_LazyList$State()).tail__sci_LazyList();
+        restRef.sr_ObjectRef__f_elem = $as_sci_LazyList(rest.sr_ObjectRef__f_elem)
+      }
+    };
+    if (itHasNext) {
+      var head = $n($as_sc_Iterator(it.sr_ObjectRef__f_elem)).next__O();
+      var this$7 = $n($as_sci_LazyList(rest.sr_ObjectRef__f_elem));
+      rest.sr_ObjectRef__f_elem = $n(this$7.scala$collection$immutable$LazyList$$state__sci_LazyList$State()).tail__sci_LazyList();
+      restRef.sr_ObjectRef__f_elem = $as_sci_LazyList(rest.sr_ObjectRef__f_elem);
+      $m_sci_LazyList$();
+      $m_sci_LazyList$();
+      var state = new $c_sjsr_AnonFunction0((() => $m_sci_LazyList$().scala$collection$immutable$LazyList$$stateFromIteratorConcatSuffix__sc_Iterator__F0__sci_LazyList$State($as_sc_Iterator(it.sr_ObjectRef__f_elem), new $c_sjsr_AnonFunction0((() => $n($m_sci_LazyList$().scala$collection$immutable$LazyList$$flatMapImpl__sci_LazyList__F1__sci_LazyList($as_sci_LazyList(rest.sr_ObjectRef__f_elem), f)).scala$collection$immutable$LazyList$$state__sci_LazyList$State())))));
+      var tl = new $c_sci_LazyList(state);
+      return new $c_sci_LazyList$State$Cons(head, tl)
+    } else {
+      return $m_sci_LazyList$State$Empty$()
+    }
+  }));
+  return new $c_sci_LazyList(state$1)
 });
 $c_sci_LazyList$.prototype.scala$collection$immutable$LazyList$$dropImpl__sci_LazyList__I__sci_LazyList = (function(ll, n) {
   var restRef = new $c_sr_ObjectRef(ll);
@@ -27752,6 +29205,18 @@ function $f_Lcom_raquo_airstream_core_WritableObservable__numAllObservers__I($th
   var $$x1 = $uI(this$.length);
   var this$$1 = $thiz.internalObservers__Lcom_raquo_ew_JsArray();
   return (($$x1 + $uI(this$$1.length)) | 0)
+}
+function $is_Lcom_raquo_airstream_core_WritableObservable(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcom_raquo_airstream_core_WritableObservable)))
+}
+function $as_Lcom_raquo_airstream_core_WritableObservable(obj) {
+  return (($is_Lcom_raquo_airstream_core_WritableObservable(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "com.raquo.airstream.core.WritableObservable"))
+}
+function $isArrayOf_Lcom_raquo_airstream_core_WritableObservable(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_raquo_airstream_core_WritableObservable)))
+}
+function $asArrayOf_Lcom_raquo_airstream_core_WritableObservable(obj, depth) {
+  return (($isArrayOf_Lcom_raquo_airstream_core_WritableObservable(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.raquo.airstream.core.WritableObservable;", depth))
 }
 /** @constructor */
 function $c_Lcom_raquo_airstream_custom_CustomSource$$anon$1(outer) {
@@ -28873,6 +30338,1629 @@ function $isArrayOf_Lcom_swarm_pages_Index$DrawerMenuItem(obj, depth) {
 function $asArrayOf_Lcom_swarm_pages_Index$DrawerMenuItem(obj, depth) {
   return (($isArrayOf_Lcom_swarm_pages_Index$DrawerMenuItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.pages.Index$DrawerMenuItem;", depth))
 }
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x11 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x11 !== null)) {
+      var this$2 = $n(x11);
+      var x13 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x11);
+      var this$4 = $n(x11);
+      var this$5 = $n(x11);
+      if ((x13 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$AwsCodeBuildApp($n($as_s_Some(x13)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x21 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x21 !== null)) {
+      var this$2 = $n(x21);
+      var x23 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x21);
+      var this$4 = $n(x21);
+      var this$5 = $n(x21);
+      if ((x23 instanceof $c_s_Some)) {
+        var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp($n($as_s_Some(x23)).s_Some__f_value);
+        $m_Lfrontroute_BrowserNavigation$().replaceState__O__sjs_js_Any__Z__V(("/adm/aws/codebuild/app/form/" + $n(app).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id), ($m_Lfrontroute_BrowserNavigation$(), (void 0)), ($m_Lfrontroute_BrowserNavigation$(), true));
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppForm$$anon$1", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  return ((x instanceof $c_s_util_Success) ? ($m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$().com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$goback__V(), (void 0)) : $n(default$1).apply__O__O(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppForm$$anon$2", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x39 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x39 !== null)) {
+      var this$2 = $n(x39);
+      var x41 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x39);
+      var this$4 = $n(x39);
+      var this$5 = $n(x39);
+      if ((x41 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$AwsCodeBuildApp($n($as_s_Some(x41)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x51 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x51 !== null)) {
+      var this$2 = $n(x51);
+      var x53 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x51);
+      var this$4 = $n(x51);
+      var this$5 = $n(x51);
+      if ((x53 instanceof $c_s_Some)) {
+        var app = $as_Lcom_swarm_models_Models$AwsCodeBuildApp($n($as_s_Some(x53)).s_Some__f_value);
+        var TransformerInto_this = new $c_Lio_scalaland_chimney_dsl_TransformerInto(app, new $c_Lio_scalaland_chimney_dsl_TransformerDefinition(($n($m_s_package$().s_package$__f_Vector), $m_sci_Vector0$())));
+        $n(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_td);
+        var awscodebuildapp$macro$1 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_source);
+        var form = new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm($n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId, $n(awscodebuildapp$macro$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt);
+        var this$8 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$().Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stateVar);
+        $f_Lcom_raquo_airstream_state_Var__set__O__V(this$8, form);
+        $m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$().com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$loadStaks__I__V(form.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$AwsCodeBuildAppForm__f_stackId);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppForm$$anon$3", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$3;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4(stackId$3, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4__f_stackId$2 = 0;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4__f_stackId$2 = stackId$3;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x61 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x61 !== null)) {
+      var this$2 = $n(x61);
+      var x63 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x61);
+      var this$4 = $n(x61);
+      var this$5 = $n(x61);
+      if ((x63 instanceof $c_s_Some)) {
+        $as_sci_List($n($as_s_Some(x63)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x71 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x71 !== null)) {
+      var this$2 = $n(x71);
+      var x73 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x71);
+      var this$4 = $n(x71);
+      var this$5 = $n(x71);
+      if ((x73 instanceof $c_s_Some)) {
+        var apps = $as_sci_List($n($as_s_Some(x73)).s_Some__f_value);
+        var this$9 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$().Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppForm$$$stackOptions);
+        var mod = new $c_sjsr_AnonFunction1(((items) => {
+          var items$1 = $as_sci_List(items);
+          var this$8 = $n(apps);
+          var f = ((s) => {
+            var s$1 = $as_Lcom_swarm_models_Models$Stack(s);
+            var id = $n(s$1).Lcom_swarm_models_Models$Stack__f_id;
+            var text = $n(s$1).Lcom_swarm_models_Models$Stack__f_name;
+            var selected = (this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4__f_stackId$2 === $n(s$1).Lcom_swarm_models_Models$Stack__f_id);
+            return new $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$StackOption(id, text, selected)
+          });
+          if ((this$8 === $m_sci_Nil$())) {
+            var $$x1 = $m_sci_Nil$()
+          } else {
+            var arg1 = this$8.head__O();
+            var h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+            var t = h;
+            var rest = $as_sci_List(this$8.tail__O());
+            while ((rest !== $m_sci_Nil$())) {
+              var arg1$1 = $n(rest).head__O();
+              var nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+              $n(t).sci_$colon$colon__f_next = nx;
+              t = nx;
+              rest = $as_sci_List($n(rest).tail__O())
+            };
+            var $$x1 = h
+          };
+          return $n($$x1).$colon$colon$colon__sci_List__sci_List(items$1)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$9, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppForm$$anon$4", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppForm$$anon$4;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x3 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x3 !== null)) {
+      var this$2 = $n(x3);
+      var x5 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x3);
+      var this$4 = $n(x3);
+      var this$5 = $n(x3);
+      if ((x5 instanceof $c_s_Some)) {
+        $as_sci_List($n($as_s_Some(x5)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x13 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x13 !== null)) {
+      var this$2 = $n(x13);
+      var x15 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x13);
+      var this$4 = $n(x13);
+      var this$5 = $n(x13);
+      if ((x15 instanceof $c_s_Some)) {
+        var apps = $as_sci_List($n($as_s_Some(x15)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$().Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppList$$$awsApps);
+        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+          $as_sci_List(_$1);
+          return apps
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppList$$anon$1", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2(awsApp$3, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2__f_awsApp$1 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2__f_awsApp$1 = awsApp$3;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var this$3 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$().Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$__f_com$swarm$pages$adm$aws$codebuild$app$AwsCodeBuildAppList$$$awsApps);
+    var mod = new $c_sjsr_AnonFunction1(((lst) => {
+      var lst$1 = $as_sci_List(lst);
+      var this$2 = $n(lst$1);
+      var f = ((_$2) => {
+        var _$2$1 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(_$2);
+        return ($n(_$2$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id === $n(this.Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2__f_awsApp$1).Lcom_swarm_models_Models$AwsCodeBuildApp__f_id)
+      });
+      var l = this$2;
+      block: {
+        var result;
+        while (true) {
+          if ($n(l).isEmpty__Z()) {
+            var result = $m_sci_Nil$();
+            break
+          } else {
+            var h = $n(l).head__O();
+            var t = $as_sci_List($n(l).tail__O());
+            if (($uZ(f(h)) === true)) {
+              l = t;
+              continue
+            };
+            var start = l;
+            var remaining = t;
+            while (true) {
+              if ($n(remaining).isEmpty__Z()) {
+                var result = start;
+                break block
+              } else {
+                var x$1 = $n(remaining).head__O();
+                if (($uZ(f(x$1)) !== true)) {
+                  remaining = $as_sci_List($n(remaining).tail__O());
+                  continue
+                };
+                var firstMiss = remaining;
+                var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
+                var toProcess = $as_sci_List($n(start).tail__O());
+                var currentLast = newHead;
+                while ((toProcess !== firstMiss)) {
+                  var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
+                  $n(currentLast).sci_$colon$colon__f_next = newElem;
+                  currentLast = newElem;
+                  toProcess = $as_sci_List($n(toProcess).tail__O())
+                };
+                var next = $as_sci_List($n(firstMiss).tail__O());
+                var nextToCopy = next;
+                while ((!$n(next).isEmpty__Z())) {
+                  var head = $n(next).head__O();
+                  if (($uZ(f(head)) !== true)) {
+                    next = $as_sci_List($n(next).tail__O())
+                  } else {
+                    while ((nextToCopy !== next)) {
+                      var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
+                      $n(currentLast).sci_$colon$colon__f_next = newElem$2;
+                      currentLast = newElem$2;
+                      nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
+                    };
+                    nextToCopy = $as_sci_List($n(next).tail__O());
+                    next = $as_sci_List($n(next).tail__O())
+                  }
+                };
+                if ((!$n(nextToCopy).isEmpty__Z())) {
+                  $n(currentLast).sci_$colon$colon__f_next = nextToCopy
+                };
+                var result = newHead;
+                break block
+              }
+            }
+          }
+        }
+      };
+      return result
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppList$$anon$2", {
+  Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_app_AwsCodeBuildAppList$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2(loadedCb$2, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2__f_loadedCb$1 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2__f_loadedCb$1 = loadedCb$2;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x12 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x12 !== null)) {
+      var this$2 = $n(x12);
+      var this$3 = $n(x12);
+      var this$4 = $n(x12);
+      var this$5 = $n(x12);
+      return true
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x20 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x20 !== null)) {
+      var this$2 = $n(x20);
+      var x22 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x20);
+      var this$4 = $n(x20);
+      var this$5 = $n(x20);
+      var this$6 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp);
+      var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+        $as_s_Option(_$1);
+        return x22
+      }));
+      $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+      var $$x2 = $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$();
+      var this$7 = $n(x22);
+      if (this$7.isEmpty__Z()) {
+        var $$x1 = true
+      } else {
+        var arg1 = this$7.get__O();
+        var _$2 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+        var $$x1 = $n(_$2).Lcom_swarm_models_Models$AwsCodeBuildApp__f_building
+      };
+      $n($$x2).com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateApp__s_Option__I__V(($$x1 ? this$7 : $m_s_None$()), 5000);
+      var this$8 = $n(this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2__f_loadedCb$1);
+      if ((!this$8.isEmpty__Z())) {
+        var arg1$1 = this$8.get__O();
+        var cb = $as_F0(arg1$1);
+        $n(cb).apply__O()
+      };
+      return (void 0)
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$2", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x28 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x28 !== null)) {
+      var this$2 = $n(x28);
+      var x30 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x28);
+      var this$4 = $n(x28);
+      var this$5 = $n(x28);
+      if ((x30 instanceof $c_s_Some)) {
+        $as_sci_List($n($as_s_Some(x30)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x38 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x38 !== null)) {
+      var this$2 = $n(x38);
+      var x40 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x38);
+      var this$4 = $n(x38);
+      var this$5 = $n(x38);
+      if ((x40 instanceof $c_s_Some)) {
+        var builds = $as_sci_List($n($as_s_Some(x40)).s_Some__f_value);
+        var this$7 = $n(builds);
+        var f = ((_$3) => {
+          var _$3$1 = $as_Lcom_swarm_models_Models$AwsBuild(_$3);
+          var this$6 = $n(_$3$1);
+          return (!this$6.completed__Z())
+        });
+        var l = this$7;
+        block: {
+          var result;
+          while (true) {
+            if ($n(l).isEmpty__Z()) {
+              var result = $m_sci_Nil$();
+              break
+            } else {
+              var h = $n(l).head__O();
+              var t = $as_sci_List($n(l).tail__O());
+              if (($uZ(f(h)) === false)) {
+                l = t;
+                continue
+              };
+              var start = l;
+              var remaining = t;
+              while (true) {
+                if ($n(remaining).isEmpty__Z()) {
+                  var result = start;
+                  break block
+                } else {
+                  var x$1 = $n(remaining).head__O();
+                  if (($uZ(f(x$1)) !== false)) {
+                    remaining = $as_sci_List($n(remaining).tail__O());
+                    continue
+                  };
+                  var firstMiss = remaining;
+                  var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
+                  var toProcess = $as_sci_List($n(start).tail__O());
+                  var currentLast = newHead;
+                  while ((toProcess !== firstMiss)) {
+                    var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
+                    $n(currentLast).sci_$colon$colon__f_next = newElem;
+                    currentLast = newElem;
+                    toProcess = $as_sci_List($n(toProcess).tail__O())
+                  };
+                  var next = $as_sci_List($n(firstMiss).tail__O());
+                  var nextToCopy = next;
+                  while ((!$n(next).isEmpty__Z())) {
+                    var head = $n(next).head__O();
+                    if (($uZ(f(head)) !== false)) {
+                      next = $as_sci_List($n(next).tail__O())
+                    } else {
+                      while ((nextToCopy !== next)) {
+                        var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
+                        $n(currentLast).sci_$colon$colon__f_next = newElem$2;
+                        currentLast = newElem$2;
+                        nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
+                      };
+                      nextToCopy = $as_sci_List($n(next).tail__O());
+                      next = $as_sci_List($n(next).tail__O())
+                    }
+                  };
+                  if ((!$n(nextToCopy).isEmpty__Z())) {
+                    $n(currentLast).sci_$colon$colon__f_next = nextToCopy
+                  };
+                  var result = newHead;
+                  break block
+                }
+              }
+            }
+          }
+        };
+        var this$8 = $n(result);
+        var these = this$8;
+        while ((!$n(these).isEmpty__Z())) {
+          var arg1 = $n(these).head__O();
+          var build = $as_Lcom_swarm_models_Models$AwsBuild(arg1);
+          $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateBuild__Lcom_swarm_models_Models$AwsBuild__V(build);
+          these = $as_sci_List($n(these).tail__O())
+        };
+        var this$9 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds);
+        var mod = new $c_sjsr_AnonFunction1(((_$4) => {
+          $as_sci_List(_$4);
+          return builds
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$9, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$3", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$3;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4(awsBuild$13, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4__f_awsBuild$1 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4__f_awsBuild$1 = awsBuild$13;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var this$3 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds);
+    var mod = new $c_sjsr_AnonFunction1(((lst) => {
+      var lst$1 = $as_sci_List(lst);
+      var this$2 = $n(lst$1);
+      var f = ((_$5) => {
+        var _$5$1 = $as_Lcom_swarm_models_Models$AwsBuild(_$5);
+        return ($n(_$5$1).Lcom_swarm_models_Models$AwsBuild__f_id === $n(this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4__f_awsBuild$1).Lcom_swarm_models_Models$AwsBuild__f_id)
+      });
+      var l = this$2;
+      block: {
+        var result;
+        while (true) {
+          if ($n(l).isEmpty__Z()) {
+            var result = $m_sci_Nil$();
+            break
+          } else {
+            var h = $n(l).head__O();
+            var t = $as_sci_List($n(l).tail__O());
+            if (($uZ(f(h)) === true)) {
+              l = t;
+              continue
+            };
+            var start = l;
+            var remaining = t;
+            while (true) {
+              if ($n(remaining).isEmpty__Z()) {
+                var result = start;
+                break block
+              } else {
+                var x$1 = $n(remaining).head__O();
+                if (($uZ(f(x$1)) !== true)) {
+                  remaining = $as_sci_List($n(remaining).tail__O());
+                  continue
+                };
+                var firstMiss = remaining;
+                var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
+                var toProcess = $as_sci_List($n(start).tail__O());
+                var currentLast = newHead;
+                while ((toProcess !== firstMiss)) {
+                  var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
+                  $n(currentLast).sci_$colon$colon__f_next = newElem;
+                  currentLast = newElem;
+                  toProcess = $as_sci_List($n(toProcess).tail__O())
+                };
+                var next = $as_sci_List($n(firstMiss).tail__O());
+                var nextToCopy = next;
+                while ((!$n(next).isEmpty__Z())) {
+                  var head = $n(next).head__O();
+                  if (($uZ(f(head)) !== true)) {
+                    next = $as_sci_List($n(next).tail__O())
+                  } else {
+                    while ((nextToCopy !== next)) {
+                      var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
+                      $n(currentLast).sci_$colon$colon__f_next = newElem$2;
+                      currentLast = newElem$2;
+                      nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
+                    };
+                    nextToCopy = $as_sci_List($n(next).tail__O());
+                    next = $as_sci_List($n(next).tail__O())
+                  }
+                };
+                if ((!$n(nextToCopy).isEmpty__Z())) {
+                  $n(currentLast).sci_$colon$colon__f_next = nextToCopy
+                };
+                var result = newHead;
+                break block
+              }
+            }
+          }
+        }
+      };
+      return result
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$4", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$4;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5(awsBuild$14, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5__f_awsBuild$3 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5__f_awsBuild$3 = awsBuild$14;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x54 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x54 !== null)) {
+      var this$2 = $n(x54);
+      var x56 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x54);
+      var this$4 = $n(x54);
+      var this$5 = $n(x54);
+      if ((x56 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x56)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x64 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x64 !== null)) {
+      var this$2 = $n(x64);
+      var x66 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x64);
+      var this$4 = $n(x64);
+      var this$5 = $n(x64);
+      if ((x66 instanceof $c_s_Some)) {
+        var build = $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x66)).s_Some__f_value);
+        var this$7 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+        var mod = new $c_sjsr_AnonFunction1(((_$7) => {
+          $as_s_Option(_$7);
+          var value = $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+          return new $c_s_Some(value)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
+        var this$13 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds);
+        var mod$1 = new $c_sjsr_AnonFunction1(((lst) => {
+          var lst$1 = $as_sci_List(lst);
+          var $$x2 = $n(lst$1);
+          var this$9 = $n(lst$1);
+          _return: {
+            var i = 0;
+            var these = $p_sc_StrictOptimizedLinearSeqOps__loop$2__I__sc_LinearSeq__sc_LinearSeq(this$9, 0, this$9);
+            while (true) {
+              var this$12 = $n(these);
+              if ((!this$12.isEmpty__Z())) {
+                var arg1 = $n(these).head__O();
+                var _$8 = $as_Lcom_swarm_models_Models$AwsBuild(arg1);
+                if (($n(_$8).Lcom_swarm_models_Models$AwsBuild__f_id === $n(this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5__f_awsBuild$3).Lcom_swarm_models_Models$AwsBuild__f_id)) {
+                  var $$x1 = i;
+                  break _return
+                };
+                i = ((1 + i) | 0);
+                these = $as_sc_LinearSeq($n(these).tail__O())
+              } else {
+                break
+              }
+            };
+            var $$x1 = (-1)
+          };
+          return $n($$x2).updated__I__O__sci_List($$x1, build)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$13, mod$1);
+        var this$14 = $n(build);
+        if ((!this$14.completed__Z())) {
+          $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateBuild__Lcom_swarm_models_Models$AwsBuild__V(build);
+          return (void 0)
+        } else {
+          return (void 0)
+        }
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$5", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$5;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6(app$4) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6__f_app$2 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6__f_app$2 = app$4
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x74 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x74 !== null)) {
+      var this$2 = $n(x74);
+      var x76 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x74);
+      var this$4 = $n(x74);
+      var this$5 = $n(x74);
+      if ((x76 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x76)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x84 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x84 !== null)) {
+      var this$2 = $n(x84);
+      var x86 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x84);
+      var this$4 = $n(x84);
+      var this$5 = $n(x84);
+      if ((x86 instanceof $c_s_Some)) {
+        var build = $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x86)).s_Some__f_value);
+        var this$7 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+        var mod = new $c_sjsr_AnonFunction1(((_$10) => {
+          $as_s_Option(_$10);
+          var value = $s_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing__Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+          return new $c_s_Some(value)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$7, mod);
+        var this$9 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds);
+        var mod$1 = new $c_sjsr_AnonFunction1(((lst) => {
+          var lst$1 = $as_sci_List(lst);
+          var this$8 = $n(lst$1);
+          return new $c_sci_$colon$colon(build, this$8)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$9, mod$1);
+        var this$25 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp);
+        var mod$2 = new $c_sjsr_AnonFunction1(((_$11) => {
+          var _$11$1 = $as_s_Option(_$11);
+          var this$10 = $n(_$11$1);
+          if (this$10.isEmpty__Z()) {
+            return $m_s_None$()
+          } else {
+            var arg1 = this$10.get__O();
+            var _$12 = $as_Lcom_swarm_models_Models$AwsCodeBuildApp(arg1);
+            $n(_$12);
+            var this$11 = $n(_$12);
+            var id = this$11.Lcom_swarm_models_Models$AwsCodeBuildApp__f_id;
+            var this$12 = $n(_$12);
+            var stackVarName = this$12.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackVarName;
+            var this$13 = $n(_$12);
+            var versionTag = this$13.Lcom_swarm_models_Models$AwsCodeBuildApp__f_versionTag;
+            var this$14 = $n(_$12);
+            var awsEcrRepositoryName = this$14.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsEcrRepositoryName;
+            var this$15 = $n(_$12);
+            var awsAccountId = this$15.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsAccountId;
+            var this$16 = $n(_$12);
+            var awsRegion = this$16.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsRegion;
+            var this$17 = $n(_$12);
+            var awsUrl = this$17.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsUrl;
+            var this$18 = $n(_$12);
+            var awsProjectName = this$18.Lcom_swarm_models_Models$AwsCodeBuildApp__f_awsProjectName;
+            var this$19 = $n(_$12);
+            var codeBase = this$19.Lcom_swarm_models_Models$AwsCodeBuildApp__f_codeBase;
+            var this$20 = $n(_$12);
+            var buildVars = this$20.Lcom_swarm_models_Models$AwsCodeBuildApp__f_buildVars;
+            var this$21 = $n(_$12);
+            var lastBuildAt = this$21.Lcom_swarm_models_Models$AwsCodeBuildApp__f_lastBuildAt;
+            var this$22 = $n(_$12);
+            var stackId = this$22.Lcom_swarm_models_Models$AwsCodeBuildApp__f_stackId;
+            var this$23 = $n(_$12);
+            var updatedAt = this$23.Lcom_swarm_models_Models$AwsCodeBuildApp__f_updatedAt;
+            return new $c_s_Some(new $c_Lcom_swarm_models_Models$AwsCodeBuildApp(id, stackVarName, versionTag, awsEcrRepositoryName, awsAccountId, awsRegion, awsUrl, awsProjectName, codeBase, buildVars, lastBuildAt, stackId, updatedAt, true))
+          }
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$25, mod$2);
+        $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateBuild__Lcom_swarm_models_Models$AwsBuild__V(build);
+        var $$x1 = $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$();
+        var value$1 = this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6__f_app$2;
+        $n($$x1).com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateApp__s_Option__I__V(new $c_s_Some(value$1), 5000);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$6", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$6;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7(awsBuild$15, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7__f_awsBuild$5 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7__f_awsBuild$5 = awsBuild$15;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x94 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x94 !== null)) {
+      var this$2 = $n(x94);
+      var x96 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x94);
+      var this$4 = $n(x94);
+      var this$5 = $n(x94);
+      if ((x96 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x96)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x104 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x104 !== null)) {
+      var this$2 = $n(x104);
+      var x106 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x104);
+      var this$4 = $n(x104);
+      var this$5 = $n(x104);
+      if ((x106 instanceof $c_s_Some)) {
+        var build = $as_Lcom_swarm_models_Models$AwsBuild($n($as_s_Some(x106)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$eventVar);
+        var mod = new $c_sjsr_AnonFunction1(((_$14) => {
+          $as_s_Option(_$14);
+          return $m_s_None$()
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        var this$12 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsBuilds);
+        var mod$1 = new $c_sjsr_AnonFunction1(((lst) => {
+          var lst$1 = $as_sci_List(lst);
+          var $$x2 = $n(lst$1);
+          var this$8 = $n(lst$1);
+          _return: {
+            var i = 0;
+            var these = $p_sc_StrictOptimizedLinearSeqOps__loop$2__I__sc_LinearSeq__sc_LinearSeq(this$8, 0, this$8);
+            while (true) {
+              var this$11 = $n(these);
+              if ((!this$11.isEmpty__Z())) {
+                var arg1 = $n(these).head__O();
+                var _$15 = $as_Lcom_swarm_models_Models$AwsBuild(arg1);
+                if (($n(_$15).Lcom_swarm_models_Models$AwsBuild__f_id === $n(this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7__f_awsBuild$5).Lcom_swarm_models_Models$AwsBuild__f_id)) {
+                  var $$x1 = i;
+                  break _return
+                };
+                i = ((1 + i) | 0);
+                these = $as_sc_LinearSeq($n(these).tail__O())
+              } else {
+                break
+              }
+            };
+            var $$x1 = (-1)
+          };
+          return $n($$x2).updated__I__O__sci_List($$x1, build)
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$12, mod$1);
+        var $$x3 = $m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$();
+        var this$13 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$awsApp);
+        var this$14 = $n(this$13.Lcom_raquo_airstream_state_SourceVar__f_signal);
+        $n($$x3).com$swarm$pages$adm$aws$codebuild$build$AwsBuildList$$$autoUpdateApp__s_Option__I__V($as_s_Option($n($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this$14)).get__O()), 0);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$$anon$7", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$$anon$7;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event.prototype = new $h_O();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_s_Product$$anon$1(this)
+});
+function $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(obj) {
+  return (((obj instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event"))
+}
+function $isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event)))
+}
+function $asArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(obj, depth) {
+  return (($isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event;", depth))
+}
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x3 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x3 !== null)) {
+      var this$2 = $n(x3);
+      var this$3 = $n(x3);
+      var this$4 = $n(x3);
+      var this$5 = $n(x3);
+      return true
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x11 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x11 !== null)) {
+      var this$2 = $n(x11);
+      var x13 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x11);
+      var this$4 = $n(x11);
+      var this$5 = $n(x11);
+      var this$6 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsApp);
+      var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+        $as_s_Option(_$1);
+        return x13
+      }));
+      $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+      return (void 0)
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildLogStream$$anon$1", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x19 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x19 !== null)) {
+      var this$2 = $n(x19);
+      var this$3 = $n(x19);
+      var this$4 = $n(x19);
+      var this$5 = $n(x19);
+      return true
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x27 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x27 !== null)) {
+      var this$2 = $n(x27);
+      var x29 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x27);
+      var this$4 = $n(x27);
+      var this$5 = $n(x27);
+      var this$6 = $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$awsBuild);
+      var mod = new $c_sjsr_AnonFunction1(((_$2) => {
+        $as_s_Option(_$2);
+        return x29
+      }));
+      $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+      var this$7 = $n(x29);
+      if ((!this$7.isEmpty__Z())) {
+        var arg1 = this$7.get__O();
+        var b = $as_Lcom_swarm_models_Models$AwsBuild(arg1);
+        $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__streamOpen__Lcom_swarm_models_Models$AwsBuild__V($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$(), b);
+        $p_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__loadAwsApp__I__V($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$(), $n(b).Lcom_swarm_models_Models$AwsBuild__f_awsCodebuildAppId)
+      };
+      return (void 0)
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildLogStream$$anon$2", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3(build$3, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3__f_build$2 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3__f_build$2 = build$3;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var msgType = $n($s_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart__Lcom_swarm_api_WebSocketClient$WsMsgType()).toString__T();
+    var msg = $n($m_Lcom_swarm_models_Models$AwsBuild$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter()).toNative__O__sjs_js_Any(this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3__f_build$2);
+    var msg$1 = new $c_Lcom_swarm_api_WebSocketClient$WsMsg(msgType, msg);
+    $n($m_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$().Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$__f_com$swarm$pages$adm$aws$codebuild$build$AwsBuildLogStream$$$wsClient).send__Lcom_swarm_api_WebSocketClient$WsMsg__V(msg$1);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildLogStream$$anon$3", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildLogStream$$anon$3;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_stack_StackForm$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype = $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  return ((x instanceof $c_s_util_Success) ? ($m_Lcom_swarm_services_Router$().navigate__T__V("/adm/stack"), (void 0)) : $n(default$1).apply__O__O(x))
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_stack_StackForm$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_stack_StackForm$$anon$1: 0
+}, false, "com.swarm.pages.adm.stack.StackForm$$anon$1", {
+  Lcom_swarm_pages_adm_stack_StackForm$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_stack_StackForm$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_stack_StackForm$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype = $c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x15 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x15 !== null)) {
+      var this$2 = $n(x15);
+      var x17 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x15);
+      var this$4 = $n(x15);
+      var this$5 = $n(x15);
+      if ((x17 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$Stack($n($as_s_Some(x17)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x27 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x27 !== null)) {
+      var this$2 = $n(x27);
+      var x29 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x27);
+      var this$4 = $n(x27);
+      var this$5 = $n(x27);
+      if ((x29 instanceof $c_s_Some)) {
+        var stack = $as_Lcom_swarm_models_Models$Stack($n($as_s_Some(x29)).s_Some__f_value);
+        var TransformerInto_this = new $c_Lio_scalaland_chimney_dsl_TransformerInto(stack, new $c_Lio_scalaland_chimney_dsl_TransformerDefinition(($n($m_s_package$().s_package$__f_Vector), $m_sci_Vector0$())));
+        $n(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_td);
+        var stack$macro$1 = $as_Lcom_swarm_models_Models$Stack(TransformerInto_this.Lio_scalaland_chimney_dsl_TransformerInto__f_source);
+        var form = new $c_Lcom_swarm_pages_adm_stack_StackForm$StackForm($n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_id, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_name, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_content, $n(stack$macro$1).Lcom_swarm_models_Models$Stack__f_enabled);
+        var this$8 = $n($m_Lcom_swarm_pages_adm_stack_StackForm$().Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$stateVar);
+        $f_Lcom_raquo_airstream_state_Var__set__O__V(this$8, form);
+        $m_Lcom_swarm_pages_adm_stack_StackForm$().Lcom_swarm_pages_adm_stack_StackForm$__f_com$swarm$pages$adm$stack$StackForm$$$editor.codemirror.setValue(form.Lcom_swarm_pages_adm_stack_StackForm$StackForm__f_content);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_stack_StackForm$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_stack_StackForm$$anon$2: 0
+}, false, "com.swarm.pages.adm.stack.StackForm$$anon$2", {
+  Lcom_swarm_pages_adm_stack_StackForm$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_stack_StackForm$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_stack_StackForm$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_stack_StackList$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackList$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_stack_StackList$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype = $c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x3 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x3 !== null)) {
+      var this$2 = $n(x3);
+      var x5 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x3);
+      var this$4 = $n(x3);
+      var this$5 = $n(x3);
+      if ((x5 instanceof $c_s_Some)) {
+        $as_sci_List($n($as_s_Some(x5)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x13 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x13 !== null)) {
+      var this$2 = $n(x13);
+      var x15 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x13);
+      var this$4 = $n(x13);
+      var this$5 = $n(x13);
+      if ((x15 instanceof $c_s_Some)) {
+        var lst = $as_sci_List($n($as_s_Some(x15)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_adm_stack_StackList$().Lcom_swarm_pages_adm_stack_StackList$__f_com$swarm$pages$adm$stack$StackList$$$stacks);
+        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+          $as_sci_List(_$1);
+          return lst
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_stack_StackList$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_stack_StackList$$anon$1: 0
+}, false, "com.swarm.pages.adm.stack.StackList$$anon$1", {
+  Lcom_swarm_pages_adm_stack_StackList$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_stack_StackList$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_stack_StackList$$anon$2(stack$5, outer) {
+  this.Lcom_swarm_pages_adm_stack_StackList$$anon$2__f_stack$1 = null;
+  this.Lcom_swarm_pages_adm_stack_StackList$$anon$2__f_stack$1 = stack$5;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_adm_stack_StackList$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_stack_StackList$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype = $c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype;
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var this$3 = $n($m_Lcom_swarm_pages_adm_stack_StackList$().Lcom_swarm_pages_adm_stack_StackList$__f_com$swarm$pages$adm$stack$StackList$$$stacks);
+    var mod = new $c_sjsr_AnonFunction1(((lst) => {
+      var lst$1 = $as_sci_List(lst);
+      var this$2 = $n(lst$1);
+      var f = ((_$2) => {
+        var _$2$1 = $as_Lcom_swarm_models_Models$Stack(_$2);
+        return ($n(_$2$1).Lcom_swarm_models_Models$Stack__f_id === $n(this.Lcom_swarm_pages_adm_stack_StackList$$anon$2__f_stack$1).Lcom_swarm_models_Models$Stack__f_id)
+      });
+      var l = this$2;
+      block: {
+        var result;
+        while (true) {
+          if ($n(l).isEmpty__Z()) {
+            var result = $m_sci_Nil$();
+            break
+          } else {
+            var h = $n(l).head__O();
+            var t = $as_sci_List($n(l).tail__O());
+            if (($uZ(f(h)) === true)) {
+              l = t;
+              continue
+            };
+            var start = l;
+            var remaining = t;
+            while (true) {
+              if ($n(remaining).isEmpty__Z()) {
+                var result = start;
+                break block
+              } else {
+                var x$1 = $n(remaining).head__O();
+                if (($uZ(f(x$1)) !== true)) {
+                  remaining = $as_sci_List($n(remaining).tail__O());
+                  continue
+                };
+                var firstMiss = remaining;
+                var newHead = new $c_sci_$colon$colon($n(start).head__O(), $m_sci_Nil$());
+                var toProcess = $as_sci_List($n(start).tail__O());
+                var currentLast = newHead;
+                while ((toProcess !== firstMiss)) {
+                  var newElem = new $c_sci_$colon$colon($n(toProcess).head__O(), $m_sci_Nil$());
+                  $n(currentLast).sci_$colon$colon__f_next = newElem;
+                  currentLast = newElem;
+                  toProcess = $as_sci_List($n(toProcess).tail__O())
+                };
+                var next = $as_sci_List($n(firstMiss).tail__O());
+                var nextToCopy = next;
+                while ((!$n(next).isEmpty__Z())) {
+                  var head = $n(next).head__O();
+                  if (($uZ(f(head)) !== true)) {
+                    next = $as_sci_List($n(next).tail__O())
+                  } else {
+                    while ((nextToCopy !== next)) {
+                      var newElem$2 = new $c_sci_$colon$colon($n(nextToCopy).head__O(), $m_sci_Nil$());
+                      $n(currentLast).sci_$colon$colon__f_next = newElem$2;
+                      currentLast = newElem$2;
+                      nextToCopy = $as_sci_List($n(nextToCopy).tail__O())
+                    };
+                    nextToCopy = $as_sci_List($n(next).tail__O());
+                    next = $as_sci_List($n(next).tail__O())
+                  }
+                };
+                if ((!$n(nextToCopy).isEmpty__Z())) {
+                  $n(currentLast).sci_$colon$colon__f_next = nextToCopy
+                };
+                var result = newHead;
+                break block
+              }
+            }
+          }
+        }
+      };
+      return result
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$3, mod);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_adm_stack_StackList$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_stack_StackList$$anon$2: 0
+}, false, "com.swarm.pages.adm.stack.StackList$$anon$2", {
+  Lcom_swarm_pages_adm_stack_StackList$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_adm_stack_StackList$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_adm_stack_StackList$$anon$2;
 function $ct_Lcom_swarm_pages_comps_Theme$CmdType__T__($thiz, icon) {
   $thiz.Lcom_swarm_pages_comps_Theme$CmdType__f_icon = icon;
   return $thiz
@@ -28891,6 +31979,180 @@ $h_Lcom_swarm_pages_comps_Theme$CmdType.prototype = $c_Lcom_swarm_pages_comps_Th
 $c_Lcom_swarm_pages_comps_Theme$CmdType.prototype.productIterator__sc_Iterator = (function() {
   return new $c_s_Product$$anon$1(this)
 });
+/** @constructor */
+function $c_Lcom_swarm_pages_services_ServiceLS$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_services_ServiceLS$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_services_ServiceLS$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype = $c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype;
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x3 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x3 !== null)) {
+      var this$2 = $n(x3);
+      var x5 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x3);
+      var this$4 = $n(x3);
+      var this$5 = $n(x3);
+      if ((x5 instanceof $c_s_Some)) {
+        $as_sci_List($n($as_s_Some(x5)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x13 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x13 !== null)) {
+      var this$2 = $n(x13);
+      var x15 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x13);
+      var this$4 = $n(x13);
+      var this$5 = $n(x13);
+      if ((x15 instanceof $c_s_Some)) {
+        var service = $as_sci_List($n($as_s_Some(x15)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_services_ServiceLS$().Lcom_swarm_pages_services_ServiceLS$__f_com$swarm$pages$services$ServiceLS$$$servicesVar);
+        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+          $as_sci_List(_$1);
+          return service
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_services_ServiceLS$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_services_ServiceLS$$anon$1: 0
+}, false, "com.swarm.pages.services.ServiceLS$$anon$1", {
+  Lcom_swarm_pages_services_ServiceLS$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_services_ServiceLS$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_services_ServiceLS$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2(serviceName$3, serviceId$3, outer) {
+  this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceName$1 = null;
+  this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceId$1 = null;
+  this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceName$1 = serviceName$3;
+  this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceId$1 = serviceId$3;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_services_ServiceLogStream$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype = $c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype;
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return (x instanceof $c_s_util_Success)
+});
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var msgType = $n($s_Lcom_swarm_api_WebSocketClient$WsMsgType$__logStart__Lcom_swarm_api_WebSocketClient$WsMsgType()).toString__T();
+    var $$x1 = $n($m_Lcom_swarm_pages_services_ServiceLogStream$ServiceName$().derived$NativeConverter__Lorg_getshaka_nativeconverter_NativeConverter());
+    var serviceName = this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceName$1;
+    var serviceId = this.Lcom_swarm_pages_services_ServiceLogStream$$anon$2__f_serviceId$1;
+    var msg = $n($$x1).toNative__O__sjs_js_Any(new $c_Lcom_swarm_pages_services_ServiceLogStream$ServiceName(serviceName, serviceId, 100));
+    var msg$1 = new $c_Lcom_swarm_api_WebSocketClient$WsMsg(msgType, msg);
+    $n($m_Lcom_swarm_pages_services_ServiceLogStream$().Lcom_swarm_pages_services_ServiceLogStream$__f_com$swarm$pages$services$ServiceLogStream$$$wsClient).send__Lcom_swarm_api_WebSocketClient$WsMsg__V(msg$1);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_services_ServiceLogStream$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_services_ServiceLogStream$$anon$2: 0
+}, false, "com.swarm.pages.services.ServiceLogStream$$anon$2", {
+  Lcom_swarm_pages_services_ServiceLogStream$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_services_ServiceLogStream$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_services_ServiceLogStream$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_services_ServicePS$$anon$2(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_services_ServicePS$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_services_ServicePS$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype = $c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype;
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return ((x instanceof $c_s_util_Success) && ($as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value), true))
+});
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var data = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    var this$1 = $n($n(data).Lcom_swarm_api_ApiServer$ApiResult__f_data);
+    if ((!this$1.isEmpty__Z())) {
+      var arg1 = this$1.get__O();
+      var services = $as_sci_List(arg1);
+      $p_Lcom_swarm_pages_services_ServicePS$__extractServiceName__sci_List__V($m_Lcom_swarm_pages_services_ServicePS$(), services)
+    };
+    var this$2 = $n($m_Lcom_swarm_pages_services_ServicePS$().Lcom_swarm_pages_services_ServicePS$__f_com$swarm$pages$services$ServicePS$$$servicesVar);
+    var mod = new $c_sjsr_AnonFunction1(((_$7) => {
+      $as_s_Option(_$7);
+      return $n(data).Lcom_swarm_api_ApiServer$ApiResult__f_data
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_services_ServicePS$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_services_ServicePS$$anon$2: 0
+}, false, "com.swarm.pages.services.ServicePS$$anon$2", {
+  Lcom_swarm_pages_services_ServicePS$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_services_ServicePS$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_services_ServicePS$$anon$2;
 /** @constructor */
 function $c_Lcom_swarm_pages_services_TerminalView() {
   /*<skip>*/
@@ -28914,6 +32176,205 @@ function $isArrayOf_Lcom_swarm_pages_services_TerminalView(obj, depth) {
 function $asArrayOf_Lcom_swarm_pages_services_TerminalView(obj, depth) {
   return (($isArrayOf_Lcom_swarm_pages_services_TerminalView(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.pages.services.TerminalView;", depth))
 }
+/** @constructor */
+function $c_Lcom_swarm_pages_stacks_StackManager$$anon$1(outer) {
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_stacks_StackManager$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_stacks_StackManager$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype = $c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype;
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x3 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x3 !== null)) {
+      var this$2 = $n(x3);
+      var this$3 = $n(x3);
+      var this$4 = $n(x3);
+      var this$5 = $n(x3);
+      return true
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x11 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x11 !== null)) {
+      var this$2 = $n(x11);
+      var x13 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x11);
+      var this$4 = $n(x11);
+      var this$5 = $n(x11);
+      var this$6 = $n($m_Lcom_swarm_pages_stacks_StackManager$().Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$stack);
+      var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+        $as_s_Option(_$1);
+        return x13
+      }));
+      $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+      return (void 0)
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_stacks_StackManager$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_stacks_StackManager$$anon$1: 0
+}, false, "com.swarm.pages.stacks.StackManager$$anon$1", {
+  Lcom_swarm_pages_stacks_StackManager$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_stacks_StackManager$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_stacks_StackManager$$anon$2() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.constructor = $c_Lcom_swarm_pages_stacks_StackManager$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_pages_stacks_StackManager$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype = $c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype;
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x19 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x19 !== null)) {
+      var this$2 = $n(x19);
+      var x21 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x19);
+      var this$4 = $n(x19);
+      var this$5 = $n(x19);
+      if ((x21 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$CmdResult($n($as_s_Some(x21)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x29 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x29 !== null)) {
+      var this$2 = $n(x29);
+      var x31 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x29);
+      var this$4 = $n(x29);
+      var this$5 = $n(x29);
+      if ((x31 instanceof $c_s_Some)) {
+        var cmd = $as_Lcom_swarm_models_Models$CmdResult($n($as_s_Some(x31)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_stacks_StackManager$().Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results);
+        var mod = new $c_sjsr_AnonFunction1(((_$2) => {
+          $as_s_Option(_$2);
+          return $n(cmd).Lcom_swarm_models_Models$CmdResult__f_messages
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_stacks_StackManager$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_pages_stacks_StackManager$$anon$2: 0
+}, false, "com.swarm.pages.stacks.StackManager$$anon$2", {
+  Lcom_swarm_pages_stacks_StackManager$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$2.prototype.$classData = $d_Lcom_swarm_pages_stacks_StackManager$$anon$2;
+/** @constructor */
+function $c_Lcom_swarm_pages_stacks_StackManager$$anon$3() {
+  /*<skip>*/
+}
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.constructor = $c_Lcom_swarm_pages_stacks_StackManager$$anon$3;
+/** @constructor */
+function $h_Lcom_swarm_pages_stacks_StackManager$$anon$3() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype = $c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype;
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x39 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x39 !== null)) {
+      var this$2 = $n(x39);
+      var x41 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x39);
+      var this$4 = $n(x39);
+      var this$5 = $n(x39);
+      if ((x41 instanceof $c_s_Some)) {
+        $as_Lcom_swarm_models_Models$CmdResult($n($as_s_Some(x41)).s_Some__f_value);
+        return true
+      }
+    }
+  };
+  return false
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x49 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x49 !== null)) {
+      var this$2 = $n(x49);
+      var x51 = this$2.Lcom_swarm_api_ApiServer$ApiResult__f_data;
+      var this$3 = $n(x49);
+      var this$4 = $n(x49);
+      var this$5 = $n(x49);
+      if ((x51 instanceof $c_s_Some)) {
+        var cmd = $as_Lcom_swarm_models_Models$CmdResult($n($as_s_Some(x51)).s_Some__f_value);
+        var this$6 = $n($m_Lcom_swarm_pages_stacks_StackManager$().Lcom_swarm_pages_stacks_StackManager$__f_com$swarm$pages$stacks$StackManager$$$results);
+        var mod = new $c_sjsr_AnonFunction1(((_$3) => {
+          $as_s_Option(_$3);
+          return $n(cmd).Lcom_swarm_models_Models$CmdResult__f_messages
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$6, mod);
+        return (void 0)
+      }
+    }
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_pages_stacks_StackManager$$anon$3 = new $TypeData().initClass({
+  Lcom_swarm_pages_stacks_StackManager$$anon$3: 0
+}, false, "com.swarm.pages.stacks.StackManager$$anon$3", {
+  Lcom_swarm_pages_stacks_StackManager$$anon$3: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_pages_stacks_StackManager$$anon$3.prototype.$classData = $d_Lcom_swarm_pages_stacks_StackManager$$anon$3;
 class $c_Lcom_swarm_services_AuthService$AuthException extends $c_jl_RuntimeException {
   constructor(message) {
     super();
@@ -28931,6 +32392,164 @@ var $d_Lcom_swarm_services_AuthService$AuthException = new $TypeData().initClass
   Ljava_io_Serializable: 1
 });
 $c_Lcom_swarm_services_AuthService$AuthException.prototype.$classData = $d_Lcom_swarm_services_AuthService$AuthException;
+/** @constructor */
+function $c_Lcom_swarm_util_ApiErrorHandle$$anon$1(message$3, outer) {
+  this.Lcom_swarm_util_ApiErrorHandle$$anon$1__f_message$1 = null;
+  this.Lcom_swarm_util_ApiErrorHandle$$anon$1__f_message$1 = message$3;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.constructor = $c_Lcom_swarm_util_ApiErrorHandle$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_util_ApiErrorHandle$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype = $c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype;
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x7 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x7 !== null)) {
+      var this$2 = $n(x7);
+      var this$3 = $n(x7);
+      var x10 = this$3.Lcom_swarm_api_ApiServer$ApiResult__f_error;
+      var this$4 = $n(x7);
+      var this$5 = $n(x7);
+      if (((x10 instanceof $c_s_Some) && ($uZ($n($as_s_Some(x10)).s_Some__f_value) === true))) {
+        return true
+      }
+    };
+    return true
+  };
+  if ((x instanceof $c_s_util_Failure)) {
+    $n($as_s_util_Failure(x));
+    return true
+  };
+  return false
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Success)) {
+    var x21 = $as_Lcom_swarm_api_ApiServer$ApiResult($n($as_s_util_Success(x)).s_util_Success__f_value);
+    if ((x21 !== null)) {
+      var this$2 = $n(x21);
+      var this$3 = $n(x21);
+      var x24 = this$3.Lcom_swarm_api_ApiServer$ApiResult__f_error;
+      var this$4 = $n(x21);
+      var x25 = this$4.Lcom_swarm_api_ApiServer$ApiResult__f_message;
+      var this$5 = $n(x21);
+      var x26 = this$5.Lcom_swarm_api_ApiServer$ApiResult__f_messages;
+      if (((x24 instanceof $c_s_Some) && ($uZ($n($as_s_Some(x24)).s_Some__f_value) === true))) {
+        var this$9 = $n(this.Lcom_swarm_util_ApiErrorHandle$$anon$1__f_message$1);
+        var mod = new $c_sjsr_AnonFunction1(((_$1) => {
+          $as_s_Option(_$1);
+          var this$6 = $n(x25);
+          if (this$6.isEmpty__Z()) {
+            var this$7 = $n(x26);
+            if (this$7.isEmpty__Z()) {
+              return $m_s_None$()
+            } else {
+              var arg1 = this$7.get__O();
+              var _$2 = $as_sci_List(arg1);
+              var this$8 = $n(_$2);
+              return new $c_s_Some($f_sc_IterableOnceOps__mkString__T__T__T__T(this$8, "", ", ", ""))
+            }
+          } else {
+            return this$6
+          }
+        }));
+        $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$9, mod);
+        return (void 0)
+      }
+    };
+    var this$11 = $n(this.Lcom_swarm_util_ApiErrorHandle$$anon$1__f_message$1);
+    var mod$1 = new $c_sjsr_AnonFunction1(((_$3) => {
+      $as_s_Option(_$3);
+      return new $c_s_Some("unknown error")
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$11, mod$1);
+    return (void 0)
+  };
+  if ((x instanceof $c_s_util_Failure)) {
+    var err = $n($as_s_util_Failure(x)).s_util_Failure__f_exception;
+    var this$13 = $n(this.Lcom_swarm_util_ApiErrorHandle$$anon$1__f_message$1);
+    var mod$2 = new $c_sjsr_AnonFunction1(((_$4) => {
+      $as_s_Option(_$4);
+      var value = ("" + $n(err).getMessage__T());
+      return new $c_s_Some(value)
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$13, mod$2);
+    return (void 0)
+  };
+  return $n(default$1).apply__O__O(x)
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_util_ApiErrorHandle$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_util_ApiErrorHandle$$anon$1: 0
+}, false, "com.swarm.util.ApiErrorHandle$$anon$1", {
+  Lcom_swarm_util_ApiErrorHandle$$anon$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$1.prototype.$classData = $d_Lcom_swarm_util_ApiErrorHandle$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_util_ApiErrorHandle$$anon$2(message$4, outer) {
+  this.Lcom_swarm_util_ApiErrorHandle$$anon$2__f_message$2 = null;
+  this.Lcom_swarm_util_ApiErrorHandle$$anon$2__f_message$2 = message$4;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.constructor = $c_Lcom_swarm_util_ApiErrorHandle$$anon$2;
+/** @constructor */
+function $h_Lcom_swarm_util_ApiErrorHandle$$anon$2() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype = $c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype;
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.isDefinedAt__s_util_Try__Z = (function(x) {
+  return ((x instanceof $c_s_util_Failure) && ($n($as_s_util_Failure(x)), true))
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.applyOrElse__s_util_Try__F1__O = (function(x, default$1) {
+  if ((x instanceof $c_s_util_Failure)) {
+    var err = $n($as_s_util_Failure(x)).s_util_Failure__f_exception;
+    var this$2 = $n(this.Lcom_swarm_util_ApiErrorHandle$$anon$2__f_message$2);
+    var mod = new $c_sjsr_AnonFunction1(((_$5) => {
+      $as_s_Option(_$5);
+      var value = ("" + $n(err).getMessage__T());
+      return new $c_s_Some(value)
+    }));
+    $f_Lcom_raquo_airstream_state_Var__update__F1__V(this$2, mod);
+    return (void 0)
+  } else {
+    return $n(default$1).apply__O__O(x)
+  }
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__s_util_Try__Z($as_s_util_Try(x))
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  return this.applyOrElse__s_util_Try__F1__O($as_s_util_Try(x), default$1)
+});
+var $d_Lcom_swarm_util_ApiErrorHandle$$anon$2 = new $TypeData().initClass({
+  Lcom_swarm_util_ApiErrorHandle$$anon$2: 0
+}, false, "com.swarm.util.ApiErrorHandle$$anon$2", {
+  Lcom_swarm_util_ApiErrorHandle$$anon$2: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcom_swarm_util_ApiErrorHandle$$anon$2.prototype.$classData = $d_Lcom_swarm_util_ApiErrorHandle$$anon$2;
 /** @constructor */
 function $c_Lfrontroute_Route$RouteEvent$NextRender(nextState, remaining, nextConsumed, render) {
   this.Lfrontroute_Route$RouteEvent$NextRender__f_nextState = null;
@@ -30107,6 +33726,47 @@ function $asArrayOf_s_Option(obj, depth) {
   return (($isArrayOf_s_Option(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Option;", depth))
 }
 /** @constructor */
+function $c_s_PartialFunction$OrElse(f1, f2) {
+  this.s_PartialFunction$OrElse__f_f1 = null;
+  this.s_PartialFunction$OrElse__f_f2 = null;
+  this.s_PartialFunction$OrElse__f_f1 = f1;
+  this.s_PartialFunction$OrElse__f_f2 = f2
+}
+$c_s_PartialFunction$OrElse.prototype = new $h_sr_AbstractPartialFunction();
+$c_s_PartialFunction$OrElse.prototype.constructor = $c_s_PartialFunction$OrElse;
+/** @constructor */
+function $h_s_PartialFunction$OrElse() {
+  /*<skip>*/
+}
+$h_s_PartialFunction$OrElse.prototype = $c_s_PartialFunction$OrElse.prototype;
+$c_s_PartialFunction$OrElse.prototype.isDefinedAt__O__Z = (function(x) {
+  return ($n(this.s_PartialFunction$OrElse__f_f1).isDefinedAt__O__Z(x) || $n(this.s_PartialFunction$OrElse__f_f2).isDefinedAt__O__Z(x))
+});
+$c_s_PartialFunction$OrElse.prototype.apply__O__O = (function(x) {
+  return $n(this.s_PartialFunction$OrElse__f_f1).applyOrElse__O__F1__O(x, this.s_PartialFunction$OrElse__f_f2)
+});
+$c_s_PartialFunction$OrElse.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
+  var z = $n(this.s_PartialFunction$OrElse__f_f1).applyOrElse__O__F1__O(x, $m_s_PartialFunction$().s_PartialFunction$__f_fallback_fn);
+  return ((!$m_s_PartialFunction$().scala$PartialFunction$$fallbackOccurred__O__Z(z)) ? z : $n(this.s_PartialFunction$OrElse__f_f2).applyOrElse__O__F1__O(x, default$1))
+});
+$c_s_PartialFunction$OrElse.prototype.orElse__s_PartialFunction__s_PartialFunction$OrElse = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this.s_PartialFunction$OrElse__f_f1, $n(this.s_PartialFunction$OrElse__f_f2).orElse__s_PartialFunction__s_PartialFunction(that))
+});
+$c_s_PartialFunction$OrElse.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return this.orElse__s_PartialFunction__s_PartialFunction$OrElse(that)
+});
+var $d_s_PartialFunction$OrElse = new $TypeData().initClass({
+  s_PartialFunction$OrElse: 0
+}, false, "scala.PartialFunction$OrElse", {
+  s_PartialFunction$OrElse: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  Ljava_io_Serializable: 1
+});
+$c_s_PartialFunction$OrElse.prototype.$classData = $d_s_PartialFunction$OrElse;
+/** @constructor */
 function $c_s_Product$$anon$1(outer) {
   this.s_Product$$anon$1__f_c = 0;
   this.s_Product$$anon$1__f_cmax = 0;
@@ -30304,6 +33964,23 @@ var $d_sc_ClassTagSeqFactory$AnySeqDelegate = new $TypeData().initClass({
 $c_sc_ClassTagSeqFactory$AnySeqDelegate.prototype.$classData = $d_sc_ClassTagSeqFactory$AnySeqDelegate;
 function $f_sc_IndexedSeqOps__map__F1__O($thiz, f) {
   return $n($thiz.iterableFactory__sc_IterableFactory()).from__sc_IterableOnce__O($ct_sc_IndexedSeqView$Map__sc_IndexedSeqOps__F1__(new $c_sc_IndexedSeqView$Map(), $thiz, f))
+}
+function $f_sc_IndexedSeqOps__head__O($thiz) {
+  if ((!$thiz.isEmpty__Z())) {
+    return $thiz.apply__I__O(0)
+  } else {
+    if ($is_sc_IndexedSeq($thiz)) {
+      var x2 = $as_sc_IndexedSeq($thiz);
+      var this$1 = $n(x2);
+      var $$x1 = this$1.className__T()
+    } else {
+      var $$x1 = $thiz.toString__T()
+    };
+    throw $ct_ju_NoSuchElementException__T__(new $c_ju_NoSuchElementException(), ("head of empty " + $$x1))
+  }
+}
+function $f_sc_IndexedSeqOps__headOption__s_Option($thiz) {
+  return ($thiz.isEmpty__Z() ? $m_s_None$() : new $c_s_Some($thiz.head__O()))
 }
 function $f_sc_Iterable__toString__T($thiz) {
   var start = ($thiz.className__T() + "(");
@@ -30800,6 +34477,9 @@ var $d_sc_Iterator$SliceIterator = new $TypeData().initClass({
   sc_IterableOnceOps: 1
 });
 $c_sc_Iterator$SliceIterator.prototype.$classData = $d_sc_Iterator$SliceIterator;
+function $f_sc_LinearSeqOps__headOption__s_Option($thiz) {
+  return ($thiz.isEmpty__Z() ? $m_s_None$() : new $c_s_Some($thiz.head__O()))
+}
 function $f_sc_LinearSeqOps__length__I($thiz) {
   var these = $as_sc_LinearSeq($thiz);
   var len = 0;
@@ -33887,6 +37567,123 @@ var $d_s_util_Success = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_s_util_Success.prototype.$classData = $d_s_util_Success;
+function $f_Lcom_raquo_airstream_combine_CombineObservable__$init$__V($thiz) {
+  $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parentObservers = $m_Lcom_raquo_ew_JsArray$().apply__sci_Seq__Lcom_raquo_ew_JsArray($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_airstream_common_InternalParentObserver.getArrayOf().constr)([])))
+}
+function $f_Lcom_raquo_airstream_combine_CombineObservable__onInputsReady__Lcom_raquo_airstream_core_Transaction__V($thiz, transaction) {
+  if ((!$n(transaction).containsPendingObservable__Lcom_raquo_airstream_core_SyncObservable__Z($thiz))) {
+    $n(transaction).enqueuePendingObservable__Lcom_raquo_airstream_core_SyncObservable__V($thiz)
+  }
+}
+function $f_Lcom_raquo_airstream_combine_CombineObservable__syncFire__Lcom_raquo_airstream_core_Transaction__V($thiz, transaction) {
+  $n($as_Lcom_raquo_airstream_core_WritableObservable($thiz)).fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V($thiz.combinedValue__s_util_Try(), transaction)
+}
+function $f_Lcom_raquo_airstream_combine_CombineObservable__onStart__V($thiz) {
+  var arr = $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parentObservers;
+  var i = 0;
+  var len = $uI(arr.length);
+  while ((i < len)) {
+    var _$1 = arr[i];
+    var _$1$1 = $as_Lcom_raquo_airstream_common_InternalParentObserver(_$1);
+    var this$3 = $n(_$1$1);
+    var this$4 = $n(this$3.Lcom_raquo_airstream_common_InternalParentObserver$$anon$2__f_parent);
+    $f_Lcom_raquo_airstream_core_WritableObservable__addInternalObserver__Lcom_raquo_airstream_core_InternalObserver__Z__V(this$4, this$3, false);
+    i = ((1 + i) | 0)
+  };
+  $f_Lcom_raquo_airstream_core_Signal__onStart__V($thiz)
+}
+function $f_Lcom_raquo_airstream_combine_CombineObservable__onStop__V($thiz) {
+  var arr = $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parentObservers;
+  var i = 0;
+  var len = $uI(arr.length);
+  while ((i < len)) {
+    var _$2 = arr[i];
+    var _$2$1 = $as_Lcom_raquo_airstream_common_InternalParentObserver(_$2);
+    var this$3 = $n(_$2$1);
+    var this$4 = $n(this$3.Lcom_raquo_airstream_common_InternalParentObserver$$anon$2__f_parent);
+    $f_Lcom_raquo_airstream_core_BaseObservable__removeInternalObserver__Lcom_raquo_airstream_core_InternalObserver__V(this$4, this$3);
+    i = ((1 + i) | 0)
+  }
+}
+class $c_Lcom_raquo_airstream_core_AirstreamError$CombinedError extends $c_Lcom_raquo_airstream_core_AirstreamError {
+  constructor(causes) {
+    super();
+    this.Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes = null;
+    this.Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes = causes;
+    var message = $m_Lcom_raquo_airstream_core_AirstreamError$().com$raquo$airstream$core$AirstreamError$$$CombinedError$superArg$1__sci_Seq__T(causes);
+    $ct_jl_Throwable__T__jl_Throwable__Z__Z__(this, message, null, true, true);
+    var this$2 = $m_s_$less$colon$less$();
+    var this$3 = $n($n($as_sc_IterableOps($n(causes).flatten__F1__O(this$2.s_$less$colon$less$__f_singleton))).headOption__s_Option());
+    if ((!this$3.isEmpty__Z())) {
+      var arg1 = this$3.get__O();
+      var x$0 = $as_jl_Throwable(arg1);
+      this.initCause__jl_Throwable__jl_Throwable(x$0)
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_s_Product$$anon$1(this)
+  };
+  hashCode__I() {
+    var this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  equals__O__Z(x$0) {
+    if ((this === x$0)) {
+      return true
+    } else if ((x$0 instanceof $c_Lcom_raquo_airstream_core_AirstreamError$CombinedError)) {
+      var x$0$2 = $as_Lcom_raquo_airstream_core_AirstreamError$CombinedError(x$0);
+      var x = this.Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes;
+      var x$2 = $n(x$0$2).Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes;
+      if (((x === null) ? (x$2 === null) : $n(x).equals__O__Z(x$2))) {
+        $n(x$0$2);
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+  productArity__I() {
+    return 1
+  };
+  productPrefix__T() {
+    return "CombinedError"
+  };
+  productElement__I__O(n) {
+    if ((n === 0)) {
+      return this.Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes
+    };
+    throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+  };
+  toString__T() {
+    var $$x1 = this.Lcom_raquo_airstream_core_AirstreamError$CombinedError__f_causes;
+    var this$2 = $m_s_$less$colon$less$();
+    var this$3 = $n($n($as_sc_IterableOnceOps($n($$x1).flatten__F1__O(this$2.s_$less$colon$less$__f_singleton))).toList__sci_List());
+    return ("CombinedError: " + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$3, "", "; ", ""))
+  };
+}
+function $as_Lcom_raquo_airstream_core_AirstreamError$CombinedError(obj) {
+  return (((obj instanceof $c_Lcom_raquo_airstream_core_AirstreamError$CombinedError) || (obj === null)) ? obj : $throwClassCastException(obj, "com.raquo.airstream.core.AirstreamError$CombinedError"))
+}
+function $isArrayOf_Lcom_raquo_airstream_core_AirstreamError$CombinedError(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_raquo_airstream_core_AirstreamError$CombinedError)))
+}
+function $asArrayOf_Lcom_raquo_airstream_core_AirstreamError$CombinedError(obj, depth) {
+  return (($isArrayOf_Lcom_raquo_airstream_core_AirstreamError$CombinedError(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.raquo.airstream.core.AirstreamError$CombinedError;", depth))
+}
+var $d_Lcom_raquo_airstream_core_AirstreamError$CombinedError = new $TypeData().initClass({
+  Lcom_raquo_airstream_core_AirstreamError$CombinedError: 0
+}, false, "com.raquo.airstream.core.AirstreamError$CombinedError", {
+  Lcom_raquo_airstream_core_AirstreamError$CombinedError: 1,
+  Lcom_raquo_airstream_core_AirstreamError: 1,
+  jl_Throwable: 1,
+  O: 1,
+  Ljava_io_Serializable: 1,
+  s_Equals: 1,
+  s_Product: 1
+});
+$c_Lcom_raquo_airstream_core_AirstreamError$CombinedError.prototype.$classData = $d_Lcom_raquo_airstream_core_AirstreamError$CombinedError;
 class $c_Lcom_raquo_airstream_core_AirstreamError$ErrorHandlingError extends $c_Lcom_raquo_airstream_core_AirstreamError {
   constructor(error, cause) {
     super();
@@ -34265,6 +38062,17 @@ function $isArrayOf_Lcom_raquo_airstream_core_Signal(obj, depth) {
 function $asArrayOf_Lcom_raquo_airstream_core_Signal(obj, depth) {
   return (($isArrayOf_Lcom_raquo_airstream_core_Signal(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.raquo.airstream.core.Signal;", depth))
 }
+var $d_Lcom_raquo_airstream_core_Signal = new $TypeData().initClass({
+  Lcom_raquo_airstream_core_Signal: 0
+}, true, "com.raquo.airstream.core.Signal", {
+  Lcom_raquo_airstream_core_Signal: 1,
+  O: 1,
+  Lcom_raquo_airstream_core_Source: 1,
+  Lcom_raquo_airstream_core_Named: 1,
+  Lcom_raquo_airstream_core_BaseObservable: 1,
+  Lcom_raquo_airstream_core_Observable: 1,
+  Lcom_raquo_airstream_core_Source$SignalSource: 1
+});
 function $f_Lcom_raquo_airstream_custom_CustomSource__$init$__V($thiz) {
   $thiz.Lcom_raquo_airstream_custom_CustomStreamSource__f_topoRank = 1;
   $thiz.Lcom_raquo_airstream_custom_CustomStreamSource__f_startIndex = 0
@@ -34319,6 +38127,9 @@ $c_Lcom_raquo_airstream_state_SourceVar.prototype.maybeDisplayName__O = (functio
 });
 $c_Lcom_raquo_airstream_state_SourceVar.prototype.toString__T = (function() {
   return $f_Lcom_raquo_airstream_core_Named__displayName__T(this)
+});
+$c_Lcom_raquo_airstream_state_SourceVar.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this.Lcom_raquo_airstream_state_SourceVar__f_signal
 });
 $c_Lcom_raquo_airstream_state_SourceVar.prototype.setCurrentValue__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(value, transaction) {
   this.Lcom_raquo_airstream_state_SourceVar__f_currentValue = value;
@@ -34478,6 +38289,144 @@ function $isArrayOf_Lcom_raquo_laminar_nodes_ReactiveSvgElement(obj, depth) {
 function $asArrayOf_Lcom_raquo_laminar_nodes_ReactiveSvgElement(obj, depth) {
   return (($isArrayOf_Lcom_raquo_laminar_nodes_ReactiveSvgElement(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.raquo.laminar.nodes.ReactiveSvgElement;", depth))
 }
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(id) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id = 0;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id = id
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype = new $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.hashCode__I = (function() {
+  var acc = (-889275714);
+  var hash = acc;
+  var data = $f_T__hashCode__I("Stop");
+  acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+  var hash$1 = acc;
+  var data$1 = this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+  var hash$2 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 1)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop)) {
+    var x$0$2 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(x$0);
+    return (this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id)
+  } else {
+    return false
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.productPrefix__T = (function() {
+  return "Stop"
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.productElement__I__O = (function(n) {
+  if ((n === 0)) {
+    return this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop__f_id
+  };
+  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+});
+function $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(obj) {
+  return (((obj instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Stop"))
+}
+function $isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop)))
+}
+function $asArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(obj, depth) {
+  return (($isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Stop;", depth))
+}
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Stop", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop: 1,
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Stop;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(id) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id = 0;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id = id
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype = new $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.hashCode__I = (function() {
+  var acc = (-889275714);
+  var hash = acc;
+  var data = $f_T__hashCode__I("Update");
+  acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+  var hash$1 = acc;
+  var data$1 = this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+  var hash$2 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 1)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update)) {
+    var x$0$2 = $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(x$0);
+    return (this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id === $n(x$0$2).Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id)
+  } else {
+    return false
+  }
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.productPrefix__T = (function() {
+  return "Update"
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.productElement__I__O = (function(n) {
+  if ((n === 0)) {
+    return this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update__f_id
+  };
+  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+});
+function $as_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(obj) {
+  return (((obj instanceof $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update) || (obj === null)) ? obj : $throwClassCastException(obj, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Update"))
+}
+function $isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update)))
+}
+function $asArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(obj, depth) {
+  return (($isArrayOf_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcom.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Update;", depth))
+}
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$Update", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update: 1,
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$Update;
 /** @constructor */
 function $c_Lcom_swarm_pages_comps_Theme$CmdType$Link(link) {
   this.Lcom_swarm_pages_comps_Theme$CmdType__f_icon = null;
@@ -35335,11 +39284,17 @@ $c_sc_AbstractIterable.prototype.fromSpecific__sc_IterableOnce__sc_IterableOps =
 $c_sc_AbstractIterable.prototype.newSpecificBuilder__scm_Builder = (function() {
   return $n(this.iterableFactory__sc_IterableFactory()).newBuilder__scm_Builder()
 });
+$c_sc_AbstractIterable.prototype.headOption__s_Option = (function() {
+  return $f_sc_IterableOps__headOption__s_Option(this)
+});
 $c_sc_AbstractIterable.prototype.map__F1__O = (function(f) {
   return $f_sc_IterableOps__map__F1__O(this, f)
 });
 $c_sc_AbstractIterable.prototype.flatMap__F1__O = (function(f) {
   return $f_sc_IterableOps__flatMap__F1__O(this, f)
+});
+$c_sc_AbstractIterable.prototype.flatten__F1__O = (function(asIterable) {
+  return this.flatMap__F1__O(asIterable)
 });
 $c_sc_AbstractIterable.prototype.zipWithIndex__O = (function() {
   return $f_sc_IterableOps__zipWithIndex__O(this)
@@ -38247,6 +42202,60 @@ $c_s_reflect_ManifestFactory$UnitManifest.prototype.runtimeClass__jl_Class = (fu
 $c_s_reflect_ManifestFactory$UnitManifest.prototype.newArray__I__O = (function(len) {
   return new ($d_jl_Void.getArrayOf().constr)(len)
 });
+function $f_Lcom_raquo_airstream_common_MultiParentSignal___parentLastUpdateIds__Lcom_raquo_ew_JsArray($thiz) {
+  return $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parents.map(((_$1) => {
+    var _$1$1 = $as_Lcom_raquo_airstream_core_Signal(_$1);
+    $m_Lcom_raquo_airstream_core_Protected$();
+    $m_Lcom_raquo_airstream_core_Protected$();
+    var this$3 = $n(_$1$1);
+    return this$3._lastUpdateId__I()
+  }))
+}
+function $f_Lcom_raquo_airstream_common_MultiParentSignal__onWillStart__V($thiz) {
+  var arr = $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parents;
+  var i = 0;
+  var len = $uI(arr.length);
+  while ((i < len)) {
+    var _$2 = arr[i];
+    var _$2$1 = $as_Lcom_raquo_airstream_core_Signal(_$2);
+    $m_Lcom_raquo_airstream_core_Protected$();
+    var this$5 = $n(_$2$1);
+    $f_Lcom_raquo_airstream_core_BaseObservable__maybeWillStart__V(this$5);
+    i = ((1 + i) | 0)
+  };
+  var shouldPullFromParent = $f_Lcom_raquo_airstream_common_MultiParentSignal__updateParentLastUpdateIds__Z($thiz);
+  if (shouldPullFromParent) {
+    $f_Lcom_raquo_airstream_common_MultiParentSignal__updateCurrentValueFromParent__V($thiz)
+  }
+}
+function $f_Lcom_raquo_airstream_common_MultiParentSignal__updateParentLastUpdateIds__Z($thiz) {
+  var elem = false;
+  elem = false;
+  var arr = $thiz.Lcom_raquo_airstream_combine_CombineSignalN__f_parents;
+  var i = 0;
+  var len = $uI(arr.length);
+  while ((i < len)) {
+    var parent = arr[i];
+    var ix = i;
+    var parent$1 = $as_Lcom_raquo_airstream_core_Signal(parent);
+    $m_Lcom_raquo_airstream_core_Protected$();
+    $m_Lcom_raquo_airstream_core_Protected$();
+    var this$5 = $n(parent$1);
+    var newLastUpdateId = this$5._lastUpdateId__I();
+    var lastSeenParentUpdateId = $uI($thiz._parentLastUpdateIds__Lcom_raquo_ew_JsArray()[ix]);
+    if ((newLastUpdateId !== lastSeenParentUpdateId)) {
+      $thiz._parentLastUpdateIds__Lcom_raquo_ew_JsArray()[ix] = newLastUpdateId;
+      var ev$3 = true;
+      elem = ev$3
+    };
+    i = ((1 + i) | 0)
+  };
+  return elem
+}
+function $f_Lcom_raquo_airstream_common_MultiParentSignal__updateCurrentValueFromParent__V($thiz) {
+  var nextValue = $thiz.combinedValue__s_util_Try();
+  $f_Lcom_raquo_airstream_core_WritableSignal__setCurrentValue__s_util_Try__Z__V($thiz, nextValue, false)
+}
 function $f_Lcom_raquo_airstream_common_MultiParentStream__onWillStart__V($thiz) {
   var arr = $thiz.Lcom_raquo_airstream_combine_MergeStream__f_parents;
   var i = 0;
@@ -38894,6 +42903,9 @@ $c_Lcom_raquo_airstream_custom_CustomStreamSource.prototype.com$raquo$airstream$
 $c_Lcom_raquo_airstream_custom_CustomStreamSource.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_custom_CustomStreamSource__f_internalObservers = x$0
 });
+$c_Lcom_raquo_airstream_custom_CustomStreamSource.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
+});
 $c_Lcom_raquo_airstream_custom_CustomStreamSource.prototype.topoRank__I = (function() {
   return this.Lcom_raquo_airstream_custom_CustomStreamSource__f_topoRank
 });
@@ -38989,6 +43001,9 @@ $c_Lcom_raquo_airstream_state_VarSignal.prototype._lastUpdateId__I = (function()
 $c_Lcom_raquo_airstream_state_VarSignal.prototype._lastUpdateId_$eq__I__V = (function(x$1) {
   this.Lcom_raquo_airstream_state_VarSignal__f__lastUpdateId = x$1
 });
+$c_Lcom_raquo_airstream_state_VarSignal.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this
+});
 $c_Lcom_raquo_airstream_state_VarSignal.prototype.onStart__V = (function() {
   $f_Lcom_raquo_airstream_core_Signal__onStart__V(this)
 });
@@ -39012,6 +43027,9 @@ $c_Lcom_raquo_airstream_state_VarSignal.prototype.maybeLastSeenCurrentValue__O =
 });
 $c_Lcom_raquo_airstream_state_VarSignal.prototype.maybeLastSeenCurrentValue_$eq__O__V = (function(x$1) {
   this.Lcom_raquo_airstream_state_VarSignal__f_maybeLastSeenCurrentValue = x$1
+});
+$c_Lcom_raquo_airstream_state_VarSignal.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableSignal__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_state_VarSignal.prototype.tryNow__s_util_Try = (function() {
   return $f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this)
@@ -39142,6 +43160,52 @@ var $d_Lcom_swarm_pages_Index$DrawerMenuItem$$anon$1 = new $TypeData().initClass
   s_deriving_Mirror$Singleton: 1
 });
 $c_Lcom_swarm_pages_Index$DrawerMenuItem$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_Index$DrawerMenuItem$$anon$1;
+/** @constructor */
+function $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1(_$ordinal$2, \u03b4name$2, outer) {
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1__f_$name$1 = null;
+  this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1__f_$name$1 = \u03b4name$2;
+  if ((outer === null)) {
+    throw $ct_jl_NullPointerException__(new $c_jl_NullPointerException())
+  }
+}
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype = new $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event();
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.constructor = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1;
+/** @constructor */
+function $h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1() {
+  /*<skip>*/
+}
+$h_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype = $c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype;
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.productArity__I = (function() {
+  return 0
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.productElement__I__O = (function(n) {
+  return $f_sr_EnumValue__productElement__I__O(this, n)
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.productPrefix__T = (function() {
+  return this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1__f_$name$1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.toString__T = (function() {
+  return this.Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1__f_$name$1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.fromProduct__s_Product__O = (function(p) {
+  return this
+});
+var $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1 = new $TypeData().initClass({
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1: 0
+}, false, "com.swarm.pages.adm.aws.codebuild.build.AwsBuildList$Event$$anon$1", {
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1: 1,
+  Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1,
+  s_reflect_Enum: 1,
+  sr_EnumValue: 1,
+  s_deriving_Mirror: 1,
+  s_deriving_Mirror$Product: 1,
+  s_deriving_Mirror$Singleton: 1
+});
+$c_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1.prototype.$classData = $d_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$$anon$1;
 /** @constructor */
 function $c_Lcom_swarm_pages_comps_Theme$CmdType$$anon$1() {
   this.Lcom_swarm_pages_comps_Theme$CmdType__f_icon = null;
@@ -39846,6 +43910,9 @@ $c_Lcom_raquo_airstream_combine_MergeStream.prototype.com$raquo$airstream$core$W
 $c_Lcom_raquo_airstream_combine_MergeStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_combine_MergeStream__f_internalObservers = x$0
 });
+$c_Lcom_raquo_airstream_combine_MergeStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
+});
 $c_Lcom_raquo_airstream_combine_MergeStream.prototype.onWillStart__V = (function() {
   $f_Lcom_raquo_airstream_common_MultiParentStream__onWillStart__V(this)
 });
@@ -40043,6 +44110,9 @@ $c_Lcom_raquo_airstream_eventbus_EventBusStream.prototype.com$raquo$airstream$co
 });
 $c_Lcom_raquo_airstream_eventbus_EventBusStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_eventbus_EventBusStream__f_internalObservers = x$0
+});
+$c_Lcom_raquo_airstream_eventbus_EventBusStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_eventbus_EventBusStream.prototype.onTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
   $f_Lcom_raquo_airstream_common_InternalNextErrorObserver__onTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
@@ -40293,11 +44363,17 @@ $c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.toList__sci_List = (function() 
 $c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.toArray__s_reflect_ClassTag__O = (function(evidence$2) {
   return $f_sc_IterableOnceOps__toArray__s_reflect_ClassTag__O(this, evidence$2)
 });
+$c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.headOption__s_Option = (function() {
+  return $f_sc_IterableOps__headOption__s_Option(this)
+});
 $c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.map__F1__O = (function(f) {
   return $f_sc_IterableOps__map__F1__O(this, f)
 });
 $c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.className__T = (function() {
   return "Seq"
+});
+$c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this, that)
 });
 $c_Lorg_scalajs_dom_DOMList$DOMListSeq.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
   return $f_s_PartialFunction__applyOrElse__O__F1__O(this, x, default$1)
@@ -40611,6 +44687,168 @@ var $d_s_concurrent_impl_Promise$Transformation = new $TypeData().initClass({
 });
 $c_s_concurrent_impl_Promise$Transformation.prototype.$classData = $d_s_concurrent_impl_Promise$Transformation;
 /** @constructor */
+function $c_Lcom_raquo_airstream_combine_CombineSignalN(parents, combinator) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeDisplayName = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_isSafeToRemoveObserver = false;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybePendingObserverRemovals = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f__lastUpdateId = 0;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_externalObservers = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_internalObservers = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeLastSeenCurrentValue = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIds$lzy1 = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIdsbitmap$1 = false;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_parentObservers = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_parents = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_combinator = null;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_topoRank = 0;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_parents = parents;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_combinator = combinator;
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeDisplayName = (void 0);
+  $f_Lcom_raquo_airstream_core_BaseObservable__$init$__V(this);
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f__lastUpdateId = 0;
+  $f_Lcom_raquo_airstream_core_WritableObservable__$init$__V(this);
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeLastSeenCurrentValue = (void 0);
+  $f_Lcom_raquo_airstream_combine_CombineObservable__$init$__V(this);
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_topoRank = ((1 + $m_Lcom_raquo_airstream_core_Protected$().maxTopoRank__I__Lcom_raquo_ew_JsArray__I(0, parents)) | 0);
+  var i = 0;
+  var len = $uI(parents.length);
+  while ((i < len)) {
+    var parent = parents[i];
+    var parent$1 = $as_Lcom_raquo_airstream_core_Signal(parent);
+    $uI(this.Lcom_raquo_airstream_combine_CombineSignalN__f_parentObservers.push($m_Lcom_raquo_airstream_common_InternalParentObserver$().fromTry__Lcom_raquo_airstream_core_Observable__F2__Lcom_raquo_airstream_common_InternalParentObserver(parent$1, new $c_sjsr_AnonFunction2(((_$2, transaction) => {
+      $as_s_util_Try(_$2);
+      var transaction$1 = $as_Lcom_raquo_airstream_core_Transaction(transaction);
+      $f_Lcom_raquo_airstream_combine_CombineObservable__onInputsReady__Lcom_raquo_airstream_core_Transaction__V(this, transaction$1)
+    })))));
+    i = ((1 + i) | 0)
+  }
+}
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype = new $h_O();
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.constructor = $c_Lcom_raquo_airstream_combine_CombineSignalN;
+/** @constructor */
+function $h_Lcom_raquo_airstream_combine_CombineSignalN() {
+  /*<skip>*/
+}
+$h_Lcom_raquo_airstream_combine_CombineSignalN.prototype = $c_Lcom_raquo_airstream_combine_CombineSignalN.prototype;
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.maybeDisplayName__O = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeDisplayName
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.toString__T = (function() {
+  return $f_Lcom_raquo_airstream_core_Named__displayName__T(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.isSafeToRemoveObserver__Z = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_isSafeToRemoveObserver
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.maybePendingObserverRemovals__O = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybePendingObserverRemovals
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.isSafeToRemoveObserver_$eq__Z__V = (function(x$1) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_isSafeToRemoveObserver = x$1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.maybePendingObserverRemovals_$eq__O__V = (function(x$1) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybePendingObserverRemovals = x$1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.equals__O__Z = (function(obj) {
+  return (this === obj)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.hashCode__I = (function() {
+  return $systemIdentityHashCode(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype._lastUpdateId__I = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f__lastUpdateId
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype._lastUpdateId_$eq__I__V = (function(x$1) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f__lastUpdateId = x$1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.onAddedExternalObserver__Lcom_raquo_airstream_core_Observer__V = (function(observer) {
+  $n(observer).onTry__s_util_Try__V($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this))
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.externalObservers__Lcom_raquo_ew_JsArray = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_externalObservers
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.internalObservers__Lcom_raquo_ew_JsArray = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_internalObservers
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.com$raquo$airstream$core$WritableObservable$_setter_$externalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_externalObservers = x$0
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_internalObservers = x$0
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.maybeLastSeenCurrentValue__O = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeLastSeenCurrentValue
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.maybeLastSeenCurrentValue_$eq__O__V = (function(x$1) {
+  this.Lcom_raquo_airstream_combine_CombineSignalN__f_maybeLastSeenCurrentValue = x$1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.tryNow__s_util_Try = (function() {
+  return $f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableSignal__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype._parentLastUpdateIds__Lcom_raquo_ew_JsArray = (function() {
+  if ((!this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIdsbitmap$1)) {
+    this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIds$lzy1 = $f_Lcom_raquo_airstream_common_MultiParentSignal___parentLastUpdateIds__Lcom_raquo_ew_JsArray(this);
+    this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIdsbitmap$1 = true
+  };
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f__parentLastUpdateIds$lzy1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.onWillStart__V = (function() {
+  $f_Lcom_raquo_airstream_common_MultiParentSignal__onWillStart__V(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.syncFire__Lcom_raquo_airstream_core_Transaction__V = (function(transaction) {
+  $f_Lcom_raquo_airstream_combine_CombineObservable__syncFire__Lcom_raquo_airstream_core_Transaction__V(this, transaction)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.onStart__V = (function() {
+  $f_Lcom_raquo_airstream_combine_CombineObservable__onStart__V(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.onStop__V = (function() {
+  $f_Lcom_raquo_airstream_combine_CombineObservable__onStop__V(this)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.topoRank__I = (function() {
+  return this.Lcom_raquo_airstream_combine_CombineSignalN__f_topoRank
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.combinedValue__s_util_Try = (function() {
+  return $m_Lcom_raquo_airstream_combine_CombineObservable$().jsArrayCombinator__Lcom_raquo_ew_JsArray__F1__s_util_Try(this.Lcom_raquo_airstream_combine_CombineSignalN__f_parents.map(((_$1) => {
+    var _$1$1 = $as_Lcom_raquo_airstream_core_Signal(_$1);
+    return $n(_$1$1).tryNow__s_util_Try()
+  })), this.Lcom_raquo_airstream_combine_CombineSignalN__f_combinator)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.currentValueFromParent__s_util_Try = (function() {
+  return this.combinedValue__s_util_Try()
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.map__F1__Lcom_raquo_airstream_core_Observable = (function(project) {
+  return new $c_Lcom_raquo_airstream_misc_MapSignal(this, project, $m_s_None$())
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.distinctTry__F2__Lcom_raquo_airstream_core_Observable = (function(isSame) {
+  return new $c_Lcom_raquo_airstream_distinct_DistinctSignal(this, isSame, false)
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.toObservable__Lcom_raquo_airstream_core_Observable = (function() {
+  return this
+});
+var $d_Lcom_raquo_airstream_combine_CombineSignalN = new $TypeData().initClass({
+  Lcom_raquo_airstream_combine_CombineSignalN: 0
+}, false, "com.raquo.airstream.combine.CombineSignalN", {
+  Lcom_raquo_airstream_combine_CombineSignalN: 1,
+  O: 1,
+  Lcom_raquo_airstream_core_Source: 1,
+  Lcom_raquo_airstream_core_Named: 1,
+  Lcom_raquo_airstream_core_BaseObservable: 1,
+  Lcom_raquo_airstream_core_Observable: 1,
+  Lcom_raquo_airstream_core_Source$SignalSource: 1,
+  Lcom_raquo_airstream_core_Signal: 1,
+  Lcom_raquo_airstream_core_WritableObservable: 1,
+  Lcom_raquo_airstream_core_WritableSignal: 1,
+  Lcom_raquo_airstream_common_MultiParentSignal: 1,
+  Lcom_raquo_airstream_core_SyncObservable: 1,
+  Lcom_raquo_airstream_combine_CombineObservable: 1
+});
+$c_Lcom_raquo_airstream_combine_CombineSignalN.prototype.$classData = $d_Lcom_raquo_airstream_combine_CombineSignalN;
+/** @constructor */
 function $c_Lcom_raquo_airstream_distinct_DistinctSignal(parent, isSame, resetOnStop) {
   this.Lcom_raquo_airstream_distinct_DistinctSignal__f_maybeDisplayName = null;
   this.Lcom_raquo_airstream_distinct_DistinctSignal__f_isSafeToRemoveObserver = false;
@@ -40673,6 +44911,9 @@ $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype._lastUpdateId__I = (fu
 $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype._lastUpdateId_$eq__I__V = (function(x$1) {
   this.Lcom_raquo_airstream_distinct_DistinctSignal__f__lastUpdateId = x$1
 });
+$c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this
+});
 $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.onAddedExternalObserver__Lcom_raquo_airstream_core_Observer__V = (function(observer) {
   $n(observer).onTry__s_util_Try__V($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this))
 });
@@ -40696,6 +44937,9 @@ $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.maybeLastSeenCurrentVa
 });
 $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.tryNow__s_util_Try = (function() {
   return $f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this)
+});
+$c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableSignal__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_distinct_DistinctSignal.prototype.onNext__O__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
   $f_Lcom_raquo_airstream_common_InternalTryObserver__onNext__O__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
@@ -40839,6 +45083,9 @@ $c_Lcom_raquo_airstream_distinct_DistinctStream.prototype.com$raquo$airstream$co
 $c_Lcom_raquo_airstream_distinct_DistinctStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_distinct_DistinctStream__f_internalObservers = x$0
 });
+$c_Lcom_raquo_airstream_distinct_DistinctStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
+});
 $c_Lcom_raquo_airstream_distinct_DistinctStream.prototype.onWillStart__V = (function() {
   $m_Lcom_raquo_airstream_core_Protected$();
   var observable = this.Lcom_raquo_airstream_distinct_DistinctStream__f_parent;
@@ -40970,6 +45217,9 @@ $c_Lcom_raquo_airstream_misc_CollectStream.prototype.com$raquo$airstream$core$Wr
 });
 $c_Lcom_raquo_airstream_misc_CollectStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_misc_CollectStream__f_internalObservers = x$0
+});
+$c_Lcom_raquo_airstream_misc_CollectStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_misc_CollectStream.prototype.onWillStart__V = (function() {
   $m_Lcom_raquo_airstream_core_Protected$();
@@ -41113,6 +45363,9 @@ $c_Lcom_raquo_airstream_misc_MapSignal.prototype._lastUpdateId__I = (function() 
 $c_Lcom_raquo_airstream_misc_MapSignal.prototype._lastUpdateId_$eq__I__V = (function(x$1) {
   this.Lcom_raquo_airstream_misc_MapSignal__f__lastUpdateId = x$1
 });
+$c_Lcom_raquo_airstream_misc_MapSignal.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this
+});
 $c_Lcom_raquo_airstream_misc_MapSignal.prototype.onAddedExternalObserver__Lcom_raquo_airstream_core_Observer__V = (function(observer) {
   $n(observer).onTry__s_util_Try__V($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this))
 });
@@ -41136,6 +45389,9 @@ $c_Lcom_raquo_airstream_misc_MapSignal.prototype.maybeLastSeenCurrentValue_$eq__
 });
 $c_Lcom_raquo_airstream_misc_MapSignal.prototype.tryNow__s_util_Try = (function() {
   return $f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this)
+});
+$c_Lcom_raquo_airstream_misc_MapSignal.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableSignal__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_misc_MapSignal.prototype.onNext__O__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
   $f_Lcom_raquo_airstream_common_InternalTryObserver__onNext__O__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
@@ -41366,6 +45622,9 @@ $c_Lcom_raquo_airstream_misc_MapStream.prototype.com$raquo$airstream$core$Writab
 $c_Lcom_raquo_airstream_misc_MapStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_misc_MapStream__f_internalObservers = x$0
 });
+$c_Lcom_raquo_airstream_misc_MapStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
+});
 $c_Lcom_raquo_airstream_misc_MapStream.prototype.onWillStart__V = (function() {
   $m_Lcom_raquo_airstream_core_Protected$();
   var observable = this.Lcom_raquo_airstream_misc_MapStream__f_parent;
@@ -41543,6 +45802,9 @@ $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype._lastUpdateId__I = (functi
 $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype._lastUpdateId_$eq__I__V = (function(x$1) {
   this.Lcom_raquo_airstream_misc_ScanLeftSignal__f__lastUpdateId = x$1
 });
+$c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.toObservable__Lcom_raquo_airstream_core_Signal = (function() {
+  return this
+});
 $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.onAddedExternalObserver__Lcom_raquo_airstream_core_Observer__V = (function(observer) {
   $n(observer).onTry__s_util_Try__V($f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this))
 });
@@ -41566,6 +45828,9 @@ $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.maybeLastSeenCurrentValue_
 });
 $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.tryNow__s_util_Try = (function() {
   return $f_Lcom_raquo_airstream_core_WritableSignal__tryNow__s_util_Try(this)
+});
+$c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableSignal__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_misc_ScanLeftSignal.prototype.onNext__O__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
   $f_Lcom_raquo_airstream_common_InternalTryObserver__onNext__O__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
@@ -41718,6 +45983,9 @@ $c_Lcom_raquo_airstream_timing_DelayStream.prototype.com$raquo$airstream$core$Wr
 });
 $c_Lcom_raquo_airstream_timing_DelayStream.prototype.com$raquo$airstream$core$WritableObservable$_setter_$internalObservers_$eq__Lcom_raquo_ew_JsArray__V = (function(x$0) {
   this.Lcom_raquo_airstream_timing_DelayStream__f_internalObservers = x$0
+});
+$c_Lcom_raquo_airstream_timing_DelayStream.prototype.fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V = (function(nextValue, transaction) {
+  $f_Lcom_raquo_airstream_core_WritableStream__fireTry__s_util_Try__Lcom_raquo_airstream_core_Transaction__V(this, nextValue, transaction)
 });
 $c_Lcom_raquo_airstream_timing_DelayStream.prototype.onWillStart__V = (function() {
   $m_Lcom_raquo_airstream_core_Protected$();
@@ -42310,6 +46578,9 @@ $c_sc_AbstractSeq.prototype.isEmpty__Z = (function() {
 $c_sc_AbstractSeq.prototype.sameElements__sc_IterableOnce__Z = (function(that) {
   return $f_sc_SeqOps__sameElements__sc_IterableOnce__Z(this, that)
 });
+$c_sc_AbstractSeq.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this, that)
+});
 $c_sc_AbstractSeq.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
   return $f_s_PartialFunction__applyOrElse__O__F1__O(this, x, default$1)
 });
@@ -42416,6 +46687,9 @@ $c_sc_AbstractMap.prototype.isDefinedAt__O__Z = (function(key) {
 });
 $c_sc_AbstractMap.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(sb, start, sep, end) {
   return $f_sc_MapOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, sb, start, sep, end)
+});
+$c_sc_AbstractMap.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this, that)
 });
 function $ct_sc_SeqView$Appended__sc_SeqOps__O__($thiz, underlying, elem) {
   $thiz.sc_SeqView$Appended__f_underlying = underlying;
@@ -42659,6 +46933,12 @@ $c_sc_AbstractIndexedSeqView.prototype.map__F1__sc_IndexedSeqView = (function(f)
 $c_sc_AbstractIndexedSeqView.prototype.stringPrefix__T = (function() {
   return "IndexedSeqView"
 });
+$c_sc_AbstractIndexedSeqView.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sc_AbstractIndexedSeqView.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
+});
 $c_sc_AbstractIndexedSeqView.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
   return ((x === len) ? 0 : ((x < len) ? (-1) : 1))
@@ -42707,6 +46987,12 @@ $c_sc_IndexedSeqView$Appended.prototype.map__F1__sc_IndexedSeqView = (function(f
 });
 $c_sc_IndexedSeqView$Appended.prototype.stringPrefix__T = (function() {
   return "IndexedSeqView"
+});
+$c_sc_IndexedSeqView$Appended.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sc_IndexedSeqView$Appended.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sc_IndexedSeqView$Appended.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -42766,6 +47052,12 @@ $c_sc_IndexedSeqView$Id.prototype.iterator__sc_Iterator = (function() {
 });
 $c_sc_IndexedSeqView$Id.prototype.stringPrefix__T = (function() {
   return "IndexedSeqView"
+});
+$c_sc_IndexedSeqView$Id.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sc_IndexedSeqView$Id.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sc_IndexedSeqView$Id.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -42837,6 +47129,12 @@ $c_sc_IndexedSeqView$Map.prototype.map__F1__sc_IndexedSeqView = (function(f) {
 });
 $c_sc_IndexedSeqView$Map.prototype.stringPrefix__T = (function() {
   return "IndexedSeqView"
+});
+$c_sc_IndexedSeqView$Map.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sc_IndexedSeqView$Map.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sc_IndexedSeqView$Map.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -44120,6 +48418,9 @@ $h_sci_LazyList.prototype = $c_sci_LazyList.prototype;
 $c_sci_LazyList.prototype.stringPrefix__T = (function() {
   return "LinearSeq"
 });
+$c_sci_LazyList.prototype.headOption__s_Option = (function() {
+  return $f_sc_LinearSeqOps__headOption__s_Option(this)
+});
 $c_sci_LazyList.prototype.length__I = (function() {
   return $f_sc_LinearSeqOps__length__I(this)
 });
@@ -44266,6 +48567,9 @@ $c_sci_LazyList.prototype.map__F1__sci_LazyList = (function(f) {
     return new $c_sci_LazyList(state)
   }
 });
+$c_sci_LazyList.prototype.flatMap__F1__sci_LazyList = (function(f) {
+  return ((this.sci_LazyList__f_scala$collection$immutable$LazyList$$stateEvaluated && (this.scala$collection$immutable$LazyList$$state__sci_LazyList$State() === $m_sci_LazyList$State$Empty$())) ? $m_sci_LazyList$().sci_LazyList$__f__empty : $m_sci_LazyList$().scala$collection$immutable$LazyList$$flatMapImpl__sci_LazyList__F1__sci_LazyList(this, f))
+});
 $c_sci_LazyList.prototype.zip__sc_IterableOnce__sci_LazyList = (function(that) {
   if (((this.sci_LazyList__f_scala$collection$immutable$LazyList$$stateEvaluated && (this.scala$collection$immutable$LazyList$$state__sci_LazyList$State() === $m_sci_LazyList$State$Empty$())) || ($n(that).knownSize__I() === 0))) {
     return $m_sci_LazyList$().sci_LazyList$__f__empty
@@ -44303,6 +48607,12 @@ $c_sci_LazyList.prototype.drop__I__O = (function(n) {
 });
 $c_sci_LazyList.prototype.zipWithIndex__O = (function() {
   return this.zipWithIndex__sci_LazyList()
+});
+$c_sci_LazyList.prototype.flatten__F1__O = (function(asIterable) {
+  return this.flatMap__F1__sci_LazyList(asIterable)
+});
+$c_sci_LazyList.prototype.flatMap__F1__O = (function(f) {
+  return this.flatMap__F1__sci_LazyList(f)
 });
 $c_sci_LazyList.prototype.map__F1__O = (function(f) {
   return this.map__F1__sci_LazyList(f)
@@ -44377,6 +48687,12 @@ $c_sci_WrappedString.prototype.iterator__sc_Iterator = (function() {
 });
 $c_sci_WrappedString.prototype.map__F1__O = (function(f) {
   return $f_sc_IndexedSeqOps__map__F1__O(this, f)
+});
+$c_sci_WrappedString.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sci_WrappedString.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sci_WrappedString.prototype.lengthCompare__I__I = (function(len) {
   var this$1 = $n(this.sci_WrappedString__f_scala$collection$immutable$WrappedString$$self);
@@ -44515,6 +48831,9 @@ $c_sjsr_WrappedVarArgs.prototype.appended__O__O = (function(elem) {
 $c_sjsr_WrappedVarArgs.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_sjsr_WrappedVarArgs.prototype.flatten__F1__O = (function(toIterableOnce) {
+  return $f_sc_StrictOptimizedIterableOps__flatten__F1__O(this, toIterableOnce)
+});
 $c_sjsr_WrappedVarArgs.prototype.zipWithIndex__O = (function() {
   return $f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this)
 });
@@ -44530,6 +48849,12 @@ $c_sjsr_WrappedVarArgs.prototype.applyPreferredMaxLength__I = (function() {
 $c_sjsr_WrappedVarArgs.prototype.iterator__sc_Iterator = (function() {
   var this$1 = new $c_sc_IndexedSeqView$Id(this);
   return $ct_sc_IndexedSeqView$IndexedSeqViewIterator__sc_IndexedSeqView__(new $c_sc_IndexedSeqView$IndexedSeqViewIterator(), this$1)
+});
+$c_sjsr_WrappedVarArgs.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sjsr_WrappedVarArgs.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sjsr_WrappedVarArgs.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -44554,6 +48879,9 @@ $c_sjsr_WrappedVarArgs.prototype.indexWhere__F1__I__I = (function(p, from) {
 });
 $c_sjsr_WrappedVarArgs.prototype.isEmpty__Z = (function() {
   return $f_sc_SeqOps__isEmpty__Z(this)
+});
+$c_sjsr_WrappedVarArgs.prototype.orElse__s_PartialFunction__s_PartialFunction = (function(that) {
+  return new $c_s_PartialFunction$OrElse(this, that)
 });
 $c_sjsr_WrappedVarArgs.prototype.applyOrElse__O__F1__O = (function(x, default$1) {
   return $f_s_PartialFunction__applyOrElse__O__F1__O(this, x, default$1)
@@ -44941,6 +49269,9 @@ $h_scm_HashSet.prototype = $c_scm_HashSet.prototype;
 $c_scm_HashSet.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_scm_HashSet.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
 $c_scm_HashSet.prototype.size__I = (function() {
   return this.scm_HashSet__f_contentSize
 });
@@ -45115,6 +49446,12 @@ $c_sci_ArraySeq.prototype.newSpecificBuilder__scm_Builder = (function() {
 $c_sci_ArraySeq.prototype.distinctBy__F1__O = (function(f) {
   return $f_sci_StrictOptimizedSeqOps__distinctBy__F1__O(this, f)
 });
+$c_sci_ArraySeq.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
+$c_sci_ArraySeq.prototype.flatten__F1__O = (function(toIterableOnce) {
+  return $f_sc_StrictOptimizedIterableOps__flatten__F1__O(this, toIterableOnce)
+});
 $c_sci_ArraySeq.prototype.zipWithIndex__O = (function() {
   return $f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this)
 });
@@ -45126,6 +49463,12 @@ $c_sci_ArraySeq.prototype.sameElements__sc_IterableOnce__Z = (function(o) {
 });
 $c_sci_ArraySeq.prototype.stringPrefix__T = (function() {
   return "IndexedSeq"
+});
+$c_sci_ArraySeq.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sci_ArraySeq.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sci_ArraySeq.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -45239,6 +49582,12 @@ $h_sci_Vector.prototype = $c_sci_Vector.prototype;
 $c_sci_Vector.prototype.distinctBy__F1__O = (function(f) {
   return $f_sci_StrictOptimizedSeqOps__distinctBy__F1__O(this, f)
 });
+$c_sci_Vector.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
+$c_sci_Vector.prototype.flatten__F1__O = (function(toIterableOnce) {
+  return $f_sc_StrictOptimizedIterableOps__flatten__F1__O(this, toIterableOnce)
+});
 $c_sci_Vector.prototype.zipWithIndex__O = (function() {
   return $f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this)
 });
@@ -45250,6 +49599,9 @@ $c_sci_Vector.prototype.sameElements__sc_IterableOnce__Z = (function(o) {
 });
 $c_sci_Vector.prototype.stringPrefix__T = (function() {
   return "IndexedSeq"
+});
+$c_sci_Vector.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_sci_Vector.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -45342,6 +49694,13 @@ $c_sci_Vector.prototype.applyPreferredMaxLength__I = (function() {
 $c_sci_Vector.prototype.ioob__I__jl_IndexOutOfBoundsException = (function(index) {
   return $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), (((index + " is out of bounds (min 0, max ") + (((-1) + this.length__I()) | 0)) + ")"))
 });
+$c_sci_Vector.prototype.head__O = (function() {
+  if (($n(this.sci_Vector__f_prefix1).u.length === 0)) {
+    throw $ct_ju_NoSuchElementException__T__(new $c_ju_NoSuchElementException(), "empty.head")
+  } else {
+    return $n(this.sci_Vector__f_prefix1).get(0)
+  }
+});
 $c_sci_Vector.prototype.foreach__F1__V = (function(f) {
   var c = this.vectorSliceCount__I();
   var i = 0;
@@ -45386,8 +49745,17 @@ $c_scm_ArraySeq.prototype.appended__O__O = (function(elem) {
 $c_scm_ArraySeq.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_scm_ArraySeq.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
 $c_scm_ArraySeq.prototype.stringPrefix__T = (function() {
   return "IndexedSeq"
+});
+$c_scm_ArraySeq.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_scm_ArraySeq.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_scm_ArraySeq.prototype.lengthCompare__I__I = (function(len) {
   var x = this.length__I();
@@ -46664,6 +51032,9 @@ $c_sci_List.prototype.iterator__sc_Iterator = (function() {
 $c_sci_List.prototype.appended__O__O = (function(elem) {
   return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
 });
+$c_sci_List.prototype.flatten__F1__O = (function(toIterableOnce) {
+  return $f_sc_StrictOptimizedIterableOps__flatten__F1__O(this, toIterableOnce)
+});
 $c_sci_List.prototype.zipWithIndex__O = (function() {
   return $f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this)
 });
@@ -46745,6 +51116,39 @@ $c_sci_List.prototype.appendedAll__sc_IterableOnce__sci_List = (function(suffix)
     return $as_sci_List($f_sc_StrictOptimizedSeqOps__appendedAll__sc_IterableOnce__O(this, suffix))
   }
 });
+$c_sci_List.prototype.updated__I__O__sci_List = (function(index, elem) {
+  var i = 0;
+  var current = this;
+  var prefix = new $c_scm_ListBuffer();
+  while (true) {
+    if ((i < index)) {
+      var this$2 = $n(current);
+      var $$x1 = (!this$2.isEmpty__Z())
+    } else {
+      var $$x1 = false
+    };
+    if ($$x1) {
+      i = ((1 + i) | 0);
+      var elem$1 = $n(current).head__O();
+      prefix.addOne__O__scm_ListBuffer(elem$1);
+      current = $as_sci_List($n(current).tail__O())
+    } else {
+      break
+    }
+  };
+  if ((i === index)) {
+    var this$3 = $n(current);
+    var $$x2 = (!this$3.isEmpty__Z())
+  } else {
+    var $$x2 = false
+  };
+  if ($$x2) {
+    var this$4 = $n($as_sci_List($n(current).tail__O()));
+    return prefix.prependToList__sci_List__sci_List(new $c_sci_$colon$colon(elem, this$4))
+  } else {
+    throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), (((index + " is out of bounds (min 0, max ") + (((-1) + this.length__I()) | 0)) + ")"))
+  }
+});
 $c_sci_List.prototype.map__F1__sci_List = (function(f) {
   if ((this === $m_sci_Nil$())) {
     return $m_sci_Nil$()
@@ -46790,6 +51194,25 @@ $c_sci_List.prototype.collect__s_PartialFunction__sci_List = (function(pf) {
     };
     return h
   }
+});
+$c_sci_List.prototype.flatMap__F1__sci_List = (function(f) {
+  var rest = this;
+  var h = null;
+  var t = null;
+  while ((rest !== $m_sci_Nil$())) {
+    var it = $n($as_sc_IterableOnce($n(f).apply__O__O($n(rest).head__O()))).iterator__sc_Iterator();
+    while ($n(it).hasNext__Z()) {
+      var nx = new $c_sci_$colon$colon($n(it).next__O(), $m_sci_Nil$());
+      if ((t === null)) {
+        h = nx
+      } else {
+        $n(t).sci_$colon$colon__f_next = nx
+      };
+      t = nx
+    };
+    rest = $as_sci_List($n(rest).tail__O())
+  };
+  return ((h === null) ? $m_sci_Nil$() : h)
 });
 $c_sci_List.prototype.foreach__F1__V = (function(f) {
   var these = this;
@@ -46865,6 +51288,9 @@ $c_sci_List.prototype.isDefinedAt__O__Z = (function(x) {
 });
 $c_sci_List.prototype.drop__I__O = (function(n) {
   return $p_sc_StrictOptimizedLinearSeqOps__loop$2__I__sc_LinearSeq__sc_LinearSeq(this, n, this)
+});
+$c_sci_List.prototype.flatMap__F1__O = (function(f) {
+  return this.flatMap__F1__sci_List(f)
 });
 $c_sci_List.prototype.map__F1__O = (function(f) {
   return this.map__F1__sci_List(f)
@@ -47953,6 +52379,9 @@ $h_scm_HashMap.prototype = $c_scm_HashMap.prototype;
 $c_scm_HashMap.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_scm_HashMap.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
 $c_scm_HashMap.prototype.size__I = (function() {
   return this.scm_HashMap__f_contentSize
 });
@@ -48337,6 +52766,9 @@ $c_sci_$colon$colon.prototype.productIterator__sc_Iterator = (function() {
 $c_sci_$colon$colon.prototype.tail__O = (function() {
   return this.sci_$colon$colon__f_next
 });
+$c_sci_$colon$colon.prototype.headOption__s_Option = (function() {
+  return new $c_s_Some(this.sci_$colon$colon__f_head)
+});
 function $as_sci_$colon$colon(obj) {
   return (((obj instanceof $c_sci_$colon$colon) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.collection.immutable.$colon$colon"))
 }
@@ -48419,6 +52851,9 @@ $c_sci_Nil$.prototype.productIterator__sc_Iterator = (function() {
 });
 $c_sci_Nil$.prototype.tail__O = (function() {
   this.tail__E()
+});
+$c_sci_Nil$.prototype.headOption__s_Option = (function() {
+  return $m_s_None$()
 });
 $c_sci_Nil$.prototype.head__O = (function() {
   this.head__E()
@@ -51189,6 +55624,12 @@ $c_scm_StringBuilder.prototype.iterator__sc_Iterator = (function() {
 $c_scm_StringBuilder.prototype.map__F1__O = (function(f) {
   return $f_sc_IndexedSeqOps__map__F1__O(this, f)
 });
+$c_scm_StringBuilder.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_scm_StringBuilder.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
+});
 $c_scm_StringBuilder.prototype.lengthCompare__I__I = (function(len) {
   var x = $n(this.scm_StringBuilder__f_underlying).length__I();
   return ((x === len) ? 0 : ((x < len) ? (-1) : 1))
@@ -51380,6 +55821,9 @@ $c_scm_ListBuffer.prototype.appended__O__O = (function(elem) {
 $c_scm_ListBuffer.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_scm_ListBuffer.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
 $c_scm_ListBuffer.prototype.iterator__sc_Iterator = (function() {
   return new $c_scm_MutationTracker$CheckedIterator($n(this.scm_ListBuffer__f_first).iterator__sc_Iterator(), new $c_sjsr_AnonFunction0((() => this.scm_ListBuffer__f_mutationCount)))
 });
@@ -51402,6 +55846,15 @@ $c_scm_ListBuffer.prototype.isEmpty__Z = (function() {
 $c_scm_ListBuffer.prototype.toList__sci_List = (function() {
   this.scm_ListBuffer__f_aliased = (!this.isEmpty__Z());
   return this.scm_ListBuffer__f_first
+});
+$c_scm_ListBuffer.prototype.prependToList__sci_List__sci_List = (function(xs) {
+  if (this.isEmpty__Z()) {
+    return xs
+  } else {
+    $p_scm_ListBuffer__ensureUnaliased__V(this);
+    $n(this.scm_ListBuffer__f_last0).sci_$colon$colon__f_next = xs;
+    return this.toList__sci_List()
+  }
 });
 $c_scm_ListBuffer.prototype.addOne__O__scm_ListBuffer = (function(elem) {
   $p_scm_ListBuffer__ensureUnaliased__V(this);
@@ -51556,8 +56009,17 @@ $c_scm_ArrayBuffer.prototype.appended__O__O = (function(elem) {
 $c_scm_ArrayBuffer.prototype.map__F1__O = (function(f) {
   return $f_sc_StrictOptimizedIterableOps__map__F1__O(this, f)
 });
+$c_scm_ArrayBuffer.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
+});
 $c_scm_ArrayBuffer.prototype.iterator__sc_Iterator = (function() {
   return $n(this.view__scm_ArrayBufferView()).iterator__sc_Iterator()
+});
+$c_scm_ArrayBuffer.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_scm_ArrayBuffer.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
 });
 $c_scm_ArrayBuffer.prototype.lengthCompare__I__I = (function(len) {
   var x = this.scm_ArrayBuffer__f_size0;
@@ -51747,6 +56209,12 @@ $c_sjs_js_WrappedArray.prototype.iterator__sc_Iterator = (function() {
 $c_sjs_js_WrappedArray.prototype.map__F1__O = (function(f) {
   return $f_sc_IndexedSeqOps__map__F1__O(this, f)
 });
+$c_sjs_js_WrappedArray.prototype.head__O = (function() {
+  return $f_sc_IndexedSeqOps__head__O(this)
+});
+$c_sjs_js_WrappedArray.prototype.headOption__s_Option = (function() {
+  return $f_sc_IndexedSeqOps__headOption__s_Option(this)
+});
 $c_sjs_js_WrappedArray.prototype.lengthCompare__I__I = (function(len) {
   var x = $uI(this.sjs_js_WrappedArray__f_scala$scalajs$js$WrappedArray$$array.length);
   return ((x === len) ? 0 : ((x < len) ? (-1) : 1))
@@ -51756,6 +56224,9 @@ $c_sjs_js_WrappedArray.prototype.distinctBy__F1__O = (function(f) {
 });
 $c_sjs_js_WrappedArray.prototype.appended__O__O = (function(elem) {
   return $f_sc_StrictOptimizedSeqOps__appended__O__O(this, elem)
+});
+$c_sjs_js_WrappedArray.prototype.flatMap__F1__O = (function(f) {
+  return $f_sc_StrictOptimizedIterableOps__flatMap__F1__O(this, f)
 });
 $c_sjs_js_WrappedArray.prototype.iterableFactory__sc_SeqFactory = (function() {
   return $m_sjs_js_WrappedArray$()
@@ -51842,9 +56313,12 @@ var $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__error = null;
 var $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__info = null;
 var $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__log = null;
 var $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__stopped = null;
+var $t_Lcom_swarm_api_WebSocketClient$WsMsgType$__awsLogsStreamStart = null;
 var $t_Lcom_swarm_pages_Index$DrawerMenuItem$__Home = null;
 var $t_Lcom_swarm_pages_Index$DrawerMenuItem$__Stack = null;
 var $t_Lcom_swarm_pages_Index$DrawerMenuItem$__AwsCodeBuildApp = null;
+var $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Start = null;
+var $t_Lcom_swarm_pages_adm_aws_codebuild_build_AwsBuildList$Event$__Nothing = null;
 var $t_Lcom_swarm_pages_comps_Theme$CmdType$__Loading = null;
 var $t_Lcom_swarm_pages_comps_Theme$CmdType$__Done = null;
 var $t_Lcom_swarm_pages_comps_Theme$CmdType$__Error = null;

@@ -145,14 +145,4 @@ proc docker::service_logs_stream {serviceName follow_stream {tail 100}} {
 	fconfigure $fd -blocking false -buffering none
 	chan event $fd readable $follow
 	return $fd
-	# [list {*}$follow_stream $fd]
-
-	#proc follow {fd} {
-	#	if {[gets $fd line] < 0} {
-	#		puts "not to read"
-	#	} else {
-	#		puts "read $line"
-	#	}
-	#}
-
 }

@@ -2,7 +2,7 @@ package com.swarm.api
 
 import com.swarm.api.ApiServer.{ApiResult, defaultHeaders, fetch}
 import com.swarm.configs.AppConfigs
-import com.swarm.models.Models.AwsCodeBuildApp
+import com.swarm.models.AwsCodeBuildApp
 import org.getshaka.nativeconverter.NativeConverter
 
 import scala.concurrent.ExecutionContext.Implicits.global

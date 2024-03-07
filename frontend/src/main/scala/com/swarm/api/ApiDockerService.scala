@@ -5,7 +5,7 @@ import org.getshaka.nativeconverter.NativeConverter
 
 import scala.concurrent.Future
 import com.swarm.api.ApiServer.*
-import com.swarm.models.Models.{CmdResult, Service}
+import com.swarm.models.{CmdResult, Service}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 

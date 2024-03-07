@@ -2,10 +2,11 @@ package com.swarm.pages.adm.aws.codebuild.app
 
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
-import com.swarm.api.{ApiAwsCodeBuildApp}
-import com.swarm.models.Models.AwsCodeBuildApp
+import com.swarm.api.ApiAwsCodeBuildApp
+import com.swarm.api.ApiServer.ApiResult
+import com.swarm.models.AwsCodeBuildApp
 import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, pageAction, pageActions}
-import com.swarm.services.Router
+import com.swarm.util.ApiErrorHandle
 import org.scalajs.dom.{HTMLDivElement, window}
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -22,36 +23,60 @@ object AwsCodeBuildAppList:
     load()
   private def load() =
     ApiAwsCodeBuildApp.list().onComplete {
-      case Success(result) =>
-        awsApps.update(_ => result.data)
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      ApiErrorHandle.handle(message) {
+        case Success(ApiResult(Some(apps), _, _, _)) =>
+          awsApps.update(_ => apps)
+      }
     }
   private def remove(awsApp: AwsCodeBuildApp) =
     if window.confirm("Are you sure?") then
       ApiAwsCodeBuildApp.delete(awsApp).onComplete {
-        case Success(_) =>
-          awsApps.update(lst => lst.filterNot(_.id == awsApp.id))
-        case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+        ApiErrorHandle.handleUnit(message) {
+          case Success(_) =>
+            awsApps.update(lst => lst.filterNot(_.id == awsApp.id))
+        }
       }
 
   private def header =
     breadcrumb(
       breadcrumbItem(
-        a(
-          href("#"),
-          span(s"aws codebuild apps")
-        ),
+        "aws codebuild apps",
         true
       )
     )
 
+  private def buildInfo(awsApp: AwsCodeBuildApp) =
+    if awsApp.building
+    then
+      span(
+        cls("fa fa-cog fa-spin fa-fw"),
+        title("app is on building")
+      )
+    else
+      span(
+        cls("fa fa-circle"),
+        title("no build")
+      )
   private def tbRow(awsApp: AwsCodeBuildApp) =
     tr(
       td(awsApp.id.toString),
+      td(
+        cls("text-center"),
+        buildInfo(awsApp)
+      ),
       td(awsApp.awsEcrRepositoryName),
       td(awsApp.versionTag),
       td(awsApp.codeBase),
+      td(awsApp.lastBuildAt),
       td(awsApp.updatedAt),
+      td(
+        cls("text-center"),
+        a(
+          href(s"/adm/aws/build/${awsApp.id}"),
+          i(cls("fa fa-list")),
+          title("show builds")
+        )
+      ),
       td(
         cls("text-center"),
         a(
@@ -74,7 +99,7 @@ object AwsCodeBuildAppList:
       cls("table table-striped table-dark table-bordered table-hover table-sm table-adm"),
       thead(
         tr(
-          List("#", "repository", "version", "code base", "last update", "", "").map { s =>
+          List("#", "", "repository", "version", "code base", "last build", "last update", "", "").map { s =>
             th(s)
           }
         )

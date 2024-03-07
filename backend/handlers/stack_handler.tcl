@@ -9,70 +9,50 @@ set log [logger::init stack_handler]
 proc stack_index {request} {
 	variable log
 	
-	set response [dict create error false messages ""]
-	set statusCode 200
-
 	try {
 
 		set result [stack_service::all]	
+		return [response::json_data_ok $result true]
 
-		if {$result == ""} {
-			dict set response data {[]}
-		} else {
-			dict set response data $result
-		}
-		
-	} on error err {		
+	} on error err {
 		${log}::error $err
-		dict set $response message $err
-		dict set $response error true 		
-		set statusCode 500
+		return [response::json_data_ok $data]					
 	}
-	
-	return [dict create json $response statusCode $statusCode list true]
+		
 }
 
 proc stack_save {request} {
 	variable log
 	
 	set body [dict get $request body]
-	set response [dict create error false messages ""]
-	set statusCode 200
 
 	try {
 
 		set result [stack_service::save $body]
-		dict set response data $result
+		return [response::json_data_ok $result]
 		
-	} on error err {		
+	} on error err {
 		${log}::error $err
-		dict set $response message $err
-		dict set $response error true 		
-		set statusCode 500
+		return [response::json_error $err]
 	}
 	
-	return [dict create json $response statusCode $statusCode]
 }
 
 proc stack_update {request} {
 	variable log
 	
 	set body [dict get $request body]
-	set response [dict create error false messages ""]
-	set statusCode 200
 
 	try {
 
 		stack_service::update $body
+		return [response::json_ok]
 
-	} on error err {		
+	} on error err {
 		${log}::error $err
-		dict set $response message $err
-		dict set $response error true 		
-		set statusCode 500
+		return [response::json_error $err]
 	}
 	
-	return [dict create json $response statusCode $statusCode]
 }
 
 proc stack_edit {request} {
@@ -87,19 +67,16 @@ proc stack_edit {request} {
 		set data [stack_service::find $id]
 
 		if {$data == ""} {
-			set statusCode 404
-		} else {
-			dict set response data $data
+			return [response::json_not_found]
 		}
+
+		return [response::json_data_ok $data]					
 				
-	} on error err {		
+	} on error err {
 		${log}::error $err
-		dict set $response message $err
-		dict set $response error true 		
-		set statusCode 500
+		return [response::json_error $err]
 	}
 	
-	return [dict create json $response statusCode $statusCode]
 }
 
 proc stack_delete {request} {
@@ -114,19 +91,17 @@ proc stack_delete {request} {
 		set exists [stack_service::exists $id]
 
 		if {!$exists} {
-			set statusCode 404
-		} else {			
-			stack_service::delete $id
+			return [response::json_not_found]
 		}
-				
-	} on error err {		
+
+		stack_service::delete $id
+		return [response::json_ok]
+
+	} on error err {
 		${log}::error $err
-		dict set $response message $err
-		dict set $response error true 		
-		set statusCode 500
+		return [response::json_error $err]
 	}
 	
-	return [dict create json $response statusCode $statusCode]	
 }
 
 

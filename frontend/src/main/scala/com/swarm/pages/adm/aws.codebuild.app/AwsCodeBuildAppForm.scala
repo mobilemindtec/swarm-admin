@@ -1,8 +1,11 @@
 package com.swarm.pages.adm.aws.codebuild.app
 
 import com.raquo.laminar.api.L.*
+import com.swarm.api.ApiServer.ApiResult
 import com.swarm.api.{ApiAwsCodeBuildApp, ApiStack}
-import com.swarm.models.Models.AwsCodeBuildApp
+import com.swarm.models.AwsCodeBuildApp
+import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem}
+import com.swarm.util.ApiErrorHandle
 import frontroute.BrowserNavigation
 import io.scalaland.chimney.dsl.*
 import org.scalajs.dom
@@ -21,6 +24,7 @@ object AwsCodeBuildAppForm:
     awsAccountId: String = "",
     awsRegion: String = "",
     awsUrl: String = "",
+    awsProjectName: String = "",
     codeBase: String = "",
     buildVars: String = "",
     stackId: Int = 0,
@@ -36,6 +40,7 @@ object AwsCodeBuildAppForm:
         awsAccountId,
         awsRegion,
         awsUrl,
+        awsProjectName,
         codeBase,
         buildVars
       ).exists(_.trim.isEmpty)
@@ -63,6 +68,20 @@ object AwsCodeBuildAppForm:
     else submit(state)
   }
 
+  private def header =
+    breadcrumb(
+      breadcrumbItem(
+        a(
+          href("/adm/aws/codebuild/app"),
+          span("aws codebuild apps")
+        ),
+        false
+      ),
+      breadcrumbItem(
+        "aws codebuild app",
+        true
+      )
+    )
   private def clear() =
     stateVar.set(AwsCodeBuildAppForm())
   private def goback(): Unit =
@@ -74,41 +93,45 @@ object AwsCodeBuildAppForm:
   private def onClone(): Unit =
     if window.confirm("Are you sure?") then
       ApiAwsCodeBuildApp.clone(stateVar.now().id).onComplete {
-        case Success(r) =>
+        ApiErrorHandle.handle(message) { case Success(ApiResult(Some(app), _, _, _)) =>
           BrowserNavigation.replaceState(
-            url = s"/adm/aws/codebuild/app/form/${r.data.id}"
+            url = s"/adm/aws/codebuild/app/form/${app.id}"
           )
-        case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+        }
       }
 
   private def submit(form: AwsCodeBuildAppForm) =
     val stack = form
       .into[AwsCodeBuildApp]
       .withFieldComputed(_.updatedAt, _ => "")
+      .withFieldComputed(_.lastBuildAt, _ => "")
+      .withFieldComputed(_.building, _ => false)
       .transform
     (if form.id == 0
      then ApiAwsCodeBuildApp.save(stack)
      else ApiAwsCodeBuildApp.update(stack)).onComplete {
-      case Success(_)   => goback()
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      ApiErrorHandle.handleUnit(message) { case Success(_) =>
+        goback()
+      }
     }
 
   private def load(id: Int) =
     ApiAwsCodeBuildApp.get(id).onComplete {
-      case Success(result) =>
-        val form = result.data.into[AwsCodeBuildAppForm].transform
+      ApiErrorHandle.handle(message) { case Success(ApiResult(Some(app), _, _, _)) =>
+        val form = app.into[AwsCodeBuildAppForm].transform
         stateVar.set(form)
         loadStaks(form.stackId)
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+
+      }
     }
 
   private def loadStaks(stackId: Int = 0) =
     ApiStack.list().onComplete {
-      case Success(result) =>
+      ApiErrorHandle.handle(message) { case Success(ApiResult(Some(apps), _, _, _)) =>
         stackOptions.update { items =>
-          items ::: result.data.map(s => StackOption(s.id, s.name, stackId == s.id))
+          items ::: apps.map(s => StackOption(s.id, s.name, stackId == s.id))
         }
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      }
     }
   private def rowInput[Ref <: dom.html.Element](
     lbl: String,
@@ -133,115 +156,124 @@ object AwsCodeBuildAppForm:
     )
   private def node() =
     div(
-      onMountCallback(_ => mount()),
-      onUnmountCallback(_ => unmount()),
-      cls("col-md-8 offset-2 col-12 mt-5 form"),
-      h2(
-        cls("text-center"),
-        "AWS CodeBuild App"
-      ),
-      hr(),
-      form(
-        div(
-          cls("row"),
-          rowInput(
-            lbl = "Stack var name",
-            plholder = "APP_NAME_VERSION",
-            reader = stateVar.signal.map(_.stackVarName),
-            writer = stateVar.updater[String]((state, s) => state.copy(stackVarName = s))
-          ),
-          rowInput(
-            lbl = "Version",
-            plholder = "1.0",
-            reader = stateVar.signal.map(_.versionTag),
-            writer = stateVar.updater[String]((state, s) => state.copy(versionTag = s))
-          ),
-          rowInput(
-            lbl = "Code base",
-            plholder = "app/folder",
-            reader = stateVar.signal.map(_.codeBase),
-            writer = stateVar.updater[String]((state, s) => state.copy(codeBase = s))
-          ),
-          rowInput(
-            lbl = "AWS ECR repository name",
-            plholder = "app_repo",
-            reader = stateVar.signal.map(_.awsEcrRepositoryName),
-            writer = stateVar.updater[String]((state, s) => state.copy(awsEcrRepositoryName = s))
-          ),
-          rowInput(
-            lbl = "AWS Account ID",
-            plholder = "...",
-            reader = stateVar.signal.map(_.awsAccountId),
-            writer = stateVar.updater[String]((state, s) => state.copy(awsAccountId = s))
-          ),
-          rowInput(
-            lbl = "AWS Region",
-            plholder = "us-east-1",
-            reader = stateVar.signal.map(_.awsRegion),
-            writer = stateVar.updater[String]((state, s) => state.copy(awsRegion = s))
-          )
+      header,
+      div(
+        onMountCallback(_ => mount()),
+        onUnmountCallback(_ => unmount()),
+        cls("col-md-8 offset-2 col-12 mt-5 form"),
+        h2(
+          cls("text-center"),
+          "AWS CodeBuild App"
         ),
-        div(
-          cls("form-group"),
-          label("Stack"),
-          select(
-            cls("form-control"),
-            children <-- stackOptions.signal.map(_.map { opt =>
-              option(
-                value(opt.id.toString),
-                selected(opt.selected),
-                opt.text
-              )
-            }),
-            onChange.mapToValue --> stateVar.updater[String]((state, s) =>
-              state.copy(stackId = s.toInt)
-            )
-          )
-        ),
-        div(
-          cls("form-group"),
-          label("Build vars"),
-          input(
-            cls("form-control"),
-            placeholder("VAR=1,VAR2=2"),
-            onInput.mapToValue --> stateVar.updater[String]((state, s) =>
-              state.copy(buildVars = s)
-            ),
-            value <-- stateVar.signal.map(_.buildVars)
-          )
-        ),
-        div(
-          cls("form-group"),
-          label("AWS URL"),
-          input(
-            cls("form-control"),
-            placeholder("https://us-east-1.console.aws.amazon.com"),
-            onInput.mapToValue --> stateVar.updater[String]((state, s) => state.copy(awsUrl = s)),
-            value <-- stateVar.signal.map(_.awsUrl)
-          )
-        ),
-        child.maybe <-- message.signal.map(_.map(s => {
-          div(
-            cls("alert alert-danger"),
-            span(s)
-          )
-        })),
         hr(),
-        div(
-          button(
-            "SAVE",
-            typ("submit")
+        form(
+          div(
+            cls("row"),
+            rowInput(
+              lbl = "Stack var name",
+              plholder = "APP_NAME_VERSION",
+              reader = stateVar.signal.map(_.stackVarName),
+              writer = stateVar.updater[String]((state, s) => state.copy(stackVarName = s))
+            ),
+            rowInput(
+              lbl = "Version",
+              plholder = "1.0",
+              reader = stateVar.signal.map(_.versionTag),
+              writer = stateVar.updater[String]((state, s) => state.copy(versionTag = s))
+            ),
+            rowInput(
+              lbl = "Code base",
+              plholder = "app/folder",
+              reader = stateVar.signal.map(_.codeBase),
+              writer = stateVar.updater[String]((state, s) => state.copy(codeBase = s))
+            ),
+            rowInput(
+              lbl = "AWS ECR repository name",
+              plholder = "app_repo",
+              reader = stateVar.signal.map(_.awsEcrRepositoryName),
+              writer = stateVar.updater[String]((state, s) => state.copy(awsEcrRepositoryName = s))
+            ),
+            rowInput(
+              lbl = "AWS Build Name",
+              plholder = "app_build_name",
+              reader = stateVar.signal.map(_.awsProjectName),
+              writer = stateVar.updater[String]((state, s) => state.copy(awsProjectName = s))
+            ),
+            rowInput(
+              lbl = "AWS Account ID",
+              plholder = "...",
+              reader = stateVar.signal.map(_.awsAccountId),
+              writer = stateVar.updater[String]((state, s) => state.copy(awsAccountId = s))
+            ),
+            rowInput(
+              lbl = "AWS Region",
+              plholder = "us-east-1",
+              reader = stateVar.signal.map(_.awsRegion),
+              writer = stateVar.updater[String]((state, s) => state.copy(awsRegion = s))
+            )
           ),
-          button(
-            "CANCEL",
-            onClick --> (_ => goback())
+          div(
+            cls("form-group"),
+            label("Stack"),
+            select(
+              cls("form-control"),
+              children <-- stackOptions.signal.map(_.map { opt =>
+                option(
+                  value(opt.id.toString),
+                  selected(opt.selected),
+                  opt.text
+                )
+              }),
+              onChange.mapToValue --> stateVar.updater[String]((state, s) =>
+                state.copy(stackId = s.toInt)
+              )
+            )
           ),
-          button(
-            "CLONE",
-            cls("pull-left"),
-            onClick --> (_ => onClone())
-          )
-        ),
-        onSubmit.preventDefault.mapTo(stateVar.now()) --> formSubmitter
+          div(
+            cls("form-group"),
+            label("Build vars"),
+            input(
+              cls("form-control"),
+              placeholder("VAR=1,VAR2=2"),
+              onInput.mapToValue --> stateVar.updater[String]((state, s) =>
+                state.copy(buildVars = s)
+              ),
+              value <-- stateVar.signal.map(_.buildVars)
+            )
+          ),
+          div(
+            cls("form-group"),
+            label("AWS URL"),
+            input(
+              cls("form-control"),
+              placeholder("https://us-east-1.console.aws.amazon.com"),
+              onInput.mapToValue --> stateVar.updater[String]((state, s) => state.copy(awsUrl = s)),
+              value <-- stateVar.signal.map(_.awsUrl)
+            )
+          ),
+          child.maybe <-- message.signal.map(_.map(s => {
+            div(
+              cls("alert alert-danger"),
+              span(s)
+            )
+          })),
+          hr(),
+          div(
+            button(
+              "SAVE",
+              typ("submit")
+            ),
+            button(
+              "CANCEL",
+              onClick --> (_ => goback())
+            ),
+            button(
+              "CLONE",
+              cls("pull-left"),
+              onClick --> (_ => onClone())
+            )
+          ),
+          onSubmit.preventDefault.mapTo(stateVar.now()) --> formSubmitter
+        )
       )
     )

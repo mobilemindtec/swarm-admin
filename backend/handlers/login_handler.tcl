@@ -11,6 +11,12 @@ proc auth_token {request} {
 
 	variable log
 
+	set auth [dict get $request auth]
+
+	if {!$auth} {
+		return [dict create next $request]	
+	}
+
 	${log}::debug "execute auth_token"
 
 	set headers [dict get $request headers]

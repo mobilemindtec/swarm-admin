@@ -11,5 +11,6 @@ proc has_error {results} {
 }
 
 proc json_error {err} {
-	return [dict create error true messages [list $err]]
+	set lines [lsearch -all -inline -not -exact [split $err \n] {}]
+	return [dict create error true messages $lines]
 }

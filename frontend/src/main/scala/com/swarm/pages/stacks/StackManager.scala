@@ -2,10 +2,12 @@ package com.swarm.pages.stacks
 
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
+import com.swarm.api.ApiServer.ApiResult
 import com.swarm.api.{ApiDockerStack, ApiStack}
-import com.swarm.models.Models.Stack
+import com.swarm.models.Stack
 import com.swarm.pages.comps.LogLineView
 import com.swarm.pages.comps.Theme.*
+import com.swarm.util.ApiErrorHandle
 import org.scalajs.dom.HTMLDivElement
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -23,8 +25,9 @@ object StackManager:
 
   private def load(id: Int) =
     ApiStack.get(id).onComplete {
-      case Success(s)   => stack.update(_ => Some(s.data))
-      case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+      ApiErrorHandle.handle(message) { case Success(ApiResult(stk, _, _, _)) =>
+        stack.update(_ => stk)
+      }
     }
 
   private def exec(action: String) =
@@ -37,8 +40,9 @@ object StackManager:
       .foreach { f =>
         exec(s"stack rm ${f.name}")
         ApiDockerStack.rm(f.name).onComplete {
-          case Success(s)   => results.update(_ => s.data.messages)
-          case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+          ApiErrorHandle.handle(message) { case Success(ApiResult(Some(cmd), _, _, _)) =>
+            results.update(_ => cmd.messages)
+          }
         }
       }
 
@@ -48,8 +52,9 @@ object StackManager:
       .foreach { f =>
         exec(s"stack deploy ${f.name}")
         ApiDockerStack.deploy(f.name).onComplete {
-          case Success(s)   => results.update(_ => s.data.messages)
-          case Failure(err) => message.update(_ => Some(s"${err.getMessage}"))
+          ApiErrorHandle.handle(message) { case Success(ApiResult(Some(cmd), _, _, _)) =>
+            results.update(_ => cmd.messages)
+          }
         }
       }
 
