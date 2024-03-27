@@ -2,7 +2,7 @@ package com.swarm.pages
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
 import com.swarm.laminar.Drawer
-import com.swarm.pages.Index.DrawerMenuItem.{AwsCodeBuildApp, Home, Stack}
+import com.swarm.pages.Index.DrawerMenuItem.{Authenticator, AwsCodeBuildApp, Home, Stack}
 import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppPage
 import com.swarm.pages.adm.aws.codebuild.build.{AwsBuildLogStream, AwsBuildPage}
 import com.swarm.pages.adm.stack.StackPage
@@ -17,7 +17,7 @@ import org.scalajs.dom.{Event, html}
 object Index:
 
   enum DrawerMenuItem:
-    case Home, Stack, AwsCodeBuildApp
+    case Home, Stack, AwsCodeBuildApp, Authenticator
 
   val drawerMenuItemVar = Var[DrawerMenuItem](DrawerMenuItem.Home)
   val menuItemCls = "list-group-item" :: "list-group-item-action" :: "rounded-0" :: Nil
@@ -78,6 +78,12 @@ object Index:
             AwsBuildPage()
           }
         },
+        pathPrefix("adm" / "authenticator") {
+          provideOption(maybeUser) { _ =>
+            drawerMenuItemVar.update(_ => DrawerMenuItem.Authenticator)
+            AuthenticatorPage()
+          }
+        },
         path("app" / "login") {
           Login()
         },
@@ -119,6 +125,11 @@ object Index:
           cls <-- getDrawerMenuItemCls(AwsCodeBuildApp),
           href("/adm/aws/codebuild/app"),
           "Aws CodeBuild Apps"
+        ),
+        a(
+          cls <-- getDrawerMenuItemCls(Authenticator),
+          href("/adm/authenticator"),
+          "Authenticator"
         ),
         a(
           cls("list-group-item list-group-item-action rounded-0"),

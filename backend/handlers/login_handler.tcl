@@ -6,6 +6,8 @@ set log [logger::init login_handler]
 
 source "./security/jwt.tcl"
 source "./configs/configs.tcl"
+source "./services/authenticator_service.tcl"
+
 
 proc auth_token {request} {
 
@@ -43,11 +45,12 @@ proc auth_token {request} {
 	return [dict create next $request]
 }
 
-proc login {request} {
+proc auth {request} {
 	variable log
 
 	${log}::debug "execute login"
 
+	set use_auth_code [get_cnf authenticator enabled]
 	set body [dict get $request body]
 
 	if {![dict exists $body username]} {
@@ -58,8 +61,15 @@ proc login {request} {
 		return [dict create json [dict create error "password is required"] statusCode 401]
 	}
 
+	if {$use_auth_code} {
+		if {![dict exists $body code]} {
+			return [dict create json [dict create error "code is required"] statusCode 401]
+		}
+	}
+
 	set username [get_cnf_or_def "" credentials username]
 	set password [get_cnf_or_def "" credentials password]
+
 
 	if { $username != [dict get $body username]} {
 		return [dict create json [dict create error "invalid username or password"] statusCode 401]
@@ -67,6 +77,23 @@ proc login {request} {
 
 	if { $password != [dict get $body password]} {
 		return [dict create json [dict create error "invalid username or password"] statusCode 401]
+	}
+
+
+	if {$use_auth_code} {
+		set code [dict get $body code]
+
+		try {
+			set authenticated [authenticator_service::authenticate $code]
+			if {$authenticated} {
+				return [dict create json [jwt::token]]
+			} else {
+				return [dict create json [dict create error "invalid code"] statusCode 401]
+			}
+		} on error err {
+			set resp [dict create error true message $err]
+			return [dict create json $resp statusCode 500]		
+		}
 	}
 
 	return [dict create json [jwt::token]]

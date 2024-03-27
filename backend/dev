@@ -13,7 +13,7 @@
 trap ctrl_c INT
 
 stop_app() {
-    PID=`ps aux | grep main.tcl | egrep -v grep | awk '{print $2}'`
+    PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
     if [ "$PID" != "" ]; then
         echo "stop app pid $PID at `date +"%Y-%m-%d %H:%M:%S"`"
         kill $PID
@@ -36,7 +36,7 @@ watch() {
 
     while true
     do
-        PID=`ps aux | grep main.tcl | egrep -v grep | awk '{print $2}'`
+        PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
 
         chsum2=$(find -L $WORKING_PATH/$DIR -type f -name "$FILTER" -exec md5sum {} \;)
         if [ "$chsum1" != "$chsum2" ] ; then

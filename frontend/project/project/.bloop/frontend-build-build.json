@@ -214,7 +214,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/home/ricardo/.sdkman/candidates/java/21.0.2-graal",
+                "home": "/home/ricardo/.sdkman/candidates/java/22-graal",
                 "options": [
                     "-Duser.dir=/mnt/data/sources/tcl/swarm-adm/frontend/project/project"
                 ]

@@ -17,7 +17,7 @@ object AuthService:
   class AuthException(message: String) extends RuntimeException(message)
   case class UserAuth()
 
-  case class UserLogin(username: String = "", password: String = ""):
+  case class UserLogin(username: String = "", password: String = "", code: String = ""):
     def validate: Boolean = this.username.nonEmpty && this.password.nonEmpty
 
   sealed trait AuthenticationEvent extends Product with Serializable
@@ -46,7 +46,7 @@ object AuthService:
   def login(u: UserLogin): Future[Unit] =
     val p = Promise[Unit]()
     ApiAuth
-      .login(u.username, u.password)
+      .login(u.username, u.password, u.code)
       .onComplete {
         case Success(r) =>
           if r.error.nonEmpty then p.failure(AuthException(r.error.get))
