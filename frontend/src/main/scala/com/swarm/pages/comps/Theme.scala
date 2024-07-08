@@ -82,6 +82,7 @@ object Theme:
       href <-- navigateTo,
       label
     )
+
   def pageAction(
     click: Any => Unit,
     label: Mod[HtmlElement]
@@ -91,7 +92,18 @@ object Theme:
       onClick --> click,
       label
     )
-  def pageActions(items: ReactiveHtmlElement[HTMLAnchorElement]*) =
+
+  def pageAction(
+    click: Any => Unit,
+    label: String
+  ): ReactiveHtmlElement[HTMLAnchorElement] =
+    a(
+      cls("action pull-left"),
+      onClick --> click,
+      label
+    )
+
+  def pageActions(items: Mod[HtmlElement]*) =
     div(
       cls("actions"),
       items

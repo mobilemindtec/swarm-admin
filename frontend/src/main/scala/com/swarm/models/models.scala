@@ -64,3 +64,23 @@ case class AwsBuild(
   def completed: Boolean = currentPhase == "COMPLETED"
 
   def building: Boolean = !completed
+
+case class Stats(
+  id: Int,
+  description: String,
+  @Json(name = "aws_s3_uri") awsS3Uri: String,
+  updatedAt: String
+) derives NativeConverter
+
+case class StatsItem(
+  time: Int,
+  text: String,
+  more: String,
+  @Json(ignore = true) count: Int,
+  @Json(ignore = true) min: Int,
+  @Json(ignore = true) max: Int,
+  @Json(ignore = true) avg: Int,
+  @Json(ignore = true) total: Int,
+  @Json(ignore = true) items: List[StatsItem] = Nil,
+  @Json(ignore = true) showMore: Boolean
+) derives NativeConverter

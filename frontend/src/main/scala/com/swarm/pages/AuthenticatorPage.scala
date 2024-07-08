@@ -15,7 +15,14 @@ object AuthenticatorPage:
   private def load =
     ApiAuth.authenticatorPair.onComplete {
       case Success(info) =>
-        val link = info.html.split("src").last.split('\'')(1)
+        val link =
+          info.html
+            .split("src")
+            .lastOption
+            .map(_.split('\''))
+            .filter(_.length >= 1)
+            .map(v => v(1))
+            .getOrElse("link not found")
         html.update(_ => Some(link))
       case Failure(err) => html.update(_ => Some(err.getMessage))
     }

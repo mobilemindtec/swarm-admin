@@ -16,7 +16,7 @@ proc stack_index {request} {
 
 	} on error err {
 		${log}::error $err
-		return [response::json_data_ok $data]					
+		return [response::json_error $err]
 	}
 		
 }

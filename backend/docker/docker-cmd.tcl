@@ -45,12 +45,15 @@ proc docker::stop {containerId} {
 # https://github.com/awslabs/amazon-ecr-credential-helper
 # sudo apt install amazon-ecr-credential-helper
 # vim ~/.docker/config.json
-#	{                                                                                                            
-#	  "credHelpers": {                                                                                           
-#	    "public.ecr.aws": "ecr-login",                                                                           
-#	    "<ecr id>.dkr.ecr.<region>.amazonaws.com": "ecr-login"
-#	  }                                                                                                          
-#	} 
+#{
+#	"credsStore": "ecr-login",
+#	"auths": {
+#		"<id>.dkr.ecr.us-east-1.amazonaws.com": {
+#			"auth": ""
+#		}
+#	}
+#}
+
 proc docker::aws_login {} {
 	variable log
 
