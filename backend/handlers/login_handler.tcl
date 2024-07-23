@@ -8,8 +8,12 @@ source "./security/jwt.tcl"
 source "./configs/configs.tcl"
 source "./services/authenticator_service.tcl"
 
+namespace eval login_handler {
+  variable log
+  set log [logger::init login_handler]
+}
 
-proc auth_token {request} {
+proc login_handler::auth_token {request} {
 
 	variable log
 
@@ -45,7 +49,7 @@ proc auth_token {request} {
 	return [dict create next $request]
 }
 
-proc auth {request} {
+proc login_handler::auth {request} {
 	variable log
 
 	${log}::debug "execute login"

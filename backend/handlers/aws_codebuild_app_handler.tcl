@@ -3,10 +3,12 @@ package require logger 0.3
 
 source "./services/aws_codebuild_app_service.tcl"
 
-variable log
-set log [logger::init aws_codebuild_app_handler]
+namespace eval aws_codebuild_app_handler {
+  variable log
+  set log [logger::init aws_codebuild_app_handler]
+}
 
-proc aws_codebuild_app_index {request} {
+proc aws_codebuild_app_handler::index {request} {
 	variable log
 	
 	try {
@@ -20,7 +22,7 @@ proc aws_codebuild_app_index {request} {
 	}
 }
 
-proc aws_codebuild_app_save {request} {
+proc aws_codebuild_app_handler::save {request} {
 	variable log
 	
 	set body [dict get $request body]
@@ -36,7 +38,7 @@ proc aws_codebuild_app_save {request} {
 	}	
 }
 
-proc aws_codebuild_app_update {request} {
+proc aws_codebuild_app_handler::update {request} {
 	variable log
 	
 	set body [dict get $request body]
@@ -52,7 +54,7 @@ proc aws_codebuild_app_update {request} {
 	}	
 }
 
-proc aws_codebuild_app_edit {request} {
+proc aws_codebuild_app_handler::edit {request} {
 	variable log
 	
 	set id [dict get $request vars id]
@@ -74,7 +76,7 @@ proc aws_codebuild_app_edit {request} {
 	
 }
 
-proc aws_codebuild_app_delete {request} {
+proc aws_codebuild_app_handler::delete {request} {
 	variable log
 	
 	set id [dict get $request body id]
@@ -98,7 +100,7 @@ proc aws_codebuild_app_delete {request} {
 }
 
 
-proc aws_codebuild_app_clone {request} {
+proc aws_codebuild_app_handler::clone {request} {
 	variable log
 	
 

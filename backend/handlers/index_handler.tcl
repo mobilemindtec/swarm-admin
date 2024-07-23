@@ -1,10 +1,12 @@
 
 package require logger 0.3
 
-set log [logger::init index_handler]
+namespace eval index_handler {
+  variable log
+  set log [logger::init index_handler]
+}
 
-
-proc index {request} {
+proc index_handler::index {request} {
 	# default action
 	return [dict create tpl "index.html"]
 }

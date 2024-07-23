@@ -2,19 +2,22 @@
 package require logger 0.3
 package require websocket
 
-set log [logger::init websocket_handler]
 
 source "./json/json.tcl"
 source "./docker/docker-service-cmd.tcl"
 source "./core/websocket.tcl"
 
+namespace eval websocket_handler {
+  variable log
+  set log [logger::init websocket_handler]
+}
 
-proc websocket {request} {
+proc websocket_handler::index {request} {
 	# default action
 	return [dict create tpl "websocket.html"]
 }
 
-proc websocket_handler {clientSocket typeOfEvent dataReceived} {
+proc websocket_handler::handle {clientSocket typeOfEvent dataReceived} {
   variable log
 
   ${log}::debug "websocket_handler"
@@ -29,7 +32,7 @@ proc websocket_handler {clientSocket typeOfEvent dataReceived} {
   }
 }
 
-proc handle_message {clientSocket dataReceived} {
+proc websocket_handler::on_message {clientSocket dataReceived} {
 
   variable log
 
@@ -51,7 +54,7 @@ proc handle_message {clientSocket dataReceived} {
       logStart {
         set serviceName [websocket_app::dict_try_get $msg serviceName none]        
         set tail [websocket_app::dict_try_get $msg tail 100]        
-        set fd [docker::service_logs_stream $serviceName [list log_stream $clientSocket] $tail]
+        set fd [docker::service_logs_stream $serviceName [list websocket_handler::log_stream $clientSocket] $tail]
 
         if {$serviceName eq "none"} {
           websocket_app::send_data $clientSocket error "serviceName is required"
@@ -77,7 +80,7 @@ proc handle_message {clientSocket dataReceived} {
           return
         }
 
-        set result [aws_build_service::codebuild_log_stream $id [list aws_log_stream $clientSocket]]
+        set result [aws_build_service::codebuild_log_stream $id [list websocket_handler::aws_log_stream $clientSocket]]
 
         if {[dict exists $result fd]} {
           set fd [dict get $result fd]
@@ -99,7 +102,7 @@ proc handle_message {clientSocket dataReceived} {
     }  
 }
 
-proc log_stream {clientSocket fd} {
+proc websocket_handler::log_stream {clientSocket fd} {
   variable log
 
   ${log}::debug "log_stream"
@@ -120,7 +123,7 @@ proc log_stream {clientSocket fd} {
   
 
 
-proc aws_log_stream {clientSocket fd lines err} {
+proc websocket_handler::aws_log_stream {clientSocket fd lines err} {
   variable log
   ${log}::debug ">>aws_log_stream lines = [llength $lines], err = $err"
 

@@ -69,6 +69,8 @@ Install ornament
 $sudo ./installmodule.tcl ornament_tcl/ornament-0.1.tm
 
 
+https://aws.amazon.com/pt/blogs/compute/authenticating-amazon-ecr-repositories-for-docker-cli-with-credential-helper/
+
 
 
 auth

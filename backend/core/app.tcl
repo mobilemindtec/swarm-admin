@@ -24,6 +24,7 @@ proc app::init_routes {} {
 
 	set configs [load_configs]
 	router::init [dict get $configs routes]		
+	router::print
 }
 
 proc app::init {} {

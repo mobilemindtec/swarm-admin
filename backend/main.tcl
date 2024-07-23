@@ -2,6 +2,7 @@
 
 package require logger 0.3
 
+
 set log [logger::init main]
 
 
@@ -12,11 +13,11 @@ source "./jobs/jobs.tcl"
 
 
 app::init
-router::print
 
 #person_worker::init
 
 jobs::schedule
 
 app::run
+
 

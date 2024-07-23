@@ -1,0 +1,24 @@
+
+
+app:
+  title: Swarm ADM
+  description: Swarm ADM
+  entrypoint: ./main.tcl
+
+dependencies:
+  - https://raw.githubusercontent.com/mobilemindtec/tcl-hash/master/hash.tcl
+  - https://github.com/mobilemindtec/tcl-hash.git
+  - http-tcl
+
+build:
+  cmds:
+
+
+http-tcl:
+  uri: https://github.com/anticrisis/tcl-http
+  cmds:
+    - ./act build manifest.txt
+    - ./act install manifest.txt
+  imports:
+    - ::tcl::tm::path add [file normalize ./packer/http-tcl/build/modules]
+    - lappend ::auto_path [file normalize ./packer/http-tcl/build/packages]

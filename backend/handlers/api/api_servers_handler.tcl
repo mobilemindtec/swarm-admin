@@ -1,7 +1,14 @@
+package require logger 0.3
+
 source "./configs/configs.tcl"
 
+namespace eval api_servers_handler {
+	variable log
+	set log [logger::init api_servers_handler]
+}
 
-proc list_servers {} {
+
+proc api_servers_handler::list {} {
 
 	set servers [get_cnf servers]
 	set curr ""

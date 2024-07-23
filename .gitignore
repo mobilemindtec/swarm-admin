@@ -32,3 +32,4 @@ node_modules
 configs.json
 .metals
 *.log
+.deps

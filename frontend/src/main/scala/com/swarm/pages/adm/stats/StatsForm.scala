@@ -1,29 +1,26 @@
 package com.swarm.pages.adm.stats
 
 import com.raquo.laminar.api.L.*
-import com.raquo.laminar.receivers.ChildReceiver.text
 import com.swarm.api.ApiServer.ApiResult
 import com.swarm.api.ApiStats
-import com.swarm.facade.{Editor, EditorOpts}
 import com.swarm.models.Stats
-import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppList.message
 import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem}
 import com.swarm.services.Router
 import com.swarm.util.ApiErrorHandle
-import org.scalajs.dom
-import org.scalajs.dom.{document, window}
 import io.scalaland.chimney.dsl.*
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.util.{Failure, Success}
+import scala.util.Success
 object StatsForm:
 
   final case class StatsForm(
     id: Int = 0,
     description: String = "",
-    awsS3Uri: String = ""
+    awsS3Uri: String = "",
+    typ: String = ""
   ):
-    def validate: Boolean = this.description.nonEmpty && this.awsS3Uri.nonEmpty
+    def validate: Boolean =
+      this.description.nonEmpty && this.awsS3Uri.nonEmpty && this.typ.nonEmpty
 
   private val message = Var[Option[String]](None)
   private val stateVar = Var(StatsForm())
@@ -46,7 +43,9 @@ object StatsForm:
   def apply(id: Int) =
     load(id)
     node()
-  def apply() = node()
+  def apply() =
+    stateVar.update(_ => StatsForm())
+    node()
 
   private def formSubmitter = Observer[StatsForm] { state =>
     if !state.validate then message.update(_ => Some("Enter with name and content"))
@@ -106,6 +105,18 @@ object StatsForm:
                 state.copy(awsS3Uri = s)
               ),
               value <-- stateVar.signal.map(_.awsS3Uri)
+            )
+          ),
+          div(
+            cls("form-group"),
+            label("Type"),
+            select(
+              cls("form-control"),
+              option("table", selected <-- stateVar.signal.map(_.typ == "table")),
+              option("line_chart", selected <-- stateVar.signal.map(_.typ == "line_chart")),
+              option("pie_chart", selected <-- stateVar.signal.map(_.typ == "pie_chart")),
+              onInput.mapToValue --> stateVar.updater[String]((state, s) => state.copy(typ = s)),
+              value <-- stateVar.signal.map(_.typ)
             )
           ),
           child.maybe <-- message.signal.map(_.map(s => {

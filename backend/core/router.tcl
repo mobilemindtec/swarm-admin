@@ -132,6 +132,12 @@ proc router::prepare_route {route routeKey {main false}} {
 
 			#puts "==> $methods0, $routePath$rKey"
 
+			if {$handler0 != ""} {
+				if {[info procs ::$handler0] == ""} {
+					error "route handler ${handler0} does not exists"
+				}
+			}
+
 			dict set sRoute auth $auth0
 			dict set sRoute methods $methods0			
 			dict set sRoute handler $handler0

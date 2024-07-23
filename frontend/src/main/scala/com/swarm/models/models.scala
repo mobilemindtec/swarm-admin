@@ -1,8 +1,10 @@
 package com.swarm.models
 
+import moment.Moment
 import org.getshaka.nativeconverter.{Json, NativeConverter}
 
 import scala.scalajs.js
+import scala.scalajs.js.Date
 
 case class Service(
   id: String,
@@ -69,18 +71,29 @@ case class Stats(
   id: Int,
   description: String,
   @Json(name = "aws_s3_uri") awsS3Uri: String,
+  @Json(name = "type") typ: String,
   updatedAt: String
 ) derives NativeConverter
 
 case class StatsItem(
-  time: Int,
+  time: Double,
   text: String,
   more: String,
   @Json(ignore = true) count: Int,
-  @Json(ignore = true) min: Int,
-  @Json(ignore = true) max: Int,
-  @Json(ignore = true) avg: Int,
-  @Json(ignore = true) total: Int,
+  @Json(ignore = true) min: Double,
+  @Json(ignore = true) max: Double,
+  @Json(ignore = true) avg: Double,
+  @Json(ignore = true) total: Double,
   @Json(ignore = true) items: List[StatsItem] = Nil,
   @Json(ignore = true) showMore: Boolean
 ) derives NativeConverter
+
+case class LineChartData(timestamp: String, label: String, value: Int, total: Int)
+  derives NativeConverter:
+
+  def date: js.Date = Moment(timestamp.replace("_", ""), "YYMMDDHHmmSS").toDate()
+
+case class PieChartData(label: String, value: Int, total: Int)
+  derives NativeConverter:
+  
+  def id: String = label.replaceAll("_", "")

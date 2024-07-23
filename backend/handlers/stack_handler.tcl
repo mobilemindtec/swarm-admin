@@ -3,10 +3,12 @@ package require logger 0.3
 
 source "./services/stack_service.tcl"
 
-variable log
-set log [logger::init stack_handler]
+namespace eval stack_handler {
+  variable log
+  set log [logger::init stack_handler]
+}
 
-proc stack_index {request} {
+proc stack_handler::index {request} {
 	variable log
 	
 	try {
@@ -21,7 +23,7 @@ proc stack_index {request} {
 		
 }
 
-proc stack_save {request} {
+proc stack_handler::save {request} {
 	variable log
 	
 	set body [dict get $request body]
@@ -38,7 +40,7 @@ proc stack_save {request} {
 	
 }
 
-proc stack_update {request} {
+proc stack_handler::update {request} {
 	variable log
 	
 	set body [dict get $request body]
@@ -55,7 +57,7 @@ proc stack_update {request} {
 	
 }
 
-proc stack_edit {request} {
+proc stack_handler::edit {request} {
 	variable log
 	
 	set id [dict get $request vars id]
@@ -79,7 +81,7 @@ proc stack_edit {request} {
 	
 }
 
-proc stack_delete {request} {
+proc stack_handler::delete {request} {
 	variable log
 	
 	set id [dict get $request body id]

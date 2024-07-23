@@ -4,10 +4,12 @@ package require logger 0.3
 
 source "./docker/docker.tcl"
 
-set log [logger::init api_handler]
+namespace eval api_docker_handler {
+	variable log
+	set log [logger::init api_docker_handler]
+}
 
-
-proc docker_service_ls {request} {
+proc api_docker_handler::service_ls {request} {
 
 	set query [dict get $request query]
 	set results [docker::cmd  "service ls"]
@@ -18,7 +20,7 @@ proc docker_service_ls {request} {
 	return [dict create json $data]
 }
 
-proc docker_service_ps {request} {
+proc api_docker_handler::service_ps {request} {
 
 	set pathVars [dict get $request vars]
 	set serviceId [dict get $pathVars id]
@@ -30,7 +32,7 @@ proc docker_service_ps {request} {
 	return [dict create json $data]
 }
 
-proc docker_service_rm {request} {
+proc api_docker_handler::service_rm {request} {
 
 	set pathVars [dict get $request vars]
 	set serviceName [dict get $pathVars service_name]
@@ -40,7 +42,7 @@ proc docker_service_rm {request} {
 	return [dict create json $data]
 }
 
-proc docker_service_update {request} {
+proc api_docker_handler::service_update {request} {
 
 	set pathVars [dict get $request vars]
 	set serviceName [dict get $pathVars service_name]
@@ -50,7 +52,7 @@ proc docker_service_update {request} {
 	return [dict create json $data]
 }
 
-proc docker_service_logs_get {request} {
+proc api_docker_handler::service_logs_get {request} {
 
 	set pathVars [dict get $request vars]
 	set serviceName [dict get $pathVars service_name]
@@ -60,7 +62,7 @@ proc docker_service_logs_get {request} {
 	return [dict create json $data]
 }
 
-proc docker_stack_deploy {request} {
+proc api_docker_handler::stack_deploy {request} {
 
 	set pathVars [dict get $request vars]
 	set stackName [dict get $pathVars stack_name]
@@ -89,7 +91,7 @@ proc docker_stack_deploy {request} {
 	return [dict create json $data]
 }
 
-proc docker_stack_rm {request} {
+proc api_docker_handler::stack_rm {request} {
 
 
 	set pathVars [dict get $request vars]

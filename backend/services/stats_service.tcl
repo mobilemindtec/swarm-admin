@@ -29,6 +29,7 @@ proc stats_service::prepare {data} {
 	set stat [dict create]
 	dict set stat description [dict get $data description]
 	dict set stat aws_s3_uri [dict get $data aws_s3_uri]
+	dict set stat type [dict get $data type]
 	dict set stat updated_at [today]
 	return $stat
 }
@@ -60,7 +61,7 @@ proc stats_service::update {data} {
 
 proc stats_service::all {} {
 
-	set rs [db::all stats [list id description aws_s3_uri created_at updated_at]]
+	set rs [db::all stats [list id description aws_s3_uri type created_at updated_at]]
 
 	if {[$rs has_error]} {
 		error [$rs get_error_info]
@@ -79,7 +80,7 @@ proc stats_service::all {} {
 
 proc stats_service::find {id} {
 
-	set rs [db::first stats [list id description aws_s3_uri created_at updated_at] $id]
+	set rs [db::first stats [list id description aws_s3_uri type created_at updated_at] $id]
 
 	if {[$rs has_error]} {
 		error [$rs get_error_info]
@@ -121,6 +122,62 @@ proc stats_service::exists {id} {
 proc stats_service::report {stat} {
 
 	set uri [dict get $stat aws_s3_uri]
+	return [stats_service::aws_cp $uri]
+
+	if {[string match *\** $uri]} {
+
+		set last_part [lindex [split $$uri /] end]
+		set x [string length $uri]
+		set y [string length $last_part]
+		set l [expr { $x - $y - 1 }]
+		set uri [string range $uri 0 $l]
+
+		set cmd [list aws s3 ls $uri]
+		set results [exec {*}$cmd]
+		
+		set results [split $results \n]
+
+		set last_part [lindex [split $last_part \*] 0]
+
+		set contents [dict create]
+		set data [list]
+		
+		foreach line $results {
+
+			lassign $line _0 _1 _2 obj_name
+
+
+			if {[string match "${last_part}*" $obj_name]} {				
+				set name [string range $obj_name [string length $last_part] end]
+				set name [lindex [split $name \.] 0]				
+				set lines [split [stats_service::aws_cp $uri$obj_name] \n]
+				foreach line $lines {
+
+					if {$line == ""} {
+						continue
+					}
+
+					set parts [split $line ,]
+					set timestamp "[lindex $parts 0]_"
+					set value [expr int([lindex $parts 1])]
+					lappend data [join [list $timestamp $name $value] ,]
+				}
+				
+			}
+
+		}
+		
+		puts $data
+		return [join $data \n]
+
+
+
+	} else {
+		stats_service::aws_cp $uri
+	}
+}
+
+proc stats_service::aws_cp {uri} {
 	set filename [lindex [split $$uri /] end]
 	set dest /tmp/$filename
 	set cmd [list aws s3 cp $uri $dest]
@@ -130,7 +187,7 @@ proc stats_service::report {stat} {
 	set fd [open $dest]
 	set content [read $fd]
 	close $fd
-	return $content	
+	return $content		
 }
 
 proc stats_service::rs_to_entity {rs} {
@@ -143,7 +200,8 @@ proc stats_service::rs_to_entity {rs} {
 	dict set stat id $id
 	dict set stat description [lindex $rs 1]
 	dict set stat aws_s3_uri [lindex $rs 2]
-	dict set stat createdAt [lindex $rs 3]
-	dict set stat updatedAt [lindex $rs 4]	
+	dict set stat type [lindex $rs 3]
+	dict set stat createdAt [lindex $rs 4]
+	dict set stat updatedAt [lindex $rs 5]	
 	return $stat
 }

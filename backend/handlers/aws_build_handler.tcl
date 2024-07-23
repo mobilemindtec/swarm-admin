@@ -2,12 +2,13 @@ package require logger 0.3
 
 source "./services/aws_build_service.tcl"
 
-variable log
-set log [logger::init aws_build_handler]
-
+namespace eval aws_build_handler {
+  variable log
+  set log [logger::init aws_build_handler]
+}
 
 # inicia um build para um app
-proc aws_build_start {request} {
+proc aws_build_handler::start {request} {
 	variable log
 	set id [dict get $request vars id] 
 	set response [dict create error false messages ""]
@@ -35,7 +36,7 @@ proc aws_build_start {request} {
 }
 
 # lista os builds de um app
-proc aws_build_list {request} {
+proc aws_build_handler::list {request} {
 	variable log
 	set id [dict get $request vars id]
 
@@ -58,7 +59,7 @@ proc aws_build_list {request} {
 }
 
 # bisca infomações de um build
-proc aws_build_get {request} {
+proc aws_build_handler::get {request} {
 	variable log
 	set id [dict get $request vars id]
 
@@ -79,7 +80,7 @@ proc aws_build_get {request} {
 }
 
 # atualiza informações de um build
-proc aws_build_update {request} {
+proc aws_build_handler::update {request} {
 	variable log
 	set id [dict get $request body id]
 
@@ -105,7 +106,7 @@ proc aws_build_update {request} {
 }
 
 # para um build em andamento
-proc aws_build_stop {request} {
+proc aws_build_handler::stop {request} {
 	variable log
 	set id [dict get $request vars id]
 
@@ -130,7 +131,7 @@ proc aws_build_stop {request} {
 }
 
 # deleta um build
-proc aws_build_delete {request} {
+proc aws_build_handler::delete {request} {
 	variable log
 	set id [dict get $request body id]
 
