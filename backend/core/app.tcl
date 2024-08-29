@@ -1,6 +1,7 @@
 
 package require logger 0.3
 
+source "./core/ornament.tcl"
 source "./configs/configs.tcl"
 source "./core/httpserver.tcl"
 source "./core/websocket.tcl"

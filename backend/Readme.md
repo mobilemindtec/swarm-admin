@@ -64,14 +64,12 @@ https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0
 Install JSON lib:
 $ sudo apt install tcllib
 
-Install ornament
-
-$sudo ./installmodule.tcl ornament_tcl/ornament-0.1.tm
 
 
+## configure docker credentials
 https://aws.amazon.com/pt/blogs/compute/authenticating-amazon-ecr-repositories-for-docker-cli-with-credential-helper/
 
 
 
-auth
+
 

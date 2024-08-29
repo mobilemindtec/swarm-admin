@@ -1,4 +1,3 @@
-package require ornament
 namespace import ornament::*
 
 source "./json/json.tcl"
