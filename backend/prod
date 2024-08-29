@@ -1,0 +1,37 @@
+#!/bin/bash
+
+export ENV=prod
+
+case "$1" in
+
+	"start")
+		echo "::> start app on prod mode"
+		echo "::> app started at `date +"%Y-%m-%d %H:%M:%S"`" > app.log
+		nohup ./main.tcl > "app.log" 2>&1 &
+	;;
+	"stop")
+		PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
+	    if [ "$PID" != "" ]; then
+	        kill $PID
+	        echo ":>> stop app pid $PID at `date +"%Y-%m-%d %H:%M:%S"`"
+	        echo "::> app stopped at `date +"%Y-%m-%d %H:%M:%S"`" > app.log
+	    else
+	    	echo "::> app not is running"
+	    fi    
+
+	;;
+	"status")
+		PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
+		if [ "$PID" != "" ]; then
+			echo "::> app is running with PID $PID"
+		else
+			echo "::> app not is running"
+		fi
+		;;
+	"logs")
+		tail -f -n 100 app.log
+	;;
+	*)
+		echo "Use: <start> | <stop> | <logs> | <status>"
+
+esac

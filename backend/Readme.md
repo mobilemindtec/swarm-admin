@@ -62,7 +62,7 @@ https://techtinkering.com/articles/introducing-ornament-a-tcl-template-module/
 https://wiki.tcl-lang.org/page/Tcl+Tutorial+Lesson+0
 
 Install JSON lib:
-$ sudo apt install tcllib
+$ sudo apt install tcllib mysqltcl tcltls tclthread
 
 
 
