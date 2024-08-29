@@ -7,16 +7,16 @@ import com.swarm.api.ApiStats
 import com.swarm.charts.google.{charts, visualization}
 import com.swarm.models.{LineChartData, PieChartData, Stats, StatsItem}
 import com.swarm.pages.comps.Theme.{breadcrumb, breadcrumbItem, pageAction, pageActions}
-import com.swarm.util.ApiErrorHandle
+import com.swarm.util.{ApiErrorHandle, DateUtil}
 import moment.Moment
 import org.scalajs.dom.{HTMLDivElement, document, window}
-
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.scalajs.js.Date
 import scala.util.Success
 import scala.scalajs.js
 import js.JSConverters.*
+import scala.collection.mutable
 
 
 
@@ -214,11 +214,19 @@ object StatsReportPage:
   private def renderLineChart() =
     div(
       idAttr("chart"),
+      styleAttr("height: 500px; padding-bottom: 15px")
     )
 
   private def renderPieChart() =
     div(
-      children <-- pieChartData.signal.map(_.map(s => div(idAttr(s.id))))
+      cls("row"),
+      children <-- pieChartData.signal.map(_.map(s =>
+        div(
+          idAttr(s.id),
+          cls("col-xs-12 col-md-4"),
+          styleAttr("height: 300px; padding-bottom: 15px")
+        )
+      ))
     )
 
   private def drawLineChart() =
@@ -226,23 +234,33 @@ object StatsReportPage:
     val st = stat.now().get
     val arrs = js.Array[js.Array[js.Any]]()
 
-    val labels = lines.groupBy(_.label)
-    val max = lines.headOption.map(_.total).getOrElse(0)
+    val labels = lines.groupBy(_.label).keys.toList.sorted
+    val max = lines.map(_.total).max
+
 
     val headers = js.Array[js.Any]("Datetime")
-    for label <- labels.keys do
+    for label <- labels do
       headers.append(label)
 
     arrs.append(headers)
 
-    for (k, v) <- lines.groupBy(_.timestamp) do
-      //window.console.log(k, v.head.date)
+    val last = mutable.Map[String, Double]()
+
+    val values = lines.groupBy(_.timestamp)
+    for k <- values.keys.toList.sortBy(d => DateUtil.chartStrToDate(d).getTime()) do
+      val v = values(k)
       val a = js.Array[js.Any](v.head.date)
-      for label <- labels.keys do
+      for label <- labels do
         v.find(_.label == label) match
-          case Some(i) => a.append(i.value)
-          case None => a.append(0)
+          case Some(i) =>
+            last.put(label, i.value)
+            a.append(i.value)
+          case None =>
+            window.console.log(s"use last key ${label}")
+            a.append(last.getOrElse(label, 0D))
       arrs.append(a)
+
+
 
     charts.load(
       "current",
@@ -256,8 +274,22 @@ object StatsReportPage:
         "title" -> st.description,
         "curveType" -> "function",
         "legend" -> js.Dynamic.literal("position" -> "right"),
-        "vAxis" -> js.Dynamic.literal("maxValue" -> 250, "minValue" -> 0)
+        "vAxis" -> js.Dynamic.literal(
+          "maxValue" -> max,
+          "minValue" -> 0,
+          "textStyle" -> js.Dynamic.literal("color" -> "#ffffff")
+        ),
+        "hAxis" -> js.Dynamic.literal(
+          "textStyle" -> js.Dynamic.literal("color" -> "#ffffff")
+        ),
+        "backgroundColor" -> "#353b48",
+        "legend" -> js.Dynamic.literal("textStyle" -> js.Dynamic.literal("color" -> "#ffffff")),
+        "titleTextStyle" -> js.Dynamic.literal("color" -> "#ffffff")
+
       )
+
+
+
       val chart = new visualization.LineChart(document.getElementById("chart"))
       chart.draw(data, options)
     }
@@ -286,7 +318,10 @@ object StatsReportPage:
         )
         val options = js.Dynamic.literal(
           "title" -> s"${st.description} - ${line.label}",
-         // "legend" -> js.Dynamic.literal("position" -> "right"),
+          "backgroundColor" -> "#353b48",
+          "legend" -> js.Dynamic.literal("textStyle" -> js.Dynamic.literal("color" -> "#ffffff")),
+          "titleTextStyle" -> js.Dynamic.literal("color" -> "#ffffff")
+
         )
         val chart = new visualization.PieChart(document.getElementById(line.id))
         chart.draw(data, options)

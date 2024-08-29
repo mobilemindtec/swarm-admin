@@ -16,6 +16,9 @@
 		"username": "test",
 		"password": "test"
 	},
+	"tokens": {
+		"api": ""
+	}
 	"docker": {
 		"stack": {
 			"path": "../swarm-stack-demo",

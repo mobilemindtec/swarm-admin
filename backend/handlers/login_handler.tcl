@@ -21,7 +21,7 @@ proc login_handler::auth_token {request} {
 
 	if {!$auth} {
 		return [dict create next $request]	
-	}
+	}	
 
 	${log}::debug "execute auth_token"
 
@@ -33,12 +33,19 @@ proc login_handler::auth_token {request} {
 
 	set token [dict get $headers "authorization"]
 
+	set default_api_token [get_cnf_or_def "" tokens api]
+
+	if {$default_api_token != "" && $default_api_token == $token} {
+		return [dict create next $request]
+	}
 
 	if {![string match {Bearer *} $token]} {
 		return [dict create json [dict create error "invalid token"] statusCode 401]
 	}
 
 	set token [string trim [lindex [split $token " "] 1]]
+
+
 
 	set valid [jwt::validate $token]
 

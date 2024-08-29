@@ -122,7 +122,6 @@ proc stats_service::exists {id} {
 proc stats_service::report {stat} {
 
 	set uri [dict get $stat aws_s3_uri]
-	return [stats_service::aws_cp $uri]
 
 	if {[string match *\** $uri]} {
 
@@ -132,42 +131,28 @@ proc stats_service::report {stat} {
 		set l [expr { $x - $y - 1 }]
 		set uri [string range $uri 0 $l]
 
-		set cmd [list aws s3 ls $uri]
-		set results [exec {*}$cmd]
-		
-		set results [split $results \n]
+		set cmd [list aws s3 ls $uri]		
+		set objs [split [exec {*}$cmd] \n]
 
 		set last_part [lindex [split $last_part \*] 0]
 
 		set contents [dict create]
 		set data [list]
 		
-		foreach line $results {
+		foreach line $objs {
 
 			lassign $line _0 _1 _2 obj_name
 
-
 			if {[string match "${last_part}*" $obj_name]} {				
-				set name [string range $obj_name [string length $last_part] end]
-				set name [lindex [split $name \.] 0]				
 				set lines [split [stats_service::aws_cp $uri$obj_name] \n]
 				foreach line $lines {
-
-					if {$line == ""} {
-						continue
-					}
-
-					set parts [split $line ,]
-					set timestamp "[lindex $parts 0]_"
-					set value [expr int([lindex $parts 1])]
-					lappend data [join [list $timestamp $name $value] ,]
+					lappend data $line
 				}
 				
 			}
 
 		}
 		
-		puts $data
 		return [join $data \n]
 
 
@@ -188,6 +173,40 @@ proc stats_service::aws_cp {uri} {
 	set content [read $fd]
 	close $fd
 	return $content		
+}
+
+proc stats_service::feed {table columns body} {
+
+	set columns [split $columns ,]
+	set cols [lmap it $columns {list ` $it `}]
+	set query "INSERT INTO $table ([join [lmap it $cols {join $it ""}] ,]) VALUES "
+
+	#puts "::> table=$table, columns=$columns"
+	#puts "::> $body"
+
+	set values {}
+
+	foreach it $body {
+		set value "("
+		foreach col $columns {
+			set v [dict get $it $col]
+			set v  [string map {' \\'} $v]
+			set value $value'$v',
+		}
+
+		set value [string range $value 0 end-1])
+		lappend values $value		
+	}
+
+	set query $query[join $values ", "]
+
+	#puts "::> $query"
+
+	set res [db::raw $query]
+
+	if {[$res has_error]} {
+		return -code error [$res get_error_info]
+	}
 }
 
 proc stats_service::rs_to_entity {rs} {

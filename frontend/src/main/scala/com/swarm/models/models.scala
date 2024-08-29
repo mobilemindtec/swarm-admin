@@ -88,12 +88,11 @@ case class StatsItem(
   @Json(ignore = true) showMore: Boolean
 ) derives NativeConverter
 
-case class LineChartData(timestamp: String, label: String, value: Int, total: Int)
+case class LineChartData(timestamp: String, label: String, value: Double, total: Double)
   derives NativeConverter:
 
   def date: js.Date = Moment(timestamp.replace("_", ""), "YYMMDDHHmmSS").toDate()
 
-case class PieChartData(label: String, value: Int, total: Int)
-  derives NativeConverter:
-  
+case class PieChartData(label: String, value: Double, total: Double) derives NativeConverter:
+
   def id: String = label.replaceAll("_", "")

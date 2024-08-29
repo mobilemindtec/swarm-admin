@@ -151,6 +151,8 @@ proc stats_handler::line_chart {request} {
 		set contents [stats_service::report $result]
 		set data [list]
 
+		#puts $contents
+
 		foreach line [split $contents \n] {
 			if {$line == ""} {
 				continue
@@ -159,8 +161,8 @@ proc stats_handler::line_chart {request} {
 			set val [dict create]
 			dict set val timestamp "[lindex $vars 0]_"
 			dict set val label [lindex $vars 1]
-			dict set val value [expr int([lindex $vars 2])]
-			dict set val total [expr int([lindex $vars 3])]
+			dict set val value [expr double([lindex $vars 2])]
+			dict set val total [expr double([lindex $vars 3])]
 			lappend data $val
 		}
 
@@ -200,8 +202,8 @@ proc stats_handler::pie_chart {request} {
 			set vars [split $line ,]
 			set val [dict create]
 			dict set val label [lindex $vars 0]
-			dict set val value [expr int([lindex $vars 1])]
-			dict set val total [expr int([lindex $vars 2])]
+			dict set val value [expr double([lindex $vars 1])]
+			dict set val total [expr double([lindex $vars 2])]
 			lappend data $val
 		}
 
@@ -212,4 +214,27 @@ proc stats_handler::pie_chart {request} {
 		${log}::error $err
 		return [response::json_error $err]
 	}		
+}
+
+proc stats_handler::feed {request} {
+	variable log
+
+
+	set query [dict get $request query]
+	set table [dict get $query table]
+	set columns [dict get $query columns]	
+	set body [dict get $request body]
+
+	# ${log}::debug "feed $query"
+	
+	try {
+
+		stats_service::feed $table $columns $body
+		return [response::json_ok success ]
+
+	} on error err {
+		${log}::error $err
+		return [response::json_error $err]			
+	}
+
 }

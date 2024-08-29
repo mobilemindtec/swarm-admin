@@ -24,3 +24,6 @@ object DateUtil:
     if dt.nonEmpty then Moment(dt.get).utcOffset(0).format(pattern) else ""
 
   def isValid(str: String) = Moment(str, pattern).isValid()
+  
+  def chartStrToDate(s: String): js.Date =
+    Moment(s.replace("_", ""), "YYMMDDHHmmSS").toDate()
