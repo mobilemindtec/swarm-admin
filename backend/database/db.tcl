@@ -169,6 +169,7 @@ proc db::get_database_params {} {
       }
       prod {
         set env prod
+        set showSql false
       }
     }
   }
