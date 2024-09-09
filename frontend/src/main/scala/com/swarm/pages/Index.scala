@@ -23,7 +23,7 @@ object Index:
     case Stats
     case AwsCodeBuildApp
     case Authenticator
-    case StatsReport
+    // case StatsReport
 
   val drawerMenuItemVar = Var[DrawerMenuItem](DrawerMenuItem.Home)
   val menuItemCls = "list-group-item" :: "list-group-item-action" :: "rounded-0" :: Nil
@@ -72,12 +72,13 @@ object Index:
             StackPage()
           }
         },
+        /*
         pathPrefix("adm" / "stats") {
           provideOption(maybeUser) { _ =>
             drawerMenuItemVar.update(_ => DrawerMenuItem.Stats)
             StatsPage()
           }
-        },
+        },*/
         pathPrefix("adm" / "aws" / "codebuild" / "app") {
           provideOption(maybeUser) { _ =>
             drawerMenuItemVar.update(_ => DrawerMenuItem.AwsCodeBuildApp)
@@ -133,11 +134,11 @@ object Index:
           href("/adm/stack"),
           "Stacks"
         ),
-        a(
+        /*a(
           cls <-- getDrawerMenuItemCls(Stats),
           href("/adm/stats"),
           "Stats"
-        ),
+        ),*/
         a(
           cls <-- getDrawerMenuItemCls(AwsCodeBuildApp),
           href("/adm/aws/codebuild/app"),
