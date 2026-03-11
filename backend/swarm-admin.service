@@ -1,0 +1,17 @@
+[Unit]
+Description=Swarm Admin
+After=network.target
+
+[Service]
+User=ubuntu
+Type=forking
+WorkingDirectory=/mnt/storage/repositories/swarm-admin/backend
+ExecStart=/bin/bash -c "cd /mnt/storage/repositories/swarm-admin/backend && ./prod start"
+#ExecStop=/bin/bash -c "cd /mnt/storage/repositories/swarm-admin/backend && ./prod stop"
+#ExecReload=/bin/bash -c "cd /mnt/storage/repositories/swarm-admin/backend && ./prod restart"
+# optional items below
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

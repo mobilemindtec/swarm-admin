@@ -20,6 +20,10 @@ case "$1" in
 	    fi    
 
 	;;
+	"restart")
+		stop
+		start
+	;;
 	"status")
 		PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
 		if [ "$PID" != "" ]; then
@@ -35,3 +39,5 @@ case "$1" in
 		echo "Use: <start> | <stop> | <logs> | <status>"
 
 esac
+
+exit 0
