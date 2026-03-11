@@ -144,7 +144,7 @@ proc person_service::create {data} {
 	set stack [dict get $data stack]
 	set search "$nickname,$name,$birthday,$stack"
 
-	#person_db_worker::send $data
+	#person_db_worker::dispatch $data
 
 	dict set cache $id $data
 	dict set cache $search $data

@@ -33,3 +33,4 @@ configs.json
 .metals
 *.log
 .deps
+*/project/project/**/*

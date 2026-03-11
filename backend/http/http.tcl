@@ -2,14 +2,14 @@ namespace import ornament::*
 
 source "./json/json.tcl"
 source "./http/mimetypes.tcl"
-
+source "./configs/configs.tcl"
 
 namespace eval response {
 
 }
 
 namespace eval request {
-  
+
 }
 
 proc request::body_parse { body contentType } {
@@ -102,34 +102,34 @@ proc response::json_created {{body ""} {location ""}} {
 
 proc response::ok {socket body contentType } {
   puts $socket "HTTP/1.0 200"
-  puts $socket "Content-Type: $contentType"  
-  puts $socket ""  
+  puts $socket "Content-Type: $contentType"
+  puts $socket ""
   puts $socket [body_format $body $contentType]
 }
 
 proc response::server_error { socket body contentType } {
   puts $socket "HTTP/1.0 500"
-  puts $socket "Content-Type: $contentType"  
-  puts $socket ""  
+  puts $socket "Content-Type: $contentType"
+  puts $socket ""
   puts $socket [body_format $body $contentType true]
 }
 
 proc response::not_found { socket body contentType } {
   puts $socket "HTTP/1.0 404"
-  puts $socket "Content-Type: $contentType"  
-  puts $socket ""    
+  puts $socket "Content-Type: $contentType"
+  puts $socket ""
   puts $socket [body_format $body $contentType true]
 }
 
 proc response::bad_request { socket body contentType } {
   puts $socket "HTTP/1.0 400"
-  puts $socket "Content-Type: $contentType"  
-  puts $socket ""    
+  puts $socket "Content-Type: $contentType"
+  puts $socket ""
   puts $socket [body_format $body $contentType true]
 }
 
 proc response::write {chan body {statusCode 200} {contentType "text/plain"} {headers {}} } {
-  
+
   switch $statusCode {
     200 {
       set status "200 OK"
@@ -149,7 +149,7 @@ proc response::write {chan body {statusCode 200} {contentType "text/plain"} {hea
     default {
       set status $statusCode
     }
-  }  
+  }
 
   if {![dict exists $headers "content-type"] && ![dict exists $headers "Content-Type"]} {
     dict set headers "Content-Type" $contentType
@@ -158,7 +158,7 @@ proc response::write {chan body {statusCode 200} {contentType "text/plain"} {hea
   puts $chan "HTTP/1.0 $status"
 
   foreach {k v} $headers {
-    puts $chan "$k: $v"    
+    puts $chan "$k: $v"
   }
 
   puts $chan ""
@@ -168,7 +168,7 @@ proc response::write {chan body {statusCode 200} {contentType "text/plain"} {hea
 
 proc response::render {template {vars ""} {cmds ""} } {
   set script [compile $template]
-  return [run $script $cmds $vars]  
+  return [run $script $cmds $vars]
 }
 
 proc response::not_found_tpl {{errorTpl "error.html"}} {
@@ -185,7 +185,7 @@ proc response::bad_request_tpl {{errorTpl "error.html"} {error ""}} {
 
 proc response::template_content {filename} {
 
-  set templatesPath [dict get $app::configs "templates"]
+  set templatesPath [get_cnf "templates"]
   set errorTpl [open "$templatesPath/$filename" r]
   set errorTplContent [read $errorTpl]
   close $errorTpl
@@ -205,47 +205,46 @@ proc response::asset {chan path {download false}} {
   #puts "assetFile = $assetFile, exists = [file exists $assetFile]"
 
   if {[file exists $assetFile] == 0 } {
-    write $chan 404    
+    write $chan 404
   } else {
     if {[catch {
-      
 
-      if {$download} {
-        set contentType "application/octet-stream"
-      } else {
-        set splited [split $path .]
-        set ext [lindex $splited end]
-        set contentType [get_mimetype ".$ext"]       
-      }
+        if {$download} {
+          set contentType "application/octet-stream"
+        } else {
+          set splited [split $path .]
+          set ext [lindex $splited end]
+          set contentType [get_mimetype ".$ext"]
+        }
 
-      set fsize [file size $assetFile]
-      set assetFile [open $assetFile r]
-      fconfigure $assetFile -translation binary
-      set assetContent [read $assetFile]
+        set fsize [file size $assetFile]
+        set assetFile [open $assetFile r]
+        fconfigure $assetFile -translation binary
+        set assetContent [read $assetFile]
 
-      close $assetFile 
-      
-      set headers [dict create content-length $fsize] 
+        close $assetFile
 
-      chan configure $chan -translation binary
-      write $chan $assetContent 200 $contentType $headers
+        set headers [dict create content-length $fsize]
 
-    } err]} {
+        chan configure $chan -translation binary
+        write $chan $assetContent 200 $contentType $headers
+
+      } err]} {
       write $chan "Internal Server Error" 500
     }
-  }  
+  }
 }
 
-proc response::slect_render {socket response contentType} {
+proc response::select_render {socket response contentType} {
 
   variable log
 
   #${log}::debug "render_response $response"
 
   if {$response == ""} {
-    ok $socket $response $contentType 
+    ok $socket $response $contentType
     return
-  } 
+  }
 
   set bodyType "json"
   set statusCode 200
@@ -285,7 +284,6 @@ proc response::slect_render {socket response contentType} {
     json {
       set bodyValue [dict get $response json]
 
-      
       if {$bodyValue eq ""} {
 
         switch $statusCode {
@@ -317,7 +315,7 @@ proc response::slect_render {socket response contentType} {
             set bodyValue [dict create message "Server Error"]
           }
           default {
-            set bodyValue [dict create message "Unknown error: $statusCode"] 
+            set bodyValue [dict create message "Unknown error: $statusCode"]
           }
         }
 
@@ -337,7 +335,7 @@ proc response::slect_render {socket response contentType} {
       ${log}::error "unknow response type: $bodyType "
       write $socket $response 200 $contentType $headers
     }
-  }        
+  }
 }
 
 proc response::as_json { chan data {statusCode 200} {headers {}} {isList false}} {
@@ -361,7 +359,7 @@ proc response::template {chan content} {
   set html ""
   set headers [dict create]
 
-  set templatesPath [dict get $app::configs templates]
+  set templatesPath [get_cnf templates]
 
   if { [dict exists $content tpl] } {
     set tplFileName [dict get $content tpl]
@@ -392,12 +390,12 @@ proc response::template {chan content} {
 
   #puts $chan "HTTP/1.0 200 OK"
   if { $text != "" } {
-    write $chan $text 200 "text/plain" 
+    write $chan $text 200 "text/plain"
   } elseif { $html != "" } {
-    write $chan $html 200 "text/html" 
+    write $chan $html 200 "text/html"
   } elseif { $tpl != "" } {
     set html [render $tpl $vars $cmds]
-    write $chan $html 200 "text/html" 
+    write $chan $html 200 "text/html"
   } else {
     write $chan "500 Internal Server Error" 500
   }

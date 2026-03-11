@@ -1,12 +1,9 @@
 package com.swarm
 
-import frontroute._
-import org.scalajs.dom
-
-import scalajs.js
+import com.raquo.laminar.api.L.*
 import com.swarm.pages.Index
-import com.raquo.laminar.api.L._
-import com.swarm.util.Cookie
+import frontroute.*
+import org.scalajs.dom
 
 object App:
 

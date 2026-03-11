@@ -77,7 +77,6 @@ proc pool::acquire {} {
 proc pool::release {currConn} {
   variable MysqlPool
 
-
   transaction_done $currConn
 
   set id [$currConn get_id]
@@ -88,17 +87,17 @@ proc pool::release {currConn} {
     set conn [dict get $item conn]
 
     if {[$conn get_id] == $id} {
-      dict set item busy false      
+      dict set item busy false
       lset MysqlPool $i $item
       break
     }
   }
 
   #show_pool_size
-}  
+}
 
 proc pool::transaction_done {rconn} {
-  variable log 
+  variable log
   set handle [$rconn get_dbhandle]
 
   if {![$rconn is_autocommit]} {
@@ -113,20 +112,17 @@ proc pool::transaction_done {rconn} {
         if {$err != ""} {
           ${log}::error "error mysql commit: $err"
         }
-      }      
+      }
     }
   }
 }
-
-
-
 
 proc db::sanitaze {value} {
   #set regex1 {\D}
   #set regex2 {[^[:alpha:]]}
   #set regex {[^[:alnum:][:space:]]}
   #regsub -all $regex $value ""
-  
+
   set value [regsub -all {'} $value {\'}]
   set value [regsub -all {"} $value {\"}]
   set value [regsub -all {;} $value {\;}]
@@ -136,7 +132,7 @@ proc db::sanitaze {value} {
 }
 
 proc db::get_query {sql params} {
- set sql {}
+  set sql {}
   set sp [split $query ?]
 
   if {[llength $args] == [llength $sp]} {
@@ -150,12 +146,12 @@ proc db::get_query {sql params} {
     set v [sanitaze [lindex $args]]
     set part [lindex $sp]
     set sql "$sql $part '$v'"
-  }  
+  }
 }
 
 proc db::get_database_params {} {
   variable showSql
-  set env dev 
+  set env dev
 
   if {[info exists ::env(ENV)]} {
     switch $::env(ENV) {
@@ -182,29 +178,29 @@ proc db::get_database_params {} {
 
   if {[info exists ::env(MYSQL_USER)]} {
     set user $::env(MYSQL_USER)
-  } 
+  }
 
   if {[info exists ::env(MYSQL_PASSWORD)]} {
     set password $::env(MYSQL_PASSWORD)
-  } 
+  }
 
   if {[info exists ::env(MYSQL_DATABASE)]} {
     set database $::env(MYSQL_DATABASE)
-  } 
+  }
 
   if {[info exists ::env(MYSQL_HOST)]} {
     set host $::env(MYSQL_HOST)
-  } 
+  }
 
   if {[info exists ::env(MYSQL_PORT)]} {
     set port $::env(MYSQL_PORT)
   }
 
-  dict create user $user password $password database $database host $host port $port   
+  dict create user $user password $password database $database host $host port $port
 }
 
 proc db::mysql_connect {{autocommit true}} {
-  
+
   set dbhandle {}
   set result [ResultSet new]
   set params [get_database_params]
@@ -222,8 +218,8 @@ proc db::mysql_connect {{autocommit true}} {
                                           -port $port \
                                           -user $user \
                                           -password $password \
-                                          -db $database]} err]} {    
-    $result set_error $err                                     
+                                          -db $database]} err]} {
+    $result set_error $err
 
   } else {
     ::mysql::autocommit $dbhandle $autocommit
@@ -233,10 +229,10 @@ proc db::mysql_connect {{autocommit true}} {
   }
 
   return $result
-} 
+}
 
 proc db::mysql_close {rconn} {
-  variable log 
+  variable log
   set handle [$rconn get_dbhandle]
 
   if {![$rconn is_autocommit]} {
@@ -251,7 +247,7 @@ proc db::mysql_close {rconn} {
         if {$err != ""} {
           ${log}::error "error mysql commit: $err"
         }
-      }      
+      }
     }
   }
 
@@ -259,9 +255,8 @@ proc db::mysql_close {rconn} {
     if {$err != ""} {
       ${log}::error "error mysql close: $err"
     }
-  }        
+  }
 }
-
 
 proc db::replace_any_query_params {query params} {
 
@@ -274,7 +269,7 @@ proc db::replace_any_query_params {query params} {
   for {set i 0} {$i < $len} {incr i} {
 
     if {$skipAtIdx > 0 && $i <= $skipAtIdx} { continue }
-    
+
     set char [lindex $chars $i]
 
     if {"$char" == "?"} {
@@ -308,7 +303,7 @@ proc db::replace_any_query_params {query params} {
       incr pindex
 
     } elseif {"$char" == ":"} {
-      
+
       set restOfQuery [string range $query $i+1 end]
       set nextArg [split $restOfQuery " "]
       set argKey [lindex $nextArg 0]
@@ -334,7 +329,7 @@ proc db::replace_any_query_params {query params} {
         }
         "null" {
           set sql "${sql}null"
-        }        
+        }
         default {
           set sql $sql'$param'
         }
@@ -355,10 +350,10 @@ proc db::compile_query {query params} {
     }
     {:} {
       return [replace_any_query_params $query $params]
-    }   
+    }
     default {
       return $query
-    } 
+    }
   }
 }
 
@@ -386,9 +381,9 @@ proc db::raw {sql {trans {}}} {
   }
 
   if {[catch {
-    set data [::mysql::exec $handle $sql]
-    $result set_data $data
-  } err]} {
+      set data [::mysql::exec $handle $sql]
+      $result set_data $data
+    } err]} {
     $result set_error $err
   }
 
@@ -426,7 +421,7 @@ proc db::raw_select {sql {trans {}}} {
     set rconn $trans
   } else {
     set rconn [pool::acquire]
-  }  
+  }
 
   set result [ResultSet new]
 
@@ -442,9 +437,9 @@ proc db::raw_select {sql {trans {}}} {
   set handle [$rconn get_dbhandle]
 
   if {[catch {
-    set data [::mysql::sel $handle $sql -list]
-    $result set_data $data
-  } err]} {
+      set data [::mysql::sel $handle $sql -list]
+      $result set_data $data
+    } err]} {
     $result set_error $err
   }
 
@@ -500,7 +495,7 @@ proc db::execute_batch {query {params {}} {trans {}}} {
       }
     }
   }
-  
+
   set hasArgs [expr [llength $params] > 0]
 
   if {$hasArgs && [llength $params] != [llength $cmds]} {
@@ -509,26 +504,26 @@ proc db::execute_batch {query {params {}} {trans {}}} {
 
   set idx 0
 
-  foreach cmd $cmds {  
+  foreach cmd $cmds {
     if {[catch {
-      
-      set arg {}
-      
-      if {$hasArgs} {
-        set arg [lindex $params $idx]
-        incr idx
-      }
 
-      set cmd [compile_query $cmd $params]
+        set arg {}
 
-      if {$showSql} {
-        puts "SQL: $cmd"
-      }
+        if {$hasArgs} {
+          set arg [lindex $params $idx]
+          incr idx
+        }
 
-      set data [::mysql::exec $handle $cmd]
+        set cmd [compile_query $cmd $params]
 
-      $result set_data $data
-    } err]} {
+        if {$showSql} {
+          puts "SQL: $cmd"
+        }
+
+        set data [::mysql::exec $handle $cmd]
+
+        $result set_data $data
+      } err]} {
       $result set_error $err
       break
     }
@@ -559,21 +554,20 @@ proc db::tx {lambda args} {
 
   set result ""
 
-
   try {
     set params [list $conn {*}$args]
-    set result [apply $lambda {*}$params]      
+    set result [apply $lambda {*}$params]
   } on error err {
     puts "error apply tx: $err"
-    error $err  
+    error $err
   }
-  
+
   if {$showSql} {
     puts "TX: close"
   }
 
   pool::release $conn
-  
+
   return $result
 }
 
@@ -603,24 +597,24 @@ proc db::insert {table entity {trans {}}} {
 
   if {$trans == ""} {
     set rs [tx { {t values sqlInsert sqlLastId} {
-      set rs [db::execute $sqlInsert $values $t]
-      if {[$rs has_error]} {
-        return $rs
-      } 
-      return [db::raw_select_one $sqlLastId $t]
+        set rs [db::execute $sqlInsert $values $t]
+        if {[$rs has_error]} {
+          return $rs
+        }
+        return [db::raw_select_one $sqlLastId $t]
 
     }} $values $sqlInsert $sqlLastId]
   } else {
-      set rs [execute $sqlInsert $values $t]    
-      if {[$rs has_error]} {
-        return $rs
-      } 
-      set rs [raw_select_one $sqlLastId]    
+    set rs [execute $sqlInsert $values $t]
+    if {[$rs has_error]} {
+      return $rs
+    }
+    set rs [raw_select_one $sqlLastId]
   }
 
   if {[$rs has_error]} {
     return $rs
-  } 
+  }
 
   dict set entity id [lindex [$rs get_data] 0]
 
@@ -637,7 +631,7 @@ proc db::update {table entity {trans {}}} {
 
   dict for {k v} $entity {
     if {$k == "id"} {
-      set id $v       
+      set id $v
     } else {
       set fields "${fields}${k} = ?, "
       lappend values $v
@@ -651,7 +645,7 @@ proc db::update {table entity {trans {}}} {
   set sql "update $table set $fields where id = ?"
 
   set rs [execute $sql $values $trans]
-  
+
   return $rs
 }
 
@@ -708,4 +702,3 @@ proc db::where_first {table cols cond params {trans {}}} {
   set sql "select $fields from $table where $cond limit 1"
   return [select_one $sql $params $trans]
 }
-

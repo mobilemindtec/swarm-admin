@@ -33,7 +33,6 @@ watch() {
     COMMAND="./main.tcl"
     chsum1=""
 
-
     while true
     do
         PID=`ps aux | grep main.tcl | grep -v grep | awk '{print $2}'`
@@ -49,7 +48,6 @@ watch() {
         fi
         sleep 2
     done
-
 }
 
 watch "$@"

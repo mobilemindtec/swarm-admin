@@ -100,7 +100,7 @@ proc person_worker::create_thread_ctx {tid} {
 			set app::configs $configs
 			puts "Consumer thread init"
 			pool::init_pool 1
-			every 5000 do_insert_buffer
+			every 5000 insert_buffer_task
 
 			vwait forever
 		}
@@ -117,7 +117,7 @@ proc person_worker::create_thread_ctx {tid} {
 			}
 		}
 
-	  proc do_insert_buffer {} {
+	  proc insert_buffer_task {} {
 	  	variable buffer
 	  	set n [llength $buffer]
 

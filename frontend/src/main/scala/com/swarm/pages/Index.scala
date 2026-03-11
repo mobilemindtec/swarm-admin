@@ -2,18 +2,17 @@ package com.swarm.pages
 import com.raquo.laminar.api.L.*
 import com.raquo.laminar.nodes.ReactiveHtmlElement
 import com.swarm.laminar.Drawer
-import com.swarm.pages.Index.DrawerMenuItem.{Authenticator, AwsCodeBuildApp, Home, Stack, Stats}
+import com.swarm.pages.Index.DrawerMenuItem.{Authenticator, AwsCodeBuildApp, Home, Stack}
 import com.swarm.pages.adm.aws.codebuild.app.AwsCodeBuildAppPage
 import com.swarm.pages.adm.aws.codebuild.build.{AwsBuildLogStream, AwsBuildPage}
 import com.swarm.pages.adm.stack.StackPage
-import com.swarm.pages.adm.stats.StatsPage
 import com.swarm.pages.services.{ServiceLS, ServiceLogStream, ServicePS}
 import com.swarm.pages.stacks.StackManager
 import com.swarm.services.AuthService
 import com.swarm.services.AuthService.{UserAuth, authenticatedUser}
 import frontroute.*
 import org.scalajs.dom
-import org.scalajs.dom.{Event, html}
+import org.scalajs.dom.Event
 
 object Index:
 

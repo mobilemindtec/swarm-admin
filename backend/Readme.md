@@ -1,3 +1,10 @@
+INSTALL
+--------
+
+	mysqltcl
+	tcllib
+	tcl-thread 
+
 
 FEATURES
 --------

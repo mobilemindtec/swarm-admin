@@ -1,4 +1,3 @@
-
 package require logger 0.3
 package require coroutine
 package require uuid
@@ -10,7 +9,6 @@ source "./configs/configs.tcl"
 #source "./support/uuid.tcl"
 source "./json/json.tcl"
 
-
 namespace eval http_server {
   variable log
   set log [logger::init httpserver]
@@ -19,10 +17,10 @@ namespace eval http_server {
 proc http_server::accept {socket addr port} {
   #set uuid [uuid::uuid generate]
   #chan configure $socket -blocking 0 -buffering line
-  #set coro [coroutine ::$uuid {*}[list handle $socket $addr $port]]  
+  #set coro [coroutine ::$uuid {*}[list handle $socket $addr $port]]
 
   chan configure $socket -blocking 0 -buffering line
-  chan event $socket readable [list http_server::handle $socket $addr $port]  
+  chan event $socket readable [list http_server::handle $socket $addr $port]
 }
 
 proc http_server::handle {socket addr port} {
@@ -37,8 +35,7 @@ proc http_server::handle {socket addr port} {
     return
   }
 
-
-  # Default request data, they are overwritten if explicitly specified in 
+  # Default request data, they are overwritten if explicitly specified in
   # the HTTP request
   set requestMethod ""
   set requestURI ""
@@ -63,11 +60,11 @@ proc http_server::handle {socket addr port} {
     # Decode the HTTP request line
     if {$state=="connecting"} {
       if {![regexp {^(\w+)\s+(/.*)\s+(HTTP/[\d\.]+)} $line {} requestMethod requestURI requestProtocol]} {
-        break }
+      break }
 
       #set path "/[string trim [lindex $line 1] /]"
       set requestQuery [router::get_uri_query $requestURI]
-      
+
       # remove query from URI
       set parts [split $requestURI ?]
       set requestURI [lindex $parts 0]
@@ -95,13 +92,12 @@ proc http_server::handle {socket addr port} {
     ${log}::debug {  No data received -> close socket}
     try_close $socket
     return
-  }  
+  }
 
   if {$state=="body"} {
 
     #fconfigure $socket -translation {binary crlf}
 
-    
     # Read the body in binary mode to match the content length and avoid
     # any unwanted translation of binary data
     fconfigure $socket -translation {binary crlf}
@@ -127,12 +123,12 @@ proc http_server::handle {socket addr port} {
         set chunkSizeHex [lindex [split $chunkHeader {;}] 0]
         set chunkSize [expr 0x$chunkSizeHex]
         if {$chunkSize==0} {
-          break}
+        break}
 
         set currentChunk {}
         while {![eof $socket]} {
-          if {[string bytelength $currentChunk]>=$chunkSize} {
-            break}
+          if {[string length $currentChunk]>=$chunkSize} {
+          break}
           append currentChunk [read $socket $chunkSize]
         }
 
@@ -146,11 +142,12 @@ proc http_server::handle {socket addr port} {
       # Read the number of bytes defined by the content-length header
       set contentLength [dict get $requestHeader content-length]
       while {![eof $socket]} {
-        if {[string bytelength $requestBody]>=$contentLength} {
-          break}
+        puts "requestBody=$requestBody, contentLength=$contentLength"
+        if {[string length $requestBody]>=$contentLength} {
+        break}
         append requestBody [read $socket $contentLength]
       }
-    
+
     } else {
       # No "content-length" and not "transfer-encoding" doesn't end
       # in "chunked". So there should be no body.
@@ -160,10 +157,10 @@ proc http_server::handle {socket addr port} {
     fconfigure $socket -translation {auto crlf}
 
     #if {$requestBody!=""} {
-    #  ${log}::debug {Received body length: [string bytelength $requestBody]}
+    #  ${log}::debug {Received body length: [string length $requestBody]}
     #  ${log}::debug "requestBody = $requestBody"
     #}
-     
+
   }
 
   set contentType [dict get $requestHeader "content-type"]
@@ -183,11 +180,11 @@ proc http_server::handle {socket addr port} {
   }
 
   #set requestURITail [string range $requestURI [lindex $ResponderDef 2] end]
-  set request [dict create]  
-  dict set request method $requestMethod 
-  dict set request uri $requestURI 
-  dict set request headers $requestHeader 
-  dict set request body $body 
+  set request [dict create]
+  dict set request method $requestMethod
+  dict set request uri $requestURI
+  dict set request headers $requestHeader
+  dict set request body $body
   dict set request rowBody $requestBody
   dict set request query $requestQuery
   dict set request contentType $contentType
@@ -218,30 +215,30 @@ proc http_server::dispatch {socket request} {
   set handler ""
 
   if {[string match "/public/assets/*" $path]} {
-    
-    set assetsPath [dict get $app::configs "assets"]
-    set map {} 
+
+    set assetsPath [get_cnf "assets"]
+    set map {}
     lappend map "/public/assets" $assetsPath
 
-    response::asset $socket [string map $map $path]    
+    response::asset $socket [string map $map $path]
     try_close $socket
 
   } elseif {[string match "/raw/logs/*" $path]} {
-    
-    set logsPath [dict get $app::configs docker logs path]
-    set map {} 
+
+    set logsPath [get_cnf docker logs path]
+    set map {}
     lappend map "/raw/logs" $logsPath
 
-    response::raw $socket [string map $map $path]    
+    response::raw $socket [string map $map $path]
     try_close $socket
 
   } elseif {[string match "/download/logs/*" $path]} {
-    
-    set logsPath [dict get $app::configs docker logs path]
-    set map {} 
+
+    set logsPath [get_cnf docker logs path]
+    set map {}
     lappend map "/download/logs" $logsPath
 
-    response::download $socket [string map $map $path]    
+    response::download $socket [string map $map $path]
     try_close $socket
 
   } else {
@@ -250,8 +247,8 @@ proc http_server::dispatch {socket request} {
 
     if { $foudedRoute == "not_found" } {
       ${log}::debug "route not found for $method $path"
-      response::not_found $socket "Not Found" $contentType 
-      try_close $socket   
+      response::not_found $socket "Not Found" $contentType
+      try_close $socket
       return
     }
 
@@ -266,67 +263,61 @@ proc http_server::dispatch {socket request} {
 
     if { $handler == "" && !$isWs } {
       response::server_error $socket "handler not found" $contentType
-      try_close $socket 
+      try_close $socket
       return
     }
 
     if {[catch {
 
-      dict set request route $routeName
-      dict set request vars $pathVars
-      dict set request auth $auth
+        dict set request route $routeName
+        dict set request vars $pathVars
+        dict set request auth $auth
 
-      foreach action $beforeHandlers {
-        set ret [$action $request]  
-        if {[dict exists $ret next]} {
-          set request [dict get $ret next]
-        } else {
-          response::slect_render $socket $ret $contentType
-          try_close $socket        
+        foreach action $beforeHandlers {
+          set ret [$action $request]
+          if {[dict exists $ret next]} {
+            set request [dict get $ret next]
+          } else {
+            response::select_render $socket $ret $contentType
+            try_close $socket
+            return
+          }
+        }
+
+        if {$isWs} {
+          set wsServer [app::get_ws_socket]
+          puts "do websocket upgrade ${wsServer}"
+          set headers [websocket_app::check_headers $headers]
+          websocket_app::upgrade $wsServer $socket $headers
           return
         }
-      }
 
-      if {$isWs} {
-        set wsServer [app::get_ws_socket]
-        puts "do websocket upgrade ${wsServer}"
-        set headers [websocket_app::check_headers $headers]        
-        websocket_app::upgrade $wsServer $socket $headers      
-        return
-      }
-      
-      ${log}::debug "handler = $handler"
+        ${log}::debug "handler = $handler"
 
-      set response [$handler $request]
+        set response [$handler $request]
 
-      foreach action $afterHandlers {
-        set ret [$action $request $response]  
-        if {[dict exists $ret next]} {
-          set response [dict get $ret next]
-        } else {
-          response::slect_render $socket $ret $contentType
-          try_close $socket
-          return
+        foreach action $afterHandlers {
+          set ret [$action $request $response]
+          if {[dict exists $ret next]} {
+            set response [dict get $ret next]
+          } else {
+            response::select_render $socket $ret $contentType
+            try_close $socket
+            return
+          }
         }
-      }
 
-      response::slect_render $socket $response $contentType
-      try_close $socket
+        response::select_render $socket $response $contentType
+        try_close $socket
 
-    } err]} {
+      } err]} {
 
       if {$err != ""} {
         ${log}::error "$::errorInfo"
-        response::server_error $socket "error to process handler: $err" $contentType 
+        response::server_error $socket "error to process handler: $err" $contentType
         try_close $socket
       }
 
-    }        
+    }
   }
 }
-
-
-
-
-
-
